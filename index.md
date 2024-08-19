@@ -1,28 +1,29 @@
 ---
 layout: default
-description: I'm Elena (Lena) Voita and I work on Natural Language Processing. More details inside!
+description: I'm Harsh Raj and I work on Natural Language Processing. More details inside!
 ---
 
 <!-- (comment) the image below can be found in img folder of this very project-->
 <!--![i_am_a_fox](./img/people/lena_large-min.png){: style="float: right; margin: 0px 20px; width: 180px;" name="fox"}-->
 <!--![i_am_a_fox](./img/people/orange_lena-min.jpg){: style="float: right; margin: 0px 20px; width: 180px;" name="fox"}-->
-![i_am_a_fox](./img/people/lena_blue.jpeg){: style="float: right; margin: 0px 20px; width: 250px; border-radius: 50%" name="fox"}
+![i_am_a_fox](./img/people/harsh_raj.jpeg){: style="float: right; margin: 0px 20px; width: 250px; border-radius: 50%" name="fox"}
 
 
 <!-- <a href= onMouseOver="document.readmore_1.src='/img/people/foxie.jpeg';" onMouseOut="document.readmore_1.src='/img/people/orange_lena-min.jpg';">
 <img src="/img/people/orange_lena-min.jpg" name="readmore_1" width=204px height=240px></a> -->
 
 
-I am Elena (Lena) Voita, a __Research Scientist__ at [__FAIR__](https://ai.facebook.com) working on Analysis and Interpetability for NLP. 
+I am Harsh Raj, an __Applied Scientist__ at [__VIJIL__](https://www.vijil.ai/) working on red-teaming and evaluating Langauge Models. 
 
-Also, [__NLP Course__ <span style="color:#92bf32">__For You__</span>](https://lena-voita.github.io/nlp_course.html) creator and current [SIGREP](https://www.sigrep.org) president.
+<!-- Also, [__NLP Course__ <span style="color:#92bf32">__For You__</span>](https://lena-voita.github.io/nlp_course.html) creator and current [SIGREP](https://www.sigrep.org) president. -->
 <!--* a __Research Scientist__ at [__FAIR__](https://ai.facebook.com) working on NLP,* current [SIGREP](https://www.sigrep.org) president,* NLP Course <span style="color:#92bf32">For You</span> creator - look [here](https://lena-voita.github.io/nlp_course.html).-->
 
 
-
-Before that, I was Ph.D. student at the University of Edinburgh supervised by [Ivan Titov]({{site:ivan_page}}) and [Rico Sennrich]({{site.rico_page}}),  was awarded [Facebook PhD Fellowship](https://research.fb.com/blog/2020/01/announcing-the-recipients-of-the-2020-facebook-fellowship-awards/),
-worked as a Research Scientist at [Yandex Research]({{site.yandex_research_main}}) side by side with the [Yandex Translate](https://translate.yandex.com) team, 
-while enjoying writing [blog posts](https://lena-voita.github.io/posts.html) and [teaching](https://lena-voita.github.io/nlp_course.html)<a onMouseOver="document.fox.src='/img/people/foxie.jpeg';" onMouseOut="document.fox.src='/img/people/orange_lena-min.jpg';">.</a> 
+Broadly, I am interested in making language models safe, useful, and controllable. I am also interested in open collaborations. Over the past few years, I have taken my first baby steps as a researcher, owing to some wonderful people and collaborations. Most recently, I am working with some folks from [CSAI](https://www.safe.ai/) (particularly [Domenic Rosati](https://scholar.google.com/citations?user=80aJAKYAAAAJ&hl=en)) on mitigating finetuning attacks on LLMs and reward hacking as a consequence of it. Being an Applied Scientist at [VijilAI](https://www.vijil.ai/), I am working on building the largest database of red teaming prompts with [Subho Majumdar](https://www.subhomajumdar.com/) and [Leif Hancox-Li](https://boltzmann-brain.github.io/).
+Before that, I worked with Subho, Dom, and [Vipul](https://vipulgupta1011.github.io/) on [evaluating](https://arxiv.org/abs/2211.05853) and [improving](https://arxiv.org/abs/2308.09138) the consistency of language models.  
+I was fortunate to collaborate via the [MLC open collabortions](https://mlcollective.org/community/) with [Yash Sharma](https://www.yash-sharma.com/) and [Laura F. Nern](https://scholar.google.de/citations?user=cBIJYxsAAAAJ&hl=de) on quantifying the robustness transfer from pre-training to fine-tuning tasks from the lens of computer vision.
+I did my bachelor thesis with [Anil S. Parihar](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en) on vision and language navigation and fortunately, we secured a top-3 position in the most popular VLN challenge [R2R](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en). 
+I also spent my summer internship during my undergrad at [Thoucentric](https://thoucentric.com/) as a researcher with [Manu Joseph](https://deep-and-shallow.com/about-me/) where I studied tabular data and forecasting and built a novel deep learning framework based on GRU named [GANDALF](https://arxiv.org/abs/2207.08548).
 
 <!--<span style="color:red">__Blog-course:__</span>    NLP Course <span style="color:#92bf32">For You</span> - look [here](https://lena-voita.github.io/nlp_course.html).-->
 
