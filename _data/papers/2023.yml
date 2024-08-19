@@ -4,14 +4,22 @@
   paper-type: inproceedings
   selected: y
   year: 2023
-  img: neurons.png
-  title: "Neurons in Large Language Models: Dead, N-gram, Positional"
-  authors: "<u>Elena Voita</u>,  Javier Ferrando, Christoforos Nalmpantis"
-  doc-url:
-  conf_name: 
+  title: "Evaluating the robustness of biomedical concept normalization"
+  authors: "Sinchani Chakraborty, <u>Harsh Raj</u>, Srishti Gureja, Tanmay Jain, Atif Hassan, Sayantan Basu"
+  conf_name: NeurIPS
   conf_year: 2023
-  url: "https://arxiv.org/pdf/2309.04827.pdf"
-  code:
-  blog:
-  abstract: " "
-
+  url: "https://proceedings.mlr.press/v203/chakraborty23a/chakraborty23a.pdf"
+  code: "https://github.com/deepwizai/robust-normalization"
+  abstract: "Biomedical concept normalization involves linking entity mentions in text to standard concepts in knowledge bases. It aids in resolving challenges to standardising ambiguous, variable terms in text or handling missing links. Therefore, it is one of the essential tasks of text mining that helps in effective information access and finds its utility in biomedical decision-making. Pre-trained language models (e.g., BERT) achieve impressive performance on this task. It has been observed that such models are insensitive to word order permutations and vulnerable to adversarial attacks on tasks like Text Classification, Natural Language Inference. However, the effect of such attacks is unknown for the task of Normalization, especially in the biomedical domain. In this paper, we propose heuristic-based Input Transformations (word level modifications and word order variations) and Adversarial attacks to study the robustness of BERT-based normalization models across various datasets consisting of different biomedical entity types. We conduct experiments across three datasets: NCBI disease, BC5CDR Disease, and BC5CDR Chemical. We observe that for Input Transformations, pre-trained models often fail to detect invalid input. On the other hand, our proposed Adversarial attacks that add imperceptible perturbations result in affecting the ranking of a concept list for a given mention (or vice versa). We also generate natural adversarial examples that lead to performance degradation of ∼30% in the F1-score. Additionally, we explore existing mitigation strategies to help a model recognize invalid inputs."
+-
+  layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2023
+  title: "On transfer of adversarial robustness from pretraining to downstream tasks"
+  authors: "Laura F. Nern, <u>Harsh Raj</u>, Maurice Georgi, Yash Sharma"
+  conf_name: NeurIPS
+  conf_year: 2023
+  url: "https://arxiv.org/abs/2208.03835"
+  code: "https://github.com/harshraj172/Measuring-Reliability-of-LLMs"
+  abstract: "As large-scale training regimes have gained popularity, the use of pretrained models for downstream tasks has become common practice in machine learning. While pretraining has been shown to enhance the performance of models in practice, the transfer of robustness properties from pretraining to downstream tasks remains poorly understood. In this study, we demonstrate that the robustness of a linear predictor on downstream tasks can be constrained by the robustness of its underlying representation, regardless of the protocol used for pretraining. We prove (i) a bound on the loss that holds independent of any downstream task, as well as (ii) a criterion for robust classification in particular. We validate our theoretical results in practical applications, show how our results can be used for calibrating expectations of downstream robustness, and when our results are useful for optimal transfer learning. Taken together, our results offer an initial step towards characterizing the requirements of the representation function for reliable post-adaptation performance."

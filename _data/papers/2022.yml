@@ -1,17 +1,35 @@
-
 -
   layout: paper
   paper-type: inproceedings
   selected: y
-  year: 2021
-  img: hallucinations-min.png
-  title: "Looking for a Needle in a Haystack: A Comprehensive Study of Hallucinations in Neural Machine Translation"
-  authors: "Nuno Guerreiro, <u>Elena Voita</u>,  André Martins"
-  doc-url:
-  conf_name: EACL
+  year: 2023
+  title: "Measuring reliability of large language models through semantic consistency"
+  authors: "<u>Harsh Raj</u>, Domenic Rosati, Subho Majumdar"
+  conf_name: NeurIPS
   conf_year: 2023
-  url: "https://arxiv.org/pdf/2208.05309.pdf"
-  code:
-  blog:
-  abstract: " "
-
+  url: "https://arxiv.org/abs/2211.05853"
+  code: "https://github.com/harshraj172/Measuring-Reliability-of-LLMs"
+  abstract: "While large pretrained language models (PLMs) demonstrate incredible fluency and performance on many natural language tasks, recent work has shown that well-performing PLMs are very sensitive to what prompts are feed into them. Even when prompts are semantically identical, language models may give very different answers. When considering safe and trustworthy deployments of PLMs we would like their outputs to be consistent under prompts that mean the same thing or convey the same intent. While some work has looked into how state-of-the-art PLMs address this need, they have been limited to only evaluating lexical equality of single- or multi-word answers and do not address consistency of generative text sequences. In order to understand consistency of PLMs under text generation settings, we develop a measure of semantic consistency that allows the comparison of open-ended text outputs. We implement several versions of this consistency metric to evaluate the performance of a number of PLMs on paraphrased versions of questions in the TruthfulQA dataset, we find that our proposed metrics are considerably more consistent than traditional metrics embodying lexical consistency, and also correlate with human evaluation of output consistency to a higher degree."
+-
+  layout: paper
+  paper-type: inproceedings
+  selected: n
+  year: 2022
+  title: "GANDALF: Gated Adaptive Network for Deep Automated Learning of Features"
+  authors: "Manu Joseph, <u>Harsh Raj</u>"
+  conf_name: TMLR
+  conf_year: 2022
+  url: "https://arxiv.org/abs/2207.08548"
+  code: "https://github.com/manujosephv/pytorch_tabular"
+  abstract: "We propose a novel high-performance, interpretable, and parameter and computationally efficient deep learning architecture for tabular data, Gated Adaptive Network for Deep Automated Learning of Features (GANDALF). GANDALF relies on a new tabular processing unit with a gating mechanism and in-built feature selection called Gated Feature Learning Unit (GFLU) as a feature representation learning unit. We demonstrate that GANDALF outperforms or stays at-par with SOTA approaches like XGBoost, SAINT, FT-Transformers, etc. by experiments on multiple established public benchmarks."
+-
+  layout: paper
+  paper-type: inproceedings
+  selected: n
+  year: 2022
+  title: "AskYourDB: An end-to-end system for querying and visualizing relational databases using natural language"
+  authors: "Manu Joseph, <u>Harsh Raj</u>, Anubhav Yadav, Aaryamann Sharma"
+  conf_name: PakDD
+  conf_year: 2022
+  url: "https://arxiv.org/abs/2210.08532"
+  abstract: "Querying databases for the right information is a time consuming and error-prone task and often requires experienced professionals for the job. Furthermore, the user needs to have some prior knowledge about the database. There have been various efforts to develop an intelligence which can help business users to query databases directly. However, there has been some successes, but very little in terms of testing and deploying those for real world users. In this paper, we propose a semantic parsing approach to address the challenge of converting complex natural language into SQL and institute a product out of it. For this purpose, we modified state-of-the-art models, by various pre and post processing steps which make the significant part when a model is deployed in production. To make the product serviceable to businesses we added an automatic visualization framework over the queried results."
