@@ -25,11 +25,29 @@ Most recently, I am working with some folks from [CSAI](https://www.safe.ai/) (p
 
 Before that, I worked with [Subho](https://www.subhomajumdar.com/), Dom, and [Vipul](https://vipulgupta1011.github.io/) on [evaluating](https://arxiv.org/abs/2211.05853) and [improving](https://arxiv.org/abs/2308.09138) the consistency of language models.  
 
-I was fortunate to collaborate via the [MLC community](https://mlcollective.org/community/) with [Yash](https://www.yash-sharma.com/) and [Laura](https://scholar.google.de/citations?user=cBIJYxsAAAAJ&hl=de) on quantifying the robustness transfer from pretraining to finetuning tasks from the lens of computer vision.
+I was fortunate to collaborate via the [MLC community](https://mlcollective.org/community/) with [Yash](https://www.yash-sharma.com/) and [Laura](https://www.linkedin.com/in/lfee-schneider/?locale=en_US) on quantifying the robustness transfer from pretraining to downstream tasks from the lens of computer vision.
 
-I did my bachelor thesis with [Anil S. Parihar](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en) on vision and language navigation (VLN) and fortunately, we secured a top-3 position in the most popular VLN challenge [R2R](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en). 
+I did my bachelor thesis with [Anil S. Parihar](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en) on Vision and Language Navigation (VLN) and fortunately, we secured a top-3 position in the most popular VLN challenge [R2R](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en). 
 
 I also spent my summer internship during my undergrad at [Thoucentric](https://thoucentric.com/) as a researcher with [Manu](https://deep-and-shallow.com/about-me/) where I studied tabular data and built a [novel](https://arxiv.org/abs/2207.08548) deep learning framework.
+
+I am actively looking for PhD in Ai Safety starting Fall 2025.
+
+## News and Timeline
+
+### 2024
+- **August**: Contributed `deception_adherence` attack to [ps-fuzz](https://github.com/prompt-security/ps-fuzz).
+- **June**: Released preprint on our work on consistency control in LLMs, mentored by Subho.
+- **January**: Joined VijilAI as an Applied Scientist.
+- **January**: Our work on Vision and Language Navigation ranked 3rd on the [R2R leaderboard](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270). Team Name: `MLR_Lab_DTU`.
+
+### 2023
+- **December**: Presented our work on robustness transfer at NeurIPS 2023 in New Orleans.
+- **May**: Our work on robustness transfer accepted to NeurIPS 2023. Led by [Laura](https://www.linkedin.com/in/lfee-schneider/?locale=en_US) and mentored by [Yash](https://www.yash-sharma.com/).
+
+### 2022
+- **November**: Our work on consistency evaluation won the [Best Paper Award](https://www.mlsafety.org/events/neurips/2022) with a cash prize of $5000.
+- **April**: Two papers accepted to NeurIPS Workshop 2023: one on consistency evaluation and another on evaluating the robustness of biomedical concept normalization.
 
 <!--<span style="color:red">__Blog-course:__</span>    NLP Course <span style="color:#92bf32">For You</span> - look [here](https://lena-voita.github.io/nlp_course.html).-->
 
