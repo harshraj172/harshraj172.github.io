@@ -36,10 +36,10 @@ I am actively looking for a PhD in AI Safety starting Fall 2025.
 ## News and Timeline
 
 ### 2024
-- **August**: Contributed `deception_adherence` attack to [ps-fuzz](https://github.com/prompt-security/ps-fuzz).
+- **August**: Contributed **deception_adherence** attack to [ps-fuzz](https://github.com/prompt-security/ps-fuzz).
 - **June**: Released preprint on our work on consistency control in LLMs, mentored by Subho.
 - **January**: Joined VijilAI as an Applied Scientist.
-- **January**: Our work on Vision and Language Navigation ranked 3rd on the [R2R leaderboard](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270). Team Name: `MLR_Lab_DTU`.
+- **January**: Our work on Vision and Language Navigation ranked 3rd on the [R2R leaderboard](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270). Team Name: **MLR_Lab_DTU**.
 
 ### 2023
 - **December**: Presented our work on robustness transfer at NeurIPS 2023 in New Orleans.
