@@ -22,6 +22,7 @@ I am Harsh Raj, an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/)
 Broadly, I am interested in making language models safe, useful, and controllable. Over the past few years, I have taken my first baby steps as a researcher, owing to some wonderful people and collaborations. 
 
 Most recently, I am working with some folks from [CSAI](https://www.safe.ai/) (particularly [Dom](https://scholar.google.com/citations?user=80aJAKYAAAAJ&hl=en)) on mitigating finetuning attacks on LLMs and reward hacking as a consequence of it. Being an Applied Scientist at [VijilAI](https://www.vijil.ai/), I am working on building the largest database of red teaming prompts with [Leif](https://boltzmann-brain.github.io/).
+I am also a core contributor to the red-teaming library [ps-fuzz](https://github.com/prompt-security/ps-fuzz).
 
 Before that, I worked with [Subho](https://www.subhomajumdar.com/), Dom, and [Vipul](https://vipulgupta1011.github.io/) on [evaluating](https://arxiv.org/abs/2211.05853) and [improving](https://arxiv.org/abs/2308.09138) the consistency of language models.  
 
@@ -36,7 +37,6 @@ I am actively looking for a PhD in AI Safety starting Fall 2025.
 ## News and Timeline
 
 ### 2024
-- **August**: Contributed **deception_adherence** attack to [ps-fuzz](https://github.com/prompt-security/ps-fuzz).
 - **June**: Released preprint on our work on consistency control in LLMs, mentored by Subho.
 - **January**: Joined VijilAI as an Applied Scientist.
 - **January**: Our work on Vision and Language Navigation ranked 3rd on the [R2R leaderboard](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270). Team Name: **MLR_Lab_DTU**.
