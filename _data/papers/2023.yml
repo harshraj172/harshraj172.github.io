@@ -3,6 +3,7 @@
   paper-type: inproceedings
   selected: y
   year: 2023
+  img: robustness_transfer.png
   title: "On transfer of adversarial robustness from pretraining to downstream tasks"
   authors: "Laura F. Nern, <u>Harsh Raj</u>, Maurice Georgi, Yash Sharma"
   conf_name: NeurIPS
@@ -15,6 +16,7 @@
   paper-type: inproceedings
   selected: y
   year: 2023
+  img: biomedical_concept_norm.png
   title: "Evaluating the robustness of biomedical concept normalization"
   authors: "Sinchani Chakraborty, <u>Harsh Raj</u>, Srishti Gureja, Tanmay Jain, Atif Hassan, Sayantan Basu"
   conf_name: NeurIPS

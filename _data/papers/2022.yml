@@ -3,6 +3,7 @@
   paper-type: inproceedings
   selected: y
   year: 2023
+  img: mesuring_reliability.png
   title: "Measuring reliability of large language models through semantic consistency"
   authors: "<u>Harsh Raj</u>, Domenic Rosati, Subho Majumdar"
   conf_name: NeurIPS
@@ -15,6 +16,7 @@
   paper-type: inproceedings
   selected: n
   year: 2022
+  img: gru.png
   title: "GANDALF: Gated Adaptive Network for Deep Automated Learning of Features"
   authors: "Manu Joseph, <u>Harsh Raj</u>"
   conf_name: TMLR
@@ -27,6 +29,7 @@
   paper-type: inproceedings
   selected: n
   year: 2022
+  img: nl2sql.png
   title: "AskYourDB: An end-to-end system for querying and visualizing relational databases using natural language"
   authors: "Manu Joseph, <u>Harsh Raj</u>, Anubhav Yadav, Aaryamann Sharma"
   conf_name: PakDD

@@ -3,6 +3,7 @@
   paper-type: inproceedings
   selected: n
   year: 2024
+  img: semantic_consistency.png
   title: "Semantic consistency for assuring reliability of large language models"
   authors: "<u>Harsh Raj</u>, Vipul Gupta, Domenic Rosati, Subho Majumdar"
   conf_name: NeurIPS
