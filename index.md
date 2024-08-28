@@ -33,7 +33,7 @@ I did my bachelor thesis with [Anil S. Parihar](https://scholar.google.com/citat
 
 I also spent my summer internship during my undergrad at [Thoucentric](https://thoucentric.com/) as a researcher with [Manu](https://deep-and-shallow.com/about-me/) where I studied tabular data and built a [novel](https://arxiv.org/abs/2207.08548) deep learning framework.
 
-I am actively looking for a PhD in AI Safety starting Fall 2025.
+<u>I am actively looking for a PhD in AI Safety starting Fall 2025.</u>
 
 ## News and Timeline
 
