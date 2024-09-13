@@ -27,7 +27,7 @@ Before that, I worked with [Subho](https://www.subhomajumdar.com/), Dom, and [Vi
 
 I was fortunate to collaborate via the [MLC community](https://mlcollective.org/community/) with [Yash](https://www.yash-sharma.com/) and [Laura](https://www.linkedin.com/in/lfee-schneider/?locale=en_US) on quantifying the robustness transfer from pretraining to downstream tasks from the lens of computer vision.
 
-I did my bachelor thesis with [Anil S. Parihar](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en) on Vision and Language Navigation (VLN) and fortunately, we secured a top-3 position in the most popular VLN challenge [R2R](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en). 
+I did my bachelor thesis with [Anil S. Parihar](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en) on Vision and Language Navigation (VLN) and fortunately, we secured a top-3 position in the most popular VLN challenge [R2R](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270). 
 
 I also spent my summer internship during my undergrad at [Thoucentric](https://thoucentric.com/) as a researcher with [Manu](https://deep-and-shallow.com/about-me/) where I studied tabular data and built a [novel](https://arxiv.org/abs/2207.08548) deep learning framework.
 
