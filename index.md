@@ -1,6 +1,6 @@
 ---
 layout: default
-description: I'm Harsh Raj and I work on Natural Language Processing. More details inside!
+description: I'm Harsh Raj and I work on AI Safety and Alignment. More details inside!
 ---
 
 <!-- (comment) the image below can be found in img folder of this very project-->
