@@ -5,8 +5,6 @@
   img: reverse_preference.png
   title: "Defending against Reverse Preference Attacks is Difficult"
   authors: "Domenic Rosati, Giles Edkins, <u>Harsh Raj</u>, David Atanasov, Subhabrata Majumdar, Janarthanan Rajendran, Frank Rudzicz, Hassan Sajjad"
-  conf_name: SaTML
-  conf_year: 2024
   url: "https://arxiv.org/abs/2409.12914"
   abstract: >
     While there has been progress towards aligning Large Language Models (LLMs) with human values and ensuring safe behaviour at inference time, safety-aligned LLMs are known to be vulnerable to training-time attacks such as supervised fine-tuning (SFT) on harmful datasets. In this paper, we ask if LLMs are vulnerable to adversarial reinforcement learning. Motivated by this goal, we propose Reverse Preference Attacks (RPA), a class of attacks to make LLMs learn harmful behavior using adversarial reward during reinforcement learning from human feedback (RLHF). RPAs expose a critical safety gap of safety-aligned LLMs in RL settings: they easily explore the harmful text generation policies to optimize adversarial reward. To protect against RPAs, we explore a host of mitigation strategies. Leveraging Constrained Markov-Decision Processes, we adapt a number of mechanisms to defend against harmful fine-tuning attacks into the RL setting. Our experiments show that ``online" defenses that are based on the idea of minimizing the negative log likelihood of refusals -- with the defender having control of the loss function -- can effectively protect LLMs against RPAs. However, trying to defend model weights using ``offline" defenses that operate under the assumption that the defender has no control over the loss function are less effective in the face of RPAs. These findings show that attacks done using RL can be used to successfully undo safety alignment in open-weight LLMs and use them for malicious purposes.
@@ -18,8 +16,6 @@
   img: semantic_consistency.png
   title: "Semantic consistency for assuring reliability of large language models"
   authors: "<u>Harsh Raj</u>, Vipul Gupta, Domenic Rosati, Subho Majumdar"
-  conf_name: TMLR
-  conf_year: 2024
   url: "https://arxiv.org/abs/2308.09138"
   code: "https://github.com/harshraj172/ConsistencyBench"
   abstract: >
