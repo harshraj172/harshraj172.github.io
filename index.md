@@ -13,7 +13,7 @@ description: I'm Harsh Raj and I work on AI Safety and Alignment. More details i
 <img src="/img/people/orange_lena-min.jpg" name="readmore_1" width=204px height=240px></a> -->
 
 
-I am Harsh Raj, an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/) working on red-teaming and evaluating Langauge Models. 
+I am Harsh Raj, an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/), where my focus is making AI agents trustworthy. 
 
 <!-- Also, [__NLP Course__ <span style="color:#92bf32">__For You__</span>](https://lena-voita.github.io/nlp_course.html) creator and current [SIGREP](https://www.sigrep.org) president. -->
 <!--* a __Research Scientist__ at [__FAIR__](https://ai.facebook.com) working on NLP,* current [SIGREP](https://www.sigrep.org) president,* NLP Course <span style="color:#92bf32">For You</span> creator - look [here](https://lena-voita.github.io/nlp_course.html).-->
