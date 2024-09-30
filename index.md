@@ -36,6 +36,7 @@ I also spent my summer internship during my undergrad at [Thoucentric](https://t
 ## News and Timeline
 
 ### 2024
+- **September**: Published my first Lesswrong blog on [Interpreting the effects of Jailbreaking in LLMs](https://www.lesswrong.com/posts/FNuBEJnbtEEdCEAnT/interpreting-the-effects-of-jailbreak-prompts-in-llms).
 - **June**: Released the preprint of our work on [Reverse Preference Attack](https://arxiv.org/abs/2409.12914), led by Domenic.
 - **January**: Joined VijilAI as an Applied Scientist.
 - **January**: Our work on Vision and Language Navigation ranked 3rd on the [R2R leaderboard](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270). Team Name: **MLR_Lab_DTU**.
