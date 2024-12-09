@@ -13,7 +13,7 @@ description: I'm Harsh Raj and I work on AI Safety and Alignment. More details i
 <img src="/img/people/orange_lena-min.jpg" name="readmore_1" width=204px height=240px></a> -->
 
 
-I am Harsh Raj, currently pursuing a Master of Science in Computer Science at Northeastern University, Boston. Moreover, I am the Synthetic Data Lead for [__Ontocord AI__](https://www.ontocord.ai/) and an Applied Security Researcher at [__AI Risk and Vulnerability Alliance (ARVA)__](https://avidml.org/arva/). I previously worked as an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/), where my focus was on making AI agents trustworthy.
+I am Harsh Raj, currently pursuing a Master of Science in Computer Science at Northeastern University, Boston. Moreover, I am the __Synthetic Data Lead__ for [__Ontocord AI__](https://www.ontocord.ai/) and an __Applied Security Researcher__ at [__AI Risk and Vulnerability Alliance (ARVA)__](https://avidml.org/arva/). I previously worked as an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/), where my focus was on making AI agents trustworthy.
 
 <!-- Also, [__NLP Course__ <span style="color:#92bf32">__For You__</span>](https://lena-voita.github.io/nlp_course.html) creator and current [SIGREP](https://www.sigrep.org) president. -->
 <!--* a __Research Scientist__ at [__FAIR__](https://ai.facebook.com) working on NLP,* current [SIGREP](https://www.sigrep.org) president,* NLP Course <span style="color:#92bf32">For You</span> creator - look [here](https://lena-voita.github.io/nlp_course.html).-->
