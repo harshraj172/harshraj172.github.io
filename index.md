@@ -13,23 +13,19 @@ description: I'm Harsh Raj and I work on AI Safety and Alignment. More details i
 <img src="/img/people/orange_lena-min.jpg" name="readmore_1" width=204px height=240px></a> -->
 
 
-I am Harsh Raj, currently pursuing a Master of Science in Computer Science at Northeastern University, Boston. Moreover, I am the __Co-founder__ for [__Ontocord AI__](https://www.ontocord.ai/) and an __Applied Security Researcher__ at [__AI Risk and Vulnerability Alliance (ARVA)__](https://avidml.org/arva/). I previously worked as an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/), where my focus was on making AI agents trustworthy.
+I am Harsh Raj, currently pursuing a Master of Science in Computer Science at Northeastern University, Boston. Additionally, I am the __Co-Founder__ of the open-source organization [__Ontocord AI__](https://www.ontocord.ai/) and a __Researcher__ at [__AI Risk and Vulnerability Alliance (ARVA)__](https://avidml.org/arva/). Previously, I worked as an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/), where I focused on making AI agents trustworthy.
 
-<!-- Also, [__NLP Course__ <span style="color:#92bf32">__For You__</span>](https://lena-voita.github.io/nlp_course.html) creator and current [SIGREP](https://www.sigrep.org) president. -->
-<!--* a __Research Scientist__ at [__FAIR__](https://ai.facebook.com) working on NLP,* current [SIGREP](https://www.sigrep.org) president,* NLP Course <span style="color:#92bf32">For You</span> creator - look [here](https://lena-voita.github.io/nlp_course.html).-->
+I am passionate about making language models safe, useful, and controllable. Over the past few years, I have taken my first steps as a researcher, thanks to some wonderful collaborators and mentors.
 
+Most recently, I have been collaborating with researchers from the [AI Safety Camp](https://www.aisafety.camp/) (particularly [Dom](https://scholar.google.com/citations?user=80aJAKYAAAAJ&hl=en)) on addressing reward hacking in RLHF. As an Applied Scientist at [VijilAI](https://www.vijil.ai/), I worked on building a database of red-teaming prompts alongside [Leif](https://boltzmann-brain.github.io/).
 
-Broadly, I am interested in making language models safe, useful, and controllable. Over the past few years, I have taken my first baby steps as a researcher, owing to some wonderful people and collaborations. 
+Previously, I collaborated with [Subho](https://www.subhomajumdar.com/), Dom, and [Vipul](https://vipulgupta1011.github.io/) on [evaluating](https://arxiv.org/abs/2211.05853) and [improving](https://shubhobm.github.io/docs/ConsistencyFinetuning___TMLR__2_.pdf) the consistency of language models.  
 
-Most recently, I am working with some folks from [AI Safety Camp](https://www.aisafety.camp/) (particularly [Dom](https://scholar.google.com/citations?user=80aJAKYAAAAJ&hl=en)) on mitigating finetuning attacks on LLMs and reward hacking as a consequence of it. Being an Applied Scientist at [VijilAI](https://www.vijil.ai/), I am working on building the largest database of red teaming prompts with [Leif](https://boltzmann-brain.github.io/).
+Through the [MLC community](https://mlcollective.org/community/), I was fortunate to work with [Yash](https://www.yash-sharma.com/) and [Laura](https://www.linkedin.com/in/lfee-schneider/?locale=en_US) on quantifying the robustness transfer from pretraining to downstream tasks.
 
-Before that, I worked with [Subho](https://www.subhomajumdar.com/), Dom, and [Vipul](https://vipulgupta1011.github.io/) on [evaluating](https://arxiv.org/abs/2211.05853) and [improving](https://arxiv.org/abs/2308.09138) the consistency of language models.  
+For my bachelor's thesis, I worked with [Anil S. Parihar](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en) on Vision and Language Navigation (VLN), and we were fortunate to secure a third position in the highly regarded VLN challenge [R2R](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270).
 
-I was fortunate to collaborate via the [MLC community](https://mlcollective.org/community/) with [Yash](https://www.yash-sharma.com/) and [Laura](https://www.linkedin.com/in/lfee-schneider/?locale=en_US) on quantifying the robustness transfer from pretraining to downstream tasks from the lens of computer vision.
-
-I did my bachelor thesis with [Anil S. Parihar](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en) on Vision and Language Navigation (VLN) and fortunately, we secured a top-3 position in the most popular VLN challenge [R2R](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270). 
-
-I also spent my summer internship during my undergrad at [Thoucentric](https://thoucentric.com/) as a researcher with [Manu](https://deep-and-shallow.com/about-me/) where I studied tabular data and built a [novel](https://arxiv.org/abs/2207.08548) deep learning framework.
+During my undergraduate summer internship at [Thoucentric](https://thoucentric.com/), I worked as a researcher with [Manu](https://deep-and-shallow.com/about-me/) on tabular data, where we developed a [novel](https://arxiv.org/abs/2207.08548) deep learning framework.
 
 <!-- <u>I am actively looking for a PhD in AI Safety starting Fall 2025.</u> -->
 
