@@ -32,7 +32,7 @@ During my undergraduate summer internship at [Thoucentric](https://thoucentric.c
 ## News and Timeline
 
 ### 2024
-- **December**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://shubhobm.github.io/docs/ConsistencyFinetuning___TMLR__2_.pdf) got accepted for poster presentation at the Transaction of Machine Learning Research (TMLR).
+- **December**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://shubhobm.github.io/docs/ConsistencyFinetuning___TMLR__2_.pdf) got accepted at the Transaction of Machine Learning Research (TMLR).
 - **December**: Our work on [Mitigating Unsafe Feedback with Learning Constraints](https://arxiv.org/abs/2409.12914v2) got accepted for poster presentation at AAAI-25 Workshop on Artificial Intelligence for Cyber Security.
 - **September**: Published my first Lesswrong blog on [Interpreting the effects of Jailbreaking in LLMs](https://www.lesswrong.com/posts/FNuBEJnbtEEdCEAnT/interpreting-the-effects-of-jailbreak-prompts-in-llms).
 - **June**: Released the preprint of our work on [Reverse Preference Attack](https://arxiv.org/abs/2409.12914), led by Domenic.
