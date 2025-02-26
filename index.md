@@ -17,15 +17,12 @@ I am Harsh Raj, currently pursuing a Master of Science in Computer Science at No
 
 I am passionate about making language models safe, useful, and controllable. Over the past few years, I have taken my first steps as a researcher, thanks to some wonderful collaborators and mentors.
 
-Most recently, I have been collaborating with researchers from the [AI Safety Camp](https://www.aisafety.camp/) (particularly [Dom](https://scholar.google.com/citations?user=80aJAKYAAAAJ&hl=en)) on addressing reward hacking in RLHF. As an Applied Scientist at [VijilAI](https://www.vijil.ai/), I worked on building a database of red-teaming prompts alongside [Leif](https://boltzmann-brain.github.io/).
+I am currently working with [David Bau](https://baulab.info/) on understanding reasoning models through mechanistic interpretability.
+Most recently, I co-led the **Preventing Adversarial Reward Optimization** project (in collaboration with [Dom](https://scholar.google.com/citations?user=80aJAKYAAAAJ&hl=en)) at the [AI Safety Camp](https://www.aisafety.camp/). As an Applied Scientist at [VijilAI](https://www.vijil.ai/), I worked alongside [Leif](https://boltzmann-brain.github.io/) to develop a database of red-teaming prompts.
 
-Previously, I collaborated with [Subho](https://www.subhomajumdar.com/), Dom, and [Vipul](https://vipulgupta1011.github.io/) on [evaluating](https://arxiv.org/abs/2211.05853) and [improving](https://shubhobm.github.io/docs/ConsistencyFinetuning___TMLR__2_.pdf) the consistency of language models.  
+Previously, I collaborated with [Subho](https://www.subhomajumdar.com/), Dom, and [Vipul](https://vipulgupta1011.github.io/) on [evaluating](https://arxiv.org/abs/2211.05853) and [improving](https://arxiv.org/abs/2502.15924) the consistency of language models.  
 
 Through the [MLC community](https://mlcollective.org/community/), I was fortunate to work with [Yash](https://www.yash-sharma.com/) and [Laura](https://www.linkedin.com/in/lfee-schneider/?locale=en_US) on quantifying the robustness transfer from pretraining to downstream tasks.
-
-For my bachelor's thesis, I worked with [Anil S. Parihar](https://scholar.google.com/citations?user=JRr4wjoAAAAJ&hl=en) on Vision and Language Navigation (VLN), and we were fortunate to secure a third position in the highly regarded VLN challenge [R2R](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270).
-
-During my undergraduate summer internship at [Thoucentric](https://thoucentric.com/), I worked as a researcher with [Manu](https://deep-and-shallow.com/about-me/) on tabular data, where we developed a [novel](https://arxiv.org/abs/2207.08548) deep learning framework.
 
 <!-- <u>I am actively looking for a PhD in AI Safety starting Fall 2025.</u> -->
 
