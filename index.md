@@ -13,7 +13,7 @@ description: I'm Harsh Raj and I work on AI Safety and Alignment. More details i
 <img src="/img/people/orange_lena-min.jpg" name="readmore_1" width=204px height=240px></a> -->
 
 
-I am Harsh Raj, currently pursuing a Master of Science in Computer Science at Northeastern University, Boston. Additionally, I am the <u>model training lead</u> of the open-source organization [__Ontocord AI__](https://www.ontocord.ai/) and a __Researcher__ at [__AI Risk and Vulnerability Alliance (ARVA)__](https://avidml.org/arva/). Previously, I worked as an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/), where I focused on making AI agents trustworthy.
+I am Harsh Raj, currently pursuing a Master of Science in Computer Science at Northeastern University, Boston. I am also the __Co-Founder__ of the open-source organization [__Ontocord AI__](https://www.ontocord.ai/) and a __Researcher__ at [__AI Risk and Vulnerability Alliance (ARVA)__](https://avidml.org/arva/). Previously, I worked as an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/), where I primarily worked on building the `vijil-evaluate` and `vijil-guardrails` service.
 
 I am passionate about making language models safe, useful, and controllable. Over the past few years, I have taken my first steps as a researcher, thanks to some wonderful collaborators and mentors.
 
@@ -27,6 +27,9 @@ Through the [MLC community](https://mlcollective.org/community/), I was fortunat
 <!-- <u>I am actively looking for a PhD in AI Safety starting Fall 2025.</u> -->
 
 ## News and Timeline
+
+### 2025
+- **April**: Published our first blog post announcing [MixtureVitae](https://aurora-lm.github.io/posts/mixturevitae/) — the most permissive dataset released till date as part of the project [Aurora-M2](https://aurora-lm.github.io/) - a family of EU AI Act-compliant, multimodal, multilingual, and multidomain mixture-of-experts (MoE) models.
 
 ### 2024
 - **December**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://shubhobm.github.io/docs/ConsistencyFinetuning___TMLR__2_.pdf) got accepted at the Transaction of Machine Learning Research (TMLR).
