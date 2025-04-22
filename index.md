@@ -29,6 +29,7 @@ Through the [MLC community](https://mlcollective.org/community/), I was fortunat
 ## News and Timeline
 
 ### 2025
+- **April**: Started as a Research Assistant at the [Interpretable Neural Networks Lab](https://baulab.info/) under David Bau.
 - **April**: Published our first blog post announcing [MixtureVitae](https://aurora-lm.github.io/posts/mixturevitae/) — the most permissive dataset released till date as part of the project [Aurora-M2](https://aurora-lm.github.io/) - a family of EU AI Act-compliant, multimodal, multilingual, and multidomain mixture-of-experts (MoE) models.
 
 ### 2024
