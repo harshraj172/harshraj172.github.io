@@ -37,7 +37,7 @@ Through the [MLC community](https://mlcollective.org/community/), I was fortunat
 - **December**: Our work on [Mitigating Unsafe Feedback with Learning Constraints](https://arxiv.org/abs/2409.12914v2) got accepted for poster presentation at AAAI-25 Workshop on Artificial Intelligence for Cyber Security.
 - **September**: Published my first Lesswrong blog on [Interpreting the effects of Jailbreaking in LLMs](https://www.lesswrong.com/posts/FNuBEJnbtEEdCEAnT/interpreting-the-effects-of-jailbreak-prompts-in-llms).
 - **June**: Released the preprint of our work on [Reverse Preference Attack](https://arxiv.org/abs/2409.12914), led by Domenic.
-- **January**: Joined VijilAI as an Applied Scientist.
+- **January**: Joined [VijilAI](https://www.vijil.ai/) as an Applied Scientist.
 - **January**: Our work on Vision and Language Navigation ranked 3rd on the [R2R leaderboard](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270). Team Name: **MLR_Lab_DTU**.
 
 ### 2023
