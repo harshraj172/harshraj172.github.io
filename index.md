@@ -18,9 +18,9 @@ I am Harsh Raj, currently pursuing a Master of Science in Computer Science at No
 I am passionate about making language models safe, useful, and controllable. Over the past few years, I have taken my first steps as a researcher, thanks to some wonderful collaborators and mentors.
 
 I am currently working with [David Bau](https://baulab.info/) and [Robert West](https://dlab.epfl.ch/people/west/) on interpretability of reasoning models.
-Most recently, I co-led the **Preventing Adversarial Reward Optimization** project (in collaboration with [Dom](https://scholar.google.com/citations?user=80aJAKYAAAAJ&hl=en)) at the [AI Safety Camp](https://www.aisafety.camp/). As an Applied Scientist at [VijilAI](https://www.vijil.ai/), I worked alongside [Leif](https://boltzmann-brain.github.io/) to develop a database of red-teaming prompts.
+Most recently, I led the **Preventing Adversarial Reward Optimization** project at the [AI Safety Camp](https://www.aisafety.camp/). As an Applied Scientist at [VijilAI](https://www.vijil.ai/), I worked alongside [Leif](https://boltzmann-brain.github.io/) to develop a database of red-teaming prompts.
 
-Previously, I collaborated with [Subho](https://www.subhomajumdar.com/), Dom, and [Vipul](https://vipulgupta1011.github.io/) on [evaluating](https://arxiv.org/abs/2211.05853) and [improving](https://arxiv.org/abs/2502.15924) the consistency of language models.  
+Previously, I collaborated with [Subho](https://www.subhomajumdar.com/), [Dom](https://scholar.google.com/citations?user=80aJAKYAAAAJ&hl=en), and [Vipul](https://vipulgupta1011.github.io/) on [evaluating](https://arxiv.org/abs/2211.05853) and [improving](https://arxiv.org/abs/2502.15924) the consistency of language models.  
 
 Through the [MLC community](https://mlcollective.org/community/), I was fortunate to work with [Yash](https://www.yash-sharma.com/) and [Laura](https://www.linkedin.com/in/lfee-schneider/?locale=en_US) on quantifying the robustness transfer from pretraining to downstream tasks.
 
