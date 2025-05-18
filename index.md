@@ -31,9 +31,9 @@ Through the [MLC community](https://mlcollective.org/community/), I was fortunat
 ### 2025
 - **April**: Started as a Research Assistant at the [Interpretable Neural Networks Lab](https://baulab.info/) under David Bau.
 - **April**: Published our first blog post announcing [MixtureVitae](https://aurora-lm.github.io/posts/mixturevitae/) — the most permissive dataset released till date as part of the project [Aurora-M2](https://aurora-lm.github.io/) - a family of EU AI Act-compliant, multimodal, multilingual, and multidomain mixture-of-experts (MoE) models.
+- **January**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://arxiv.org/abs/2502.15924) got accepted at the Transaction of Machine Learning Research (TMLR).
 
 ### 2024
-- **December**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://arxiv.org/abs/2502.15924) got accepted at the Transaction of Machine Learning Research (TMLR).
 - **December**: Our work on [Mitigating Unsafe Feedback with Learning Constraints](https://arxiv.org/abs/2409.12914v2) got accepted for poster presentation at AAAI-25 Workshop on Artificial Intelligence for Cyber Security.
 - **September**: Published my first Lesswrong blog on [Interpreting the effects of Jailbreaking in LLMs](https://www.lesswrong.com/posts/FNuBEJnbtEEdCEAnT/interpreting-the-effects-of-jailbreak-prompts-in-llms).
 - **June**: Released the preprint of our work on [Reverse Preference Attack](https://arxiv.org/abs/2409.12914), led by Domenic.
