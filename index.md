@@ -29,6 +29,7 @@ Through the [MLC community](https://mlcollective.org/community/), I was fortunat
 ## News and Timeline
 
 ### 2025
+- **May**: Launched our project [terminal-bench](https://github.com/laude-institute/terminal-bench), which was recognized by Anthropic as a benchmark for measuring AI agent autonomy during the release of Claude-4.
 - **April**: Started as a Research Assistant at the [Interpretable Neural Networks Lab](https://baulab.info/) under David Bau.
 - **April**: Published our first blog post announcing [MixtureVitae](https://aurora-lm.github.io/posts/mixturevitae/) — the most permissive dataset released till date as part of the project [Aurora-M2](https://aurora-lm.github.io/) - a family of EU AI Act-compliant, multimodal, multilingual, and multidomain mixture-of-experts (MoE) models.
 - **January**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://arxiv.org/abs/2502.15924) got accepted at the Transaction of Machine Learning Research (TMLR).
