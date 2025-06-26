@@ -29,10 +29,10 @@ Through the [MLC community](https://mlcollective.org/community/), I was fortunat
 ## News and Timeline
 
 ### 2025
-- **May**: Launched our project [terminal-bench](https://github.com/laude-institute/terminal-bench), which was recognized by Anthropic as a benchmark for measuring AI agent autonomy during the release of Claude-4.
-- **April**: Started as a Research Assistant at the [Interpretable Neural Networks Lab](https://baulab.info/) under David Bau.
-- **April**: Published our first blog post announcing [MixtureVitae](https://aurora-lm.github.io/posts/mixturevitae/) — the most permissive dataset released till date as part of the project [Aurora-M2](https://aurora-lm.github.io/) - a family of EU AI Act-compliant, multimodal, multilingual, and multidomain mixture-of-experts (MoE) models.
-- **January**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://arxiv.org/abs/2502.15924) got accepted at the Transaction of Machine Learning Research (TMLR).
+* **May**: Contributed to the project [terminal-bench](https://github.com/laude-institute/terminal-bench).
+* **April**: Started working as a Research Assistant at the [Interpretable Neural Networks Lab](https://baulab.info/) under David Bau.
+* **April**: Published our first blog post announcing [MixtureVitae](https://aurora-lm.github.io/posts/mixturevitae/), the most permissively licensed dataset released to date, as part of the [Aurora-M2](https://aurora-lm.github.io/) project.
+* **January**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://arxiv.org/abs/2502.15924) was accepted at *Transactions of Machine Learning Research (TMLR)*.
 
 ### 2024
 - **December**: Our work on [Mitigating Unsafe Feedback with Learning Constraints](https://arxiv.org/abs/2409.12914v2) got accepted for poster presentation at AAAI-25 Workshop on Artificial Intelligence for Cyber Security.
