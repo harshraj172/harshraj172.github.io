@@ -29,7 +29,7 @@ Through the [MLC community](https://mlcollective.org/community/), I was fortunat
 ## News and Timeline
 
 ### 2025
-* **May**: Contributed to the project [terminal-bench](https://github.com/laude-institute/terminal-bench).
+* **May**: Core contributor and maintainer of [terminal-bench](https://github.com/laude-institute/terminal-bench).
 * **April**: Started working as a Research Assistant at the [Interpretable Neural Networks Lab](https://baulab.info/) under David Bau.
 * **April**: Published our first blog post announcing [MixtureVitae](https://aurora-lm.github.io/posts/mixturevitae/), the most permissively licensed dataset released to date, as part of the [Aurora-M2](https://aurora-lm.github.io/) project.
 * **January**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://arxiv.org/abs/2502.15924) was accepted at *Transactions of Machine Learning Research (TMLR)*.
