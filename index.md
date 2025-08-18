@@ -32,7 +32,7 @@ Through the [MLC community](https://mlcollective.org/community/), I was fortunat
 * **June**: Led the [Swiss AI Large Grant proposal](https://www.swiss-ai.org/) in collaboration with [Prof. Robert West](https://dlab.epfl.ch/people/west/). Secured CHF 61,000 and 200K GPU hours on the [Alps Supercomputer](https://www.cscs.ch/computers/alps) for the project *"From Training a Model to Raising a Model: A Path Toward Safe AI via Student–Teacher Pretraining"*.
 * **May**: Core contributor and maintainer of [terminal-bench](https://github.com/laude-institute/terminal-bench).
 * **April**: Started working as a Research Assistant at the [Interpretable Neural Networks Lab](https://baulab.info/) under David Bau.
-* **April**: Resleased [MixtureVitae](https://aurora-lm.github.io/posts/mixturevitae/), the best-performing and permissively licensed dataset to date, even outperforming some non-permissive sources such as Fineweb-Edu.
+* **April**: Resleased [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae), the best-performing and permissively licensed dataset to date, even outperforming some non-permissive sources such as Fineweb-Edu.
 * **January**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://arxiv.org/abs/2502.15924) was accepted at *Transactions of Machine Learning Research (TMLR)*.
 
 ### 2024
