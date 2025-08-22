@@ -1,6 +1,6 @@
 ---
 layout: default
-description: I'm Harsh Raj and I work on AI Safety and Alignment. More details inside!
+description: I'm Harsh Raj and I'm interested in Language Agents, Language Model Evaluation, and Software Engineering. More details inside!
 ---
 
 <!-- (comment) the image below can be found in img folder of this very project-->
@@ -13,26 +13,23 @@ description: I'm Harsh Raj and I work on AI Safety and Alignment. More details i
 <img src="/img/people/orange_lena-min.jpg" name="readmore_1" width=204px height=240px></a> -->
 
 
-I am Harsh Raj, currently pursuing a Master of Science in Computer Science at Northeastern University, Boston. I am also the __Co-Founder__ of the open-source organization [__Ontocord AI__](https://www.ontocord.ai/) and a __Researcher__ at [__AI Risk and Vulnerability Alliance (ARVA)__](https://avidml.org/arva/). Previously, I worked as an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/), where I primarily worked on building their LLM evaluation and guardrails service.
+I am Harsh Raj, currently pursuing a M.S. in Computer Science at Northeastern University, Boston. I am also the __Co-Founder__ of the open-source organization [__Ontocord AI__](https://www.ontocord.ai/). Previously, I worked as an __Applied Scientist__ at [__VijilAI__](https://www.vijil.ai/).
 
-I am passionate about making language models safe, useful, and controllable. Over the past few years, I have taken my first steps as a researcher, thanks to some wonderful collaborators and mentors.
+My research interests focus on language agents, language model evaluation, and software engineering. Over the past few years, I have been fortunate to grow as a researcher with the support of wonderful collaborators and mentors.
 
-I am currently working with [David Bau](https://baulab.info/) and [Robert West](https://dlab.epfl.ch/people/west/) on interpretability of reasoning models.
-Most recently, I led the **Preventing Adversarial Reward Optimization** project at the [AI Safety Camp](https://www.aisafety.camp/). As an Applied Scientist at [VijilAI](https://www.vijil.ai/), I worked alongside [Leif](https://boltzmann-brain.github.io/) to develop a database of red-teaming prompts.
+Most recently, I led the [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT) project at Ontocord AI alongside [Huu Nguyen](https://scholar.google.com/citations?user=HLWECfMAAAAJ&hl=en), developing state-of-the-art pretraining corpora for LLMs. Our work produced the first permissible dataset achieving results comparable to or even surpassing non-permissible sources (paper coming soon).
 
-Previously, I collaborated with [Subho](https://www.subhomajumdar.com/), [Dom](https://scholar.google.com/citations?user=80aJAKYAAAAJ&hl=en), and [Vipul](https://vipulgupta1011.github.io/) on [evaluating](https://arxiv.org/abs/2211.05853) and [improving](https://arxiv.org/abs/2502.15924) the consistency of language models.  
-
-Through the [MLC community](https://mlcollective.org/community/), I was fortunate to work with [Yash](https://www.yash-sharma.com/) and [Laura](https://www.linkedin.com/in/lfee-schneider/?locale=en_US) on quantifying the robustness transfer from pretraining to downstream tasks.
+In addition, I am a core contributor and maintainer of [Terminal-Bench](https://www.tbench.ai/contributors) and collaborate with Professor [Ludwig Schmidt](https://profiles.stanford.edu/ludwig-schmidt)’s lab.
 
 <!-- <u>I am actively looking for a PhD in AI Safety starting Fall 2025.</u> -->
 
 ## News and Timeline
 
 ### 2025
-* **June**: Led the [Swiss AI Large Grant proposal](https://www.swiss-ai.org/) in collaboration with [Prof. Robert West](https://dlab.epfl.ch/people/west/). Secured CHF 61,000 and 200K GPU hours on the [Alps Supercomputer](https://www.cscs.ch/computers/alps) for the project *"From Training a Model to Raising a Model: A Path Toward Safe AI via Student–Teacher Pretraining"*.
+* **August**: Released [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT), the first permissibly licensed pretraining corpus to achieve performance comparable to or even surpassing some non-permissive sources. *(paper coming soon)*
+* **June**: Led the [Swiss AI Large Grant proposal](https://www.swiss-ai.org/) in collaboration with [Prof. Robert West](https://dlab.epfl.ch/people/west/). Secured CHF 61K and 200K GPU hours on the [Alps Supercomputer](https://www.cscs.ch/computers/alps).
 * **May**: Core contributor and maintainer of [terminal-bench](https://github.com/laude-institute/terminal-bench).
-* **April**: Started working as a Research Assistant at the [Interpretable Neural Networks Lab](https://baulab.info/) under David Bau.
-* **April**: Resleased [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae), the best-performing and permissively licensed dataset to date, even outperforming some non-permissive sources such as Fineweb-Edu.
+* **April**: Started as a Research Assistant at the [Interpretable Neural Networks Lab](https://baulab.info/) under David Bau.
 * **January**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://arxiv.org/abs/2502.15924) was accepted at *Transactions of Machine Learning Research (TMLR)*.
 
 ### 2024
