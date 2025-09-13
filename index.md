@@ -27,7 +27,7 @@ In addition, I am the co-author and maintainer of [Terminal-Bench](https://www.t
 
 ### 2025
 * **August**: Released [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT), the first permissibly licensed pretraining corpus to achieve performance comparable to or even surpassing some non-permissive sources. *(paper coming soon)*
-* **June**: Led the [Swiss AI Large Grant proposal](https://www.swiss-ai.org/) in collaboration with [Prof. Robert West](https://dlab.epfl.ch/people/west/). Secured CHF 61K and 200K GPU hours on the [Alps Supercomputer](https://www.cscs.ch/computers/alps).
+* **June**: Led the [Swiss AI Large Grant proposal](https://www.swiss-ai.org/) under [Prof. Robert West](https://dlab.epfl.ch/people/west/). Secured CHF 61K and 200K GPU hours on the [Alps Supercomputer](https://www.cscs.ch/computers/alps).
 * **May**: Released [terminal-bench](https://www.tbench.ai/).
 * **April**: Started as a Research Assistant at the [Interpretable Neural Networks Lab](https://baulab.info/) advised by [Prof. David Bau](https://baulab.info/).
 * **January**: Our work on [Improving Consistency in Large Language Models through Chain of Guidance](https://arxiv.org/abs/2502.15924) was accepted at *Transactions of Machine Learning Research (TMLR)*.
