@@ -19,13 +19,14 @@ My research interests focus on language agents, language model evaluation, and s
 
 Most recently, I led the [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT) project at Ontocord AI alongside [Huu Nguyen](https://scholar.google.com/citations?user=HLWECfMAAAAJ&hl=en), developing state-of-the-art pretraining corpora for LLMs. Our work produced the first permissible dataset achieving results comparable to or even surpassing non-permissible sources *(paper coming soon)*.
 
-In addition, I am the co-author and maintainer of [Terminal-Bench](https://www.tbench.ai/contributors) and collaborate with Professor [Ludwig Schmidt](https://profiles.stanford.edu/ludwig-schmidt)’s lab.
+In addition, I am the co-author of [harbor](https://github.com/laude-institute/harbor) and [Terminal-Bench](https://www.tbench.ai/contributors) and collaborate with Professor [Ludwig Schmidt](https://profiles.stanford.edu/ludwig-schmidt)’s lab.
 
 <!-- <u>I am actively looking for a PhD in AI Safety starting Fall 2025.</u> -->
 
 ## News and Timeline
 
 ### 2025
+* **November**: Released [harbor](https://github.com/laude-institute/harbor) for massive parallelization in agent-sandbox execution used for training and evaluating AI agents.
 * **August**: Released [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT), the first permissibly licensed pretraining corpus to achieve performance comparable to or even surpassing some non-permissive sources. *(paper coming soon)*
 * **June**: Led the [Swiss AI Large Grant proposal](https://www.swiss-ai.org/) under [Prof. Robert West](https://dlab.epfl.ch/people/west/). Secured CHF 61K and 200K GPU hours on the [Alps Supercomputer](https://www.cscs.ch/computers/alps).
 * **May**: Released [terminal-bench](https://www.tbench.ai/).
