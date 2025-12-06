@@ -17,7 +17,7 @@ I am Harsh Raj, currently pursuing a M.S. in Computer Science at Northeastern Un
 
 My research interests focus on language agents, language model evaluation, and software engineering. Over the past few years, I have been fortunate to grow as a researcher with the support of wonderful collaborators and mentors.
 
-Most recently, I led the [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT) project at Ontocord AI alongside [Huu Nguyen](https://scholar.google.com/citations?user=HLWECfMAAAAJ&hl=en), developing state-of-the-art pretraining corpora for LLMs. Our work produced the first permissible dataset achieving results comparable to or even surpassing non-permissible sources *(paper coming soon)*.
+Most recently, I led the [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT) project at Ontocord AI alongside [Huu Nguyen](https://scholar.google.com/citations?user=HLWECfMAAAAJ&hl=en), developing state-of-the-art pretraining corpora for LLMs. Our work produced the first permissible dataset achieving results comparable to or even surpassing non-permissible sources *([paper](https://arxiv.org/abs/2509.25531))*.
 
 In addition, I am the co-author of [harbor](https://github.com/laude-institute/harbor) and [Terminal-Bench](https://www.tbench.ai/contributors) and collaborate with Professor [Ludwig Schmidt](https://profiles.stanford.edu/ludwig-schmidt)’s lab.
 
