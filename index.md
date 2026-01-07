@@ -25,6 +25,9 @@ In addition, I am the co-author of [harbor](https://github.com/laude-institute/h
 
 ## News and Timeline
 
+### 2026
+* **January**: Started as a Research Intern for Spring 2026 at [BespokeLabsAI](https://www.bespokelabs.ai/).
+
 ### 2025
 * **November**: Released [harbor](https://github.com/laude-institute/harbor) for massive parallelization in agent-sandbox execution used for training and evaluating AI agents.
 * **August**: Released [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT), the first permissibly licensed pretraining corpus to achieve performance comparable to or even surpassing some non-permissive sources. *(paper coming soon)*
