@@ -19,7 +19,7 @@ My research interests focus on language agents, language model evaluation, and s
 
 Most recently, I led the [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT) project at Ontocord AI alongside [Huu Nguyen](https://scholar.google.com/citations?user=HLWECfMAAAAJ&hl=en), developing state-of-the-art pretraining corpora for LLMs. Our work produced the first permissible dataset achieving results comparable to or even surpassing non-permissible sources *([paper](https://arxiv.org/abs/2509.25531))*.
 
-In addition, I am the co-author of [harbor](https://github.com/laude-institute/harbor) and [Terminal-Bench](https://www.tbench.ai/contributors) and collaborate with Professor [Ludwig Schmidt](https://profiles.stanford.edu/ludwig-schmidt)’s lab.
+In addition, I am the core author of [Terminal-Bench](https://www.tbench.ai/contributors) and [Harbor](https://github.com/laude-institute/harbor) and collaborate with Professor [Ludwig Schmidt’s](https://profiles.stanford.edu/ludwig-schmidt) lab.
 
 <!-- <u>I am actively looking for a PhD in AI Safety starting Fall 2025.</u> -->
 
