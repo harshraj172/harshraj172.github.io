@@ -1,0 +1,20 @@
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
+  img: openthoughts_agent.png
+  title: "OpenThoughts-Agent: Data Recipes for Agentic Models"
+  authors: "Negin Raoof, Richard Zhuang, Marianna Nezhurina, Etash Guha, ..., <u>Harsh Raj</u>, et al."
+  url: "https://arxiv.org/abs/2606.24855"
+  abstract: >
+    Open data curation for training agentic models lags far behind the closed pipelines used by frontier labs. OpenThoughts-Agent (OT-Agent) closes this gap with a fully open data recipe for agentic post-training. Through over 100 controlled ablations, we assemble a 100K-example training set and fine-tune Qwen3-32B to reach 44.8% average accuracy across seven agentic benchmarks, a 3.9 point improvement over the strongest prior open-data agentic model.
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
+  img: agent_consistency.png
+  title: "Consistency as a Testable Property: Statistical Methods to Evaluate AI Agent Reliability"
+  authors: "<u>Harsh Raj</u>, Niranjan Orkat, Suvrorup Mukherjee, Aritra Guha, Cheryl Flynn, Subhabrata Majumdar"
+  url: "https://arxiv.org/abs/2605.10516"
+  abstract: >
+    Standard performance benchmarks tell us how often an AI agent succeeds, but not how reliably it behaves. We frame consistency as a testable statistical property and develop methods to measure agent reliability across semantic variations of a task and across repeated trajectories. We show that trajectory-level consistency metrics surface agent vulnerabilities far more effectively than aggregate accuracy, enabling sharper diagnosis of architectural weaknesses before deployment in demanding applications.
