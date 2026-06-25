@@ -5,11 +5,11 @@ description: I'm Harsh Raj and I'm interested in Language Agents, Language Model
 
 ![Harsh Raj](./img/people/harsh_raj_gh.png){: style="float: right; margin: 0px 20px; width: 220px; border-radius: 50%" name="profile"}
 
-I am Harsh Raj, a M.S. student in Computer Science at Northeastern University, Boston, and currently a __Machine Learning Research Intern__ at [__Scale AI__](https://scale.com/) in New York City. I am also the __Co-Founder__ of the open-source organization [__Ontocord AI__](https://www.ontocord.ai/), and previously worked as an __Applied Scientist__ at [__Vijil AI__](https://www.vijil.ai/).
+I am Harsh Raj, a M.S. student in Computer Science at Northeastern University, Boston, and currently a __Machine Learning Research Intern__ at [__Scale AI__](https://scale.com/) in NYC.
 
 My research centers on __language agents__, __language model evaluation__, and __software engineering__ — building systems that are not just capable, but reliable and reproducible. Over the past few years I have been fortunate to grow as a researcher with the support of generous collaborators and mentors.
 
-Most recently, I led the [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT) project at Ontocord AI alongside [Huu Nguyen](https://scholar.google.com/citations?user=HLWECfMAAAAJ&hl=en), developing state-of-the-art pretraining corpora for LLMs. Our work produced the first permissible dataset achieving results comparable to or even surpassing non-permissible sources *([paper](https://arxiv.org/abs/2509.25531))*.
+Most recently, I led the [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT) project, developing state-of-the-art pretraining corpora for LLMs. Our work produced the first permissible dataset achieving results comparable to or even surpassing non-permissible sources *([paper](https://arxiv.org/abs/2509.25531))*.
 
 In addition, I am the core author of [Terminal-Bench](https://www.tbench.ai/contributors) and [Harbor](https://github.com/laude-institute/harbor) and collaborate with Professor [Ludwig Schmidt’s](https://profiles.stanford.edu/ludwig-schmidt) lab.
 
@@ -20,12 +20,12 @@ In addition, I am the core author of [Terminal-Bench](https://www.tbench.ai/cont
 ### 2026
 * **June**: Serving as a reviewer for the [NeurIPS 2026](https://neurips.cc/) Datasets & Benchmarks (Evaluations) Track.
 * **June**: Released [OpenThoughts-Agent: Data Recipes for Agentic Models](https://arxiv.org/abs/2606.24855), an open data recipe for agentic post-training.
-* **May**: Started as a Machine Learning Research Intern at [Scale AI](https://scale.com/), New York City.
+* **May**: Started as a Machine Learning Research Intern at [Scale AI](https://scale.com/), NYC.
 * **May**: Released [Consistency as a Testable Property: Statistical Methods to Evaluate AI Agent Reliability](https://arxiv.org/abs/2605.10516).
 * **January**: Started as a Research Intern for Spring 2026 at [Bespoke Labs](https://www.bespokelabs.ai/).
 
 ### 2025
-* **November**: Released [harbor](https://github.com/laude-institute/harbor) for massive parallelization in agent-sandbox execution used for training and evaluating AI agents.
+* **November**: Released [Harbor](https://github.com/laude-institute/harbor) for massive parallelization in agent-sandbox execution used for training and evaluating AI agents.
 * **August**: Released [MixtureVitae](https://huggingface.co/datasets/ontocord/MixtureVitae-300BT), the first permissibly licensed pretraining corpus to achieve performance comparable to or even surpassing some non-permissive sources *([paper](https://arxiv.org/abs/2509.25531))*.
 * **June**: Led the [Swiss AI Large Grant proposal](https://www.swiss-ai.org/) under [Prof. Robert West](https://dlab.epfl.ch/people/west/). Secured CHF 61K and 200K GPU hours on the [Alps Supercomputer](https://www.cscs.ch/computers/alps).
 * **May**: Released [terminal-bench](https://www.tbench.ai/).
