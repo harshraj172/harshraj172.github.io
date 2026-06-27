@@ -2,6 +2,19 @@
   paper-type: inproceedings
   selected: y
   year: 2026
+  img: mixturevitae.png
+  title: "MixtureVitae: Open Web-Scale Pretraining Dataset With High Quality Instruction and Reasoning Data Built from Permissive-First Text Sources"
+  authors: "Huu Nguyen*, Victor May*, <u>Harsh Raj</u>*, Marianna Nezhurina, Yishan Wang, ..., Jenia Jitsev"
+  conf_name: "TMLR (Featured / J2C &rarr; ICML)"
+  conf_year: 2026
+  url: "https://openreview.net/forum?id=SyCcUNUUMf"
+  code: "https://github.com/ontocord/mixturevitae"
+  abstract: >
+    We present MixtureVitae, a 422-billion-token open-access pretraining corpus built to minimize copyright and legal risk while delivering strong downstream performance. It follows a permissive-first, risk-mitigated sourcing strategy that combines public-domain and permissively licensed text (e.g., CC-BY/Apache) with carefully justified low-risk additions, and front-loads synthetic instruction and reasoning data typically scarce in permissive web corpora. Under the open-sci-ref protocol across 130M-1.7B parameters, models trained on MixtureVitae consistently outperform other permissive datasets, approach FineWeb-Edu and DCLM at the 1.7B/300B scale, and a 1.7B model matches or exceeds a strong instruction-tuned baseline on GSM8K, HumanEval, and MBPP despite using over 36x fewer tokens. Accepted at TMLR with Featured Certification and Journal-to-Conference Certification (to be presented at ICML 2026, Seoul).
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
   img: openthoughts_agent.png
   title: "OpenThoughts-Agent: Data Recipes for Agentic Models"
   authors: "Negin Raoof, Richard Zhuang, Marianna Nezhurina, Etash Guha, ..., <u>Harsh Raj</u>, et al."

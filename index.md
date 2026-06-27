@@ -22,6 +22,7 @@ In addition, I am the core author of [Terminal-Bench](https://www.tbench.ai/cont
 * **June**: Released [OpenThoughts-Agent: Data Recipes for Agentic Models](https://arxiv.org/abs/2606.24855), an open data recipe for agentic post-training.
 * **May**: Started as a Machine Learning Research Intern at [Scale AI](https://scale.com/), NYC.
 * **May**: Released [Consistency as a Testable Property: Statistical Methods to Evaluate AI Agent Reliability](https://arxiv.org/abs/2605.10516).
+* **March**: [MixtureVitae](https://openreview.net/forum?id=SyCcUNUUMf) was accepted at *Transactions of Machine Learning Research (TMLR)* with a **Featured Certification** and **Journal-to-Conference Certification**, to be presented at [**ICML 2026**](https://icml.cc/virtual/2026/poster/68836), Seoul.
 * **January**: Started as a Research Intern for Spring 2026 at [Bespoke Labs](https://www.bespokelabs.ai/).
 
 ### 2025
