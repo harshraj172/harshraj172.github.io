@@ -2,6 +2,19 @@
   paper-type: inproceedings
   selected: y
   year: 2026
+  img: model_or_harness.png
+  title: "Model or Harness? An Interaction-Centric Taxonomy for Localizing Agent Failures"
+  authors: "<u>Harsh Raj</u>, Vipul Gupta, Anas Mahmoud, Razvan-Gabriel Dumitru, Darvin Yi, Aakash Sabharwal, Yunzhong He"
+  conf_name: Scale AI
+  conf_year: 2026
+  url: "https://arxiv.org/abs/2607.28802"
+  blog: "https://www.alphaxiv.org/abs/2607.28802"
+  abstract: >
+    Existing evaluations often reduce agent failures to system-level outcomes, obscuring where the fault originated and which intervention would actually improve the next iteration of the agent system. We introduce an interaction-centric taxonomy that localizes agent failures to the interaction in which they originate and identifies the component responsible. The taxonomy organizes 41 failure modes by assigning each failure to an edge between two components and a fault side indicating where the repair belongs, making it directly actionable: model-side failures identify targets for post-training, harness-side failures point to scaffolding and tool-integration fixes, and environment or grader failures reveal evaluation conditions that must be redesigned. We ground the taxonomy in worked examples from public benchmarks, model system cards, published reports, and logged agent trajectories, and evaluate its operational reproducibility using independent reasoning agents as judges, with the strongest judge reaching Cohen's kappa = 0.76 against human category labels.
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
   img: mixturevitae.png
   title: "MixtureVitae: Open Web-Scale Pretraining Dataset With High Quality Instruction and Reasoning Data Built from Permissive-First Text Sources"
   authors: "Huu Nguyen*, Victor May*, <u>Harsh Raj</u>*, Marianna Nezhurina, Yishan Wang, ..., Jenia Jitsev"

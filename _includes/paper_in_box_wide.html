@@ -2,75 +2,118 @@
 
 <style>
 
+  .fullCard {
+    max-width: 700px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    margin: 14px auto;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 18px;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .fullCard:hover {
+    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.12);
+    transform: translateY(-2px);
+  }
+  .paper_thumb_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #thumbnail {
+    border-radius: 6px;
+    border: 1px solid #eef0f2;
+  }
+
   .paper_title {
-    text-align: center;
-    background-color: rgba(45, 45, 45, 0.1);
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    line-height: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    color: #1c2027;
   }
   .paper_authors {
-    font-size: 16px;
-    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
     margin-bottom: 10px;
   }
-  p {
-    text-align: justify;
-  }
-
-  #thumbnail {
-    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
-  }
-  #thumbnail:hover {
-    box-shadow: 0 12px 24px rgba(0,0,0,0.19), 0 8px 8px rgba(0,0,0,0.23);
-  }
-
-  .fullCard {
-    width: 700px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 10px 5px;
-    padding: 4px;
-    display: grid;
-    grid-template-columns: 180px 520px;
-  }
-  .cardContent {
-    padding: 10px;
-
-  }
-  .paper_logo {
-  float: left;
-  padding: 10px;
-  }
-
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .links {
+  .cardContent p {
     text-align: left;
-    color: black;
-    margin-right: 8px;
-    padding: 4px;
-    margin-bottom: 0px;
+  }
 
+  .cardContent {
+    min-width: 0;
+  }
+
+  .card_meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px solid #f0f1f3;
+    padding-top: 10px;
+    margin-top: 6px;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .links a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #2757c9;
+    border: 1px solid #d7e0f5;
+    background: #f4f7fe;
+    border-radius: 999px;
+    padding: 4px 12px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .links a:hover {
+    background-color: #2757c9;
+    color: #fff;
+    text-decoration: none;
   }
   .conf_name {
-    float: right;
-    font-family: sans-serif;
-    padding: 4px;
-    margin-bottom: 0px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: #8a6d1f;
+    background: #fbf3da;
+    border-radius: 999px;
+    padding: 4px 12px;
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: 600px) {
+    .fullCard {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .paper_title, .paper_authors {
+      text-align: center;
+    }
+    .card_meta {
+      justify-content: center;
+    }
   }
 
 </style>
 
-<div class="fullCard" id="thumbnail" >
-    <div>
+<div class="fullCard">
+    <div class="paper_thumb_wrap">
           <a href="{{ include.paper.url }}" target="_blank">
-              <img src="/img/paper/{{ include.paper.img }} "
-                   alt="" style="max-height:120px; max-width:180px; margin-top:20px;" class="center"/>
+              <img id="thumbnail" src="{{ "/img/paper/" | prepend: site.baseurl }}{{ include.paper.img }}"
+                   alt="" style="max-height:120px; max-width:160px;"/>
           </a>
     </div>
   <div class="cardContent">
@@ -82,14 +125,14 @@
     <div class="paper_authors">
         {{ include.paper.authors }}
     </div>
-      <hr>
 
-      <hr style="margin-bottom:5px">
+    <div class="card_meta">
+      <div class="links">
+        <a href="{{ include.paper.url }}" target="_blank">Paper</a>
+        {% if include.paper.code %}<a href="{{ include.paper.code }}" target="_blank">Code</a>{% endif %}
+        {% if include.paper.blog %}<a href="{{ include.paper.blog }}" target="_blank">Blog</a>{% endif %}
+      </div>
       {% if include.paper.conf_name %}<div class="conf_name">{{ include.paper.conf_name }} {{ include.paper.conf_year }}</div>{% endif %}
-    <div class="links">
-      <a href="{{ include.paper.url }}" target="_blank" class="links">Paper</a>
-        {% if include.paper.code %}<a href="{{ include.paper.code }}" target="_blank" class="links">Code</a>{% endif %}
-        {% if include.paper.blog %}<a href="{{ include.paper.blog }}" target="_blank" class="links">Blog</a>{% endif %}
     </div>
 
   </div>
