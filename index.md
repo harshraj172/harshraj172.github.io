@@ -9,8 +9,6 @@ I am Harsh Raj, a M.S. student in Computer Science at Northeastern University, B
 
 My research centers on __language agents__, __language model evaluation__, and __software engineering__ — building systems that are not just capable, but reliable and reproducible. Over the past few years I have been fortunate to grow as a researcher with the support of generous collaborators and mentors.
 
-Most recently, I published [Model or Harness? An Interaction-Centric Taxonomy for Localizing Agent Failures](https://arxiv.org/abs/2607.28802) during my internship at Scale AI, introducing an interaction-centric taxonomy of 41 agent failure modes. The paper was warmly received on social media and featured by [DAIR.AI](https://x.com/dair_ai), [AlphaXiv](https://www.alphaxiv.org/abs/2607.28802), and [Hugging Face Papers](https://huggingface.co/papers/2607.28802).
-
 Previously, I led the [MixtureVitae](https://openreview.net/forum?id=SyCcUNUUMf) project, developing state-of-the-art pretraining corpora for LLMs.
 
 In addition, I am the core author of [Terminal-Bench](https://www.tbench.ai/contributors) and [Harbor](https://github.com/laude-institute/harbor) and collaborate with Professor [Ludwig Schmidt’s](https://profiles.stanford.edu/ludwig-schmidt) lab.
@@ -21,7 +19,6 @@ In addition, I am the core author of [Terminal-Bench](https://www.tbench.ai/cont
 
 ### 2026
 * **September**: Our paper [Model or Harness? An Interaction-Centric Taxonomy for Localizing Agent Failures](https://arxiv.org/abs/2607.28802) got a lot of love on Twitter/X, featured by [DAIR.AI](https://x.com/dair_ai), [AlphaXiv](https://www.alphaxiv.org/abs/2607.28802), and [Hugging Face Papers](https://huggingface.co/papers/2607.28802).
-* **July**: Published [Model or Harness? An Interaction-Centric Taxonomy for Localizing Agent Failures](https://arxiv.org/abs/2607.28802), introducing an interaction-centric taxonomy of 41 agent failure modes, during my internship at [Scale AI](https://scale.com/).
 * **June**: Serving as a reviewer for the [NeurIPS 2026](https://neurips.cc/) Datasets & Benchmarks (Evaluations) Track.
 * **June**: Released [OpenThoughts-Agent: Data Recipes for Agentic Models](https://arxiv.org/abs/2606.24855), an open data recipe for agentic post-training.
 * **May**: Started as a Machine Learning Research Intern at [Scale AI](https://scale.com/), NYC.
