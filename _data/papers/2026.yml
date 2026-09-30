@@ -2,15 +2,73 @@
   paper-type: inproceedings
   selected: y
   year: 2026
+  img: rca_search.png
+  title: "Root-Cause Attribution Is a Search Problem: Continual Search for Long-Horizon Agent Failures"
+  authors: "<u>Harsh Raj</u>, David Lee, Anas Mahmoud, Renxiong Wang, Razvan-Gabriel Dumitru, Chenguang Wang, Tong Zhao, Yunzhong He, Darvin Yi, Vipul Gupta"
+  venue: "arXiv, 2026"
+  url: "https://arxiv.org/abs/2609.13463"
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
   img: model_or_harness.png
   title: "Model or Harness? An Interaction-Centric Taxonomy for Localizing Agent Failures"
   authors: "<u>Harsh Raj</u>, Vipul Gupta, Anas Mahmoud, Razvan-Gabriel Dumitru, Darvin Yi, Aakash Sabharwal, Yunzhong He"
   conf_name: Scale AI
   conf_year: 2026
+  venue: "arXiv, 2026"
   url: "https://arxiv.org/abs/2607.28802"
   blog: "https://www.alphaxiv.org/abs/2607.28802"
   abstract: >
     Existing evaluations often reduce agent failures to system-level outcomes, obscuring where the fault originated and which intervention would actually improve the next iteration of the agent system. We introduce an interaction-centric taxonomy that localizes agent failures to the interaction in which they originate and identifies the component responsible. The taxonomy organizes 41 failure modes by assigning each failure to an edge between two components and a fault side indicating where the repair belongs, making it directly actionable: model-side failures identify targets for post-training, harness-side failures point to scaffolding and tool-integration fixes, and environment or grader failures reveal evaluation conditions that must be redesigned. We ground the taxonomy in worked examples from public benchmarks, model system cards, published reports, and logged agent trajectories, and evaluate its operational reproducibility using independent reasoning agents as judges, with the strongest judge reaching Cohen's kappa = 0.76 against human category labels.
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
+  img: harbor_index.png
+  title: "Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation"
+  authors: "Lin Shi, Haowei Lin, Zixuan Zhu, ..., <u>Harsh Raj</u>, ..., Mike Merrill, Ludwig Schmidt, Alex Shaw"
+  venue: "NeurIPS 2026"
+  url: "https://arxiv.org/abs/2609.04298"
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
+  img: strong_post_training.png
+  title: "Strong Post-Training from Permissive, Reasoning-Dominant, Web-Scale Pretraining"
+  authors: "<u>Harsh Raj</u>, Ali Elganzory, Marianna Nezhurina, Victor May, Van Khue Nguyen, David Salinas, Huu Nguyen, Jenia Jitsev"
+  venue: "NeurIPS 2026"
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
+  img: agent_consistency.png
+  title: "Consistency as a Testable Property: Statistical Methods to Evaluate AI Agent Reliability"
+  authors: "<u>Harsh Raj</u>, Niranjan Orkat, Suvrorup Mukherjee, Aritra Guha, Cheryl Flynn, Subhabrata Majumdar"
+  venue: "NeurIPS 2026"
+  url: "https://arxiv.org/abs/2605.10516"
+  abstract: >
+    Standard performance benchmarks tell us how often an AI agent succeeds, but not how reliably it behaves. We frame consistency as a testable statistical property and develop methods to measure agent reliability across semantic variations of a task and across repeated trajectories. We show that trajectory-level consistency metrics surface agent vulnerabilities far more effectively than aggregate accuracy, enabling sharper diagnosis of architectural weaknesses before deployment in demanding applications.
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
+  img: synthetic_persona.png
+  title: "Synthetic Persona Pretraining: Alignment from Token Zero"
+  authors: "Julian Minder, Viktor Moskvoretskii, Raghav Singhal, Difan Jiao, Andy Arditi, Shaobo Cui, Yiderigun Borjigin, Kartik Bali, Stefan Krsteski, <u>Harsh Raj</u>, Huu Nguyen, Jannik Brinkmann, Ashton Anderson, Roland Aydin, Robert West"
+  venue: "NeurIPS 2026 AI4Good Workshop"
+  url: "https://arxiv.org/abs/2608.13482"
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
+  img: openthoughts_agent.png
+  title: "OpenThoughts-Agent: Data Recipes for Agentic Models"
+  authors: "Negin Raoof, Richard Zhuang, Marianna Nezhurina, Etash Guha, ..., <u>Harsh Raj</u>, et al."
+  venue: "arXiv, 2026"
+  url: "https://arxiv.org/abs/2606.24855"
+  abstract: >
+    Open data curation for training agentic models lags far behind the closed pipelines used by frontier labs. OpenThoughts-Agent (OT-Agent) closes this gap with a fully open data recipe for agentic post-training. Through over 100 controlled ablations, we assemble a 100K-example training set and fine-tune Qwen3-32B to reach 44.8% average accuracy across seven agentic benchmarks, a 3.9 point improvement over the strongest prior open-data agentic model.
 - layout: paper
   paper-type: inproceedings
   selected: y
@@ -20,27 +78,9 @@
   authors: "Huu Nguyen*, Victor May*, <u>Harsh Raj</u>*, Marianna Nezhurina, Yishan Wang, ..., Jenia Jitsev"
   conf_name: "TMLR (Featured / J2C &rarr; ICML)"
   conf_year: 2026
+  venue: "TMLR, 2026"
+  note: "Featured Certification; presented at ICML 2026"
   url: "https://openreview.net/forum?id=SyCcUNUUMf"
   code: "https://github.com/ontocord/mixturevitae"
   abstract: >
     We present MixtureVitae, a 422-billion-token open-access pretraining corpus built to minimize copyright and legal risk while delivering strong downstream performance. It follows a permissive-first, risk-mitigated sourcing strategy that combines public-domain and permissively licensed text (e.g., CC-BY/Apache) with carefully justified low-risk additions, and front-loads synthetic instruction and reasoning data typically scarce in permissive web corpora. Under the open-sci-ref protocol across 130M-1.7B parameters, models trained on MixtureVitae consistently outperform other permissive datasets, approach FineWeb-Edu and DCLM at the 1.7B/300B scale, and a 1.7B model matches or exceeds a strong instruction-tuned baseline on GSM8K, HumanEval, and MBPP despite using over 36x fewer tokens. Accepted at TMLR with Featured Certification and Journal-to-Conference Certification (to be presented at ICML 2026, Seoul).
-- layout: paper
-  paper-type: inproceedings
-  selected: y
-  year: 2026
-  img: openthoughts_agent.png
-  title: "OpenThoughts-Agent: Data Recipes for Agentic Models"
-  authors: "Negin Raoof, Richard Zhuang, Marianna Nezhurina, Etash Guha, ..., <u>Harsh Raj</u>, et al."
-  url: "https://arxiv.org/abs/2606.24855"
-  abstract: >
-    Open data curation for training agentic models lags far behind the closed pipelines used by frontier labs. OpenThoughts-Agent (OT-Agent) closes this gap with a fully open data recipe for agentic post-training. Through over 100 controlled ablations, we assemble a 100K-example training set and fine-tune Qwen3-32B to reach 44.8% average accuracy across seven agentic benchmarks, a 3.9 point improvement over the strongest prior open-data agentic model.
-- layout: paper
-  paper-type: inproceedings
-  selected: y
-  year: 2026
-  img: agent_consistency.png
-  title: "Consistency as a Testable Property: Statistical Methods to Evaluate AI Agent Reliability"
-  authors: "<u>Harsh Raj</u>, Niranjan Orkat, Suvrorup Mukherjee, Aritra Guha, Cheryl Flynn, Subhabrata Majumdar"
-  url: "https://arxiv.org/abs/2605.10516"
-  abstract: >
-    Standard performance benchmarks tell us how often an AI agent succeeds, but not how reliably it behaves. We frame consistency as a testable statistical property and develop methods to measure agent reliability across semantic variations of a task and across repeated trajectories. We show that trajectory-level consistency metrics surface agent vulnerabilities far more effectively than aggregate accuracy, enabling sharper diagnosis of architectural weaknesses before deployment in demanding applications.

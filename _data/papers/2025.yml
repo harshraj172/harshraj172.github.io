@@ -4,6 +4,7 @@
   year: 2025
   img: semantic_consistency.png
   title: "Improving Consistency in Large Language Models through Chain of Guidance"
+  venue: "TMLR, 2025"
   conf_name: TMLR
   conf_year: 2025
   authors: "<u>Harsh Raj</u>, Vipul Gupta, Domenic Rosati, Subho Majumdar"

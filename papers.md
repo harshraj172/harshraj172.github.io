@@ -1,22 +1,9 @@
 ---
-layout: photolist
-title: Publications
-description: Publications with links to papers, blogs and code.
-menu: yes
-order: 2
+layout: null
+permalink: /papers.html
 ---
-
-{% assign hashes = (site.data.papers) %}
-{% capture years %}
-{% for hash in hashes %}
-{{ hash[0] }}
-{% endfor %}
-{% endcapture %}
-
-{% assign sortedyears = years | split:' ' | sort | reverse %}
-{% for year in sortedyears %}
-[comment]: <> (### {{ year }})
-{% for paper in hashes[year] %}
-{% include paper_in_box_wide.html paper=paper %}
-{% endfor %}
-{% endfor %}
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Publications</title>
+<meta http-equiv="refresh" content="0; url=/#publications">
+<link rel="canonical" href="/#publications"></head>
+<body><a href="/#publications">Publications</a></body></html>

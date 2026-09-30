@@ -4,6 +4,7 @@
   year: 2024
   img: reverse_preference.png
   title: "Mitigating Unsafe Feedback with Learning Constraints"
+  venue: "AAAI-25 Workshop on AI for Cyber Security"
   authors: "Domenic Rosati, Giles Edkins, <u>Harsh Raj</u>, David Atanasov, Subhabrata Majumdar, Janarthanan Rajendran, Frank Rudzicz, Hassan Sajjad"
   conf_name: AAAI
   conf_year: 2024

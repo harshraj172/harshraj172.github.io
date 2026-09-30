@@ -1,0 +1,149 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harsh Raj</title>
+  <meta name="author" content="Harsh Raj">
+  <meta name="description" content="Harsh Raj works on language agents, language model evaluation, and software engineering.">
+  <link rel="icon" href="img/people/harsh_raj.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap">
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      color: #222;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    a { color: #1772d0; text-decoration: none; }
+    a:hover, a:focus { color: #f09228; }
+    .page { max-width: 820px; margin: 0 auto; padding: 32px 20px 24px; }
+
+    .intro { display: flex; gap: 36px; align-items: center; }
+    .intro .text { flex: 1; }
+    .intro .photo { flex: 0 0 200px; }
+    .intro .photo img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; display: block; }
+    .name { font-size: 32px; font-weight: 400; text-align: center; margin: 0 0 16px; }
+    .intro p { margin: 0 0 12px; }
+    .links { text-align: center; margin-top: 4px; }
+    .links a + a::before { content: "/"; color: #aaa; margin: 0 8px; }
+
+    h2 { font-size: 22px; font-weight: 400; margin: 36px 0 10px; }
+    .section-note { margin: 0 0 8px; color: #444; }
+
+    .news { list-style: none; padding: 0; margin: 0; }
+    .news li { display: flex; gap: 14px; padding: 3px 0; }
+    .news .date { flex: 0 0 82px; color: #666; white-space: nowrap; }
+    details.older summary { cursor: pointer; color: #1772d0; margin: 6px 0 2px; list-style: none; }
+    details.older summary::-webkit-details-marker { display: none; }
+    details.older summary:hover { color: #f09228; }
+
+    .pubs { width: 100%; border-collapse: separate; border-spacing: 0; }
+    .pubs td { vertical-align: middle; padding: 14px 0; }
+    .pubs td.thumb { width: 180px; padding-right: 22px; }
+    .pubs td.thumb img { width: 180px; max-height: 130px; object-fit: contain; display: block; }
+    .pubs tr.highlight td { background: #fffbeb; }
+    .pubs tr.highlight td.thumb { padding-left: 10px; }
+    .pubs tr.highlight td.info { padding-right: 10px; }
+    .papertitle { font-weight: 700; }
+    .authors { margin: 3px 0; }
+    .venue { font-style: italic; }
+    .note { color: #b3261e; }
+    .plinks { margin-top: 2px; }
+    .plinks a + a::before { content: "/"; color: #aaa; margin: 0 7px; }
+
+    .footer { text-align: right; font-size: 13px; color: #888; margin-top: 40px; }
+
+    @media (max-width: 640px) {
+      .intro { flex-direction: column-reverse; gap: 16px; }
+      .pubs td.thumb { display: none; }
+      .news li { flex-direction: column; gap: 0; padding: 5px 0; }
+      .news .date { flex: none; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="intro">
+    <div class="text">
+      <p class="name">Harsh Raj</p>
+      <p>I am an M.S. student in Computer Science at Northeastern University, Boston, and currently a Machine Learning Research Intern at <a href="https://scale.com/">Scale AI</a> in New York.</p>
+      <p>My research centers on language agents, language model evaluation, and software engineering: building systems that are not just capable, but reliable and reproducible.</p>
+      <p>Previously, I led the <a href="https://openreview.net/forum?id=SyCcUNUUMf">MixtureVitae</a> project on permissively licensed pretraining corpora. I am a core author of <a href="https://www.tbench.ai/contributors">Terminal-Bench</a> and <a href="https://github.com/laude-institute/harbor">Harbor</a>, and collaborate with <a href="https://profiles.stanford.edu/ludwig-schmidt">Ludwig Schmidt</a>'s lab.</p>
+      <p class="links">
+        <a href="mailto:{{ site.email }}">Email</a><a href="resources/Resume.pdf">CV</a><a href="https://scholar.google.com/citations?user={{ site.scholar_id }}">Google Scholar</a><a href="https://github.com/{{ site.github }}">GitHub</a><a href="https://x.com/{{ site.twitter }}">Twitter</a>
+      </p>
+    </div>
+    <div class="photo">
+      <img src="img/people/harsh_raj_gh.png" alt="Harsh Raj">
+    </div>
+  </div>
+
+  <h2>News</h2>
+  <ul class="news">
+    <li><span class="date">Sep 2026</span><span>Released <a href="https://arxiv.org/abs/2609.13463">Root-Cause Attribution Is a Search Problem</a>.</span></li>
+    <li><span class="date">Sep 2026</span><span>Three papers accepted to <a href="https://neurips.cc/">NeurIPS 2026</a>, and one to the NeurIPS 2026 AI4Good Workshop.</span></li>
+    <li><span class="date">Sep 2026</span><span><a href="https://arxiv.org/abs/2607.28802">Model or Harness?</a> was featured by <a href="https://x.com/omarsar0/status/2084367708439949343">DAIR.AI</a> and <a href="https://www.alphaxiv.org/abs/2607.28802">alphaXiv</a>.</span></li>
+    <li><span class="date">Jun 2026</span><span>Reviewer for the NeurIPS 2026 Datasets &amp; Benchmarks (Evaluations) Track.</span></li>
+    <li><span class="date">Jun 2026</span><span>Released <a href="https://arxiv.org/abs/2606.24855">OpenThoughts-Agent</a>, an open data recipe for agentic post-training.</span></li>
+    <li><span class="date">May 2026</span><span>Started as a Machine Learning Research Intern at <a href="https://scale.com/">Scale AI</a>, New York.</span></li>
+    <li><span class="date">Mar 2026</span><span><a href="https://openreview.net/forum?id=SyCcUNUUMf">MixtureVitae</a> accepted at TMLR with Featured and Journal-to-Conference Certifications; presented at <a href="https://icml.cc/virtual/2026/poster/68836">ICML 2026</a>, Seoul.</span></li>
+    <li><span class="date">Jan 2026</span><span>Research Intern at <a href="https://www.bespokelabs.ai/">Bespoke Labs</a> for Spring 2026.</span></li>
+  </ul>
+  <details class="older">
+    <summary>Older news</summary>
+    <ul class="news">
+      <li><span class="date">Nov 2025</span><span>Released <a href="https://github.com/laude-institute/harbor">Harbor</a>, a framework for parallel agent-sandbox execution for training and evaluating agents.</span></li>
+      <li><span class="date">Aug 2025</span><span>Released <a href="https://huggingface.co/datasets/ontocord/MixtureVitae-300BT">MixtureVitae</a>, a permissively licensed pretraining corpus (<a href="https://arxiv.org/abs/2509.25531">paper</a>).</span></li>
+      <li><span class="date">Jun 2025</span><span>Led a <a href="https://www.swiss-ai.org/">Swiss AI</a> Large Grant proposal under <a href="https://dlab.epfl.ch/people/west/">Robert West</a>, securing CHF 61K and 200K GPU hours on the <a href="https://www.cscs.ch/computers/alps">Alps</a> supercomputer.</span></li>
+      <li><span class="date">May 2025</span><span>Released <a href="https://www.tbench.ai/">Terminal-Bench</a>.</span></li>
+      <li><span class="date">Apr 2025</span><span>Research Assistant at the <a href="https://baulab.info/">Interpretable Neural Networks Lab</a>, advised by David Bau.</span></li>
+      <li><span class="date">Jan 2025</span><span><a href="https://arxiv.org/abs/2502.15924">Chain of Guidance</a> accepted at TMLR.</span></li>
+      <li><span class="date">Dec 2024</span><span><a href="https://arxiv.org/abs/2409.12914v2">Mitigating Unsafe Feedback with Learning Constraints</a> accepted at the AAAI-25 Workshop on AI for Cyber Security.</span></li>
+      <li><span class="date">Sep 2024</span><span>Wrote <a href="https://www.lesswrong.com/posts/FNuBEJnbtEEdCEAnT/interpreting-the-effects-of-jailbreak-prompts-in-llms">Interpreting the effects of jailbreak prompts in LLMs</a> on LessWrong.</span></li>
+      <li><span class="date">Jan 2024</span><span>Joined <a href="https://www.vijil.ai/">Vijil</a> as an Applied Scientist.</span></li>
+      <li><span class="date">Jan 2024</span><span>Ranked 3rd on the <a href="https://eval.ai/web/challenges/challenge-page/97/leaderboard/270">R2R</a> vision-and-language navigation leaderboard.</span></li>
+      <li><span class="date">Dec 2023</span><span>Presented work on robustness transfer at NeurIPS 2023, New Orleans.</span></li>
+      <li><span class="date">Nov 2022</span><span>Our work on consistency evaluation won the <a href="https://www.mlsafety.org/events/neurips/2022">Best Paper Award</a> at the NeurIPS ML Safety Workshop.</span></li>
+    </ul>
+  </details>
+
+  <h2 id="publications">Publications</h2>
+  <p class="section-note">* denotes equal contribution. Highlighted papers are ones I led.</p>
+
+  <table class="pubs">
+  {% capture years %}{% for hash in site.data.papers %}{{ hash[0] }} {% endfor %}{% endcapture %}
+  {% assign sortedyears = years | split: ' ' | sort | reverse %}
+  {% for year in sortedyears %}
+    {% for p in site.data.papers[year] %}
+    {% assign led = false %}
+    {% assign first = p.authors | slice: 0, 16 %}
+    {% if first == "<u>Harsh Raj</u>" %}{% assign led = true %}{% endif %}
+    {% if p.authors contains "<u>Harsh Raj</u>*" %}{% assign led = true %}{% endif %}
+    <tr{% if led %} class="highlight"{% endif %}>
+      <td class="thumb">{% if p.img %}<img src="img/paper/{{ p.img }}" alt="" loading="lazy">{% endif %}</td>
+      <td class="info">
+        {% if p.url %}<a href="{{ p.url }}"><span class="papertitle">{{ p.title }}</span></a>{% else %}<span class="papertitle">{{ p.title }}</span>{% endif %}
+        <div class="authors">{{ p.authors | replace: "<u>Harsh Raj</u>", "<strong>Harsh Raj</strong>" }}</div>
+        <div><span class="venue">{{ p.venue }}</span>{% if p.note %} &nbsp;<span class="note">{{ p.note }}</span>{% endif %}</div>
+        {% if p.url or p.code or p.blog %}
+        <div class="plinks">{% if p.url %}<a href="{{ p.url }}">paper</a>{% endif %}{% if p.code %}<a href="{{ p.code }}">code</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">alphaXiv</a>{% endif %}</div>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  {% endfor %}
+  </table>
+
+  <p class="footer">Design adapted from <a href="https://jonbarron.info/">Jon Barron</a>'s website.</p>
+
+</div>
+</body>
+</html>
