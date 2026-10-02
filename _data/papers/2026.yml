@@ -75,8 +75,10 @@
   year: 2026
   img: terminal_bench.png
   title: "Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces"
-  authors: "Mike A. Merrill, Alexander G. Shaw, Nicholas Carlini, Boxuan Li, <u>Harsh Raj</u>, Ivan Bercovich, Lin Shi, et al."
+  authors: "Mike A. Merrill, Alexander G. Shaw, Nicholas Carlini, Boxuan Li, <u>Harsh Raj</u>, Ivan Bercovich, Lin Shi, ..."
   venue: "ICLR 2026"
+  note: "(Core team)"
+  highlight: true
   url: "https://arxiv.org/abs/2601.11868"
   code: "https://github.com/laude-institute/terminal-bench"
 - layout: paper

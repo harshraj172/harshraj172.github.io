@@ -127,6 +127,7 @@ layout: null
     {% assign first = p.authors | slice: 0, 16 %}
     {% if first == "<u>Harsh Raj</u>" %}{% assign led = true %}{% endif %}
     {% if p.authors contains "<u>Harsh Raj</u>*" %}{% assign led = true %}{% endif %}
+    {% if p.highlight %}{% assign led = true %}{% endif %}
     <tr{% if led %} class="highlight"{% endif %}>
       <td class="thumb">{% if p.img %}<img src="img/paper/{{ p.img }}" alt="" loading="lazy">{% endif %}</td>
       <td class="info">
