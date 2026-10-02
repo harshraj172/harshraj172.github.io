@@ -73,6 +73,25 @@
   paper-type: inproceedings
   selected: y
   year: 2026
+  img: terminal_bench.png
+  title: "Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces"
+  authors: "Mike A. Merrill, Alexander G. Shaw, Nicholas Carlini, Boxuan Li, <u>Harsh Raj</u>, Ivan Bercovich, Lin Shi, et al."
+  venue: "ICLR 2026"
+  url: "https://arxiv.org/abs/2601.11868"
+  code: "https://github.com/laude-institute/terminal-bench"
+- layout: paper
+  paper-type: misc
+  selected: n
+  year: 2026
+  title: "Harbor: A Framework for Evaluating and Optimizing Agents and Models in Container Environments"
+  authors: "Harbor Framework Team (incl. <u>Harsh Raj</u>)"
+  venue: "Zenodo, 2026"
+  url: "https://zenodo.org/records/20953922"
+  code: "https://github.com/laude-institute/harbor"
+- layout: paper
+  paper-type: inproceedings
+  selected: y
+  year: 2026
   img: mixturevitae.png
   title: "MixtureVitae: Open Web-Scale Pretraining Dataset With High Quality Instruction and Reasoning Data Built from Permissive-First Text Sources"
   authors: "Huu Nguyen*, Victor May*, <u>Harsh Raj</u>*, Marianna Nezhurina, Yishan Wang, ..., Jenia Jitsev"

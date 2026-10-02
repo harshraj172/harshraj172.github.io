@@ -5,7 +5,7 @@
   year: 2023
   img: mesuring_reliability.png
   title: "Measuring reliability of large language models through semantic consistency"
-  venue: "NeurIPS 2023"
+  venue: "NeurIPS 2022"
   note: "Best Paper Award, NeurIPS ML Safety Workshop"
   authors: "<u>Harsh Raj</u>, Domenic Rosati, Subho Majumdar"
   conf_name: NeurIPS
@@ -35,3 +35,11 @@
   authors: "Manu Joseph, <u>Harsh Raj</u>, Anubhav Yadav, Aaryamann Sharma"
   url: "https://arxiv.org/abs/2210.08532"
   abstract: "Querying databases for the right information is a time consuming and error-prone task and often requires experienced professionals for the job. Furthermore, the user needs to have some prior knowledge about the database. There have been various efforts to develop an intelligence which can help business users to query databases directly. However, there has been some successes, but very little in terms of testing and deploying those for real world users. In this paper, we propose a semantic parsing approach to address the challenge of converting complex natural language into SQL and institute a product out of it. For this purpose, we modified state-of-the-art models, by various pre and post processing steps which make the significant part when a model is deployed in production. To make the product serviceable to businesses we added an automatic visualization framework over the queried results."
+- layout: paper
+  paper-type: inproceedings
+  selected: n
+  year: 2022
+  title: "Extract It! Product Category Extraction by Transfer Learning"
+  authors: "<u>Harsh Raj</u>, Aakansha Gupta, Rahul Katarya"
+  venue: "CICT 2021, Springer"
+  url: "https://link.springer.com/chapter/10.1007/978-981-16-9756-2_9"
