@@ -18,18 +18,6 @@
   paper-type: inproceedings
   selected: n
   year: 2022
-  img: gru.png
-  title: "GANDALF: Gated Adaptive Network for Deep Automated Learning of Features"
-  venue: "arXiv, 2022"
-  authors: "Manu Joseph, <u>Harsh Raj</u>"
-  url: "https://arxiv.org/abs/2207.08548"
-  code: "https://github.com/manujosephv/pytorch_tabular"
-  abstract: "We propose a novel high-performance, interpretable, and parameter and computationally efficient deep learning architecture for tabular data, Gated Adaptive Network for Deep Automated Learning of Features (GANDALF). GANDALF relies on a new tabular processing unit with a gating mechanism and in-built feature selection called Gated Feature Learning Unit (GFLU) as a feature representation learning unit. We demonstrate that GANDALF outperforms or stays at-par with SOTA approaches like XGBoost, SAINT, FT-Transformers, etc. by experiments on multiple established public benchmarks."
--
-  layout: paper
-  paper-type: inproceedings
-  selected: n
-  year: 2022
   img: nl2sql.png
   title: "AskYourDB: An end-to-end system for querying and visualizing relational databases using natural language"
   venue: "arXiv, 2022"
