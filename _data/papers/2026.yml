@@ -93,6 +93,17 @@
 - layout: paper
   paper-type: inproceedings
   selected: y
+  year: 2025
+  img: open_sci_ref.png
+  title: "Open-sci-ref-0.02: Open Reference Baselines for Reproducible Language Model and Dataset Comparison"
+  authors: "Marianna Nezhurina*, <u>Harsh Raj</u>*, Victor May*, Jörg Franke, Taishi Nakamura, Timur Carstensen, Niccolò Ajroldi, Ville Komulainen, David Salinas, Jenia Jitsev*"
+  conf_name: AAAI
+  conf_year: 2025
+  venue: "AAAI, 2025"
+  url: "https://arxiv.org/abs/2509.09009"
+- layout: paper
+  paper-type: inproceedings
+  selected: y
   year: 2026
   img: mixturevitae.png
   title: "MixtureVitae: Open Web-Scale Pretraining Dataset With High Quality Instruction and Reasoning Data Built from Permissive-First Text Sources"
