@@ -99,8 +99,9 @@
   authors: "Marianna Nezhurina*, <u>Harsh Raj</u>*, Victor May*, Jörg Franke, Taishi Nakamura, Timur Carstensen, Niccolò Ajroldi, Ville Komulainen, David Salinas, Jenia Jitsev*"
   conf_name: AAAI
   conf_year: 2025
-  venue: "AAAI, 2025"
+  venue: "AAAI AI Magazine, Special Issue, 2025"
   url: "https://arxiv.org/abs/2509.09009"
+  hf: "https://huggingface.co/collections/open-sci/open-sci-ref-002"
 - layout: paper
   paper-type: inproceedings
   selected: y

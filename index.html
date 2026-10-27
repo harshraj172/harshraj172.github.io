@@ -135,8 +135,8 @@ layout: null
         {% if p.url %}<a href="{{ p.url }}"><span class="papertitle">{{ p.title }}</span></a>{% else %}<span class="papertitle">{{ p.title }}</span>{% endif %}
         <div class="authors">{{ p.authors | replace: "<u>Harsh Raj</u>", "<strong>Harsh Raj</strong>" }}</div>
         <div><span class="venue">{{ p.venue }}</span>{% if p.note %} &nbsp;<span class="note">{{ p.note }}</span>{% endif %}</div>
-        {% if p.url or p.code or p.blog %}
-        <div class="plinks">{% if p.url %}<a href="{{ p.url }}">paper</a>{% endif %}{% if p.code %}<a href="{{ p.code }}">code</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">alphaXiv</a>{% endif %}</div>
+        {% if p.url or p.code or p.blog or p.hf %}
+        <div class="plinks">{% if p.url %}<a href="{{ p.url }}">paper</a>{% endif %}{% if p.code %}<a href="{{ p.code }}">code</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">alphaXiv</a>{% endif %}{% if p.hf %}<a href="{{ p.hf }}">HF collection</a>{% endif %}</div>
         {% endif %}
       </td>
     </tr>
