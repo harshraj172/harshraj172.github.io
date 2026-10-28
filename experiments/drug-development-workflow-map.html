@@ -103,6 +103,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 .card{position:relative;z-index:1;align-self:start;align-content:start;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:grid;gap:20px;transition:margin-top .18s ease}
 .card dl{margin:0}
+.card{grid-template-columns:minmax(0,1fr)}
+.card > *{min-width:0}
+.steps-in,.steps-in *{min-width:0}
 .card .eyrow{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
 .card .ey{font:500 10.5px/1.5 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
 .card h3{font:600 21px/1.2 var(--display)}
@@ -141,7 +144,33 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .steps-in summary i{font-style:normal;color:var(--accent);letter-spacing:.04em}
 .steps-in[open] summary i{visibility:hidden}
 .steps-in summary:hover{color:var(--ink)}
-.steps-in ul{margin:0;padding:2px 13px 11px 30px;display:grid;gap:5px;font-size:13.5px;color:var(--muted)}
+.slist{padding:2px 10px 10px;display:grid;grid-template-columns:minmax(0,1fr);gap:1px}
+.wstep{border-radius:8px}
+.steps-in .slist{min-width:0}
+.wstep,.wstep > summary,.wstep.flat{min-width:0;max-width:100%}
+.wstep > summary,.wstep.flat{display:flex;align-items:center;gap:9px;padding:7px 10px;cursor:pointer;list-style:none;border-radius:8px;font:400 13.5px/1.45 var(--body);letter-spacing:0;text-transform:none;color:var(--muted)}
+.wstep.flat{cursor:default}
+.wstep > summary::-webkit-details-marker{display:none}
+.wstep > summary::before{content:"\203A";color:var(--faint);font-size:14px;line-height:1;transition:transform .15s ease;flex:0 0 auto}
+.wstep[open] > summary::before{transform:rotate(90deg)}
+.wstep.flat::before{content:"\00B7";color:var(--faint);padding:0 4px}
+.wstep > summary:hover{background:var(--surface2);color:var(--ink)}
+.wstep[open] > summary{color:var(--ink);font-weight:600}
+.sdet p,.sdet li{overflow-wrap:anywhere}
+.wstep .sp{flex:1;min-width:0;overflow-wrap:anywhere}
+.wstep.on > summary,.wstep.flat.on{color:var(--ink);font-weight:600}
+.sdet{padding:2px 10px 12px 27px;display:grid;grid-template-columns:minmax(0,1fr);gap:9px}
+.sh{font-size:14px;line-height:1.5;color:var(--ink)}
+.stools{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:5px}
+.stools li{display:grid;gap:0}
+.stools b{font:600 13.5px/1.35 var(--body);color:var(--ink)}
+.stools span{font-size:13px;color:var(--muted)}
+.sf{font-size:12.5px;color:var(--muted)}
+.sf span{font:500 10px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--faint);margin-right:7px}
+.ssub summary{cursor:pointer;font:500 11px var(--mono);color:var(--accent);letter-spacing:.03em}
+.ssub ul{margin:7px 0 0;padding-left:17px;display:grid;gap:4px;font-size:13px;color:var(--muted)}
+.ssub em{font-style:normal;font:400 11px var(--mono);color:var(--faint)}
+.sc{font:400 11px var(--mono)}
 .steps-in li::marker{color:var(--line)}
 .steps-in li.on{color:var(--ink);font-weight:600}
 .steps-in li.on{display:list-item}
@@ -4889,12 +4918,403 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
   "judged": "not judged"
  }
 }</script>
+<script id="sdata" type="application/json">{
+ "b1-1": {
+  "steps": [
+   {
+    "i": 1,
+    "name": "Disease hypothesis and unmet need framing",
+    "plain": "Explain which disease lacks good treatments and why it matters",
+    "human": "Write down which disease has no good treatment and why the gap matters",
+    "toolList": [
+     {
+      "name": "No single standard tool",
+      "does": "Not described in our sources"
+     }
+    ],
+    "paradigm": "Documents",
+    "files": "Not described in our sources",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    }
+   },
+   {
+    "i": 2,
+    "name": "Literature and patent data mining",
+    "plain": "Search papers, patents and biology data for possible drug targets",
+    "human": "Search papers, patents and biology databases to pull out possible target genes",
+    "toolList": [
+     {
+      "name": "Open Targets",
+      "does": "Web pages, a programming interface and database queries"
+     }
+    ],
+    "paradigm": "Platform",
+    "files": "Table and text exports, bulk downloads from cloud storage",
+    "cite": {
+     "label": "Open Targets data access",
+     "url": "https://platform-docs.opentargets.org/data-access"
+    }
+   },
+   {
+    "i": 3,
+    "name": "Evidence weighting and association scoring",
+    "plain": "Weigh evidence to score how strongly targets link to disease",
+    "human": "Set how much each kind of evidence counts, then read the ranked list",
+    "toolList": [
+     {
+      "name": "Open Targets",
+      "does": "Scores and ranks gene to disease evidence"
+     }
+    ],
+    "paradigm": "GUI",
+    "files": "Association tables and query results",
+    "cite": {
+     "label": "Open Targets associations",
+     "url": "https://platform-docs.opentargets.org/associations"
+    }
+   },
+   {
+    "i": 4,
+    "name": "Human genetics evidence",
+    "plain": "Check if human gene studies link the target to disease",
+    "human": "Test whether inherited gene differences across many people line up with the disease",
+    "toolList": [
+     {
+      "name": "REGENIE",
+      "does": "Tests whole genomes for links to disease"
+     }
+    ],
+    "paradigm": "Scripted",
+    "files": "Genotype files in BGEN and PLINK formats",
+    "cite": {
+     "label": "REGENIE docs",
+     "url": "https://rgcgithub.github.io/regenie/"
+    },
+    "substeps": [
+     {
+      "name": "GWAS sample and variant quality control",
+      "plain": "Drop bad samples and bad markers before any testing",
+      "tool": "PLINK 1.9"
+     },
+     {
+      "name": "Hardy-Weinberg and allele frequency filtering",
+      "plain": "Remove markers whose genotype counts look miscalled",
+      "tool": "PLINK 1.9"
+     },
+     {
+      "name": "Ancestry principal component analysis for population structure",
+      "plain": "Work out ancestry so it cannot fake a result",
+      "tool": "PLINK 1.9"
+     },
+     {
+      "name": "Relatedness and identity-by-descent screening",
+      "plain": "Find people in the sample who are relatives",
+      "tool": "PLINK 1.9"
+     },
+     {
+      "name": "Whole-genome regression association testing with leave-one-chromosome-out prediction",
+      "plain": "Test every marker while handling relatedness at huge scale",
+      "tool": "regenie"
+     },
+     {
+      "name": "Firth-corrected logistic association for rare or imbalanced case-control counts",
+      "plain": "Use a fixed-up logistic test when cases are few",
+      "tool": "PLINK 2.0"
+     },
+     {
+      "name": "Fixed-effect GWAS meta-analysis across cohorts",
+      "plain": "Pool results from many studies into one answer",
+      "tool": "METAL"
+     },
+     {
+      "name": "Genomic control correction of meta-analysis inflation",
+      "plain": "Shrink test results that look inflated across the genome",
+      "tool": "METAL"
+     },
+     {
+      "name": "Sample overlap correction in sample-size weighted meta-analysis",
+      "plain": "Stop counting the same people twice across studies",
+      "tool": "METAL"
+     },
+     {
+      "name": "Bayesian fine-mapping to 95 percent credible sets with SuSiE",
+      "plain": "Shrink a signal to a short list of variants",
+      "tool": "susieR"
+     },
+     {
+      "name": "Multi-causal-variant fine-mapping by shotgun stochastic search",
+      "plain": "Search for more than one cause in the region",
+      "tool": "FINEMAP"
+     },
+     {
+      "name": "Two-sample Mendelian randomisation with harmonised summary statistics",
+      "plain": "Use inherited variants as a natural test of cause",
+      "tool": "TwoSampleMR"
+     },
+     {
+      "name": "Horizontal pleiotropy testing and robust MR estimators",
+      "plain": "Rerun the causal test with methods that resist bias",
+      "tool": "TwoSampleMR"
+     },
+     {
+      "name": "STROBE-MR compliant reporting of a Mendelian randomisation study",
+      "plain": "Report the causal study against a fixed checklist",
+      "tool": "STROBE-MR checklist"
+     },
+     {
+      "name": "Bayesian colocalisation of a GWAS and a molecular QTL signal",
+      "plain": "Ask whether two signals share one causing variant",
+      "tool": "coloc"
+     },
+     {
+      "name": "Colocalisation under multiple causal variants using SuSiE credible sets",
+      "plain": "Split stacked signals apart before matching them up",
+      "tool": "coloc"
+     },
+     {
+      "name": "Transcriptome-wide association study with cis expression weights",
+      "plain": "Test predicted gene activity against disease risk",
+      "tool": "FUSION"
+     },
+     {
+      "name": "Summary-statistic TWAS with S-PrediXcan",
+      "plain": "Run the gene-level test from published summary data only",
+      "tool": "S-PrediXcan"
+     },
+     {
+      "name": "SNP heritability estimation by LD score regression",
+      "plain": "Measure how much of the disease is inherited",
+      "tool": "LDSC"
+     },
+     {
+      "name": "Cross-trait genetic correlation estimation",
+      "plain": "Measure how much two diseases share their genetics",
+      "tool": "LDSC"
+     },
+     {
+      "name": "Gene-based rare-variant burden testing",
+      "plain": "Group rare changes in one gene and test together",
+      "tool": "regenie"
+     },
+     {
+      "name": "Rare-variant variance-component and omnibus testing with SKAT and SKAT-O",
+      "plain": "Use tests that still work when effects point both ways",
+      "tool": "regenie"
+     },
+     {
+      "name": "Transmission disequilibrium testing in parent-offspring trios",
+      "plain": "Check which parent copy got passed to affected children",
+      "tool": "PLINK 1.9"
+     },
+     {
+      "name": "Sibship-based association testing with the sib-TDT",
+      "plain": "Test families of brothers and sisters without parents",
+      "tool": "PLINK 1.9"
+     },
+     {
+      "name": "Mendel error screening before family-based tests",
+      "plain": "Find genotypes that parents could not have passed on",
+      "tool": "PLINK 1.9"
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "name": "Expression and omics evidence",
+    "plain": "Check if target gene or protein levels change in disease",
+    "human": "Check whether the gene or its protein is turned up or down in disease",
+    "toolList": [
+     {
+      "name": "nf-core/rnaseq",
+      "does": "Turns raw sequencing reads into gene count tables"
+     },
+     {
+      "name": "Scanpy",
+      "does": "Python code for single cell gene activity work"
+     },
+     {
+      "name": "MultiQC",
+      "does": "Builds one quality report from pipeline output"
+     }
+    ],
+    "paradigm": "Pipeline",
+    "files": "Samplesheets, read files, gene count matrices, quality reports",
+    "cite": {
+     "label": "nf-core/rnaseq",
+     "url": "https://nf-co.re/rnaseq"
+    },
+    "substeps": [
+     {
+      "name": "cis-eQTL discovery with a normalised expression pipeline",
+      "plain": "Find nearby variants that change a gene's activity",
+      "tool": "GTEx eQTL pipeline"
+     },
+     {
+      "name": "Genome-wide trans-eQTL mapping at scale",
+      "plain": "Scan for variants acting on far-away genes",
+      "tool": "tensorQTL"
+     },
+     {
+      "name": "Interaction and cell-state eQTL mapping",
+      "plain": "Test whether a gene effect depends on cell state",
+      "tool": "tensorQTL"
+     },
+     {
+      "name": "Covariate and hidden factor adjustment in QTL models",
+      "plain": "Put known and unseen nuisance factors into the model",
+      "tool": "Matrix eQTL"
+     },
+     {
+      "name": "Surrogate variable and batch effect removal before QTL testing",
+      "plain": "Find hidden batch effects and take them out",
+      "tool": "sva"
+     },
+     {
+      "name": "Reuse of uniformly processed QTL summary statistics",
+      "plain": "Reuse ready-made QTL results instead of redoing them",
+      "tool": "eQTL Catalogue"
+     },
+     {
+      "name": "Haplotype-aware allele-specific expression quantification",
+      "plain": "Compare the two gene copies inside one person",
+      "tool": "phASER"
+     },
+     {
+      "name": "Reference mapping bias correction for allele-specific reads",
+      "plain": "Remove read errors that fake lopsided gene copies",
+      "tool": "WASP"
+     },
+     {
+      "name": "Combined haplotype testing of allele-specific and total read counts",
+      "plain": "Join both kinds of read count into one test",
+      "tool": "WASP"
+     },
+     {
+      "name": "Annotation-free intron excision quantification",
+      "plain": "Measure how a gene's pieces get joined together",
+      "tool": "LeafCutter"
+     },
+     {
+      "name": "Splicing QTL mapping from intron excision ratios",
+      "plain": "Find variants that change how a gene is spliced",
+      "tool": "LeafCutter"
+     },
+     {
+      "name": "Methylation array preprocessing and probe quality control",
+      "plain": "Clean up DNA tag array data before testing it",
+      "tool": "minfi"
+     },
+     {
+      "name": "cis and trans methylation QTL mapping",
+      "plain": "Find variants that change DNA tags on genes",
+      "tool": null
+     },
+     {
+      "name": "Bulk expression deconvolution into cell-type fractions",
+      "plain": "Work out which cell types made a tissue signal",
+      "tool": "CIBERSORTx"
+     },
+     {
+      "name": "Affinity proteomics pQTL mapping and NPX quality control",
+      "plain": "Measure protein levels and link them to variants",
+      "tool": "OlinkAnalyze"
+     },
+     {
+      "name": "Aptamer proteomics pQTL mapping across a wide dynamic range",
+      "plain": "Measure thousands of proteins at once for QTLs",
+      "tool": "SomaScan"
+     },
+     {
+      "name": "Dilution tiering and dynamic range checks in proteomic panels",
+      "plain": "Check very high and very low proteins separately",
+      "tool": "SomaScan"
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "name": "Functional-genomics screen analysis",
+    "plain": "Rank genes from gene-editing screens by their effect on cells",
+    "human": "Count reads from a gene cutting screen and rank genes by their effect",
+    "toolList": [
+     {
+      "name": "MAGeCK",
+      "does": "Ranks genes from screen read count tables"
+     }
+    ],
+    "paradigm": "Scripted",
+    "files": "Library file, read count tables, ranked gene summary",
+    "cite": {
+     "label": "MAGeCK wiki",
+     "url": "https://sourceforge.net/p/mageck/wiki/Home/"
+    }
+   },
+   {
+    "i": 7,
+    "name": "Phenotypic and antibody-led target discovery",
+    "plain": "Find antibodies that bind disease cells, then name their targets",
+    "human": "Find antibodies that stick to diseased cells, then work out what they stick to",
+    "toolList": [
+     {
+      "name": "No single standard tool",
+      "does": "Antibody display libraries, then the bound targets get identified"
+     }
+    ],
+    "paradigm": "Platform",
+    "files": "Not described in our sources",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    }
+   },
+   {
+    "i": 8,
+    "name": "Target tractability and assessment triage",
+    "plain": "Judge if a target is safe, workable and worth funding",
+    "human": "Answer a set list of questions on safety, workability and value before spending money",
+    "toolList": [
+     {
+      "name": "No single standard tool",
+      "does": "A mixed team answers forty critical path questions"
+     }
+    ],
+    "paradigm": "Documents",
+    "files": "Not described in our sources",
+    "cite": {
+     "label": "Emmerich et al., GOT-IT",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7667479/"
+    }
+   },
+   {
+    "i": 9,
+    "name": "Target selection gate",
+    "plain": "Decide go or no-go on picking the target",
+    "human": "Project leaders decide together whether to go ahead with this target or stop",
+    "toolList": [
+     {
+      "name": "No single standard tool",
+      "does": "Project plans set milestones and go or no-go points"
+     }
+    ],
+    "paradigm": "Documents",
+    "files": "Project plan documents",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    }
+   }
+  ]
+ }
+}</script>
 <script>
 const R = JSON.parse(document.getElementById("data").textContent);
 const T = JSON.parse(document.getElementById("tdata").textContent).blocks;
 const K = JSON.parse(document.getElementById("kdata").textContent);
 const P = JSON.parse(document.getElementById("pdata").textContent);
 const L = JSON.parse(document.getElementById("ldata").textContent);
+const SD = JSON.parse(document.getElementById("sdata").textContent);
 const fmtN = n => n>=1000 ? (n/1000).toFixed(n>=10000?0:1).replace(/\.0$/,"")+"k" : String(n);
 const QLAB = {good:"Good match", fair:"Fair match", poor:"Weak match"};
 function litBar(id){
@@ -4958,12 +5378,28 @@ function stepList(bi, si, id){
   const orig = sub ? (sub.steps || sub.rows.map(r=>r[0])).map(x=>x.replace(/\*\*/g,"")) : [];
   const plain = P[id] && P[id].length===orig.length ? P[id] : orig;
   const mine = K.filter(k=>k.at===id);
-  let items = orig.map((o,i)=>({o, p:plain[i], on: mine.some(k=>k.step===o)}));
-  if(!items.length) items = mine.map(k=>({o:k.step, p:k.step, on:true}));
+  const det = SD[id] ? SD[id].steps : null;
+  let items = orig.map((o,i)=>({o, p:plain[i], on: mine.some(k=>k.step===o), d: det ? det[i] : null}));
+  if(!items.length) items = mine.map(k=>({o:k.step, p:k.step, on:true, d:null}));
   if(!items.length || (items.length===1 && !mine.length)) return "";
   const hit = items.some(x=>x.on);
-  return `<details class="steps-in"${hit?" open":""}><summary><span>Steps</span><i>show</i></summary>
-    <ul>${items.map(x=>`<li class="${x.on?"on":""}" title="${esc(x.o)}">${esc(x.p)}${x.on?'<i class="tflag">task</i>':""}</li>`).join("")}</ul></details>`;
+  const body = x => {
+    const d = x.d; if(!d) return "";
+    const tools = (d.toolList||[]).map(tl=>`<li><b>${esc(tl.name)}</b><span>${esc(tl.does)}</span></li>`).join("");
+    const subs = (d.substeps||[]).map(s=>`<li>${esc(s.plain)}${s.tool?` <em>${esc(s.tool)}</em>`:""}</li>`).join("");
+    return `<div class="sdet">
+      ${d.human?`<p class="sh">${esc(d.human)}</p>`:""}
+      ${tools?`<ul class="stools">${tools}</ul>`:""}
+      ${d.files && !/^Not described/i.test(d.files)?`<p class="sf"><span>Data</span>${esc(d.files)}</p>`:""}
+      ${subs?`<details class="ssub"><summary>${(d.substeps||[]).length} kinds of this work</summary><ul>${subs}</ul></details>`:""}
+      ${d.cite&&d.cite.url?`<p class="sc"><a href="${esc(d.cite.url)}" target="_blank" rel="noopener">${esc(d.cite.label||host(d.cite.url))}</a></p>`:""}
+    </div>`;
+  };
+  const row = x => x.d
+    ? `<details class="wstep${x.on?" on":""}"><summary><span class="sp">${esc(x.p)}</span>${x.d.paradigm?`<i class="dot ${x.d.paradigm}" title="${PLAB[x.d.paradigm]||""}"></i>`:""}${x.on?'<i class="tflag">task</i>':""}</summary>${body(x)}</details>`
+    : `<div class="wstep flat${x.on?" on":""}"><span class="sp">${esc(x.p)}</span>${x.on?'<i class="tflag">task</i>':""}</div>`;
+  return `<details class="steps-in"${hit||det?" open":""}><summary><span>Steps</span><i>show</i></summary>
+    <div class="slist">${items.map(row).join("")}</div></details>`;
 }
 function tCard(bi, si){
   const b = T[bi], s = b.sections[si];
@@ -4974,8 +5410,8 @@ function tCard(bi, si){
       <h3 style="margin-top:8px">${esc(s.label)}</h3>${full && full.toLowerCase()!==s.label.toLowerCase()?`<div class="full">${esc(full)}</div>`:""}</div>
     ${s.gets?`<div class="flow"><div><span>Input</span><p>${esc(s.gets)}</p></div><i aria-hidden="true">&rarr;</i><div><span>Output</span><p>${esc(s.gives)}</p></div></div>`:""}
     ${stepList(bi, +sn-1, s.id)}
-    <dl class="kv"><dt>What humans do</dt><dd>${esc(s.human)}</dd></dl>
-    <dl class="kv"><dt>Tools <span class="ptag"><i class="dot ${s.paradigm}"></i>${PLAB[s.paradigm]||s.paradigm}</span></dt><dd>${s.toolList?`<ul class="tools">${s.toolList.map(x=>`<li><b>${esc(x.name)}</b><span>${esc(x.does)}</span></li>`).join("")}</ul>`:esc(s.tools)}</dd></dl>
+    ${SD[s.id]?"":`<dl class="kv"><dt>What humans do</dt><dd>${esc(s.human)}</dd></dl>`}
+    ${SD[s.id]?"":`<dl class="kv"><dt>Tools <span class="ptag"><i class="dot ${s.paradigm}"></i>${PLAB[s.paradigm]||s.paradigm}</span></dt><dd>${s.toolList?`<ul class="tools">${s.toolList.map(x=>`<li><b>${esc(x.name)}</b><span>${esc(x.does)}</span></li>`).join("")}</ul>`:esc(s.tools)}</dd></dl>`}
     ${litBox(s.id)}
     ${tasksAt(s.id).map(k=>`<div class="tbox"><div class="tbh"><span class="tflag">Our task</span><a href="${esc(k.url)}" target="_blank" rel="noopener">${esc(k.name)}</a></div>
       <p>${esc(k.what)}</p>
