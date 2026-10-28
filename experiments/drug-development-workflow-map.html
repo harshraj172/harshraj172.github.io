@@ -164,6 +164,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .stools{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:5px}
 .stools li{display:grid;gap:0}
 .stools b{font:600 13.5px/1.35 var(--body);color:var(--ink)}
+.stools b em{font-style:normal;font:500 10.5px var(--mono);letter-spacing:.03em;color:var(--faint)}
+.stools li{padding-left:11px;border-left:2px solid var(--line)}
+.stools li.k-tool{border-left-color:var(--p-gui)}
+.stools li.k-technique{border-left-color:var(--p-scr)}
+.stools li.k-data{border-left-color:var(--p-plat)}
+.stools li.k-resource{border-left-color:var(--p-pipe)}
+.stools li.niche b{font-weight:500}
 .stools span{font-size:13px;color:var(--muted)}
 .sf{font-size:12.5px;color:var(--muted)}
 .sf span{font:500 10px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--faint);margin-right:7px}
@@ -4937,7 +4944,129 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
     "cite": {
      "label": "Hughes et al. 2011",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
-    }
+    },
+    "items": [
+     {
+      "name": "IHME Global Burden of Disease",
+      "kind": "Resource",
+      "does": "Country level disease burden numbers like deaths and years lost",
+      "common": "standard",
+      "cite": {
+       "label": "IHME GBD",
+       "url": "https://www.healthdata.org/research-analysis/gbd"
+      }
+     },
+     {
+      "name": "WHO Global Health Observatory",
+      "kind": "Resource",
+      "does": "WHO health statistics by country with an open data API",
+      "common": "widely used",
+      "cite": {
+       "label": "WHO GHO",
+       "url": "https://www.who.int/data/gho"
+      }
+     },
+     {
+      "name": "Orphanet and Orphadata",
+      "kind": "Resource",
+      "does": "Rare disease prevalence figures and standard ORPHA codes",
+      "common": "standard",
+      "cite": {
+       "label": "Orphadata site",
+       "url": "https://www.orphadata.com/"
+      }
+     },
+     {
+      "name": "ClinicalTrials.gov API v2",
+      "kind": "Resource",
+      "does": "Registry showing what is already being tested in patients",
+      "common": "standard",
+      "cite": {
+       "label": "CTG data API",
+       "url": "https://clinicaltrials.gov/data-api/api"
+      }
+     },
+     {
+      "name": "WHO ICTRP Search Portal",
+      "kind": "Resource",
+      "does": "Searches trial registries worldwide from one place",
+      "common": "widely used",
+      "cite": {
+       "label": "ICTRP portal",
+       "url": "https://trialsearch.who.int/"
+      }
+     },
+     {
+      "name": "target product profile",
+      "kind": "Technique",
+      "does": "Written list of features a new medicine must hit",
+      "common": "standard",
+      "cite": {
+       "label": "WHO TPP page",
+       "url": "https://www.who.int/observatories/global-observatory-on-health-research-and-development/analyses-and-syntheses/target-product-profile/who-target-product-profiles"
+      }
+     },
+     {
+      "name": "Citeline Pharmaprojects",
+      "kind": "Resource",
+      "does": "Paid database of every drug in development per disease",
+      "common": "widely used",
+      "cite": {
+       "label": "Citeline product page",
+       "url": "https://www.citeline.com/en/products-services/clinical/pharmaprojects"
+      }
+     },
+     {
+      "name": "SEER cancer statistics",
+      "kind": "Resource",
+      "does": "US cancer incidence and survival from population registries",
+      "common": "widely used",
+      "cite": {
+       "label": "SEER site",
+       "url": "https://seer.cancer.gov/"
+      }
+     },
+     {
+      "name": "European Platform on Rare Disease Registration",
+      "kind": "Resource",
+      "does": "Finds European registries holding rare disease records",
+      "common": "niche",
+      "cite": {
+       "label": "EU RD Platform",
+       "url": "https://eu-rd-platform.jrc.ec.europa.eu/"
+      }
+     },
+     {
+      "name": "PRISMA systematic review",
+      "kind": "Technique",
+      "does": "Formal repeatable review of current treatments and their evidence",
+      "common": "widely used",
+      "cite": {
+       "label": "PRISMA statement",
+       "url": "https://www.prisma-statement.org/"
+      }
+     },
+     {
+      "name": "Cochrane Library",
+      "kind": "Resource",
+      "does": "Systematic reviews judging how well existing treatments work",
+      "common": "widely used",
+      "cite": {
+       "label": "Cochrane evidence",
+       "url": "https://www.cochrane.org/evidence"
+      }
+     },
+     {
+      "name": "ICD-11 disease codes",
+      "kind": "Data",
+      "does": "WHO codes that pin down exactly which disease you mean",
+      "common": "standard",
+      "cite": {
+       "label": "WHO ICD-11",
+       "url": "https://icd.who.int/en"
+      }
+     }
+    ]
    },
    {
     "i": 2,
@@ -4955,7 +5084,139 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
     "cite": {
      "label": "Open Targets data access",
      "url": "https://platform-docs.opentargets.org/data-access"
-    }
+    },
+    "items": [
+     {
+      "name": "PubMed with NCBI E-utilities",
+      "kind": "Resource",
+      "does": "Paper search plus an API for bulk automated queries",
+      "common": "standard",
+      "cite": {
+       "label": "E-utilities docs",
+       "url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/"
+      }
+     },
+     {
+      "name": "Europe PMC Annotations API",
+      "kind": "Resource",
+      "does": "Papers plus ready made gene disease and drug mentions",
+      "common": "standard",
+      "cite": {
+       "label": "SciLite paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5527546/"
+      }
+     },
+     {
+      "name": "Embase with Emtree",
+      "kind": "Resource",
+      "does": "Drug focused paper database also covering conference abstracts",
+      "common": "widely used",
+      "cite": {
+       "label": "Elsevier Embase",
+       "url": "https://www.elsevier.com/products/embase"
+      }
+     },
+     {
+      "name": "SureChEMBL",
+      "kind": "Resource",
+      "does": "Free chemical structures pulled out of patent documents",
+      "common": "widely used",
+      "cite": {
+       "label": "SureChEMBL site",
+       "url": "https://www.surechembl.org/"
+      }
+     },
+     {
+      "name": "EPO Open Patent Services",
+      "kind": "Tool",
+      "does": "Patent office API giving bibliographic and full text XML",
+      "common": "widely used",
+      "cite": {
+       "label": "EPO OPS page",
+       "url": "https://www.epo.org/en/searching-for-patents/data/web-services/ops"
+      }
+     },
+     {
+      "name": "Google Patents Public Datasets on BigQuery",
+      "kind": "Resource",
+      "does": "Worldwide patent text searchable with plain SQL queries",
+      "common": "widely used",
+      "cite": {
+       "label": "Google Cloud post",
+       "url": "https://cloud.google.com/blog/topics/public-datasets/google-patents-public-datasets-connecting-public-paid-and-private-patent-data"
+      }
+     },
+     {
+      "name": "PubTator 3.0",
+      "kind": "Tool",
+      "does": "Auto tags genes diseases and chemicals in papers",
+      "common": "widely used",
+      "cite": {
+       "label": "PubTator 3",
+       "url": "https://www.ncbi.nlm.nih.gov/research/pubtator3/"
+      }
+     },
+     {
+      "name": "scispaCy",
+      "kind": "Tool",
+      "does": "Python models that find biomedical names inside text",
+      "common": "widely used",
+      "cite": {
+       "label": "scispaCy docs",
+       "url": "https://allenai.github.io/scispacy/"
+      }
+     },
+     {
+      "name": "BioC JSON and XML",
+      "kind": "Data",
+      "does": "Shared file format for text mining annotations on papers",
+      "common": "widely used",
+      "cite": {
+       "label": "BioC format paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3889917/"
+      }
+     },
+     {
+      "name": "Open Targets Platform",
+      "kind": "Tool",
+      "does": "One place joining mined evidence per target and disease",
+      "common": "standard",
+      "cite": {
+       "label": "Open Targets access",
+       "url": "https://platform-docs.opentargets.org/data-access"
+      }
+     },
+     {
+      "name": "TSV and JSON exports",
+      "kind": "Data",
+      "does": "Candidate gene tables taken out for further work",
+      "common": "standard",
+      "cite": {
+       "label": "Open Targets access",
+       "url": "https://platform-docs.opentargets.org/data-access"
+      }
+     },
+     {
+      "name": "International Mouse Phenotyping Consortium",
+      "kind": "Resource",
+      "does": "Open knockout mouse results showing what each gene does",
+      "common": "widely used",
+      "cite": {
+       "label": "About IMPC",
+       "url": "https://www.mousephenotype.org/about-impc/"
+      }
+     },
+     {
+      "name": "ChEMBL web services",
+      "kind": "Resource",
+      "does": "Compound activity against targets through an open data API",
+      "common": "standard",
+      "cite": {
+       "label": "ChEMBL at EBI",
+       "url": "https://www.ebi.ac.uk/chembl/"
+      }
+     }
+    ]
    },
    {
     "i": 3,
@@ -4973,7 +5234,139 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
     "cite": {
      "label": "Open Targets associations",
      "url": "https://platform-docs.opentargets.org/associations"
-    }
+    },
+    "items": [
+     {
+      "name": "Open Targets Platform",
+      "kind": "Tool",
+      "does": "Ranks targets for a disease from pooled evidence",
+      "common": "standard",
+      "cite": {
+       "label": "Open Targets associations",
+       "url": "https://platform-docs.opentargets.org/associations"
+      }
+     },
+     {
+      "name": "harmonic sum association score",
+      "kind": "Technique",
+      "does": "Adds ranked evidence scores with falling weights",
+      "common": "standard",
+      "cite": {
+       "label": "Open Targets associations",
+       "url": "https://platform-docs.opentargets.org/associations"
+      }
+     },
+     {
+      "name": "evidence source weighting",
+      "kind": "Technique",
+      "does": "Sets how much each data source counts",
+      "common": "standard",
+      "cite": {
+       "label": "Open Targets associations",
+       "url": "https://platform-docs.opentargets.org/associations"
+      }
+     },
+     {
+      "name": "indirect associations by ontology propagation",
+      "kind": "Technique",
+      "does": "Rolls child disease evidence up to the parent",
+      "common": "standard",
+      "cite": {
+       "label": "Open Targets associations",
+       "url": "https://platform-docs.opentargets.org/associations"
+      }
+     },
+     {
+      "name": "target prioritisation factors",
+      "kind": "Technique",
+      "does": "Traffic light columns shown beside the ranked list",
+      "common": "widely used",
+      "cite": {
+       "label": "Open Targets docs",
+       "url": "https://platform-docs.opentargets.org/web-interface/target-prioritisation"
+      }
+     },
+     {
+      "name": "locus-to-gene score",
+      "kind": "Technique",
+      "does": "Picks the likely gene under a genetic signal",
+      "common": "standard",
+      "cite": {
+       "label": "Open Targets L2G",
+       "url": "https://platform-docs.opentargets.org/gentropy/locus-to-gene-l2g"
+      }
+     },
+     {
+      "name": "Open Targets GraphQL API",
+      "kind": "Tool",
+      "does": "Pulls the same scores from your own code",
+      "common": "standard",
+      "cite": {
+       "label": "Open Targets GraphQL",
+       "url": "https://platform-docs.opentargets.org/data-access/graphql-api"
+      }
+     },
+     {
+      "name": "Open Targets BigQuery",
+      "kind": "Tool",
+      "does": "Runs SQL across whole association tables",
+      "common": "widely used",
+      "cite": {
+       "label": "Open Targets BigQuery",
+       "url": "https://platform-docs.opentargets.org/data-access/google-bigquery"
+      }
+     },
+     {
+      "name": "Parquet and JSON release dumps",
+      "kind": "Data",
+      "does": "Whole data release downloaded for local scoring",
+      "common": "standard",
+      "cite": {
+       "label": "Open Targets datasets",
+       "url": "https://platform-docs.opentargets.org/data-access/datasets"
+      }
+     },
+     {
+      "name": "Experimental Factor Ontology",
+      "kind": "Resource",
+      "does": "Disease names plus their parent and child links",
+      "common": "standard",
+      "cite": {
+       "label": "EFO at EBI",
+       "url": "https://www.ebi.ac.uk/efo/"
+      }
+     },
+     {
+      "name": "Target Development Level",
+      "kind": "Technique",
+      "does": "Bins targets by how far drug work reached",
+      "common": "widely used",
+      "cite": {
+       "label": "Pharos protocol",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7818358/"
+      }
+     },
+     {
+      "name": "DisGeNET",
+      "kind": "Resource",
+      "does": "Gene to disease links gathered from many sources",
+      "common": "widely used",
+      "cite": {
+       "label": "DisGeNET site",
+       "url": "https://disgenet.com/"
+      }
+     },
+     {
+      "name": "DISEASES",
+      "kind": "Resource",
+      "does": "Text mined gene to disease links with scores",
+      "common": "niche",
+      "cite": {
+       "label": "JensenLab DISEASES",
+       "url": "https://diseases.jensenlab.org/"
+      }
+     }
+    ]
    },
    {
     "i": 4,
@@ -5118,6 +5511,148 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
       "plain": "Find genotypes that parents could not have passed on",
       "tool": "PLINK 1.9"
      }
+    ],
+    "items": [
+     {
+      "name": "REGENIE",
+      "kind": "Tool",
+      "does": "Tests whole genomes at biobank scale",
+      "common": "standard",
+      "cite": {
+       "label": "REGENIE docs",
+       "url": "https://rgcgithub.github.io/regenie/"
+      }
+     },
+     {
+      "name": "PLINK 2.0",
+      "kind": "Tool",
+      "does": "Filters genotypes and runs fast association tests",
+      "common": "standard",
+      "cite": {
+       "label": "PLINK 2.0",
+       "url": "https://www.cog-genomics.org/plink/2.0/"
+      }
+     },
+     {
+      "name": "SAIGE",
+      "kind": "Tool",
+      "does": "Mixed model tests when cases are rare",
+      "common": "widely used",
+      "cite": {
+       "label": "SAIGE docs",
+       "url": "https://saigegit.github.io/SAIGE-doc/"
+      }
+     },
+     {
+      "name": "BOLT-LMM",
+      "kind": "Tool",
+      "does": "Mixed model scan over hundreds of thousands",
+      "common": "widely used",
+      "cite": {
+       "label": "BOLT-LMM manual",
+       "url": "https://alkesgroup.broadinstitute.org/BOLT-LMM/BOLT-LMM_manual.html"
+      }
+     },
+     {
+      "name": "GCTA",
+      "kind": "Tool",
+      "does": "Relatedness, heritability and conditional signal splitting",
+      "common": "widely used",
+      "cite": {
+       "label": "GCTA site",
+       "url": "https://yanglab.westlake.edu.cn/software/gcta/"
+      }
+     },
+     {
+      "name": "bcftools",
+      "kind": "Tool",
+      "does": "Filters and reshapes variant call files",
+      "common": "standard",
+      "cite": {
+       "label": "bcftools manual",
+       "url": "https://samtools.github.io/bcftools/bcftools.html"
+      }
+     },
+     {
+      "name": "Hail",
+      "kind": "Tool",
+      "does": "Python framework for huge genetic datasets",
+      "common": "widely used",
+      "cite": {
+       "label": "Hail site",
+       "url": "https://hail.is/"
+      }
+     },
+     {
+      "name": "UK Biobank Research Analysis Platform",
+      "kind": "Resource",
+      "does": "Cloud workspace holding half a million genomes",
+      "common": "standard",
+      "cite": {
+       "label": "UK Biobank RAP",
+       "url": "https://dnanexus.gitbook.io/uk-biobank-rap"
+      }
+     },
+     {
+      "name": "FinnGen",
+      "kind": "Resource",
+      "does": "Finnish biobank results for many diseases",
+      "common": "widely used",
+      "cite": {
+       "label": "FinnGen site",
+       "url": "https://www.finngen.fi/en"
+      }
+     },
+     {
+      "name": "GWAS Catalog",
+      "kind": "Resource",
+      "does": "Published association results and summary statistics",
+      "common": "standard",
+      "cite": {
+       "label": "GWAS Catalog",
+       "url": "https://www.ebi.ac.uk/gwas/"
+      }
+     },
+     {
+      "name": "gnomAD",
+      "kind": "Resource",
+      "does": "How common each variant is, and gene constraint",
+      "common": "standard",
+      "cite": {
+       "label": "gnomAD browser",
+       "url": "https://gnomad.broadinstitute.org/"
+      }
+     },
+     {
+      "name": "OMIM",
+      "kind": "Resource",
+      "does": "Known inherited disease genes and their syndromes",
+      "common": "widely used",
+      "cite": {
+       "label": "OMIM at NCBI",
+       "url": "https://www.ncbi.nlm.nih.gov/omim/"
+      }
+     },
+     {
+      "name": "BGEN",
+      "kind": "Data",
+      "does": "Compact file of imputed genotype chances",
+      "common": "standard",
+      "cite": {
+       "label": "regenie input options",
+       "url": "https://rgcgithub.github.io/regenie/options/"
+      }
+     },
+     {
+      "name": "GWAS-SSF summary statistics",
+      "kind": "Data",
+      "does": "Standard table of effect sizes per variant",
+      "common": "standard",
+      "cite": {
+       "label": "GWAS Catalog format",
+       "url": "https://www.ebi.ac.uk/gwas/docs/summary-statistics-format"
+      }
+     }
     ]
    },
    {
@@ -5231,6 +5766,148 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
       "plain": "Check very high and very low proteins separately",
       "tool": "SomaScan"
      }
+    ],
+    "items": [
+     {
+      "name": "nf-core/rnaseq",
+      "kind": "Tool",
+      "does": "Turns raw reads into gene count tables",
+      "common": "standard",
+      "cite": {
+       "label": "nf-core/rnaseq",
+       "url": "https://nf-co.re/rnaseq"
+      }
+     },
+     {
+      "name": "STAR",
+      "kind": "Tool",
+      "does": "Lines reads up against the genome",
+      "common": "standard",
+      "cite": {
+       "label": "STAR repository",
+       "url": "https://github.com/alexdobin/STAR"
+      }
+     },
+     {
+      "name": "Salmon",
+      "kind": "Tool",
+      "does": "Counts reads per transcript without full alignment",
+      "common": "widely used",
+      "cite": {
+       "label": "Salmon docs",
+       "url": "https://salmon.readthedocs.io/en/latest/"
+      }
+     },
+     {
+      "name": "DESeq2",
+      "kind": "Tool",
+      "does": "Finds genes changed between disease and control",
+      "common": "standard",
+      "cite": {
+       "label": "DESeq2 package",
+       "url": "https://bioconductor.org/packages/DESeq2/"
+      }
+     },
+     {
+      "name": "edgeR",
+      "kind": "Tool",
+      "does": "Another count based test for changed genes",
+      "common": "widely used",
+      "cite": {
+       "label": "edgeR package",
+       "url": "https://bioconductor.org/packages/edgeR/"
+      }
+     },
+     {
+      "name": "limma-voom",
+      "kind": "Tool",
+      "does": "Linear models with weights for count data",
+      "common": "widely used",
+      "cite": {
+       "label": "limma package",
+       "url": "https://bioconductor.org/packages/limma/"
+      }
+     },
+     {
+      "name": "MultiQC",
+      "kind": "Tool",
+      "does": "Builds one quality report from pipeline output",
+      "common": "standard",
+      "cite": {
+       "label": "MultiQC site",
+       "url": "https://multiqc.info/"
+      }
+     },
+     {
+      "name": "Cell Ranger",
+      "kind": "Tool",
+      "does": "Makes cell by gene counts from droplet data",
+      "common": "standard",
+      "cite": {
+       "label": "Cell Ranger repo",
+       "url": "https://github.com/10XGenomics/cellranger"
+      }
+     },
+     {
+      "name": "Scanpy",
+      "kind": "Tool",
+      "does": "Python code for single cell gene activity work",
+      "common": "standard",
+      "cite": {
+       "label": "Scanpy docs",
+       "url": "https://scanpy.readthedocs.io/en/stable/"
+      }
+     },
+     {
+      "name": "Seurat",
+      "kind": "Tool",
+      "does": "R package doing the same single cell work",
+      "common": "standard",
+      "cite": {
+       "label": "Seurat site",
+       "url": "https://satijalab.org/seurat/"
+      }
+     },
+     {
+      "name": "h5ad AnnData object",
+      "kind": "Data",
+      "does": "One file holding cells, genes and their labels",
+      "common": "standard",
+      "cite": {
+       "label": "AnnData docs",
+       "url": "https://anndata.readthedocs.io/en/latest/"
+      }
+     },
+     {
+      "name": "GTEx Portal",
+      "kind": "Resource",
+      "does": "Normal tissue gene levels for comparison",
+      "common": "standard",
+      "cite": {
+       "label": "GTEx Portal",
+       "url": "https://gtexportal.org/home/"
+      }
+     },
+     {
+      "name": "Human Protein Atlas",
+      "kind": "Resource",
+      "does": "Where each protein sits across tissues and cells",
+      "common": "standard",
+      "cite": {
+       "label": "Protein Atlas",
+       "url": "https://www.proteinatlas.org/"
+      }
+     },
+     {
+      "name": "Gene Expression Omnibus",
+      "kind": "Resource",
+      "does": "Public store of other people's expression datasets",
+      "common": "standard",
+      "cite": {
+       "label": "GEO at NCBI",
+       "url": "https://www.ncbi.nlm.nih.gov/geo/"
+      }
+     }
     ]
    },
    {
@@ -5249,7 +5926,149 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
     "cite": {
      "label": "MAGeCK wiki",
      "url": "https://sourceforge.net/p/mageck/wiki/Home/"
-    }
+    },
+    "items": [
+     {
+      "name": "MAGeCK",
+      "kind": "Tool",
+      "does": "Ranks genes from screen read count tables",
+      "common": "standard",
+      "cite": {
+       "label": "MAGeCK wiki",
+       "url": "https://sourceforge.net/p/mageck/wiki/Home/"
+      }
+     },
+     {
+      "name": "robust rank aggregation",
+      "kind": "Technique",
+      "does": "Scores a gene from its guides' ranks",
+      "common": "standard",
+      "cite": {
+       "label": "MAGeCK paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4290824/"
+      }
+     },
+     {
+      "name": "MAGeCK MLE",
+      "kind": "Technique",
+      "does": "Fits gene effects by maximum likelihood instead",
+      "common": "widely used",
+      "cite": {
+       "label": "MAGeCK wiki",
+       "url": "https://sourceforge.net/p/mageck/wiki/Home/"
+      }
+     },
+     {
+      "name": "MAGeCKFlute",
+      "kind": "Tool",
+      "does": "Plots and interprets the ranked gene output",
+      "common": "widely used",
+      "cite": {
+       "label": "MAGeCKFlute package",
+       "url": "https://bioconductor.org/packages/MAGeCKFlute/"
+      }
+     },
+     {
+      "name": "BAGEL2",
+      "kind": "Tool",
+      "does": "Gives each gene a log odds of being essential",
+      "common": "widely used",
+      "cite": {
+       "label": "BAGEL2 repository",
+       "url": "https://github.com/hart-lab/bagel"
+      }
+     },
+     {
+      "name": "CRISPRcleanR",
+      "kind": "Tool",
+      "does": "Removes copy number bias from guide counts",
+      "common": "widely used",
+      "cite": {
+       "label": "CRISPRcleanR repo",
+       "url": "https://github.com/francescojm/CRISPRcleanR"
+      }
+     },
+     {
+      "name": "drugZ",
+      "kind": "Tool",
+      "does": "Finds genes that change a drug's effect",
+      "common": "niche",
+      "cite": {
+       "label": "drugZ repository",
+       "url": "https://github.com/hart-lab/drugz"
+      }
+     },
+     {
+      "name": "Chronos",
+      "kind": "Tool",
+      "does": "Models cell growth to get cleaner gene scores",
+      "common": "widely used",
+      "cite": {
+       "label": "Chronos paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8686573/"
+      }
+     },
+     {
+      "name": "nf-core/crisprseq",
+      "kind": "Tool",
+      "does": "Pipeline from raw screen reads to ranked genes",
+      "common": "widely used",
+      "cite": {
+       "label": "nf-core/crisprseq",
+       "url": "https://nf-co.re/crisprseq"
+      }
+     },
+     {
+      "name": "CRISPRi and CRISPRa screens",
+      "kind": "Technique",
+      "does": "Turns genes down or up instead of cutting",
+      "common": "widely used",
+      "cite": {
+       "label": "Horlbeck et al. 2016",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5094855/"
+      }
+     },
+     {
+      "name": "Brunello library",
+      "kind": "Resource",
+      "does": "Ready made guide set covering every human gene",
+      "common": "standard",
+      "cite": {
+       "label": "Addgene Brunello",
+       "url": "https://www.addgene.org/pooled-library/broadgpp-human-knockout-brunello/"
+      }
+     },
+     {
+      "name": "sgRNA library and count tables",
+      "kind": "Data",
+      "does": "Guide names, sequences and reads per sample",
+      "common": "standard",
+      "cite": {
+       "label": "MAGeCK wiki",
+       "url": "https://sourceforge.net/p/mageck/wiki/Home/"
+      }
+     },
+     {
+      "name": "DepMap Portal",
+      "kind": "Resource",
+      "does": "Screen results across a thousand cancer cell lines",
+      "common": "standard",
+      "cite": {
+       "label": "DepMap portal",
+       "url": "https://depmap.org/portal/"
+      }
+     },
+     {
+      "name": "Project Score",
+      "kind": "Resource",
+      "does": "Sanger screens ranking cancer dependencies as targets",
+      "common": "widely used",
+      "cite": {
+       "label": "Project Score paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7778984/"
+      }
+     }
+    ]
    },
    {
     "i": 7,
@@ -5267,7 +6086,149 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
     "cite": {
      "label": "Hughes et al. 2011",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
-    }
+    },
+    "items": [
+     {
+      "name": "Phage display antibody library",
+      "kind": "Technique",
+      "does": "Shows millions of antibodies on phage so binders can be picked",
+      "common": "standard",
+      "cite": {
+       "label": "Phage display campaign",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+      }
+     },
+     {
+      "name": "Cell-based panning",
+      "kind": "Technique",
+      "does": "Selects binders on whole live cells instead of purified protein",
+      "common": "standard",
+      "cite": {
+       "label": "Cell panning review",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6698842/"
+      }
+     },
+     {
+      "name": "Yeast surface display",
+      "kind": "Technique",
+      "does": "Shows antibodies on yeast and sorts binders by flow cytometry",
+      "common": "widely used",
+      "cite": {
+       "label": "Yeast display review",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10839864/"
+      }
+     },
+     {
+      "name": "Cell microarray screening",
+      "kind": "Technique",
+      "does": "Tests one binder against thousands of surface proteins to name its target",
+      "common": "widely used",
+      "cite": {
+       "label": "Cell microarray paper",
+       "url": "https://doi.org/10.1177/2472555219897567"
+      }
+     },
+     {
+      "name": "Immunoprecipitation mass spectrometry",
+      "kind": "Technique",
+      "does": "Pulls down whatever an antibody grabs then names that protein",
+      "common": "standard",
+      "cite": {
+       "label": "Antigen identification study",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2377314/"
+      }
+     },
+     {
+      "name": "Cell Surface Protein Atlas",
+      "kind": "Resource",
+      "does": "Measured list of proteins sitting on many human cell types",
+      "common": "widely used",
+      "cite": {
+       "label": "Surfaceome atlas",
+       "url": "https://wollscheidlab.org/CSPA"
+      }
+     },
+     {
+      "name": "MaxQuant",
+      "kind": "Tool",
+      "does": "Turns raw mass spectrometry files into named and counted proteins",
+      "common": "standard",
+      "cite": {
+       "label": "MaxQuant site",
+       "url": "https://maxquant.org/"
+      }
+     },
+     {
+      "name": "MSFragger with FragPipe",
+      "kind": "Tool",
+      "does": "Fast search engine and pipeline for identifying peptides and proteins",
+      "common": "widely used",
+      "cite": {
+       "label": "FragPipe site",
+       "url": "https://fragpipe.nesvilab.org/"
+      }
+     },
+     {
+      "name": "mzML",
+      "kind": "Data",
+      "does": "Open file format holding raw mass spectrometer output",
+      "common": "standard",
+      "cite": {
+       "label": "mzML standard",
+       "url": "https://www.psidev.info/mzML"
+      }
+     },
+     {
+      "name": "Antibody repertoire sequencing",
+      "kind": "Technique",
+      "does": "Reads millions of antibody genes from selected or immune cells",
+      "common": "widely used",
+      "cite": {
+       "label": "Repertoire sequencing review",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4113560/"
+      }
+     },
+     {
+      "name": "MiXCR",
+      "kind": "Tool",
+      "does": "Rebuilds antibody and receptor sequences from raw repertoire reads",
+      "common": "widely used",
+      "cite": {
+       "label": "MiXCR docs",
+       "url": "https://mixcr.com/"
+      }
+     },
+     {
+      "name": "IgBLAST",
+      "kind": "Tool",
+      "does": "Assigns germline genes and marks binding loops in antibody sequences",
+      "common": "standard",
+      "cite": {
+       "label": "IgBLAST site",
+       "url": "https://ncbi.github.io/igblast/"
+      }
+     },
+     {
+      "name": "Observed Antibody Space",
+      "kind": "Resource",
+      "does": "Billion annotated antibody sequences to compare a campaign against",
+      "common": "niche",
+      "cite": {
+       "label": "OAS database",
+       "url": "https://opig.stats.ox.ac.uk/webapps/oas/"
+      }
+     },
+     {
+      "name": "FASTQ",
+      "kind": "Data",
+      "does": "Sequencing read file carrying a quality score per base",
+      "common": "standard",
+      "cite": {
+       "label": "FASTQ format paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2847217/"
+      }
+     }
+    ]
    },
    {
     "i": 8,
@@ -5285,7 +6246,149 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
     "cite": {
      "label": "Emmerich et al., GOT-IT",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7667479/"
-    }
+    },
+    "items": [
+     {
+      "name": "GOT-IT critical path questions",
+      "kind": "Technique",
+      "does": "Forty set questions a mixed team answers before backing a target",
+      "common": "widely used",
+      "cite": {
+       "label": "GOT-IT recommendations",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7667479/"
+      }
+     },
+     {
+      "name": "AstraZeneca 5R framework",
+      "kind": "Technique",
+      "does": "Checks right target, tissue, safety, patient and commercial potential",
+      "common": "widely used",
+      "cite": {
+       "label": "5R framework paper",
+       "url": "https://doi.org/10.1038/nrd.2017.244"
+      }
+     },
+     {
+      "name": "Open Targets tractability buckets",
+      "kind": "Resource",
+      "does": "Flags whether a target can be hit by drugs or antibodies",
+      "common": "standard",
+      "cite": {
+       "label": "Tractability docs",
+       "url": "https://platform-docs.opentargets.org/target/tractability"
+      }
+     },
+     {
+      "name": "Pharos",
+      "kind": "Resource",
+      "does": "Shows how well studied and how druggable each human protein is",
+      "common": "widely used",
+      "cite": {
+       "label": "Pharos portal",
+       "url": "https://pharos.nih.gov/"
+      }
+     },
+     {
+      "name": "fpocket",
+      "kind": "Tool",
+      "does": "Finds pockets on a protein structure and scores them",
+      "common": "widely used",
+      "cite": {
+       "label": "fpocket repository",
+       "url": "https://github.com/Discngine/fpocket"
+      }
+     },
+     {
+      "name": "SiteMap",
+      "kind": "Tool",
+      "does": "Commercial tool ranking binding sites and how druggable they look",
+      "common": "widely used",
+      "cite": {
+       "label": "SiteMap page",
+       "url": "https://www.schrodinger.com/platform/products/sitemap/"
+      }
+     },
+     {
+      "name": "AlphaFold Protein Structure Database",
+      "kind": "Resource",
+      "does": "Predicted shapes for almost every known protein, free to download",
+      "common": "standard",
+      "cite": {
+       "label": "AlphaFold database",
+       "url": "https://alphafold.ebi.ac.uk/"
+      }
+     },
+     {
+      "name": "ESMFold",
+      "kind": "Tool",
+      "does": "Predicts a protein shape from one sequence, no relatives needed",
+      "common": "niche",
+      "cite": {
+       "label": "ESM repository",
+       "url": "https://github.com/facebookresearch/esm"
+      }
+     },
+     {
+      "name": "PyMOL",
+      "kind": "Tool",
+      "does": "Views and renders protein structures and candidate binding pockets",
+      "common": "standard",
+      "cite": {
+       "label": "PyMOL site",
+       "url": "https://pymol.org/"
+      }
+     },
+     {
+      "name": "PDBx/mmCIF",
+      "kind": "Data",
+      "does": "File format used to archive and share protein structures",
+      "common": "standard",
+      "cite": {
+       "label": "mmCIF resource",
+       "url": "https://mmcif.wwpdb.org/"
+      }
+     },
+     {
+      "name": "Human Protein Atlas",
+      "kind": "Resource",
+      "does": "Shows where in the body and in cells a protein appears",
+      "common": "standard",
+      "cite": {
+       "label": "Protein Atlas",
+       "url": "https://www.proteinatlas.org/"
+      }
+     },
+     {
+      "name": "gnomAD constraint metrics",
+      "kind": "Resource",
+      "does": "Shows whether losing a gene is tolerated in healthy people",
+      "common": "widely used",
+      "cite": {
+       "label": "gnomAD constraint paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7334197/"
+      }
+     },
+     {
+      "name": "Chemical Probes Portal",
+      "kind": "Resource",
+      "does": "Expert reviewed compounds for testing a target in living cells",
+      "common": "widely used",
+      "cite": {
+       "label": "Probes portal",
+       "url": "https://www.chemicalprobes.org/"
+      }
+     },
+     {
+      "name": "DGIdb",
+      "kind": "Resource",
+      "does": "Collects known drug and gene interactions for a candidate target",
+      "common": "widely used",
+      "cite": {
+       "label": "DGIdb paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10767982/"
+      }
+     }
+    ]
    },
    {
     "i": 9,
@@ -5303,7 +6406,99 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
     "cite": {
      "label": "Hughes et al. 2011",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
-    }
+    },
+    "items": [
+     {
+      "name": "Target product profile",
+      "kind": "Data",
+      "does": "Document stating the intended label and minimum acceptable product features",
+      "common": "standard",
+      "cite": {
+       "label": "FDA TPP notice",
+       "url": "https://www.govinfo.gov/content/pkg/FR-2007-03-30/pdf/E7-5949.pdf"
+      }
+     },
+     {
+      "name": "Stage-gate review",
+      "kind": "Technique",
+      "does": "Gate meeting that ends in go, kill, hold or recycle",
+      "common": "standard",
+      "cite": {
+       "label": "Stage-Gate International",
+       "url": "https://www.stage-gate.com/"
+      }
+     },
+     {
+      "name": "Project plan with go or no-go points",
+      "kind": "Data",
+      "does": "Written plan listing milestones and the points where work stops",
+      "common": "standard",
+      "cite": {
+       "label": "GOT-IT decision points",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7667479/"
+      }
+     },
+     {
+      "name": "Good drug target criteria checklist",
+      "kind": "Technique",
+      "does": "Company list of properties a target must show to proceed",
+      "common": "widely used",
+      "cite": {
+       "label": "Good target paper",
+       "url": "https://doi.org/10.1016/j.drudis.2011.09.007"
+      }
+     },
+     {
+      "name": "Open Targets target prioritisation view",
+      "kind": "Tool",
+      "does": "Traffic light scores for precedence, tractability, doability and safety",
+      "common": "widely used",
+      "cite": {
+       "label": "Prioritisation docs",
+       "url": "https://platform-docs.opentargets.org/web-interface/target-prioritisation"
+      }
+     },
+     {
+      "name": "Analytic hierarchy process ranking",
+      "kind": "Technique",
+      "does": "Weights criteria by pairwise comparison then ranks candidate targets",
+      "common": "niche",
+      "cite": {
+       "label": "NCI antigen ranking",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5779623/"
+      }
+     },
+     {
+      "name": "Expected net present value modelling",
+      "kind": "Technique",
+      "does": "Values a project from success odds, cost and time per phase",
+      "common": "widely used",
+      "cite": {
+       "label": "R&D productivity analysis",
+       "url": "https://doi.org/10.1038/nrd3078"
+      }
+     },
+     {
+      "name": "Microsoft Project",
+      "kind": "Tool",
+      "does": "Generic scheduler for tasks, milestones and Gantt charts",
+      "common": "widely used",
+      "cite": {
+       "label": "Project documentation",
+       "url": "https://learn.microsoft.com/en-us/project/"
+      }
+     },
+     {
+      "name": "Planisware",
+      "kind": "Tool",
+      "does": "Portfolio software tracking projects, gates, budgets and people",
+      "common": "niche",
+      "cite": {
+       "label": "Planisware site",
+       "url": "https://www.planisware.com/"
+      }
+     }
+    ]
    }
   ]
  }
@@ -5385,12 +6580,13 @@ function stepList(bi, si, id){
   const hit = items.some(x=>x.on);
   const body = x => {
     const d = x.d; if(!d) return "";
-    const tools = (d.toolList||[]).map(tl=>`<li><b>${esc(tl.name)}</b><span>${esc(tl.does)}</span></li>`).join("");
+    const items = d.items && d.items.length ? d.items : (d.toolList||[]).map(tl=>({name:tl.name,kind:"Tool",does:tl.does}));
+    const tools = items.map(it=>`<li class="k-${esc((it.kind||"Tool").toLowerCase())}${it.common==="niche"?" niche":""}"><b>${esc(it.name)} <em>(${esc(it.kind||"Tool")})</em></b><span>${esc(it.does)}${it.common && it.common!=="standard"?` · ${esc(it.common)}`:""}</span></li>`).join("");
     const subs = (d.substeps||[]).map(s=>`<li>${esc(s.plain)}${s.tool?` <em>${esc(s.tool)}</em>`:""}</li>`).join("");
     return `<div class="sdet">
       ${d.human?`<p class="sh">${esc(d.human)}</p>`:""}
       ${tools?`<ul class="stools">${tools}</ul>`:""}
-      ${d.files && !/^Not described/i.test(d.files)?`<p class="sf"><span>Data</span>${esc(d.files)}</p>`:""}
+      ${(!d.items||!d.items.length) && d.files && !/^Not described/i.test(d.files)?`<p class="sf"><span>Data</span>${esc(d.files)}</p>`:""}
       ${subs?`<details class="ssub"><summary>${(d.substeps||[]).length} kinds of this work</summary><ul>${subs}</ul></details>`:""}
       ${d.cite&&d.cite.url?`<p class="sc"><a href="${esc(d.cite.url)}" target="_blank" rel="noopener">${esc(d.cite.label||host(d.cite.url))}</a></p>`:""}
     </div>`;
