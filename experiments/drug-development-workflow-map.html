@@ -6501,6 +6501,2282 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
     ]
    }
   ]
+ },
+ "b1-2": {
+  "steps": [
+   {
+    "i": 1,
+    "name": "Scoping the validation package",
+    "plain": "Plan how much testing is needed to prove the target",
+    "human": "Decide which tests would prove the target matters, then write the plan down",
+    "toolList": [
+     {
+      "name": "No single standard tool",
+      "does": "Not described in our sources"
+     }
+    ],
+    "paradigm": "Documents",
+    "files": "Not described in our sources",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    },
+    "items": [
+     {
+      "name": "GOT-IT target assessment process",
+      "kind": "Technique",
+      "does": "Structured way to plan the evidence a target still needs",
+      "common": "widely used",
+      "cite": {
+       "label": "GOT-IT recommendations",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7667479/"
+      }
+     },
+     {
+      "name": "Validation cascade from cells to whole animals",
+      "kind": "Technique",
+      "does": "Orders the work from test tube tools up to living animals",
+      "common": "standard",
+      "cite": {
+       "label": "Hughes et al. 2011",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+      }
+     },
+     {
+      "name": "Three pillars of survival",
+      "kind": "Technique",
+      "does": "Demands proof of exposure, target binding and a real effect",
+      "common": "widely used",
+      "cite": {
+       "label": "Morgan et al. 2012",
+       "url": "https://doi.org/10.1016/j.drudis.2011.12.020"
+      }
+     },
+     {
+      "name": "Pharmacological audit trail",
+      "kind": "Technique",
+      "does": "Chain of questions each experiment must answer before the next",
+      "common": "widely used",
+      "cite": {
+       "label": "Banerji and Workman",
+       "url": "https://doi.org/10.1053/j.seminoncol.2016.06.001"
+      }
+     },
+     {
+      "name": "Open Targets Platform",
+      "kind": "Tool",
+      "does": "Pulls together evidence already published about the target",
+      "common": "widely used",
+      "cite": {
+       "label": "Open Targets access",
+       "url": "https://platform-docs.opentargets.org/data-access"
+      }
+     },
+     {
+      "name": "International Mouse Phenotyping Consortium",
+      "kind": "Resource",
+      "does": "Shows whether a knockout mouse exists and what it showed",
+      "common": "widely used",
+      "cite": {
+       "label": "About IMPC",
+       "url": "https://www.mousephenotype.org/about-impc/"
+      }
+     },
+     {
+      "name": "Structural Genomics Consortium Target Enabling Package",
+      "kind": "Resource",
+      "does": "Open bundle of reagents and assays for starting a target",
+      "common": "niche",
+      "cite": {
+       "label": "SGC enabling packages",
+       "url": "https://www.thesgc.org/target-enabling-packages"
+      }
+     },
+     {
+      "name": "NC3Rs Experimental Design Assistant",
+      "kind": "Tool",
+      "does": "Walks you through designing a sound animal experiment",
+      "common": "widely used",
+      "cite": {
+       "label": "NC3Rs EDA",
+       "url": "https://eda.nc3rs.org.uk/"
+      }
+     },
+     {
+      "name": "ARRIVE guidelines 2.0",
+      "kind": "Resource",
+      "does": "Checklist of what an animal study must plan and report",
+      "common": "standard",
+      "cite": {
+       "label": "ARRIVE guidelines",
+       "url": "https://arriveguidelines.org/"
+      }
+     },
+     {
+      "name": "G*Power",
+      "kind": "Tool",
+      "does": "Works out how many animals or wells the test needs",
+      "common": "widely used",
+      "cite": {
+       "label": "G*Power page",
+       "url": "https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower"
+      }
+     },
+     {
+      "name": "SYRCLE risk of bias tool",
+      "kind": "Technique",
+      "does": "Judges how trustworthy published animal studies really are",
+      "common": "niche",
+      "cite": {
+       "label": "SYRCLE tool paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4230647/"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 2,
+    "name": "Pharmacological tool validation",
+    "plain": "Test the target using reversible chemical tool compounds",
+    "human": "Treat cells with a selective compound at many doses and watch what changes",
+    "toolList": [
+     {
+      "name": "No single standard tool",
+      "does": "Reversible tool agents, which need the tool to stay present"
+     }
+    ],
+    "paradigm": "GUI",
+    "files": "Not described in our sources",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    },
+    "items": [
+     {
+      "name": "Chemical probe quality criteria",
+      "kind": "Technique",
+      "does": "Potency, selectivity and cell activity limits a probe must meet",
+      "common": "standard",
+      "cite": {
+       "label": "Arrowsmith et al. 2015",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4706458/"
+      }
+     },
+     {
+      "name": "Chemical Probes Portal",
+      "kind": "Resource",
+      "does": "Expert verdicts on which compounds work as target probes",
+      "common": "standard",
+      "cite": {
+       "label": "Chemical Probes Portal",
+       "url": "https://www.chemicalprobes.org/"
+      }
+     },
+     {
+      "name": "Matched inactive control compound",
+      "kind": "Technique",
+      "does": "Near identical molecule that misses the target, run alongside",
+      "common": "standard",
+      "cite": {
+       "label": "Probe control guidance",
+       "url": "https://www.chemicalprobes.org/info/controls"
+      }
+     },
+     {
+      "name": "Orthogonal second chemotype",
+      "kind": "Technique",
+      "does": "Repeats the finding with a structurally unrelated compound",
+      "common": "standard",
+      "cite": {
+       "label": "Blagg and Workman",
+       "url": "https://doi.org/10.1016/j.ccell.2017.10.011"
+      }
+     },
+     {
+      "name": "Four parameter logistic dose-response fit",
+      "kind": "Technique",
+      "does": "Fits the curve to read off the half effect dose",
+      "common": "standard",
+      "cite": {
+       "label": "Prism curve fitting",
+       "url": "https://www.graphpad.com/guides/prism/latest/curve-fitting/index.htm"
+      }
+     },
+     {
+      "name": "GraphPad Prism",
+      "kind": "Tool",
+      "does": "Fits and plots dose response curves from bench data",
+      "common": "standard",
+      "cite": {
+       "label": "Prism features",
+       "url": "https://www.graphpad.com/features"
+      }
+     },
+     {
+      "name": "scanMAX kinase selectivity panel",
+      "kind": "Tool",
+      "does": "Tests one compound against hundreds of kinases at once",
+      "common": "widely used",
+      "cite": {
+       "label": "Eurofins scanMAX",
+       "url": "https://www.eurofinsdiscovery.com/solution/scanmax"
+      }
+     },
+     {
+      "name": "Secondary pharmacology off-target panel",
+      "kind": "Technique",
+      "does": "Screens the compound against common unwanted targets early",
+      "common": "widely used",
+      "cite": {
+       "label": "Bowes et al. 2012",
+       "url": "https://doi.org/10.1038/nrd3845"
+      }
+     },
+     {
+      "name": "NanoBRET target engagement assay",
+      "kind": "Technique",
+      "does": "Shows the compound binding its target inside living cells",
+      "common": "widely used",
+      "cite": {
+       "label": "Promega NanoBRET TE",
+       "url": "https://www.promega.com/products/cell-signaling/kinase-target-engagement/"
+      }
+     },
+     {
+      "name": "Cellular thermal shift assay",
+      "kind": "Technique",
+      "does": "Proves binding by how much heat the target survives",
+      "common": "widely used",
+      "cite": {
+       "label": "CETSA site",
+       "url": "https://www.cetsa.org/"
+      }
+     },
+     {
+      "name": "Kinobead chemoproteomic profiling",
+      "kind": "Technique",
+      "does": "Pulls down proteins to see everything the compound hits",
+      "common": "widely used",
+      "cite": {
+       "label": "Klaeger et al. 2017",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6542668/"
+      }
+     },
+     {
+      "name": "Washout reversibility test",
+      "kind": "Technique",
+      "does": "Removes the compound to show the effect fades again",
+      "common": "standard",
+      "cite": {
+       "label": "Hughes et al. 2011",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+      }
+     },
+     {
+      "name": "ChEMBL",
+      "kind": "Resource",
+      "does": "Looks up published potency and selectivity for the compound",
+      "common": "standard",
+      "cite": {
+       "label": "ChEMBL at EBI",
+       "url": "https://www.ebi.ac.uk/chembl/"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 3,
+    "name": "Genetic validation in whole animals",
+    "plain": "Change the target gene in animals and watch the effects",
+    "human": "Breed mice with the gene switched off or altered, then measure what changes",
+    "toolList": [
+     {
+      "name": "No single standard tool",
+      "does": "Transgenic knockout and knock-in animals read for phenotype"
+     }
+    ],
+    "paradigm": "GUI",
+    "files": "In vivo and behavioural study datasets",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    },
+    "items": [
+     {
+      "name": "CRISPR-Cas9 zygote editing",
+      "kind": "Technique",
+      "does": "Cuts the gene in a fertilised egg to make founder mice",
+      "common": "standard",
+      "cite": {
+       "label": "Wang et al. 2013",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3969854/"
+      }
+     },
+     {
+      "name": "Cre-lox conditional knockout",
+      "kind": "Technique",
+      "does": "Deletes the gene only in the tissue you choose",
+      "common": "standard",
+      "cite": {
+       "label": "Cre-LoxP review",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6333611/"
+      }
+     },
+     {
+      "name": "Tamoxifen-inducible CreERT2",
+      "kind": "Technique",
+      "does": "Starts the deletion only when you give the drug",
+      "common": "standard",
+      "cite": {
+       "label": "Feil et al. 1996",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC38252/"
+      }
+     },
+     {
+      "name": "Doxycycline-controlled tet-on expression",
+      "kind": "Technique",
+      "does": "Turns a gene on or off through the drinking water",
+      "common": "widely used",
+      "cite": {
+       "label": "Gossen and Bujard",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC49329/"
+      }
+     },
+     {
+      "name": "Kinase-dead knock-in allele",
+      "kind": "Technique",
+      "does": "Swaps in a dead protein instead of removing it entirely",
+      "common": "widely used",
+      "cite": {
+       "label": "IRAK4 kinase-dead mice",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2118590/"
+      }
+     },
+     {
+      "name": "dTAG degron tagging",
+      "kind": "Technique",
+      "does": "Tags the protein so a drug destroys it within hours",
+      "common": "widely used",
+      "cite": {
+       "label": "Nabet et al. 2018",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6295913/"
+      }
+     },
+     {
+      "name": "KOMP Repository",
+      "kind": "Resource",
+      "does": "Supplies ready made knockout and floxed mouse lines",
+      "common": "standard",
+      "cite": {
+       "label": "KOMP Repository",
+       "url": "https://www.komp.org/"
+      }
+     },
+     {
+      "name": "Mouse Genome Informatics",
+      "kind": "Resource",
+      "does": "Official allele names and what each mutant mouse showed",
+      "common": "standard",
+      "cite": {
+       "label": "MGI at JAX",
+       "url": "https://www.informatics.jax.org/"
+      }
+     },
+     {
+      "name": "IMPReSS phenotyping protocols",
+      "kind": "Resource",
+      "does": "Standard test battery for scoring a mutant mouse",
+      "common": "standard",
+      "cite": {
+       "label": "IMPReSS protocols",
+       "url": "https://www.mousephenotype.org/impress/"
+      }
+     },
+     {
+      "name": "CRISPResso2",
+      "kind": "Tool",
+      "does": "Checks the edited allele from amplicon sequencing reads",
+      "common": "widely used",
+      "cite": {
+       "label": "CRISPResso2 paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6533916/"
+      }
+     },
+     {
+      "name": "Antisense oligonucleotide knockdown",
+      "kind": "Technique",
+      "does": "Injects a short strand that lowers the target in tissues",
+      "common": "widely used",
+      "cite": {
+       "label": "Crooke antisense review",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8005817/"
+      }
+     },
+     {
+      "name": "GalNAc-conjugated siRNA",
+      "kind": "Technique",
+      "does": "Knocks the target down in liver after one injection",
+      "common": "widely used",
+      "cite": {
+       "label": "GalNAc liver delivery",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7403466/"
+      }
+     },
+     {
+      "name": "AAV vector delivery",
+      "kind": "Technique",
+      "does": "Virus carries the change into tissues of adult animals",
+      "common": "widely used",
+      "cite": {
+       "label": "Addgene AAV guide",
+       "url": "https://www.addgene.org/viral-vectors/aav/aav-guide/"
+      }
+     },
+     {
+      "name": "EthoVision XT video tracking",
+      "kind": "Tool",
+      "does": "Scores animal behaviour automatically from video",
+      "common": "widely used",
+      "cite": {
+       "label": "Noldus EthoVision",
+       "url": "https://www.noldus.com/ethovision-xt"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 4,
+    "name": "Antibody tool validation",
+    "plain": "Make selective antibodies as tools to probe the target",
+    "human": "Make antibodies that grab only this target, then check how tightly they bind",
+    "toolList": [
+     {
+      "name": "No single standard tool",
+      "does": "Selective binders raised as target interrogation tools"
+     }
+    ],
+    "paradigm": "Platform",
+    "files": "Not described in our sources",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    },
+    "items": [
+     {
+      "name": "Hybridoma monoclonal generation",
+      "kind": "Technique",
+      "does": "Immunise an animal then grow one antibody making cell line",
+      "common": "standard",
+      "cite": {
+       "label": "Kohler and Milstein",
+       "url": "https://doi.org/10.1038/256495a0"
+      }
+     },
+     {
+      "name": "Phage display selection",
+      "kind": "Technique",
+      "does": "Picks binders from millions shown on phage particles",
+      "common": "standard",
+      "cite": {
+       "label": "Hughes et al. 2011",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+      }
+     },
+     {
+      "name": "Human antibody transgenic mice",
+      "kind": "Tool",
+      "does": "Mice whose own antibodies are already human sequence",
+      "common": "widely used",
+      "cite": {
+       "label": "VelocImmune mouse paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3986188/"
+      }
+     },
+     {
+      "name": "Surface plasmon resonance with Biacore",
+      "kind": "Tool",
+      "does": "Measures how tightly and how fast the antibody binds",
+      "common": "standard",
+      "cite": {
+       "label": "Biacore kinetics comparison",
+       "url": "https://doi.org/10.1177/2472555220934814"
+      }
+     },
+     {
+      "name": "Biolayer interferometry with Octet",
+      "kind": "Tool",
+      "does": "Same binding measurement on dipped sensor tips",
+      "common": "widely used",
+      "cite": {
+       "label": "Sartorius Octet BLI",
+       "url": "https://www.sartorius.com/en/products/biolayer-interferometry"
+      }
+     },
+     {
+      "name": "Epitope binning",
+      "kind": "Technique",
+      "does": "Groups antibodies by which patch of the target they cover",
+      "common": "widely used",
+      "cite": {
+       "label": "Carterra epitope binning",
+       "url": "https://www.carterra-bio.com/applications/epitope-binning/"
+      }
+     },
+     {
+      "name": "Knockout cell line specificity test",
+      "kind": "Technique",
+      "does": "Signal must vanish when the target gene is deleted",
+      "common": "standard",
+      "cite": {
+       "label": "YCharOS",
+       "url": "https://ycharos.com/"
+      }
+     },
+     {
+      "name": "Five pillars of antibody validation",
+      "kind": "Technique",
+      "does": "Set ways to prove an antibody hits only its target",
+      "common": "standard",
+      "cite": {
+       "label": "Uhlen et al. 2016",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10335836/"
+      }
+     },
+     {
+      "name": "Function blocking neutralisation assay",
+      "kind": "Technique",
+      "does": "Tests whether the antibody stops the target working",
+      "common": "standard",
+      "cite": {
+       "label": "Hughes et al. 2011",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+      }
+     },
+     {
+      "name": "Single domain nanobody",
+      "kind": "Technique",
+      "does": "Small camelid binder used as a compact target probe",
+      "common": "widely used",
+      "cite": {
+       "label": "Nanobody toolkit review",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5495861/"
+      }
+     },
+     {
+      "name": "Antibody Registry",
+      "kind": "Resource",
+      "does": "Gives each antibody a permanent identifier to cite",
+      "common": "standard",
+      "cite": {
+       "label": "Antibody Registry",
+       "url": "https://www.antibodyregistry.org/"
+      }
+     },
+     {
+      "name": "Antibodypedia",
+      "kind": "Resource",
+      "does": "Shows published validation data per antibody and target",
+      "common": "widely used",
+      "cite": {
+       "label": "Antibodypedia",
+       "url": "https://www.antibodypedia.com/"
+      }
+     },
+     {
+      "name": "IMGT/V-QUEST",
+      "kind": "Tool",
+      "does": "Numbers the antibody sequence and names its germline genes",
+      "common": "widely used",
+      "cite": {
+       "label": "IMGT/V-QUEST",
+       "url": "https://www.imgt.org/IMGT_vquest/analysis"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 5,
+    "name": "Mechanism and cellular pharmacology calls",
+    "plain": "Decide what the results say about how the target works",
+    "human": "Work out from the numbers how the compound acts on the target",
+    "toolList": [
+     {
+      "name": "No single standard tool",
+      "does": "Not described in our sources"
+     }
+    ],
+    "paradigm": "GUI",
+    "files": "Not described in our sources",
+    "cite": {
+     "label": "LatchBio competency post",
+     "url": "https://blog.latch.bio/p/quantifying-frontier-model-performance"
+    },
+    "items": [
+     {
+      "name": "Schild analysis",
+      "kind": "Technique",
+      "does": "Curve shifts show the compound competes at the site",
+      "common": "standard",
+      "cite": {
+       "label": "IUPHAR pharmacology terms",
+       "url": "https://doi.org/10.1124/pr.55.4.4"
+      }
+     },
+     {
+      "name": "Operational model of agonism",
+      "kind": "Technique",
+      "does": "Splits binding strength from how strongly the signal follows",
+      "common": "widely used",
+      "cite": {
+       "label": "Kenakin analytical pharmacology",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7088946/"
+      }
+     },
+     {
+      "name": "Inhibition modality determination",
+      "kind": "Technique",
+      "does": "Tells whether the compound blocks the active site or elsewhere",
+      "common": "standard",
+      "cite": {
+       "label": "Inhibition modality method",
+       "url": "https://doi.org/10.1177/2472555219829898"
+      }
+     },
+     {
+      "name": "Covalent inhibition kinetics",
+      "kind": "Technique",
+      "does": "Measures how fast an irreversible compound locks on",
+      "common": "widely used",
+      "cite": {
+       "label": "Covalent inhibition kinetics",
+       "url": "https://doi.org/10.1177/1087057116671509"
+      }
+     },
+     {
+      "name": "Resistance-conferring target mutant rescue",
+      "kind": "Technique",
+      "does": "Mutate the target so the compound stops working",
+      "common": "standard",
+      "cite": {
+       "label": "Kapoor and Miller",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5708298/"
+      }
+     },
+     {
+      "name": "Knockdown and add-back rescue",
+      "kind": "Technique",
+      "does": "Remove the target then put it back to confirm",
+      "common": "standard",
+      "cite": {
+       "label": "Blagg and Workman",
+       "url": "https://doi.org/10.1016/j.ccell.2017.10.011"
+      }
+     },
+     {
+      "name": "L1000 Connectivity Map signature matching",
+      "kind": "Technique",
+      "does": "Matches the gene response pattern to known drug mechanisms",
+      "common": "widely used",
+      "cite": {
+       "label": "Next generation CMap",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5990023/"
+      }
+     },
+     {
+      "name": "CLUE platform",
+      "kind": "Tool",
+      "does": "Runs connectivity map queries through a web app",
+      "common": "widely used",
+      "cite": {
+       "label": "CLUE platform",
+       "url": "https://clue.io/"
+      }
+     },
+     {
+      "name": "Cell Painting morphological profiling",
+      "kind": "Technique",
+      "does": "Reads mechanism from how treated cells change shape",
+      "common": "widely used",
+      "cite": {
+       "label": "Bray et al. 2016",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5223290/"
+      }
+     },
+     {
+      "name": "CellProfiler",
+      "kind": "Tool",
+      "does": "Measures thousands of features from cell images",
+      "common": "standard",
+      "cite": {
+       "label": "CellProfiler site",
+       "url": "https://cellprofiler.org/"
+      }
+     },
+     {
+      "name": "drc R package",
+      "kind": "Tool",
+      "does": "Fits dose response models in R with error estimates",
+      "common": "widely used",
+      "cite": {
+       "label": "CRAN drc",
+       "url": "https://cran.r-project.org/package=drc"
+      }
+     },
+     {
+      "name": "IUPHAR/BPS Guide to PHARMACOLOGY",
+      "kind": "Resource",
+      "does": "Reference values for targets, ligands and their mechanisms",
+      "common": "standard",
+      "cite": {
+       "label": "Guide to PHARMACOLOGY",
+       "url": "https://www.guidetopharmacology.org/"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 6,
+    "name": "Validation data handling",
+    "plain": "Store raw lab files and link them to their records",
+    "human": "Put raw machine files in cloud storage and link each one to its sample record",
+    "toolList": [
+     {
+      "name": "Benchling",
+      "does": "Notebook and typed registry tables for wet lab staff"
+     },
+     {
+      "name": "Nextflow",
+      "does": "Runs analysis pipelines on cloud batch machines"
+     },
+     {
+      "name": "Amazon S3",
+      "does": "Versioned object storage holding raw instrument files"
+     }
+    ],
+    "paradigm": "Platform",
+    "files": "Raw instrument files, typed schema tables, small CSV count files",
+    "cite": {
+     "label": "Workman, LatchBio",
+     "url": "https://blog.latch.bio/p/how-biotechs-use-software-to-make"
+    },
+    "items": [
+     {
+      "name": "Benchling Notebook",
+      "kind": "Tool",
+      "does": "Cloud notebook where staff write up each experiment",
+      "common": "standard",
+      "cite": {
+       "label": "Benchling Notebook",
+       "url": "https://www.benchling.com/notebook"
+      }
+     },
+     {
+      "name": "Benchling Registry",
+      "kind": "Tool",
+      "does": "Typed tables giving every sample and candidate an identity",
+      "common": "standard",
+      "cite": {
+       "label": "Benchling Registry",
+       "url": "https://www.benchling.com/registry"
+      }
+     },
+     {
+      "name": "Registry entity identifier as join key",
+      "kind": "Technique",
+      "does": "One shared identifier ties raw files to the entity",
+      "common": "standard",
+      "cite": {
+       "label": "Workman, LatchBio",
+       "url": "https://blog.latch.bio/p/how-biotechs-use-software-to-make"
+      }
+     },
+     {
+      "name": "LabArchives",
+      "kind": "Tool",
+      "does": "Another cloud notebook, common in university labs",
+      "common": "widely used",
+      "cite": {
+       "label": "LabArchives ELN",
+       "url": "https://www.labarchives.com/"
+      }
+     },
+     {
+      "name": "Revvity Signals Notebook",
+      "kind": "Tool",
+      "does": "Vendor notebook used across industry research sites",
+      "common": "widely used",
+      "cite": {
+       "label": "Signals Notebook page",
+       "url": "https://www.revvitysignals.com/products/research/signals-notebook-eln"
+      }
+     },
+     {
+      "name": "Amazon S3 with versioning",
+      "kind": "Tool",
+      "does": "Keeps every version of a raw file in cloud storage",
+      "common": "standard",
+      "cite": {
+       "label": "S3 versioning docs",
+       "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html"
+      }
+     },
+     {
+      "name": "Nextflow",
+      "kind": "Tool",
+      "does": "Runs analysis pipelines over many files reproducibly",
+      "common": "standard",
+      "cite": {
+       "label": "Nextflow site",
+       "url": "https://www.nextflow.io/"
+      }
+     },
+     {
+      "name": "AWS Batch",
+      "kind": "Tool",
+      "does": "Rents cloud machines to run those pipeline jobs",
+      "common": "widely used",
+      "cite": {
+       "label": "AWS Batch",
+       "url": "https://aws.amazon.com/batch/"
+      }
+     },
+     {
+      "name": "Jupyter notebooks",
+      "kind": "Tool",
+      "does": "Where computational staff analyse and plot the data",
+      "common": "standard",
+      "cite": {
+       "label": "Project Jupyter",
+       "url": "https://jupyter.org/"
+      }
+     },
+     {
+      "name": "FCS 3.1 flow cytometry file",
+      "kind": "Data",
+      "does": "Standard raw file written by a flow cytometer",
+      "common": "standard",
+      "cite": {
+       "label": "FCS 3.1 standard",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2892967/"
+      }
+     },
+     {
+      "name": "FlowJo",
+      "kind": "Tool",
+      "does": "Gates and counts cells from flow cytometry files",
+      "common": "standard",
+      "cite": {
+       "label": "FlowJo site",
+       "url": "https://www.flowjo.com/"
+      }
+     },
+     {
+      "name": "OME-TIFF",
+      "kind": "Data",
+      "does": "Open image file keeping microscope settings alongside pixels",
+      "common": "widely used",
+      "cite": {
+       "label": "OME-TIFF format",
+       "url": "https://ome-model.readthedocs.io/en/stable/ome-tiff/"
+      }
+     },
+     {
+      "name": "CSV count tables",
+      "kind": "Data",
+      "does": "Small summary tables passed to computational biology",
+      "common": "standard",
+      "cite": {
+       "label": "Workman, LatchBio",
+       "url": "https://blog.latch.bio/p/how-biotechs-use-software-to-make"
+      }
+     },
+     {
+      "name": "Benchling Insights",
+      "kind": "Tool",
+      "does": "No code dashboards letting the whole company browse results",
+      "common": "widely used",
+      "cite": {
+       "label": "Benchling Insights",
+       "url": "https://www.benchling.com/insights"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 7,
+    "name": "Regulatory posture of the work",
+    "plain": "Know this early research falls outside formal lab safety rules",
+    "human": "Note that this early work sits outside the strict rules later safety studies follow",
+    "toolList": [
+     {
+      "name": "Electronic lab notebook in validated mode",
+      "does": "Audit ready records and signatures once work becomes regulated"
+     }
+    ],
+    "paradigm": "Documents",
+    "files": "Audit-ready electronic records and signatures in validated mode",
+    "cite": {
+     "label": "21 CFR 58.3",
+     "url": "https://www.law.cornell.edu/cfr/text/21/58.3"
+    },
+    "items": [
+     {
+      "name": "21 CFR Part 58 Good Laboratory Practice",
+      "kind": "Resource",
+      "does": "US rules governing formal safety studies, not this work",
+      "common": "standard",
+      "cite": {
+       "label": "21 CFR Part 58",
+       "url": "https://www.law.cornell.edu/cfr/text/21/part-58"
+      }
+     },
+     {
+      "name": "Basic exploratory study exclusion",
+      "kind": "Resource",
+      "does": "Wording that puts early discovery outside those rules",
+      "common": "standard",
+      "cite": {
+       "label": "21 CFR 58.3",
+       "url": "https://www.law.cornell.edu/cfr/text/21/58.3"
+      }
+     },
+     {
+      "name": "OECD Principles of Good Laboratory Practice",
+      "kind": "Resource",
+      "does": "The same quality rules as agreed between countries",
+      "common": "widely used",
+      "cite": {
+       "label": "OECD GLP principles",
+       "url": "https://ntp.niehs.nih.gov/sites/default/files/iccvam/suppdocs/feddocs/oecd/oecd_glpcm.pdf"
+      }
+     },
+     {
+      "name": "21 CFR Part 11 electronic records",
+      "kind": "Resource",
+      "does": "Rules for computer records once work becomes regulated",
+      "common": "standard",
+      "cite": {
+       "label": "21 CFR Part 11",
+       "url": "https://www.law.cornell.edu/cfr/text/21/part-11"
+      }
+     },
+     {
+      "name": "Benchling Validated Cloud",
+      "kind": "Tool",
+      "does": "Notebook mode built for regulated electronic records",
+      "common": "widely used",
+      "cite": {
+       "label": "Benchling Validated Cloud",
+       "url": "https://www.benchling.com/validated-cloud"
+      }
+     },
+     {
+      "name": "Audit trail and electronic signature",
+      "kind": "Technique",
+      "does": "Locked record of who changed what and when",
+      "common": "standard",
+      "cite": {
+       "label": "21 CFR Part 11",
+       "url": "https://www.law.cornell.edu/cfr/text/21/part-11"
+      }
+     },
+     {
+      "name": "ALCOA data integrity principles",
+      "kind": "Technique",
+      "does": "Records must be attributable, legible, contemporaneous, original and accurate",
+      "common": "widely used",
+      "cite": {
+       "label": "MHRA data integrity",
+       "url": "https://www.gov.uk/government/publications/guidance-on-gxp-data-integrity"
+      }
+     },
+     {
+      "name": "GOT-IT recommendations",
+      "kind": "Resource",
+      "does": "Notes no standard covers quality in target assessment",
+      "common": "widely used",
+      "cite": {
+       "label": "GOT-IT recommendations",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7667479/"
+      }
+     },
+     {
+      "name": "Animal care and use committee approval",
+      "kind": "Technique",
+      "does": "Animal work still needs a reviewed and approved protocol",
+      "common": "standard",
+      "cite": {
+       "label": "PHS animal policy",
+       "url": "https://olaw.nih.gov/policies-laws/phs-policy.htm"
+      }
+     },
+     {
+      "name": "Guide for the Care and Use of Laboratory Animals",
+      "kind": "Resource",
+      "does": "Housing and welfare standards animal facilities must meet",
+      "common": "standard",
+      "cite": {
+       "label": "NIH animal care guide",
+       "url": "https://grants.nih.gov/grants/olaw/guide-for-the-care-and-use-of-laboratory-animals.pdf"
+      }
+     },
+     {
+      "name": "Home Office project licence",
+      "kind": "Resource",
+      "does": "British animal work needs licences granted before it starts",
+      "common": "widely used",
+      "cite": {
+       "label": "UK animal licences",
+       "url": "https://www.gov.uk/guidance/research-and-testing-using-animals"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 8,
+    "name": "Validation gate",
+    "plain": "Decide if evidence justifies starting drug discovery on the target",
+    "human": "Leaders weigh all the evidence and decide whether to start hunting for a drug",
+    "toolList": [
+     {
+      "name": "No single standard tool",
+      "does": "The team declares the target validated or not"
+     }
+    ],
+    "paradigm": "Documents",
+    "files": "Not described in our sources",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    },
+    "items": [
+     {
+      "name": "GOT-IT target assessment decision points",
+      "kind": "Technique",
+      "does": "Set points where a target assessment stops or proceeds",
+      "common": "widely used",
+      "cite": {
+       "label": "GOT-IT recommendations",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7667479/"
+      }
+     },
+     {
+      "name": "Stage-gate review",
+      "kind": "Technique",
+      "does": "Gate meeting ending in go, kill, hold or recycle",
+      "common": "standard",
+      "cite": {
+       "label": "Stage-Gate International",
+       "url": "https://www.stage-gate.com/"
+      }
+     },
+     {
+      "name": "Target validation dossier",
+      "kind": "Data",
+      "does": "Written package of all evidence behind the decision",
+      "common": "standard",
+      "cite": {
+       "label": "GOT-IT recommendations",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7667479/"
+      }
+     },
+     {
+      "name": "Independent replication of key results",
+      "kind": "Technique",
+      "does": "Repeat the deciding experiments in another lab or model",
+      "common": "standard",
+      "cite": {
+       "label": "Begley and Ellis",
+       "url": "https://www.nature.com/articles/483531a"
+      }
+     },
+     {
+      "name": "Blinding and randomisation in confirmatory studies",
+      "kind": "Technique",
+      "does": "Hide the group labels so results cannot be nudged",
+      "common": "standard",
+      "cite": {
+       "label": "Landis et al. 2012",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3511845/"
+      }
+     },
+     {
+      "name": "Five-dimensional right target framework",
+      "kind": "Technique",
+      "does": "Asks whether the target is right before spending more",
+      "common": "widely used",
+      "cite": {
+       "label": "Cook et al. 2014",
+       "url": "https://doi.org/10.1038/nrd4309"
+      }
+     },
+     {
+      "name": "Clinical success rate estimates",
+      "kind": "Data",
+      "does": "Published odds of surviving each later trial phase",
+      "common": "widely used",
+      "cite": {
+       "label": "Wong et al. 2019",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6409418/"
+      }
+     },
+     {
+      "name": "Phase II attrition reduction case",
+      "kind": "Technique",
+      "does": "Argument that better validation cuts later failures",
+      "common": "widely used",
+      "cite": {
+       "label": "Hughes et al. 2011",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+      }
+     },
+     {
+      "name": "Lead discovery entry criteria",
+      "kind": "Technique",
+      "does": "What must be ready before hit finding can start",
+      "common": "standard",
+      "cite": {
+       "label": "Hughes et al. 2011",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+      }
+     }
+    ],
+    "substeps": []
+   }
+  ]
+ },
+ "b1-3": {
+  "steps": [
+   {
+    "i": 1,
+    "name": "Assay format selection and reagent generation",
+    "plain": "Choose the test format and get the needed lab materials",
+    "human": "Pick how the test will read out, then make or buy the reagents",
+    "paradigm": "Documents",
+    "cite": {
+     "label": "Workman, LatchBio",
+     "url": "https://blog.latch.bio/p/how-biotechs-use-software-to-make"
+    },
+    "items": [
+     {
+      "name": "Assay Guidance Manual",
+      "kind": "Resource",
+      "does": "Free guidance on building and validating early drug discovery assays",
+      "common": "standard",
+      "cite": {
+       "label": "NCATS assay manual",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12626110/"
+      }
+     },
+     {
+      "name": "Homogeneous time-resolved fluorescence",
+      "kind": "Technique",
+      "does": "Mixes reagents once and reads a delayed two-colour light signal",
+      "common": "standard",
+      "cite": {
+       "label": "HTRF review",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2802762/"
+      }
+     },
+     {
+      "name": "AlphaScreen bead proximity assay",
+      "kind": "Technique",
+      "does": "Beads make reactive oxygen so only close partners give light",
+      "common": "widely used",
+      "cite": {
+       "label": "AlphaScreen review",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2775125/"
+      }
+     },
+     {
+      "name": "CellTiter-Glo viability assay",
+      "kind": "Tool",
+      "does": "Reads the cell energy molecule as light to count living cells",
+      "common": "standard",
+      "cite": {
+       "label": "CellTiter-Glo page",
+       "url": "https://www.promega.com/products/cell-health-assays/cell-viability-and-cytotoxicity-assays/celltiter-glo-luminescent-cell-viability-assay/"
+      }
+     },
+     {
+      "name": "ADP-Glo kinase assay",
+      "kind": "Tool",
+      "does": "Turns kinase waste product into light to measure enzyme activity",
+      "common": "widely used",
+      "cite": {
+       "label": "ADP-Glo protocol",
+       "url": "https://www.promega.com/resources/protocols/technical-manuals/0/adp-glo-kinase-assay-protocol/"
+      }
+     },
+     {
+      "name": "NanoBRET target engagement assay",
+      "kind": "Technique",
+      "does": "Shows a compound binding its target inside living cells",
+      "common": "widely used",
+      "cite": {
+       "label": "Robers et al. 2015",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4686764/"
+      }
+     },
+     {
+      "name": "Fluorescence polarization binding assay",
+      "kind": "Technique",
+      "does": "Tracks tumbling of a labelled tracer to measure binding",
+      "common": "widely used",
+      "cite": {
+       "label": "Lea and Simeonov",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3277431/"
+      }
+     },
+     {
+      "name": "Luciferase reporter gene assay",
+      "kind": "Technique",
+      "does": "Cell line lights up when the target pathway switches on",
+      "common": "widely used",
+      "cite": {
+       "label": "Reporter cell lines",
+       "url": "https://doi.org/10.1016/j.ejpb.2007.01.004"
+      }
+     },
+     {
+      "name": "Calcium flux assay",
+      "kind": "Technique",
+      "does": "Dye flashes when a receptor releases calcium inside cells",
+      "common": "widely used",
+      "cite": {
+       "label": "Calcium flux assay",
+       "url": "https://doi.org/10.1089/adt.2011.443"
+      }
+     },
+     {
+      "name": "Addgene plasmid repository",
+      "kind": "Resource",
+      "does": "Shared store of plasmids for building assay cell lines",
+      "common": "standard",
+      "cite": {
+       "label": "Addgene site",
+       "url": "https://www.addgene.org/"
+      }
+     },
+     {
+      "name": "Short tandem repeat cell line authentication",
+      "kind": "Technique",
+      "does": "Fingerprints a cell line to prove it is the right one",
+      "common": "standard",
+      "cite": {
+       "label": "ATCC authentication guidance",
+       "url": "https://www.atcc.org/resources/technical-documents/cell-line-authentication-test-recommendations"
+      }
+     },
+     {
+      "name": "Biochemical versus cell-based format choice",
+      "kind": "Technique",
+      "does": "Decides between purified protein and whole living cells",
+      "common": "standard",
+      "cite": {
+       "label": "Macarron et al. 2011",
+       "url": "https://doi.org/10.1038/nrd3368"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 2,
+    "name": "Miniaturization to plate format",
+    "plain": "Shrink the test to fit small wells on plates",
+    "human": "Move the test into plates with many tiny wells and cut the volumes",
+    "paradigm": "Platform",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    },
+    "items": [
+     {
+      "name": "ANSI SLAS microplate standards",
+      "kind": "Resource",
+      "does": "Fixed plate footprint and well positions so robots fit plates",
+      "common": "standard",
+      "cite": {
+       "label": "ANSI SLAS standards",
+       "url": "https://www.slas.org/education/ansi-slas-microplate-standards/"
+      }
+     },
+     {
+      "name": "384-well and 1536-well plate formats",
+      "kind": "Technique",
+      "does": "Many more, much smaller wells on the same plate footprint",
+      "common": "standard",
+      "cite": {
+       "label": "384 and 1536 miniaturisation",
+       "url": "https://doi.org/10.1177/108705710000500203"
+      }
+     },
+     {
+      "name": "Acoustic droplet ejection",
+      "kind": "Technique",
+      "does": "Sound waves fling nanolitre drops across without touching anything",
+      "common": "standard",
+      "cite": {
+       "label": "Echo 525 page",
+       "url": "https://www.beckman.com/liquid-handlers/echo-525"
+      }
+     },
+     {
+      "name": "Echo acoustic liquid handler",
+      "kind": "Tool",
+      "does": "Instrument moving nanolitre compound drops into screening plates",
+      "common": "standard",
+      "cite": {
+       "label": "Echo 525 page",
+       "url": "https://www.beckman.com/liquid-handlers/echo-525"
+      }
+     },
+     {
+      "name": "Three microlitre cell assay in 1536 wells",
+      "kind": "Technique",
+      "does": "Published cut of a cell assay to three microlitres",
+      "common": "widely used",
+      "cite": {
+       "label": "Three microlitre 1536",
+       "url": "https://doi.org/10.1177/108705719900400307"
+      }
+     },
+     {
+      "name": "Tecan Fluent workstation",
+      "kind": "Tool",
+      "does": "Robot arm and pipettes that handle plates for you",
+      "common": "widely used",
+      "cite": {
+       "label": "Tecan Fluent page",
+       "url": "https://lifesciences.tecan.com/fluent"
+      }
+     },
+     {
+      "name": "Edge effect reduction by bench pre-incubation",
+      "kind": "Technique",
+      "does": "Resting plates at room temperature evens cells across the wells",
+      "common": "widely used",
+      "cite": {
+       "label": "Lundholt et al. 2003",
+       "url": "https://doi.org/10.1177/1087057103256465"
+      }
+     },
+     {
+      "name": "Compound stock plates in dimethyl sulfoxide",
+      "kind": "Technique",
+      "does": "Keeps dissolved compounds stable in sealed small-well storage plates",
+      "common": "standard",
+      "cite": {
+       "label": "1536 compound storage",
+       "url": "https://doi.org/10.1177/1087057109335261"
+      }
+     },
+     {
+      "name": "Titration-based screening in 1536-well plates",
+      "kind": "Technique",
+      "does": "Runs every compound at several doses in tiny wells",
+      "common": "widely used",
+      "cite": {
+       "label": "Inglese et al. 2006",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1518803/"
+      }
+     },
+     {
+      "name": "Plate maps",
+      "kind": "Data",
+      "does": "Table saying which sample or control sits in each well",
+      "common": "standard",
+      "cite": {
+       "label": "Genedata Screener",
+       "url": "https://www.genedata.com/products/screener"
+      }
+     },
+     {
+      "name": "Genedata Screener",
+      "kind": "Tool",
+      "does": "Reads plate data and applies standard quality control rules",
+      "common": "widely used",
+      "cite": {
+       "label": "Genedata Screener",
+       "url": "https://www.genedata.com/products/screener"
+      }
+     },
+     {
+      "name": "Mass spectrometry readout in 1536-well plates",
+      "kind": "Technique",
+      "does": "Reads product directly with no label, at very high speed",
+      "common": "niche",
+      "cite": {
+       "label": "MALDI 1536 screening",
+       "url": "https://doi.org/10.1177/1087057115608605"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 3,
+    "name": "Robustness and quality qualification",
+    "plain": "Check the test gives reliable signals before screening starts",
+    "human": "Run the test many times and measure whether the signal separates reliably",
+    "paradigm": "Platform",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    },
+    "items": [
+     {
+      "name": "Z prime factor",
+      "kind": "Technique",
+      "does": "One number combining the signal gap and both controls' noise",
+      "common": "standard",
+      "cite": {
+       "label": "Zhang et al. 1999",
+       "url": "https://doi.org/10.1177/108705719900400206"
+      }
+     },
+     {
+      "name": "Z prime above 0.5 acceptance rule",
+      "kind": "Technique",
+      "does": "Usual bar an assay must clear to enter screening",
+      "common": "standard",
+      "cite": {
+       "label": "Hughes et al. 2011",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+      }
+     },
+     {
+      "name": "Signal window",
+      "kind": "Technique",
+      "does": "Signal gap measured in units of control spread",
+      "common": "widely used",
+      "cite": {
+       "label": "Iversen et al. 2006",
+       "url": "https://doi.org/10.1177/1087057105285610"
+      }
+     },
+     {
+      "name": "Assay variability ratio",
+      "kind": "Technique",
+      "does": "Share of the signal gap taken up by noise",
+      "common": "niche",
+      "cite": {
+       "label": "Iversen et al. 2006",
+       "url": "https://doi.org/10.1177/1087057105285610"
+      }
+     },
+     {
+      "name": "Coefficient of variation",
+      "kind": "Technique",
+      "does": "Spread of repeat wells as a percentage of their mean",
+      "common": "standard",
+      "cite": {
+       "label": "Malo et al. 2006",
+       "url": "https://doi.org/10.1038/nbt1186"
+      }
+     },
+     {
+      "name": "Signal to background ratio",
+      "kind": "Technique",
+      "does": "How many times brighter the high control reads",
+      "common": "standard",
+      "cite": {
+       "label": "Malo et al. 2006",
+       "url": "https://doi.org/10.1038/nbt1186"
+      }
+     },
+     {
+      "name": "Strictly standardized mean difference",
+      "kind": "Technique",
+      "does": "Effect size for control separation that handles unequal spread",
+      "common": "widely used",
+      "cite": {
+       "label": "Zhang 2007 SSMD",
+       "url": "https://doi.org/10.1177/1087057107300646"
+      }
+     },
+     {
+      "name": "Minimum significant ratio",
+      "kind": "Technique",
+      "does": "Smallest potency fold change the assay can call real",
+      "common": "widely used",
+      "cite": {
+       "label": "Eastwood et al. 2006",
+       "url": "https://doi.org/10.1177/1087057105285611"
+      }
+     },
+     {
+      "name": "Replicate-experiment variability study",
+      "kind": "Technique",
+      "does": "Repeats the whole assay on separate days to size variation",
+      "common": "widely used",
+      "cite": {
+       "label": "Eastwood et al. 2006",
+       "url": "https://doi.org/10.1177/1087057105285611"
+      }
+     },
+     {
+      "name": "Known limits of the Z prime factor",
+      "kind": "Technique",
+      "does": "Published cases where the number misleads about assay quality",
+      "common": "widely used",
+      "cite": {
+       "label": "Z-factor issues",
+       "url": "https://doi.org/10.1093/bioinformatics/btaa1049"
+      }
+     },
+     {
+      "name": "Edge and plate position uniformity check",
+      "kind": "Technique",
+      "does": "Looks for drift at plate edges before accepting data",
+      "common": "widely used",
+      "cite": {
+       "label": "Lundholt et al. 2003",
+       "url": "https://doi.org/10.1177/1087057103256465"
+      }
+     },
+     {
+      "name": "Maximum and minimum control wells",
+      "kind": "Data",
+      "does": "Reference wells on every plate that the statistics need",
+      "common": "standard",
+      "cite": {
+       "label": "Zhang et al. 1999",
+       "url": "https://doi.org/10.1177/108705719900400206"
+      }
+     },
+     {
+      "name": "Effect size measures for imaging assay quality",
+      "kind": "Technique",
+      "does": "Quality scores suited to measurements made on single cells",
+      "common": "niche",
+      "cite": {
+       "label": "Effect-size measures review",
+       "url": "https://doi.org/10.1089/adt.2016.740"
+      }
+     },
+     {
+      "name": "Genedata Screener",
+      "kind": "Tool",
+      "does": "Computes the quality numbers and flags suspect plates",
+      "common": "widely used",
+      "cite": {
+       "label": "Genedata Screener",
+       "url": "https://www.genedata.com/products/screener"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 4,
+    "name": "Dose-response method setup",
+    "plain": "Set up curve fits showing how response changes with dose",
+    "human": "Fit curves through dose and response points, and decide which values to fix",
+    "paradigm": "GUI",
+    "cite": {
+     "label": "GraphPad Prism guide",
+     "url": "https://www.graphpad.com/guides/prism/latest/curve-fitting/reg_dr_inhibit_variable_2.htm"
+    },
+    "items": [
+     {
+      "name": "Four-parameter logistic curve",
+      "kind": "Technique",
+      "does": "Standard S-shaped fit with bottom, top, midpoint and slope",
+      "common": "standard",
+      "cite": {
+       "label": "GraphPad Prism guide",
+       "url": "https://www.graphpad.com/guides/prism/latest/curve-fitting/reg_dr_inhibit_variable_2.htm"
+      }
+     },
+     {
+      "name": "Half maximal inhibitory concentration",
+      "kind": "Technique",
+      "does": "Dose giving a response halfway between bottom and top",
+      "common": "standard",
+      "cite": {
+       "label": "GraphPad Prism guide",
+       "url": "https://www.graphpad.com/guides/prism/latest/curve-fitting/reg_dr_inhibit_variable_2.htm"
+      }
+     },
+     {
+      "name": "Hill slope constrained to minus one",
+      "kind": "Technique",
+      "does": "Fixes curve steepness when the data cannot support fitting it",
+      "common": "standard",
+      "cite": {
+       "label": "GraphPad Prism guide",
+       "url": "https://www.graphpad.com/guides/prism/latest/curve-fitting/reg_dr_inhibit_variable_2.htm"
+      }
+     },
+     {
+      "name": "GraphPad Prism",
+      "kind": "Tool",
+      "does": "Point and click curve fitting that reports the concentrations",
+      "common": "standard",
+      "cite": {
+       "label": "GraphPad Prism guide",
+       "url": "https://www.graphpad.com/guides/prism/latest/curve-fitting/reg_dr_inhibit_variable_2.htm"
+      }
+     },
+     {
+      "name": "drc package for R",
+      "kind": "Tool",
+      "does": "Scripted dose-response fitting with many built-in curve shapes",
+      "common": "widely used",
+      "cite": {
+       "label": "Ritz et al. 2015",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4696819/"
+      }
+     },
+     {
+      "name": "JMP",
+      "kind": "Tool",
+      "does": "Statistics program taking raw reader output to fitted values",
+      "common": "widely used",
+      "cite": {
+       "label": "JMP case study",
+       "url": "https://www.jmp.com/en_au/customer-stories/discovery-summit-presentations/speeding-up-assay-development.html"
+      }
+     },
+     {
+      "name": "Benchling datasets through R",
+      "kind": "Tool",
+      "does": "Pulls plate data, fits it, pushes results and plots back",
+      "common": "niche",
+      "cite": {
+       "label": "Benchling R docs",
+       "url": "https://docs.benchling.com/docs/working-with-datasets-using-r"
+      }
+     },
+     {
+      "name": "Genedata Screener",
+      "kind": "Tool",
+      "does": "Fits curves across whole screening runs in one place",
+      "common": "widely used",
+      "cite": {
+       "label": "Genedata Screener",
+       "url": "https://www.genedata.com/products/screener"
+      }
+     },
+     {
+      "name": "Cheng-Prusoff conversion",
+      "kind": "Technique",
+      "does": "Turns a measured inhibitory concentration into a binding constant",
+      "common": "widely used",
+      "cite": {
+       "label": "Cheng and Prusoff",
+       "url": "https://doi.org/10.1016/0006-2952(73)90196-2"
+      }
+     },
+     {
+      "name": "Normalisation to high and low controls",
+      "kind": "Technique",
+      "does": "Rescales raw readings into percent effect before fitting",
+      "common": "standard",
+      "cite": {
+       "label": "Malo et al. 2006",
+       "url": "https://doi.org/10.1038/nbt1186"
+      }
+     },
+     {
+      "name": "Concentration and response data tables",
+      "kind": "Data",
+      "does": "Two columns the fitting tools expect as input",
+      "common": "standard",
+      "cite": {
+       "label": "Benchling R docs",
+       "url": "https://docs.benchling.com/docs/working-with-datasets-using-r"
+      }
+     },
+     {
+      "name": "Titration curve classification",
+      "kind": "Technique",
+      "does": "Sorts fitted curves into quality classes automatically",
+      "common": "widely used",
+      "cite": {
+       "label": "Inglese et al. 2006",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1518803/"
+      }
+     },
+     {
+      "name": "Minimum significant ratio of potency values",
+      "kind": "Technique",
+      "does": "Says how different two potencies must be to matter",
+      "common": "widely used",
+      "cite": {
+       "label": "Eastwood et al. 2006",
+       "url": "https://doi.org/10.1177/1087057105285611"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 5,
+    "name": "Automation and instrument integration",
+    "plain": "Connect lab machines so their data flows into the system",
+    "human": "Wire the machines and their files into one place so results arrive automatically",
+    "paradigm": "Platform",
+    "cite": {
+     "label": "Genedata Screener",
+     "url": "https://www.genedata.com/products/screener"
+    },
+    "items": [
+     {
+      "name": "Genedata Screener",
+      "kind": "Tool",
+      "does": "Central screening platform with adapters for many instruments",
+      "common": "standard",
+      "cite": {
+       "label": "Genedata Screener",
+       "url": "https://www.genedata.com/products/screener"
+      }
+     },
+     {
+      "name": "Benchling lab automation",
+      "kind": "Tool",
+      "does": "Takes in and parses liquid handler and reader files",
+      "common": "widely used",
+      "cite": {
+       "label": "Benchling lab automation",
+       "url": "https://www.benchling.com/resources/benchling-lab-automation"
+      }
+     },
+     {
+      "name": "SiLA 2",
+      "kind": "Resource",
+      "does": "Open standard for talking to laboratory instruments over networks",
+      "common": "widely used",
+      "cite": {
+       "label": "SiLA standard site",
+       "url": "https://sila-standard.com/"
+      }
+     },
+     {
+      "name": "Allotrope Foundation data models",
+      "kind": "Resource",
+      "does": "Shared vocabulary and format for analytical instrument results",
+      "common": "niche",
+      "cite": {
+       "label": "Allotrope Foundation",
+       "url": "https://www.allotrope.org/"
+      }
+     },
+     {
+      "name": "Analytical Information Markup Language",
+      "kind": "Data",
+      "does": "Vendor-neutral file format for instrument data and its history",
+      "common": "niche",
+      "cite": {
+       "label": "AnIML schemas",
+       "url": "https://github.com/AnIML/schemas"
+      }
+     },
+     {
+      "name": "OPC UA laboratory and analytical device standard",
+      "kind": "Resource",
+      "does": "Common machine interface for lab devices and their data",
+      "common": "niche",
+      "cite": {
+       "label": "OPC UA LADS",
+       "url": "https://opcfoundation.org/markets-collaboration/lads/"
+      }
+     },
+     {
+      "name": "SoftMax Pro",
+      "kind": "Tool",
+      "does": "Reader control software that exports plate results for analysis",
+      "common": "widely used",
+      "cite": {
+       "label": "SoftMax Pro page",
+       "url": "https://www.moleculardevices.com/products/microplate-readers/acquisition-and-analysis-software/softmax-pro-software"
+      }
+     },
+     {
+      "name": "BMG LABTECH reader software",
+      "kind": "Tool",
+      "does": "Runs the plate reader and writes out its results",
+      "common": "widely used",
+      "cite": {
+       "label": "BMG reader software",
+       "url": "https://www.bmglabtech.com/en/microplate-reader-software/"
+      }
+     },
+     {
+      "name": "Tecan Fluent",
+      "kind": "Tool",
+      "does": "Liquid handling robot driven by its own scripting software",
+      "common": "widely used",
+      "cite": {
+       "label": "Tecan Fluent page",
+       "url": "https://lifesciences.tecan.com/fluent"
+      }
+     },
+     {
+      "name": "Green Button Go scheduler",
+      "kind": "Tool",
+      "does": "Schedules the instruments in a linked automation system",
+      "common": "widely used",
+      "cite": {
+       "label": "Green Button Go",
+       "url": "https://www.biosero.com/products/green-button-go-scheduler"
+      }
+     },
+     {
+      "name": "Comma separated value exports",
+      "kind": "Data",
+      "does": "Plain tables readers write out and platforms read in",
+      "common": "standard",
+      "cite": {
+       "label": "Benchling charting post",
+       "url": "https://www.benchling.com/blog/no-code-data-transformations-charting"
+      }
+     },
+     {
+      "name": "Dotmatics",
+      "kind": "Tool",
+      "does": "Linked research software holding screening and instrument data",
+      "common": "widely used",
+      "cite": {
+       "label": "Dotmatics products",
+       "url": "https://www.dotmatics.com/products"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 6,
+    "name": "Analysis plumbing and acceptance checks",
+    "plain": "Automate data analysis and pass or fail checks for plates",
+    "human": "Write rules that score each plate and pass or fail it without hand work",
+    "paradigm": "Pipeline",
+    "cite": {
+     "label": "Benchling charting post",
+     "url": "https://www.benchling.com/blog/no-code-data-transformations-charting"
+    },
+    "items": [
+     {
+      "name": "Benchling no-code transformations and charting",
+      "kind": "Tool",
+      "does": "Builds plate analysis and charts without copying into spreadsheets",
+      "common": "widely used",
+      "cite": {
+       "label": "Benchling charting post",
+       "url": "https://www.benchling.com/blog/no-code-data-transformations-charting"
+      }
+     },
+     {
+      "name": "Plate heat map",
+      "kind": "Technique",
+      "does": "Coloured grid of every well so patterns stand out",
+      "common": "standard",
+      "cite": {
+       "label": "Benchling charting post",
+       "url": "https://www.benchling.com/blog/no-code-data-transformations-charting"
+      }
+     },
+     {
+      "name": "Acceptance criterion as an if statement",
+      "kind": "Technique",
+      "does": "Rule that marks a plate passed or failed automatically",
+      "common": "widely used",
+      "cite": {
+       "label": "Benchling charting post",
+       "url": "https://www.benchling.com/blog/no-code-data-transformations-charting"
+      }
+     },
+     {
+      "name": "B score with median polish",
+      "kind": "Technique",
+      "does": "Removes row and column patterns before calling hits",
+      "common": "widely used",
+      "cite": {
+       "label": "Brideau et al. 2003",
+       "url": "https://doi.org/10.1177/1087057103258285"
+      }
+     },
+     {
+      "name": "Percent of control normalisation",
+      "kind": "Technique",
+      "does": "Rescales each well against the controls on its plate",
+      "common": "standard",
+      "cite": {
+       "label": "Malo et al. 2006",
+       "url": "https://doi.org/10.1038/nbt1186"
+      }
+     },
+     {
+      "name": "Robust z score",
+      "kind": "Technique",
+      "does": "Uses median and median spread so outliers matter less",
+      "common": "widely used",
+      "cite": {
+       "label": "Malo et al. 2006",
+       "url": "https://doi.org/10.1038/nbt1186"
+      }
+     },
+     {
+      "name": "Strictly standardized mean difference for hit calling",
+      "kind": "Technique",
+      "does": "Effect size cut-off used instead of a raw threshold",
+      "common": "widely used",
+      "cite": {
+       "label": "Zhang 2007 SSMD",
+       "url": "https://doi.org/10.1177/1087057107300646"
+      }
+     },
+     {
+      "name": "cellHTS2",
+      "kind": "Tool",
+      "does": "R package normalising, scoring and reporting screening plates",
+      "common": "widely used",
+      "cite": {
+       "label": "cellHTS2 package",
+       "url": "https://bioconductor.org/packages/cellHTS2/"
+      }
+     },
+     {
+      "name": "web cellHTS2",
+      "kind": "Tool",
+      "does": "Browser front end for the same screening analysis",
+      "common": "niche",
+      "cite": {
+       "label": "web cellHTS2",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3098057/"
+      }
+     },
+     {
+      "name": "KNIME",
+      "kind": "Tool",
+      "does": "Drag and drop workflows for repeatable plate analysis",
+      "common": "widely used",
+      "cite": {
+       "label": "KNIME site",
+       "url": "https://www.knime.com/"
+      }
+     },
+     {
+      "name": "Spotfire",
+      "kind": "Tool",
+      "does": "Interactive charts and dashboards over screening tables",
+      "common": "widely used",
+      "cite": {
+       "label": "Spotfire site",
+       "url": "https://www.spotfire.com/"
+      }
+     },
+     {
+      "name": "Pipeline Pilot",
+      "kind": "Tool",
+      "does": "Builds reusable scientific data processing protocols without coding",
+      "common": "widely used",
+      "cite": {
+       "label": "Pipeline Pilot page",
+       "url": "https://www.3ds.com/products/biovia/pipeline-pilot"
+      }
+     },
+     {
+      "name": "Genedata Screener quality control flags",
+      "kind": "Tool",
+      "does": "Applies standard checks and marks suspect wells and plates",
+      "common": "standard",
+      "cite": {
+       "label": "Genedata Screener",
+       "url": "https://www.genedata.com/products/screener"
+      }
+     },
+     {
+      "name": "Comma separated value plate upload",
+      "kind": "Data",
+      "does": "Raw plate table loaded in to start the analysis",
+      "common": "standard",
+      "cite": {
+       "label": "Benchling charting post",
+       "url": "https://www.benchling.com/blog/no-code-data-transformations-charting"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 7,
+    "name": "Image-based assay analysis",
+    "plain": "Measure cell features from microscope images, by hand or model",
+    "human": "Measure cell size, shape and number from images, or let a model learn them",
+    "paradigm": "Scripted",
+    "cite": {
+     "label": "Mahajan, Owl Posting",
+     "url": "https://www.owlposting.com/i/150120478/introduction"
+    },
+    "items": [
+     {
+      "name": "CellProfiler",
+      "kind": "Tool",
+      "does": "Builds image analysis pipelines that measure thousands of cells",
+      "common": "standard",
+      "cite": {
+       "label": "CellProfiler site",
+       "url": "https://cellprofiler.org/"
+      }
+     },
+     {
+      "name": "CellProfiler 4",
+      "kind": "Tool",
+      "does": "Faster rebuild of the same pipeline software",
+      "common": "standard",
+      "cite": {
+       "label": "CellProfiler 4 paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8431850/"
+      }
+     },
+     {
+      "name": "Hand-crafted morphology features",
+      "kind": "Technique",
+      "does": "Measures size, shape, texture and nuclei count per cell",
+      "common": "standard",
+      "cite": {
+       "label": "Carpenter et al. 2006",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1794559/"
+      }
+     },
+     {
+      "name": "CellProfiler Analyst",
+      "kind": "Tool",
+      "does": "Explores feature tables and trains classifiers on cell phenotypes",
+      "common": "widely used",
+      "cite": {
+       "label": "CellProfiler Analyst 3.0",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186093/"
+      }
+     },
+     {
+      "name": "Cell Painting assay",
+      "kind": "Technique",
+      "does": "Six dyes in one well give a broad morphology profile",
+      "common": "standard",
+      "cite": {
+       "label": "Bray et al. 2016",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5223290/"
+      }
+     },
+     {
+      "name": "Pycytominer",
+      "kind": "Tool",
+      "does": "Normalises and aggregates image features into usable profiles",
+      "common": "widely used",
+      "cite": {
+       "label": "Pycytominer paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12121495/"
+      }
+     },
+     {
+      "name": "Cellpose",
+      "kind": "Tool",
+      "does": "Learned model that outlines cells it never saw",
+      "common": "widely used",
+      "cite": {
+       "label": "Cellpose paper",
+       "url": "https://www.nature.com/articles/s41592-020-01018-x"
+      }
+     },
+     {
+      "name": "StarDist",
+      "kind": "Tool",
+      "does": "Outlines nuclei as star-shaped polygons from learned models",
+      "common": "widely used",
+      "cite": {
+       "label": "StarDist paper",
+       "url": "https://arxiv.org/abs/1806.03535"
+      }
+     },
+     {
+      "name": "Fiji and ImageJ",
+      "kind": "Tool",
+      "does": "Free image program with plugins for cell measurement",
+      "common": "standard",
+      "cite": {
+       "label": "Fiji site",
+       "url": "https://imagej.net/software/fiji/"
+      }
+     },
+     {
+      "name": "Bio-Formats",
+      "kind": "Tool",
+      "does": "Reads hundreds of vendor microscope file formats",
+      "common": "standard",
+      "cite": {
+       "label": "Bio-Formats page",
+       "url": "https://www.openmicroscopy.org/bio-formats/"
+      }
+     },
+     {
+      "name": "OME next generation file format",
+      "kind": "Data",
+      "does": "Chunked cloud-friendly layout for very large image sets",
+      "common": "widely used",
+      "cite": {
+       "label": "OME-NGFF spec",
+       "url": "https://ngff.openmicroscopy.org/latest/"
+      }
+     },
+     {
+      "name": "Per-cell feature tables",
+      "kind": "Data",
+      "does": "One row per cell holding all its measurements",
+      "common": "standard",
+      "cite": {
+       "label": "Pycytominer paper",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12121495/"
+      }
+     },
+     {
+      "name": "MetaXpress",
+      "kind": "Tool",
+      "does": "Vendor software running and measuring high content imaging plates",
+      "common": "widely used",
+      "cite": {
+       "label": "MetaXpress page",
+       "url": "https://www.moleculardevices.com/products/cellular-imaging-systems/acquisition-and-analysis-software/metaxpress"
+      }
+     },
+     {
+      "name": "Image Data Resource",
+      "kind": "Resource",
+      "does": "Public store of published screening image datasets",
+      "common": "widely used",
+      "cite": {
+       "label": "Image Data Resource",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5536224/"
+      }
+     }
+    ],
+    "substeps": []
+   },
+   {
+    "i": 8,
+    "name": "Screen-ready gate",
+    "plain": "Sign off the test as ready for large-scale screening",
+    "human": "Agree the test passed its checks and release it for the big screen",
+    "paradigm": "Documents",
+    "cite": {
+     "label": "Hughes et al. 2011",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+    },
+    "items": [
+     {
+      "name": "Principles of early drug discovery",
+      "kind": "Resource",
+      "does": "States the assay moves to screening after robustness testing",
+      "common": "standard",
+      "cite": {
+       "label": "Hughes et al. 2011",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3058157/"
+      }
+     },
+     {
+      "name": "Assay Guidance Manual",
+      "kind": "Resource",
+      "does": "Published guidance practitioners cite when signing an assay off",
+      "common": "standard",
+      "cite": {
+       "label": "NCATS assay manual",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12626110/"
+      }
+     },
+     {
+      "name": "Z prime above 0.5 entry condition",
+      "kind": "Technique",
+      "does": "The quality bar checked at the sign-off meeting",
+      "common": "standard",
+      "cite": {
+       "label": "Zhang et al. 1999",
+       "url": "https://doi.org/10.1177/108705719900400206"
+      }
+     },
+     {
+      "name": "Minimum significant ratio report",
+      "kind": "Technique",
+      "does": "States how reproducible potency values will be in screening",
+      "common": "widely used",
+      "cite": {
+       "label": "Eastwood et al. 2006",
+       "url": "https://doi.org/10.1177/1087057105285611"
+      }
+     },
+     {
+      "name": "Pilot screen on a known compound set",
+      "kind": "Technique",
+      "does": "Trial run on known actives before the full screen",
+      "common": "widely used",
+      "cite": {
+       "label": "Macarron et al. 2011",
+       "url": "https://doi.org/10.1038/nrd3368"
+      }
+     },
+     {
+      "name": "LOPAC1280 compound set",
+      "kind": "Resource",
+      "does": "Twelve hundred known active compounds used for validation runs",
+      "common": "widely used",
+      "cite": {
+       "label": "LOPAC1280 page",
+       "url": "https://www.sigmaaldrich.com/US/en/product/sigma/lo1280"
+      }
+     },
+     {
+      "name": "Benchling Notebook",
+      "kind": "Tool",
+      "does": "Electronic notebook holding the signed assay description and protocol",
+      "common": "widely used",
+      "cite": {
+       "label": "Benchling Notebook",
+       "url": "https://www.benchling.com/notebook"
+      }
+     },
+     {
+      "name": "BioAssay Ontology",
+      "kind": "Resource",
+      "does": "Shared terms describing what an assay measures and how",
+      "common": "niche",
+      "cite": {
+       "label": "BioAssay Ontology",
+       "url": "https://www.ebi.ac.uk/ols4/ontologies/bao"
+      }
+     },
+     {
+      "name": "PubChem BioAssay deposition",
+      "kind": "Resource",
+      "does": "Public place to publish the assay and its results",
+      "common": "widely used",
+      "cite": {
+       "label": "PubChem BioAssay docs",
+       "url": "https://pubchem.ncbi.nlm.nih.gov/docs/bioassays"
+      }
+     },
+     {
+      "name": "Microscopy-based high-content screening review",
+      "kind": "Resource",
+      "does": "Sets out what an imaging screen needs before starting",
+      "common": "widely used",
+      "cite": {
+       "label": "Boutros et al. 2015",
+       "url": "https://doi.org/10.1016/j.cell.2015.11.007"
+      }
+     }
+    ],
+    "substeps": []
+   }
+  ]
  }
 }</script>
 <script>
