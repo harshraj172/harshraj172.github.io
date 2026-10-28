@@ -4962,7 +4962,7 @@ function stepList(bi, si, id){
   if(!items.length) items = mine.map(k=>({o:k.step, p:k.step, on:true}));
   if(!items.length || (items.length===1 && !mine.length)) return "";
   const hit = items.some(x=>x.on);
-  return `<details class="steps-in"${hit?" open":""}><summary><span>What happens in this section</span><i>show</i></summary>
+  return `<details class="steps-in"${hit?" open":""}><summary><span>Steps</span><i>show</i></summary>
     <ul>${items.map(x=>`<li class="${x.on?"on":""}" title="${esc(x.o)}">${esc(x.p)}${x.on?'<i class="tflag">task</i>':""}</li>`).join("")}</ul></details>`;
 }
 function tCard(bi, si){
@@ -4972,7 +4972,7 @@ function tCard(bi, si){
   return `<article class="card" id="tcard">
     <div><div class="eyrow"><span class="ey">Block ${bn}</span><span class="ey num" style="white-space:nowrap">Section ${sn} of ${b.sections.length}</span></div>
       <h3 style="margin-top:8px">${esc(s.label)}</h3>${full && full.toLowerCase()!==s.label.toLowerCase()?`<div class="full">${esc(full)}</div>`:""}</div>
-    ${s.gets?`<div class="flow"><div><span>Starts with</span><p>${esc(s.gets)}</p></div><i aria-hidden="true">&rarr;</i><div><span>Produces</span><p>${esc(s.gives)}</p></div></div>`:""}
+    ${s.gets?`<div class="flow"><div><span>Input</span><p>${esc(s.gets)}</p></div><i aria-hidden="true">&rarr;</i><div><span>Output</span><p>${esc(s.gives)}</p></div></div>`:""}
     ${stepList(bi, +sn-1, s.id)}
     <dl class="kv"><dt>What humans do</dt><dd>${esc(s.human)}</dd></dl>
     <dl class="kv"><dt>Tools <span class="ptag"><i class="dot ${s.paradigm}"></i>${PLAB[s.paradigm]||s.paradigm}</span></dt><dd>${s.toolList?`<ul class="tools">${s.toolList.map(x=>`<li><b>${esc(x.name)}</b><span>${esc(x.does)}</span></li>`).join("")}</ul>`:esc(s.tools)}</dd></dl>
