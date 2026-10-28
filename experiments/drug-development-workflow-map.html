@@ -1948,348 +1948,356 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
 }</script>
 <script id="ldata" type="application/json">{
  "b1-1": {
-  "pubmed": "(\"Drug Discovery\"[MeSH] OR \"Molecular Targeted Therapy\"[MeSH]) AND (\"Genome-Wide Association Study\"[MeSH] OR \"Mendelian Randomization Analysis\"[MeSH] OR \"Genetic Predisposition to Disease\"[MeSH]) AND (\"drug target*\"[tiab] OR \"therapeutic target*\"[tiab])",
-  "epmc": "TITLE_ABS:(\"drug target*\" OR \"therapeutic target*\" OR \"target identification\" OR \"target prioriti*\") AND TITLE_ABS:(\"mendelian randomization\" OR GWAS OR \"genome-wide association\" OR \"human genetic*\" OR \"genetic evidence\")",
-  "n_pubmed": 56,
-  "n_epmc": 741,
+  "pubmed": "((\"Drug Discovery\"[MeSH] OR \"Molecular Targeted Therapy\"[MeSH] OR \"drug target*\"[tiab] OR \"therapeutic target*\"[tiab] OR \"druggable\"[tiab] OR \"target identification\"[tiab] OR \"target prioriti*\"[tiab]) AND (\"Genome-Wide Association Study\"[MeSH] OR \"Mendelian Randomization Analysis\"[MeSH] OR \"CRISPR-Cas Systems\"[MeSH] OR \"mendelian randomi*\"[tiab] OR \"GWAS\"[tiab] OR \"genome-wide association\"[tiab] OR \"human genetic*\"[tiab] OR \"genetic evidence\"[tiab] OR \"CRISPR screen*\"[tiab] OR \"multi-omic*\"[tiab] OR \"target-disease association*\"[tiab])) AND (\"2025/10/28\"[dp] : \"2026/10/28\"[dp]) NOT (review[pt] OR editorial[pt] OR comment[pt] OR letter[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt]) NOT (\"Viruses\"[MeSH] OR \"Virus Diseases\"[MeSH] OR \"Bacterial Infections\"[MeSH] OR \"Toxins, Biological\"[MeSH] OR virus*[tiab] OR viral[tiab] OR pathogen*[tiab] OR toxin*[tiab])",
+  "epmc": "(TITLE_ABS:(\"drug target\" OR \"drug targets\" OR \"therapeutic target\" OR \"therapeutic targets\" OR \"target identification\" OR \"target prioritization\" OR \"target prioritisation\" OR druggable) AND TITLE_ABS:(\"mendelian randomization\" OR GWAS OR \"genome-wide association\" OR \"human genetics\" OR \"genetic evidence\" OR \"CRISPR screen\" OR \"multi-omics\" OR \"Open Targets\") AND METHODS:(\"mendelian randomization\" OR colocalization OR MAGeCK OR \"Open Targets\" OR DESeq2 OR \"summary statistics\" OR eQTL OR pQTL)) AND OPEN_ACCESS:y AND FIRST_PDATE:[2025-10-28 TO 2026-10-28] NOT PUB_TYPE:(\"review\" OR \"review-article\" OR \"systematic-review\" OR \"editorial\" OR \"letter\" OR \"comment\" OR \"meta-analysis\") NOT SRC:PPR NOT TITLE_ABS:(virus OR viruses OR viral OR virion OR capsid OR pathogen OR pathogens OR pathogenic OR toxin OR toxins OR \"infectious disease\" OR \"infectious diseases\" OR antiviral OR antibacterial)",
+  "n_pubmed": 2425,
+  "n_epmc": 914,
   "examples": [
    {
-    "pmid": "42556473",
-    "title": "The Long, Remarkable History of KRAS and Pancreatic Cancer: From Gene Discovery to Successful Therapeutic Targeting.",
-    "year": 2026,
-    "on": "partly"
-   },
-   {
-    "pmid": "42749723",
-    "title": "Locus-specific stratification and prioritization unveil genetic risk mechanism underlying complex diseases.",
-    "year": 2026,
-    "on": "partly"
-   },
-   {
-    "pmid": "42683821",
-    "title": "Pharmacological Targets for Periodontitis: A Systematic Review of Drug-Target Mendelian Randomisation Studies.",
+    "pmid": "41994650",
+    "title": "RBM3-associated germline variants and their functional role in gastric cancer susceptibility and progression.",
     "year": 2026,
     "on": "yes"
    },
    {
-    "pmid": "42378954",
-    "title": "Genome-wide copy number analysis identifies AKT as a novel therapeutic target in pleural mesothelioma.",
+    "pmid": "41602910",
+    "title": "ABCA1 acts as a protective modulator in amyotrophic lateral sclerosis.",
     "year": 2026,
     "on": "yes"
    },
    {
-    "pmid": "42308999",
-    "title": "Therapeutic targets for atherosclerotic coronary artery disease: druggable genome-wide Mendelian randomization analysis.",
+    "pmid": "42634679",
+    "title": "Integrative Multi-Omics Mendelian Randomization Identifies BLMH as a Keratinocyte-Enriched Protective Candidate Gene and Potential Therapeutic Target in Psoriasis.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "42327717",
+    "title": "Identification of potential therapeutic targets for idiopathic pulmonary fibrosis: an integrated multiomics analysis.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "41889163",
+    "title": "Proteomic Profiling of Plasma to Uncover Novel Intervention Targets and Prognostic Biomarkers for Chronic Liver Diseases.",
     "year": 2026,
     "on": "yes"
    }
   ],
-  "on_target": "5/5",
+  "on_target": "87%",
   "quality": "good",
   "better_source": null,
   "query_version": "v1",
-  "revised": false
+  "revised": false,
+  "judged": "two judges, abstracts"
  },
  "b1-2": {
-  "pubmed": "(\"Drug Discovery\"[MeSH] OR \"Molecular Targeted Therapy\"[MeSH]) AND (\"Gene Knockout Techniques\"[MeSH] OR \"Gene Knockdown Techniques\"[MeSH] OR \"RNA Interference\"[MeSH] OR \"CRISPR-Cas Systems\"[MeSH]) AND (\"target validation\"[tiab] OR \"therapeutic target\"[tiab] OR \"drug target\"[tiab] OR \"validated target\"[tiab])",
-  "epmc": "TITLE_ABS:(\"target validation\" OR \"validate* as a therapeutic target\" OR \"validate* as a drug target\") AND TITLE_ABS:(knockout OR knockdown OR siRNA OR CRISPR OR \"tool compound\" OR inhibitor OR antibody)",
-  "n_pubmed": 9,
-  "n_epmc": 74,
+  "pubmed": "((\"Mice, Knockout\"[MeSH] OR \"Gene Knockout Techniques\"[MeSH] OR \"RNA Interference\"[MeSH] OR \"CRISPR-Cas Systems\"[MeSH] OR \"Molecular Probes\"[MeSH] OR \"target validation\"[tiab] OR \"validated target\"[tiab] OR \"genetic validation\"[tiab] OR \"pharmacological validation\"[tiab] OR \"chemical probe*\"[tiab] OR \"tool compound*\"[tiab] OR \"knockout\"[tiab] OR \"knockdown\"[tiab]) AND (\"Molecular Targeted Therapy\"[MeSH] OR \"Drug Discovery\"[MeSH] OR \"target validation\"[tiab] OR \"therapeutic target*\"[tiab] OR \"drug target*\"[tiab] OR \"druggable\"[tiab]) AND (\"Disease Models, Animal\"[MeSH] OR \"disease model*\"[tiab] OR \"mouse model*\"[tiab] OR \"xenograft*\"[tiab] OR \"in vivo\"[tiab])) AND (\"2025/10/28\"[dp] : \"2026/10/28\"[dp]) NOT (review[pt] OR editorial[pt] OR comment[pt] OR letter[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt]) NOT (\"Viruses\"[MeSH] OR \"Virus Diseases\"[MeSH] OR \"Bacterial Infections\"[MeSH] OR \"Toxins, Biological\"[MeSH] OR virus*[tiab] OR viral[tiab] OR pathogen*[tiab] OR toxin*[tiab])",
+  "epmc": "(TITLE_ABS:(\"target validation\" OR \"therapeutic target\" OR \"therapeutic targets\" OR \"drug target\" OR \"chemical probe\" OR \"tool compound\") AND TITLE_ABS:(knockout OR knockdown OR CRISPR OR siRNA OR inhibitor OR inhibition OR antibody) AND TITLE_ABS:(\"mouse model\" OR \"disease model\" OR \"in vivo\" OR xenograft) AND METHODS:(\"knockout mice\" OR siRNA OR shRNA OR sgRNA OR CRISPR OR Cre OR loxP)) AND OPEN_ACCESS:y AND FIRST_PDATE:[2025-10-28 TO 2026-10-28] NOT PUB_TYPE:(\"review\" OR \"review-article\" OR \"systematic-review\" OR \"editorial\" OR \"letter\" OR \"comment\" OR \"meta-analysis\") NOT SRC:PPR NOT TITLE_ABS:(virus OR viruses OR viral OR virion OR capsid OR pathogen OR pathogens OR pathogenic OR toxin OR toxins OR \"infectious disease\" OR \"infectious diseases\" OR antiviral OR antibacterial)",
+  "n_pubmed": 2919,
+  "n_epmc": 1367,
   "examples": [
    {
-    "pmid": "41428057",
-    "title": "Identification of the novel therapeutic target gene SLC12A9, which determines the prognosis of patients with colorectal cancer.",
-    "year": 2026,
-    "on": "partly"
-   },
-   {
-    "pmid": "42163799",
-    "title": "Diacylglycerol Kinase Eta as a Novel Target in NRAS Mutant Melanoma.",
+    "pmid": "41838329",
+    "title": "NR2F2/AGAP2 axis: regulating lipid synthesis to drive AML progression via AMPK\u03b1/ACC pathway.",
     "year": 2026,
     "on": "yes"
    },
    {
-    "pmid": "41981656",
-    "title": "Midkine as a novel prognostic and therapeutic target in meningioma: insights from single-cell analysis and organoid-based drug validation.",
+    "pmid": "42305299",
+    "title": "lncRNA LINC00152 knockdown suppressed hepatic cancer biological activity.",
     "year": 2026,
     "on": "yes"
    },
    {
-    "pmid": "41539368",
-    "title": "Hsp90α as a promising therapeutic target for suppressing tumor progression in Lactotroph PitNETs.",
+    "pmid": "42737968",
+    "title": "Tubule-Specific RGC-32 Knockout Exhibits Direct and Progressive Aggravating Activity Against Renal Function in an Ischemia-Reperfusion Mouse Model.",
     "year": 2026,
     "on": "yes"
    },
    {
-    "pmid": "40148722",
-    "title": "Transgenesis in Drug Discovery: Enhancing Target Identification and Validation.",
+    "pmid": "41599186",
+    "title": "Cell-Penetrating Peptide-Mediated siRNA Targeting of LDHC Suppresses Tumor Growth in a Triple-Negative Breast Cancer Zebrafish Xenograft Model.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "41781996",
+    "title": "DKC1: a robust prognostic factor and potential therapeutic target in multiple myeloma.",
     "year": 2026,
     "on": "yes"
    }
   ],
-  "on_target": "5/5",
-  "quality": "poor",
+  "on_target": "100%",
+  "quality": "good",
   "better_source": null,
   "query_version": "v2",
-  "revised": true
+  "revised": true,
+  "judged": "two judges, abstracts"
  },
  "b1-3": {
-  "pubmed": "\"High-Throughput Screening Assays\"[MeSH] AND (\"Biological Assay\"[MeSH] OR \"assay development\"[tiab] OR miniaturi*[tiab] OR \"Z-factor\"[tiab] OR \"Z'\"[tiab] OR \"384-well\"[tiab] OR \"1536-well\"[tiab])",
-  "epmc": "TITLE_ABS:(\"assay development\" OR \"assay miniaturi*\" OR \"1536-well\" OR \"384-well\" OR \"Z-factor\" OR \"Z'-factor\") AND TITLE_ABS:(screen* OR \"drug discovery\")",
-  "n_pubmed": 94,
-  "n_epmc": 123,
+  "pubmed": "((\"High-Throughput Screening Assays\"[MeSH] OR \"Biological Assay\"[MeSH] OR \"Drug Evaluation, Preclinical\"[MeSH] OR \"assay development\"[tiab] OR \"screening assay*\"[tiab] OR \"HTS assay*\"[tiab] OR \"high-throughput assay*\"[tiab] OR \"assay miniaturi*\"[tiab]) AND (\"assay development\"[tiab] OR \"assay optimi*\"[tiab] OR \"Z-factor\"[tiab] OR \"Z' factor\"[tiab] OR \"Z'-factor\"[tiab] OR \"miniaturi*\"[tiab] OR \"384-well\"[tiab] OR \"1536-well\"[tiab] OR \"robustness\"[tiab] OR \"assay validation\"[tiab])) AND (\"2025/10/28\"[dp] : \"2026/10/28\"[dp]) NOT (review[pt] OR editorial[pt] OR comment[pt] OR letter[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt]) NOT (\"Viruses\"[MeSH] OR \"Virus Diseases\"[MeSH] OR \"Bacterial Infections\"[MeSH] OR \"Toxins, Biological\"[MeSH] OR virus*[tiab] OR viral[tiab] OR pathogen*[tiab] OR toxin*[tiab])",
+  "epmc": "(TITLE_ABS:(\"assay development\" OR \"assay optimization\" OR \"assay optimisation\" OR \"screening assay\" OR \"HTS assay\" OR \"high-throughput assay\" OR miniaturized OR miniaturised) AND TITLE_ABS:(screening OR \"high-throughput\" OR HTS OR \"drug discovery\" OR \"384-well\" OR \"1536-well\") AND METHODS:(\"Z'\" OR \"Z-factor\" OR \"Z'-factor\" OR \"Z prime\" OR \"signal-to-background\" OR \"384-well\" OR \"1536-well\" OR \"DMSO tolerance\")) AND OPEN_ACCESS:y AND FIRST_PDATE:[2025-10-28 TO 2026-10-28] NOT PUB_TYPE:(\"review\" OR \"review-article\" OR \"systematic-review\" OR \"editorial\" OR \"letter\" OR \"comment\" OR \"meta-analysis\") NOT SRC:PPR NOT TITLE_ABS:(virus OR viruses OR viral OR virion OR capsid OR pathogen OR pathogens OR pathogenic OR toxin OR toxins OR \"infectious disease\" OR \"infectious diseases\" OR antiviral OR antibacterial)",
+  "n_pubmed": 270,
+  "n_epmc": 49,
   "examples": [
    {
-    "pmid": "42648817",
-    "title": "Automated QuEChERS method for high-throughput analysis of pesticides in Cannabis sativa L. flowering tops by GC-MS/MS.",
-    "year": 2026,
-    "on": "no"
-   },
-   {
-    "pmid": "42941975",
-    "title": "A Cell-Based ELISA for High-Throughput Screening of Inhibitors Blocking Influenza Virus Attachment to the Subtype-Independent α2,6-Sialic Acid Receptor.",
+    "pmid": "42567021",
+    "title": "Development of a thin-layer chromatography-angiotensin-converting enzyme bioassay coupled with digital image analysis for effect-directed screening of enzyme inhibitors.",
     "year": 2026,
     "on": "yes"
    },
    {
-    "pmid": "42551721",
-    "title": "High-throughput eutectic screening and hot-melt extrusion enable rapid development of nifedipine amorphous solid dispersions.",
-    "year": 2026,
-    "on": "no"
-   },
-   {
-    "pmid": "42697043",
-    "title": "High-throughput primary B cell cytokines assay for drug screening in multiple sclerosis.",
+    "pmid": "42138089",
+    "title": "Functional Precision Oncology Approach Using Nanoliter Droplet Array for Drug Sensitivity Testing in Lung Cancer.",
     "year": 2026,
     "on": "yes"
    },
    {
-    "pmid": "42648491",
-    "title": "Development of diversified HTS cell-based assays for solute carrier drug discovery.",
+    "pmid": "41540001",
+    "title": "A high-throughput, flow cytometry approach to measure phase behavior and exchange in biomolecular condensates.",
     "year": 2026,
     "on": "yes"
+   },
+   {
+    "pmid": "42646227",
+    "title": "Functional In Vitro Expression of the Succinate-Acetate Transporter SatP and an Initial Screening Strategy.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "42177640",
+    "title": "A scalable, multi-resolution consensus clustering approach for prioritizing robust signals from high-throughput screens.",
+    "year": 2026,
+    "on": "partly"
    }
   ],
-  "on_target": "3/5",
+  "on_target": "56%",
   "quality": "fair",
   "better_source": null,
   "query_version": "v1",
-  "revised": false
+  "revised": false,
+  "judged": "two judges, abstracts"
  },
  "b1-4": {
-  "pubmed": "\"High-Throughput Screening Assays\"[MeSH] AND (\"Small Molecule Libraries\"[MeSH] OR \"Drug Evaluation, Preclinical\"[MeSH]) AND (\"hit*\"[tiab] OR \"compound librar*\"[tiab])",
-  "epmc": "TITLE_ABS:(\"high-throughput screen*\" OR \"high throughput screen*\" OR \"compound screen*\" OR \"library screen*\") AND TITLE_ABS:(hits OR \"hit compound*\" OR \"compound librar*\" OR \"small molecule librar*\") NOT TITLE:(CRISPR OR \"virtual screen*\")",
-  "n_pubmed": 47,
-  "n_epmc": 22,
+  "pubmed": "((\"High-Throughput Screening Assays\"[MeSH] OR \"Cell Surface Display Techniques\"[MeSH] OR \"high-throughput screen*\"[tiab] OR \"high throughput screen*\"[tiab] OR \"compound screen*\"[tiab] OR \"library screen*\"[tiab] OR \"DNA-encoded librar*\"[tiab] OR \"fragment screen*\"[tiab] OR \"phage display\"[tiab]) AND (\"hit identification\"[tiab] OR \"hit compound*\"[tiab] OR \"hit rate\"[tiab] OR \"primary screen*\"[tiab] OR \"screening campaign\"[tiab] OR \"hit discovery\"[tiab] OR \"hit finding\"[tiab] OR \"screening hit*\"[tiab] OR \"binders\"[tiab])) AND (\"2025/10/28\"[dp] : \"2026/10/28\"[dp]) NOT (review[pt] OR editorial[pt] OR comment[pt] OR letter[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt]) NOT (\"Viruses\"[MeSH] OR \"Virus Diseases\"[MeSH] OR \"Bacterial Infections\"[MeSH] OR \"Toxins, Biological\"[MeSH] OR virus*[tiab] OR viral[tiab] OR pathogen*[tiab] OR toxin*[tiab])",
+  "epmc": "(TITLE_ABS:(\"high-throughput screening\" OR \"high-throughput screen\" OR \"compound screening\" OR \"library screening\" OR \"DNA-encoded library\" OR \"fragment screening\" OR \"phage display\" OR \"screening campaign\") AND TITLE_ABS:(hit OR hits OR \"hit identification\" OR \"hit rate\" OR binders OR \"primary screen\") AND METHODS:(\"Z'\" OR \"Z-factor\" OR \"hit rate\" OR \"hit selection\" OR \"percent inhibition\" OR plates OR panning OR enrichment)) AND OPEN_ACCESS:y AND FIRST_PDATE:[2025-10-28 TO 2026-10-28] NOT PUB_TYPE:(\"review\" OR \"review-article\" OR \"systematic-review\" OR \"editorial\" OR \"letter\" OR \"comment\" OR \"meta-analysis\") NOT SRC:PPR NOT TITLE_ABS:(virus OR viruses OR viral OR virion OR capsid OR pathogen OR pathogens OR pathogenic OR toxin OR toxins OR \"infectious disease\" OR \"infectious diseases\" OR antiviral OR antibacterial)",
+  "n_pubmed": 186,
+  "n_epmc": 73,
   "examples": [
    {
-    "pmid": "42372925",
-    "title": "OracleScreen-LILRB4 (HTS-Oracle v3): machine learning-guided discovery of myeloid immune checkpoint binders validated in patient-derived cells.",
-    "year": 2026,
-    "on": "partly"
-   },
-   {
-    "pmid": "42943707",
-    "title": "Research on the Intervention of Bile Stasis-Induced Pruritus Using Small Molecules Targeting MRGPRX4 Through High-Throughput Screening.",
+    "pmid": "42669160",
+    "title": "A QC-guided framework for performance assessment in plate-based RNAi screening with fluorescence and metabolic readouts.",
     "year": 2026,
     "on": "yes"
    },
    {
-    "pmid": "42917943",
-    "title": "Automated High-Throughput Ligand-Detected NMR for Medicinal Chemistry Hit Triage and Binding Assessment.",
+    "pmid": "41706023",
+    "title": "Gonystylones A-E, Antiproliferative 5,6-Dihydro-\u03b1-pyrones from the Plant Gonystylus borneensis.",
     "year": 2026,
-    "on": "partly"
+    "on": "yes"
    },
    {
-    "pmid": "42336208",
-    "title": "A Hybrid Experimental and in silico Platform for ITPK1 Chemical Probe Discovery.",
-    "year": 2026,
-    "on": "partly"
+    "pmid": "41250566",
+    "title": "High-Throughput Screening and Initial SAR Studies Identify a Novel Submicromolar Potent Human cGAS Inhibitor.",
+    "year": 2025,
+    "on": "yes"
    },
    {
-    "pmid": "42150408",
-    "title": "Discovery of selenium-containing amino acid derivatives as novel ENL YEATS domain inhibitors via AlphaScreen-based high throughput screening.",
+    "pmid": "41847301",
+    "title": "An integrated biophysical fragment screening approach identifies novel binders of the CD28 immune receptor.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "42797333",
+    "title": "Developing a Fluorescence-Based High-Throughput Screening Method for Natural Product Fractions to Identify Inhibitors of AR-V7 for Castration-Resistant Prostate Cancer.",
     "year": 2026,
     "on": "yes"
    }
   ],
-  "on_target": "5/5",
-  "quality": "good",
-  "better_source": null,
-  "query_version": "v1",
-  "revised": false
- },
- "b1-5": {
-  "pubmed": "(\"High-Throughput Screening Assays\"[MeSH] OR \"Small Molecule Libraries\"[MeSH] OR \"Drug Discovery\"[MeSH]) AND (\"False Positive Reactions\"[MeSH] OR \"Artifacts\"[MeSH] OR \"pan-assay interference\"[tiab] OR PAINS[tiab] OR \"hit triage\"[tiab] OR \"hit validation\"[tiab] OR \"hit confirmation\"[tiab] OR counter-screen*[tiab] OR counterscreen*[tiab] OR \"orthogonal assay*\"[tiab] OR aggregator*[tiab] OR \"assay interference\"[tiab])",
-  "epmc": "TITLE_ABS:(\"hit triage\" OR \"hit validation\" OR \"false positive*\" OR \"pan-assay interference\" OR PAINS OR \"counter-screen*\" OR \"counterscreen*\" OR \"orthogonal assay*\" OR \"colloidal aggregat*\") AND TITLE_ABS:(screen* OR hits)",
-  "n_pubmed": 51,
-  "n_epmc": 892,
-  "examples": [
-   {
-    "pmid": "42485955",
-    "title": "A multistage computational pipeline integrating ligand-based and structure-based screening with ADMET evaluation, molecular dynamic simulation and free energy calculations for the discovery of potential TNIK inhibitors.",
-    "year": 2027,
-    "on": "no"
-   },
-   {
-    "pmid": "42600712",
-    "title": "Early-stage anthelmintic discovery: Integrating phenotype, target and mechanism.",
-    "year": 2026,
-    "on": "partly"
-   },
-   {
-    "pmid": "42531898",
-    "title": "Discovery of thiobarbiturate-indole scaffold as a selective inhibitor targeting chikungunya virus nsP3 macrodomain through a cryptic binding pocket.",
-    "year": 2026,
-    "on": "no"
-   },
-   {
-    "pmid": "42924965",
-    "title": "Phenolic Metabolites as Therapeutics for Chronic Diseases: One Researcher's PAINS Is Another's Translatable Polypharmacology.",
-    "year": 2026,
-    "on": "yes"
-   },
-   {
-    "pmid": "42902950",
-    "title": "Systematic Evaluation of Washing Conditions to Preserve Low Affinity Binders in DEL Selections.",
-    "year": 2026,
-    "on": "partly"
-   }
-  ],
-  "on_target": "3/5",
+  "on_target": "72%",
   "quality": "fair",
   "better_source": null,
-  "query_version": "v2",
-  "revised": true
- },
- "b1-6": {
-  "pubmed": "\"Structure-Activity Relationship\"[MeSH] AND (\"Drug Discovery\"[MeSH] OR \"Drug Design\"[MeSH]) AND (\"hit-to-lead\"[tiab] OR \"hit to lead\"[tiab] OR \"screening hit\"[tiab] OR \"hit compound\"[tiab] OR \"hit expansion\"[tiab])",
-  "epmc": "TITLE_ABS:(\"hit-to-lead\" OR \"hit to lead\" OR \"hit expansion\" OR \"screening hit\" OR \"hit optimi*\") AND TITLE_ABS:(\"structure-activity\" OR SAR OR analog* OR series)",
-  "n_pubmed": 60,
-  "n_epmc": 53,
-  "examples": [
-   {
-    "pmid": "42826819",
-    "title": "Design, synthesis, and preliminary in vitro screening of novel tolmetin hydrazones against colon cancer.",
-    "year": 2027,
-    "on": "partly"
-   },
-   {
-    "pmid": "42492172",
-    "title": "Discovery of a novel class of broad-spectrum antivirals targeting the UEV domain of TSG101 in the host ESCRT pathway.",
-    "year": 2026,
-    "on": "partly"
-   },
-   {
-    "pmid": "42435557",
-    "title": "Targeting HsDHODH: Shape and machine-learning guided discovery and structural validation of SARS-CoV-2 antivirals.",
-    "year": 2026,
-    "on": "partly"
-   },
-   {
-    "pmid": "42926241",
-    "title": "A novel approach for recommendation-based prioritization of growth vectors in hit-to-lead optimization.",
-    "year": 2026,
-    "on": "yes"
-   },
-   {
-    "pmid": "42721525",
-    "title": "Design, synthesis, and biological evaluation of novel 1-aryl-3-hydroxypyrrolidine derivatives as dual HGK/HPK1 inhibitors with therapeutic potential for lung cancer.",
-    "year": 2026,
-    "on": "partly"
-   }
-  ],
-  "on_target": "5/5",
-  "quality": "good",
-  "better_source": null,
   "query_version": "v1",
-  "revised": false
+  "revised": false,
+  "judged": "two judges, abstracts"
  },
- "b1-7": {
-  "pubmed": "\"Structure-Activity Relationship\"[MeSH] AND (\"Drug Design\"[MeSH] OR \"Drug Discovery\"[MeSH]) AND (\"Pharmacokinetics\"[MeSH] OR \"Biological Availability\"[MeSH] OR \"Microsomes, Liver\"[MeSH] OR \"lead optimi*\"[tiab] OR \"metabolic stability\"[tiab])",
-  "epmc": "TITLE_ABS:(\"lead optimi*\" OR \"metabolic stability\" OR \"oral bioavailability\" OR \"pharmacokinetic propert*\") AND TITLE_ABS:(\"structure-activity\" OR SAR OR potent OR potency) AND TITLE_ABS:(inhibitor* OR agonist* OR antagonist* OR degrader*)",
-  "n_pubmed": 235,
-  "n_epmc": 453,
+ "b1-5": {
+  "pubmed": "((\"High-Throughput Screening Assays\"[MeSH] OR \"Small Molecule Libraries\"[MeSH] OR \"Drug Evaluation, Preclinical\"[MeSH] OR \"screening hit*\"[tiab] OR \"hit compound*\"[tiab] OR \"HTS hit*\"[tiab] OR \"primary hit*\"[tiab] OR \"hits\"[tiab]) AND (\"hit triage\"[tiab] OR \"hit validation\"[tiab] OR \"hit confirmation\"[tiab] OR \"confirmed hit*\"[tiab] OR \"false positive*\"[tiab] OR \"PAINS\"[tiab] OR \"aggregator*\"[tiab] OR \"orthogonal assay*\"[tiab] OR \"counter-screen*\"[tiab] OR \"counterscreen*\"[tiab] OR \"chemical series\"[tiab] OR \"chemotype*\"[tiab])) AND (\"2025/10/28\"[dp] : \"2026/10/28\"[dp]) NOT (review[pt] OR editorial[pt] OR comment[pt] OR letter[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt]) NOT (\"Viruses\"[MeSH] OR \"Virus Diseases\"[MeSH] OR \"Bacterial Infections\"[MeSH] OR \"Toxins, Biological\"[MeSH] OR virus*[tiab] OR viral[tiab] OR pathogen*[tiab] OR toxin*[tiab])",
+  "epmc": "(TITLE_ABS:(hit OR hits OR \"screening hits\" OR \"HTS hits\") AND TITLE_ABS:(\"hit triage\" OR \"hit validation\" OR \"hit confirmation\" OR \"false positive\" OR \"false positives\" OR PAINS OR aggregation OR \"orthogonal assay\" OR \"counter-screen\" OR \"chemical series\" OR chemotype OR chemotypes) AND METHODS:(\"dose-response\" OR IC50 OR orthogonal OR \"counter-screen\" OR counterscreen OR purity OR resynthesized OR SPR)) AND OPEN_ACCESS:y AND FIRST_PDATE:[2025-10-28 TO 2026-10-28] NOT PUB_TYPE:(\"review\" OR \"review-article\" OR \"systematic-review\" OR \"editorial\" OR \"letter\" OR \"comment\" OR \"meta-analysis\") NOT SRC:PPR NOT TITLE_ABS:(virus OR viruses OR viral OR virion OR capsid OR pathogen OR pathogens OR pathogenic OR toxin OR toxins OR \"infectious disease\" OR \"infectious diseases\" OR antiviral OR antibacterial)",
+  "n_pubmed": 209,
+  "n_epmc": 29,
   "examples": [
    {
-    "pmid": "42753957",
-    "title": "Discovery of potent, selective, and orally bioavailable monocyclic pyridine-based PKMYT1 inhibitors that synergize with CHK1 inhibition in replication-stressed cancer cells.",
-    "year": 2027,
-    "on": "yes"
-   },
-   {
-    "pmid": "42810190",
-    "title": "Discovery of (177)Lu-PSMA-MN4 as an improved PSMA-targeted radioligand with enhanced antitumor efficacy.",
-    "year": 2026,
-    "on": "partly"
-   },
-   {
-    "pmid": "42790171",
-    "title": "In silico-guided design, synthesis and in vitro evaluation of thiazolo-pyridines targeting SARS-CoV-2 Nsp13.",
-    "year": 2026,
-    "on": "no"
-   },
-   {
-    "pmid": "42762595",
-    "title": "From discovery to clinic: Medicinal chemistry strategies for PROTAC linker optimization.",
+    "pmid": "42155335",
+    "title": "In vitro profiling of Trypanosoma cruzi inhibitors identified from High throughput Screening and application to parasite painting.",
     "year": 2026,
     "on": "yes"
    },
    {
-    "pmid": "42721550",
-    "title": "Structure-guided discovery of HIV-1 capsid inhibitors: From diverse binding sites to resistance-resilient antiviral strategies.",
+    "pmid": "42456602",
+    "title": "High-throughput phenotypic screening identifies novel antimalarial scaffolds and target-associated chemotypes.",
     "year": 2026,
-    "on": "partly"
-   }
-  ],
-  "on_target": "4/5",
-  "quality": "good",
-  "better_source": null,
-  "query_version": "v1",
-  "revised": false
- },
- "b1-8": {
-  "pubmed": "(\"Drug Discovery\"[MeSH] OR \"Drug Evaluation, Preclinical\"[MeSH]) AND (\"clinical candidate\"[ti] OR \"development candidate\"[ti] OR \"preclinical candidate\"[ti] OR \"candidate selection\"[tiab] OR \"candidate nomination\"[tiab] OR \"IND-enabling\"[tiab])",
-  "epmc": "TITLE_ABS:(\"clinical candidate\" OR \"development candidate\" OR \"preclinical candidate\" OR \"candidate selection\" OR \"candidate nomination\" OR \"selected for clinical development\" OR \"advanced to clinical\")",
-  "n_pubmed": 37,
-  "n_epmc": 775,
-  "examples": [
-   {
-    "pmid": "42673834",
-    "title": "Redundancy-aware AI-guided discovery and experimental validation of antimicrobial peptides for infected wound treatment.",
-    "year": 2026,
-    "on": "no"
+    "on": "yes"
    },
    {
-    "pmid": "42468337",
-    "title": "HighPlay2: Structure-guided design of cyclic peptide candidates containing non-canonical amino acids.",
+    "pmid": "42929590",
+    "title": "CASyM: Chemotype Annotation through Synthesis Mapping.",
     "year": 2026,
-    "on": "no"
+    "on": "partly"
+   },
+   {
+    "pmid": "42519714",
+    "title": "Exploring the antimycobacterial profile of N-alkyl imidazoles.",
+    "year": 2026,
+    "on": "partly"
    },
    {
     "pmid": "42364293",
     "title": "A mechanism-guided framework for prioritizing membrane-interaction anti-Vibrio peptides from peptidomics data.",
     "year": 2026,
     "on": "partly"
-   },
+   }
+  ],
+  "on_target": "77%",
+  "quality": "fair",
+  "better_source": null,
+  "query_version": "v2",
+  "revised": true,
+  "judged": "two judges, abstracts"
+ },
+ "b1-6": {
+  "pubmed": "((\"Structure-Activity Relationship\"[MeSH] OR \"Drug Design\"[MeSH] OR \"Drug Discovery\"[MeSH] OR \"hit-to-lead\"[tiab] OR \"hit to lead\"[tiab] OR \"structure-activity\"[tiab] OR \"SAR\"[tiab] OR \"lead compound*\"[tiab] OR \"lead series\"[tiab] OR \"hit expansion\"[tiab] OR \"hit optimi*\"[tiab]) AND (\"hit-to-lead\"[tiab] OR \"hit to lead\"[tiab] OR \"hit expansion\"[tiab] OR \"hit optimi*\"[tiab] OR \"lead identification\"[tiab] OR \"lead generation\"[tiab]) AND (\"Enzyme Inhibitors\"[MeSH] OR \"Small Molecule Libraries\"[MeSH] OR \"Drug Discovery\"[MeSH] OR \"inhibitor*\"[tiab] OR \"small molecule*\"[tiab] OR \"small-molecule*\"[tiab] OR \"drug discovery\"[tiab])) AND (\"2025/10/28\"[dp] : \"2026/10/28\"[dp]) NOT (review[pt] OR editorial[pt] OR comment[pt] OR letter[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt]) NOT (\"Viruses\"[MeSH] OR \"Virus Diseases\"[MeSH] OR \"Bacterial Infections\"[MeSH] OR \"Toxins, Biological\"[MeSH] OR virus*[tiab] OR viral[tiab] OR pathogen*[tiab] OR toxin*[tiab])",
+  "epmc": "(TITLE_ABS:(\"hit-to-lead\" OR \"hit to lead\" OR \"hit expansion\" OR \"hit optimization\" OR \"hit optimisation\" OR \"lead identification\" OR \"lead generation\" OR \"affinity maturation\" OR humanization) AND METHODS:(IC50 OR \"structure-activity\" OR SAR OR \"microsomal stability\" OR solubility OR SPR OR Biacore OR synthesis)) AND OPEN_ACCESS:y AND FIRST_PDATE:[2025-10-28 TO 2026-10-28] NOT PUB_TYPE:(\"review\" OR \"review-article\" OR \"systematic-review\" OR \"editorial\" OR \"letter\" OR \"comment\" OR \"meta-analysis\") NOT SRC:PPR NOT TITLE_ABS:(virus OR viruses OR viral OR virion OR capsid OR pathogen OR pathogens OR pathogenic OR toxin OR toxins OR \"infectious disease\" OR \"infectious diseases\" OR antiviral OR antibacterial)",
+  "n_pubmed": 81,
+  "n_epmc": 50,
+  "examples": [
    {
-    "pmid": "42671460",
-    "title": "Developability-by-design for bispecific antibodies in discovery: combining computational prediction and early screening for candidate selection.",
+    "pmid": "42420190",
+    "title": "Hit-To-Lead Optimization of a Pyridylpiperazine Class Against Malaria: Pharmacokinetic Profile and In Vivo Efficacy of Optimized Compounds.",
     "year": 2026,
     "on": "yes"
    },
    {
-    "pmid": "42596775",
-    "title": "Advances in antisense technology for cardiovascular drug discovery: from gene silencing to therapeutics.",
+    "pmid": "41290653",
+    "title": "Expediting hit-to-lead progression in drug discovery through reaction prediction and multi-dimensional optimization.",
+    "year": 2025,
+    "on": "yes"
+   },
+   {
+    "pmid": "42693316",
+    "title": "Integrating machine learning and deep learning with multiple molecular fingerprints for topoisomerase I inhibitor screening and lead identification.",
     "year": 2026,
-    "on": "no"
+    "on": "partly"
+   },
+   {
+    "pmid": "42129437",
+    "title": "An integrated experimental and computational pipeline for crystallographic fragment screening of membrane protein in the lipid cubic phase.",
+    "year": 2026,
+    "on": "partly"
+   },
+   {
+    "pmid": "41847301",
+    "title": "An integrated biophysical fragment screening approach identifies novel binders of the CD28 immune receptor.",
+    "year": 2026,
+    "on": "partly"
    }
   ],
-  "on_target": "2/5",
+  "on_target": "53%",
+  "quality": "fair",
+  "better_source": null,
+  "query_version": "v1",
+  "revised": false,
+  "judged": "two judges, abstracts"
+ },
+ "b1-7": {
+  "pubmed": "((\"Structure-Activity Relationship\"[MeSH] OR \"Drug Design\"[MeSH] OR \"Pharmacokinetics\"[MeSH] OR \"Biological Availability\"[MeSH] OR \"lead optimi*\"[tiab] OR \"structure-activity\"[tiab] OR \"oral bioavailability\"[tiab] OR \"pharmacokinetic*\"[tiab] OR \"developability\"[tiab]) AND (\"lead optimi*\"[tiab] OR \"optimization of\"[tiab] OR \"optimisation of\"[tiab] OR \"improved pharmacokinetic*\"[tiab] OR \"oral bioavailability\"[tiab] OR \"metabolic stability\"[tiab] OR \"developability\"[tiab] OR \"liabilit*\"[tiab]) AND (\"Enzyme Inhibitors\"[MeSH] OR \"Small Molecule Libraries\"[MeSH] OR \"Drug Discovery\"[MeSH] OR \"Antibodies, Monoclonal\"[MeSH] OR \"Single-Domain Antibodies\"[MeSH] OR \"Single-Chain Antibodies\"[MeSH] OR \"Immunoglobulin Fragments\"[MeSH] OR \"inhibitor*\"[tiab] OR \"small molecule*\"[tiab] OR \"small-molecule*\"[tiab] OR \"drug discovery\"[tiab] OR \"antibod*\"[tiab])) AND (\"2025/10/28\"[dp] : \"2026/10/28\"[dp]) NOT (review[pt] OR editorial[pt] OR comment[pt] OR letter[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt]) NOT (\"Viruses\"[MeSH] OR \"Virus Diseases\"[MeSH] OR \"Bacterial Infections\"[MeSH] OR \"Toxins, Biological\"[MeSH] OR virus*[tiab] OR viral[tiab] OR pathogen*[tiab] OR toxin*[tiab])",
+  "epmc": "(TITLE_ABS:(\"lead optimization\" OR \"lead optimisation\" OR \"optimization of\" OR \"improved pharmacokinetic\" OR \"oral bioavailability\" OR \"metabolic stability\" OR developability OR liability OR liabilities) AND TITLE_ABS:(inhibitor OR inhibitors OR \"small molecule\" OR \"small-molecule\" OR \"lead compound\" OR \"drug candidate\" OR \"medicinal chemistry\" OR antibody OR antibodies OR nanobody OR nanobodies OR scFv OR VHH OR Fab) AND METHODS:(\"microsomal stability\" OR \"intrinsic clearance\" OR pharmacokinetic OR \"oral bioavailability\" OR hERG OR \"Caco-2\" OR \"size-exclusion chromatography\" OR \"hydrophobic interaction chromatography\")) AND OPEN_ACCESS:y AND FIRST_PDATE:[2025-10-28 TO 2026-10-28] NOT PUB_TYPE:(\"review\" OR \"review-article\" OR \"systematic-review\" OR \"editorial\" OR \"letter\" OR \"comment\" OR \"meta-analysis\") NOT SRC:PPR NOT TITLE_ABS:(virus OR viruses OR viral OR virion OR capsid OR pathogen OR pathogens OR pathogenic OR toxin OR toxins OR \"infectious disease\" OR \"infectious diseases\" OR antiviral OR antibacterial)",
+  "n_pubmed": 1448,
+  "n_epmc": 293,
+  "examples": [
+   {
+    "pmid": "42324823",
+    "title": "Discovery of an Orally Available Potent ER Aminopeptidase 1 (ERAP1) Inhibitor That Enhances Antitumor Responses and Limits Inflammatory Autoimmunity In Vivo.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "42329166",
+    "title": "Cryo-EM-guided subtractive optimization of a novel VCP/p97 inhibitor.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "41696287",
+    "title": "Optimization of Pyrazolo[3,4\u2011&lt;i&gt;b&lt;/i&gt;]pyridine Analogues: Synthesis, In Vitro Anticancer Evaluation and In Vivo Pharmacokinetics.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "42947618",
+    "title": "Discovery of potent anti-inflammatory flavonoid-sesquiterpenoid hybrids from Syzygium simile: Structure-activity relationships and nanomolar inhibition of human neutrophil activation.",
+    "year": 2026,
+    "on": "partly"
+   },
+   {
+    "pmid": "42557890",
+    "title": "Integrated \"gut-liver\"-on-a-chip (iGLoC): an immune-competent and metabolically active microphysiological model of the gut-liver axis for drug screening, validated by abemaciclib pharmacokinetics, hepatotoxicity, and drug-drug interaction studies.",
+    "year": 2026,
+    "on": "partly"
+   }
+  ],
+  "on_target": "50%",
+  "quality": "fair",
+  "better_source": null,
+  "query_version": "v1",
+  "revised": false,
+  "judged": "two judges, abstracts"
+ },
+ "b1-8": {
+  "pubmed": "((\"preclinical candidate\"[tiab] OR \"clinical candidate\"[tiab] OR \"development candidate\"[tiab] OR \"candidate nomination\"[tiab] OR \"IND-enabling\"[tiab] OR \"candidate selection\"[tiab] OR \"candidate drug*\"[tiab]) AND (\"Drug Evaluation, Preclinical\"[MeSH] OR \"Drug Discovery\"[MeSH] OR \"drug discovery\"[tiab] OR \"medicinal chemistry\"[tiab] OR \"preclinical development\"[tiab] OR \"inhibitor*\"[tiab] OR \"small molecule*\"[tiab] OR \"small-molecule*\"[tiab] OR \"antibod*\"[tiab] OR \"lead optimi*\"[tiab])) AND (\"2025/10/28\"[dp] : \"2026/10/28\"[dp]) NOT (review[pt] OR editorial[pt] OR comment[pt] OR letter[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt]) NOT (\"Viruses\"[MeSH] OR \"Virus Diseases\"[MeSH] OR \"Bacterial Infections\"[MeSH] OR \"Toxins, Biological\"[MeSH] OR virus*[tiab] OR viral[tiab] OR pathogen*[tiab] OR toxin*[tiab])",
+  "epmc": "(TITLE_ABS:(\"preclinical candidate\" OR \"clinical candidate\" OR \"development candidate\" OR \"candidate nomination\" OR \"IND-enabling\" OR \"clinical development candidate\" OR \"candidate selection\") AND TITLE_ABS:(inhibitor OR inhibitors OR \"small molecule\" OR \"small-molecule\" OR \"lead compound\" OR \"drug candidate\" OR \"medicinal chemistry\" OR \"drug discovery\" OR antibody OR antibodies OR nanobody OR nanobodies OR scFv OR VHH OR Fab OR \"preclinical development\" OR \"lead optimization\") AND METHODS:(pharmacokinetic OR hERG OR Ames OR bioavailability OR CYP OR efficacy OR titer OR \"mg/kg\")) AND OPEN_ACCESS:y AND FIRST_PDATE:[2025-10-28 TO 2026-10-28] NOT PUB_TYPE:(\"review\" OR \"review-article\" OR \"systematic-review\" OR \"editorial\" OR \"letter\" OR \"comment\" OR \"meta-analysis\") NOT SRC:PPR NOT TITLE_ABS:(virus OR viruses OR viral OR virion OR capsid OR pathogen OR pathogens OR pathogenic OR toxin OR toxins OR \"infectious disease\" OR \"infectious diseases\" OR antiviral OR antibacterial)",
+  "n_pubmed": 278,
+  "n_epmc": 19,
+  "examples": [
+   {
+    "pmid": "41295593",
+    "title": "Discovery of VU6052254: A Novel, Potent M1 Positive Allosteric Modulator.",
+    "year": 2025,
+    "on": "yes"
+   },
+   {
+    "pmid": "41514673",
+    "title": "Integrating In Vitro Analytics for Improved Antibody-Drug Conjugate Candidate Selection.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "41808149",
+    "title": "Integrative preclinical strategy for pharmacokinetic profiling and candidate selection of 3-hydroxypropanamidines: a promising antimalarial class.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "41353980",
+    "title": "MK-7602: a potent multi-stage dual-targeting antimalarial.",
+    "year": 2026,
+    "on": "yes"
+   },
+   {
+    "pmid": "42623604",
+    "title": "Selective Macrocyclic WEE1 Kinase Inhibitors with Strong Efficacy against Patient-Derived Colorectal Cancer Organoids.",
+    "year": 2026,
+    "on": "partly"
+   }
+  ],
+  "on_target": "47%",
   "quality": "poor",
   "better_source": null,
   "query_version": "v2",
-  "revised": true
+  "revised": true,
+  "judged": "two judges, abstracts"
  },
  "b2-1": {
   "pubmed": "(\"nonclinical\"[tiab] OR \"non-clinical\"[tiab]) AND (\"Drug Evaluation, Preclinical\"[MeSH] OR \"Drug Development\"[MeSH]) AND (regulat*[tiab] OR guideline*[tiab] OR ICH[tiab] OR FDA[tiab])",
@@ -2766,7 +2774,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
    },
    {
     "pmid": "42409302",
-    "title": "Safety and digestibility evaluation of L-β-galactoglucan: Implication for its use as a novel food ingredient.",
+    "title": "Safety and digestibility evaluation of L-\u03b2-galactoglucan: Implication for its use as a novel food ingredient.",
     "year": 2026,
     "on": "no"
    },
@@ -3829,7 +3837,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
    },
    {
     "pmid": "42890889",
-    "title": "Immune-effector and infection-associated reporting patterns of CD20×CD3 bispecific antibodies in B-cell lymphoma: a label-anchored FAERS analysis with descriptive JADER contextualization.",
+    "title": "Immune-effector and infection-associated reporting patterns of CD20\u00d7CD3 bispecific antibodies in B-cell lymphoma: a label-anchored FAERS analysis with descriptive JADER contextualization.",
     "year": 2026,
     "on": "no"
    },
@@ -3866,7 +3874,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
    },
    {
     "pmid": "41876378",
-    "title": "Evaluating the safety profile of α-1 blockers, 5α-reductase inhibitors, and PDE5I for BPH: a disproportionality analysis of real-world adverse events based on FDA adverse event reporting system (FAERS).",
+    "title": "Evaluating the safety profile of \u03b1-1 blockers, 5\u03b1-reductase inhibitors, and PDE5I for BPH: a disproportionality analysis of real-world adverse events based on FDA adverse event reporting system (FAERS).",
     "year": 2026,
     "on": "yes"
    },
@@ -3878,13 +3886,13 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
    },
    {
     "pmid": "42808785",
-    "title": "Real‑world pharmacovigilance of rituximab‑associated adverse reactions in children and adolescents: Disproportionality signal detection and time‑to‑onset pattern characterization using the FAERS database.",
+    "title": "Real\u2011world pharmacovigilance of rituximab\u2011associated adverse reactions in children and adolescents: Disproportionality signal detection and time\u2011to\u2011onset pattern characterization using the FAERS database.",
     "year": 2026,
     "on": "yes"
    },
    {
     "pmid": "42695738",
-    "title": "Pharmacovigilance signals of dupilumab among pediatric patients: A real‑world analysis based on the FAERS database.",
+    "title": "Pharmacovigilance signals of dupilumab among pediatric patients: A real\u2011world analysis based on the FAERS database.",
     "year": 2026,
     "on": "yes"
    }
