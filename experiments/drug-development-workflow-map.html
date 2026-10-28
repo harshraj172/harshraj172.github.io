@@ -4121,7 +4121,7 @@ function litBar(id){
 function litBox(id){
   const l = L[id]; if(!l) return "";
   const ex = l.examples||[]; const OL = {yes:"on topic",partly:"partly",no:"off topic"};
-  return `<div class="lit"><div class="lith"><span>In the paper database</span><em class="qc q-${l.quality}">${QLAB[l.quality]||l.quality}</em></div>
+  return `<div class="lit"><div class="lith"><span>Related papers from PubMed and Europe PMC</span><em class="qc q-${l.quality}">${QLAB[l.quality]||l.quality}</em></div>
     <p class="litn">Examples:</p>
     ${ex.length?`<ul>${ex.map(e=>`<li class="on-${esc(e.on)}"><a href="https://pubmed.ncbi.nlm.nih.gov/${esc(e.pmid)}/" target="_blank" rel="noopener">${esc(e.title)}</a> <span class="num">${esc(e.year)}</span> <em class="ot ot-${esc(e.on)}">${OL[e.on]||e.on}</em></li>`).join("")}</ul>`:""}
     ${l.better_source?`<p class="better"><span>Better source than papers</span>${esc(l.better_source)}</p>`:""}
