@@ -269,6 +269,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hh{font:500 10px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
 .hh em{font-style:normal;text-transform:none;letter-spacing:0;margin-left:6px;color:var(--muted)}
 .hc{font-size:12px;color:var(--muted)}
+.hu{font-size:12.5px;color:var(--muted)}
+.hmath summary{cursor:pointer;font:500 10.5px var(--mono);color:var(--accent);letter-spacing:.04em}
+.hmath{display:grid;gap:6px}
+.htasks{list-style:none;margin:2px 0 0;padding:0;display:grid;gap:5px}
+.htasks li{display:grid;gap:0;font-size:12.5px}
+.htasks li b{font:500 11px var(--mono);color:var(--ink)}
+.htasks li span{color:var(--faint);font-size:12px}
 .hbox ul{margin:0;padding-left:17px;font-size:12.5px;display:grid;gap:3px}
 .vcount{font-size:13px;color:var(--muted);margin-top:4px}
 .vcount b{color:var(--ink)}
@@ -57852,51 +57859,4447 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
  }
 }</script>
 <script id="hdata" type="application/json">{
- "b1-2.s2": {
+ "b1-1.s1": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 16.0,
+  "high": 24.4,
+  "unit": "Write a one-page disease and unmet-need brief for one disease: pull prevalence, current standard of care, treatment failure rates and 5 competing programs, then draft and review it with the project lead.",
+  "ests": [
+   [
+    16.0,
+    24.4
+   ],
+   [
+    11.5,
+    19.5
+   ],
+   [
+    17,
+    29
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Gather 15 to 20 sources",
+    "low": 4.5,
+    "high": 6.7,
+    "basis": "18 sources x 15 min = 4.5 h, high 20 x 20 min"
+   },
+   {
+    "task": "Extract epidemiology, failure rates, treatment gaps",
+    "low": 3,
+    "high": 5,
+    "basis": "15 sources x 12 min = 3 h, high x 20 min"
+   },
+   {
+    "task": "Profile 5 competing programs",
+    "low": 2.5,
+    "high": 3.75,
+    "basis": "5 programs x 30 min = 2.5 h, high x 45 min"
+   },
+   {
+    "task": "Draft 1 to 2 page brief",
+    "low": 3,
+    "high": 5,
+    "basis": "1 draft x 3 h = 3 h"
+   },
+   {
+    "task": "Review meeting with project lead",
+    "low": 2,
+    "high": 2,
+    "basis": "2 people x 1 h = 2 h"
+   },
+   {
+    "task": "Revise brief once",
+    "low": 1,
+    "high": 2,
+    "basis": "1 revision x 1 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-1.s3": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 13,
+  "high": 28,
+  "unit": "Set evidence-type weights for a scoring scheme over 200 candidate genes across 6 evidence types (genetics, expression, literature, pathways, animal models, drugs) and review the ranked output to produce a top-50 list.",
+  "ests": [
+   [
+    20,
+    32.3
+   ],
+   [
+    10.5,
+    21
+   ],
+   [
+    13,
+    28
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Choose and justify weights",
+    "low": 3,
+    "high": 5,
+    "basis": "6 types x 30-50 min"
+   },
+   {
+    "task": "Run scoring tool",
+    "low": 1,
+    "high": 2,
+    "basis": "3 runs x 20-40 min"
+   },
+   {
+    "task": "Check top-ranked genes make sense",
+    "low": 3,
+    "high": 5,
+    "basis": "50 genes x 4-6 min"
+   },
+   {
+    "task": "Spot-check 20 genes against source",
+    "low": 3,
+    "high": 5,
+    "basis": "20 genes x 9-15 min"
+   },
+   {
+    "task": "Adjust weights once or twice",
+    "low": 1,
+    "high": 3,
+    "basis": "2 rounds x 30-90 min"
+   },
+   {
+    "task": "Write rationale",
+    "low": 2,
+    "high": 4,
+    "basis": "1 doc x 2-4 h"
+   },
+   {
+    "task": "Rework: rerun after data issue",
+    "low": 0,
+    "high": 4,
+    "basis": "one round x 4 h, high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-1.s5": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 26,
+  "high": 47.3,
+  "unit": "Expression and omics review for the top 50 candidates: analyze 3 public disease versus control datasets (for example 200 samples RNA-seq, one proteomics set), compute differential expression with QC, and summarize direction and tissue specificity per gene.",
+  "ests": [
+   [
+    29.5,
+    47.3
+   ],
+   [
+    17,
+    37
+   ],
+   [
+    26,
+    54
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Choose and download 3 datasets",
+    "low": 4.5,
+    "high": 7.5,
+    "basis": "3 sets x 1.5 h = 4.5 h, high x 2.5 h"
+   },
+   {
+    "task": "QC for batch and outliers",
+    "low": 6,
+    "high": 9,
+    "basis": "3 sets x 2 h = 6 h, high x 3 h"
+   },
+   {
+    "task": "Run differential analysis",
+    "low": 6,
+    "high": 10.5,
+    "basis": "3 sets x 2 h = 6 h, high x 3.5 h"
+   },
+   {
+    "task": "Check hits in tissue atlases",
+    "low": 5,
+    "high": 8.3,
+    "basis": "50 genes x 6 min = 5 h, high x 10 min"
+   },
+   {
+    "task": "Build per-gene summary",
+    "low": 4,
+    "high": 6,
+    "basis": "1 table x 4 h"
+   },
+   {
+    "task": "Make figures",
+    "low": 4,
+    "high": 6,
+    "basis": "8 figures x 30 min = 4 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "Count-based differential expression for 4 to 10 samples: under 1 hour of hands-on time (Nature Protocols 2013)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23975260/"
+   }
+  ]
+ },
+ "b1-1.s8": {
   "bin": 4,
-  "sure": "medium",
-  "unit": "one tool compound, one cell line",
-  "reason": "Dose-response repeats, an inactive control, a second compound and a binding check in cells come to roughly 3 to 7 days of hands-on work. It reaches the next bin if selectivity panels run in-house.",
-  "cites": [],
-  "label": "1 day to 1 week"
+  "label": "1 week to 1 month",
+  "low": 37.3,
+  "high": 65,
+  "unit": "Fill in a standard tractability and safety checklist (about 25 questions across druggability, safety, biomarker, competition, and modality) for 10 deep-review targets.",
+  "ests": [
+   [
+    37.3,
+    62.6
+   ],
+   [
+    33,
+    65
+   ],
+   [
+    54,
+    110
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Research 250 checklist questions",
+    "low": 20.8,
+    "high": 33.3,
+    "basis": "250 questions x 5 min = 20.8 h, high x 8 min"
+   },
+   {
+    "task": "Quick structure and pocket checks",
+    "low": 3.3,
+    "high": 5,
+    "basis": "10 targets x 20 min = 3.3 h"
+   },
+   {
+    "task": "Record evidence and confidence",
+    "low": 4.2,
+    "high": 8.3,
+    "basis": "250 entries x 1 min = 4.2 h, high x 2 min"
+   },
+   {
+    "task": "Expert input across 5 areas",
+    "low": 5,
+    "high": 10,
+    "basis": "5 areas x 1 h = 5 h, high x 2 h"
+   },
+   {
+    "task": "Draft ranked summary of 3 targets",
+    "low": 4,
+    "high": 6,
+    "basis": "1 summary x 4 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-1.s9": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 22,
+  "high": 27,
+  "unit": "One target selection gate meeting: a 2 hour meeting reviewing a dossier on 3 finalist targets and deciding go, no-go or hold for 1 target.",
+  "ests": [
+   [
+    22,
+    27
+   ],
+   [
+    23,
+    28
+   ],
+   [
+    22,
+    26
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare dossier by presenters",
+    "low": 3,
+    "high": 5,
+    "basis": "3 presenters x 1 h = 3 h, high 5"
+   },
+   {
+    "task": "Pre-read dossier",
+    "low": 6,
+    "high": 8,
+    "basis": "6 people x 1 h = 6 h, high x 1.3 h"
+   },
+   {
+    "task": "Attend gate meeting",
+    "low": 12,
+    "high": 12,
+    "basis": "6 people x 2 h = 12 h"
+   },
+   {
+    "task": "Minutes and decision write-up",
+    "low": 1,
+    "high": 2,
+    "basis": "1 lead x 1 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-3.s1": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 49,
+  "high": 80,
+  "unit": "Choose the assay format for one target by comparing 3 candidate formats (for example biochemical, TR-FRET, cell-based reporter) and produce enough reagents (protein, cells, probes) for a pilot of 20 plates.",
+  "ests": [
+   [
+    49,
+    80
+   ],
+   [
+    36,
+    76
+   ],
+   [
+    51,
+    98
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Literature and vendor review of 3 formats",
+    "low": 9,
+    "high": 15,
+    "basis": "3 formats x 3 h = 9 h, high x 5 h"
+   },
+   {
+    "task": "Select format and design pilot",
+    "low": 4,
+    "high": 6,
+    "basis": "1 design x 4 h"
+   },
+   {
+    "task": "Order and organize reagents",
+    "low": 3,
+    "high": 5,
+    "basis": "1 order set x 3 h"
+   },
+   {
+    "task": "Prepare protein, cells and probes",
+    "low": 12,
+    "high": 20,
+    "basis": "1 tech x 12 h, high with rebatch"
+   },
+   {
+    "task": "Test 3 formats side by side",
+    "low": 15,
+    "high": 24,
+    "basis": "3 formats x 5 h = 15 h, high x 8 h"
+   },
+   {
+    "task": "Analyze comparison",
+    "low": 6,
+    "high": 10,
+    "basis": "3 formats x 2 h = 6 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-3.s2": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 24.5,
+  "high": 46,
+  "unit": "Miniaturize one assay from 96-well to 384-well format: optimize volumes, cell density or enzyme and substrate concentrations, DMSO tolerance and incubation time in about 12 test plates.",
+  "ests": [
+   [
+    29,
+    46
+   ],
+   [
+    19,
+    42
+   ],
+   [
+    24.5,
+    54
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Design optimization plates",
+    "low": 3,
+    "high": 5,
+    "basis": "12 plates x 15-25 min"
+   },
+   {
+    "task": "Prepare cells or enzyme, substrate and buffers",
+    "low": 6,
+    "high": 10,
+    "basis": "3-4 rounds x 2-3 h"
+   },
+   {
+    "task": "Plate setup and dispensing",
+    "low": 8,
+    "high": 12,
+    "basis": "12 plates x 40-60 min"
+   },
+   {
+    "task": "Read plates and log",
+    "low": 2,
+    "high": 3,
+    "basis": "12 plates x 10-15 min"
+   },
+   {
+    "task": "Analyze results",
+    "low": 4,
+    "high": 7,
+    "basis": "12 plates x 20-35 min"
+   },
+   {
+    "task": "Repeat once or twice with refined conditions",
+    "low": 0,
+    "high": 14,
+    "basis": "one extra round x 14 h, high only"
+   },
+   {
+    "task": "Record final conditions",
+    "low": 1.5,
+    "high": 3,
+    "basis": "1 SOP x 1.5-3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-3.s3": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 21.5,
+  "high": 37.1,
+  "unit": "Robustness run for one assay in 384-well format: plate uniformity test across 3 days with 3 plates per day (max, mid, min signals), compute Z-prime, signal-to-background and CV, and check DMSO and reagent stability.",
+  "ests": [
+   [
+    23.5,
+    37.1
+   ],
+   [
+    15,
+    34
+   ],
+   [
+    21.5,
+    42.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare reagents over 3 days",
+    "low": 6,
+    "high": 9,
+    "basis": "3 days x 2 h = 6 h, high x 3 h"
+   },
+   {
+    "task": "Set up 9 plates",
+    "low": 4.5,
+    "high": 6.8,
+    "basis": "9 plates x 30 min = 4.5 h, high x 45 min"
+   },
+   {
+    "task": "Load and read plates",
+    "low": 1.5,
+    "high": 2.3,
+    "basis": "9 plates x 10 min = 1.5 h"
+   },
+   {
+    "task": "Calculate Z prime, S/B and CV",
+    "low": 5,
+    "high": 8,
+    "basis": "1 analysis x 5 h"
+   },
+   {
+    "task": "DMSO and reagent stability tests",
+    "low": 3,
+    "high": 5,
+    "basis": "3 conditions x 1 h = 3 h"
+   },
+   {
+    "task": "Edge effect spot checks",
+    "low": 1.5,
+    "high": 3,
+    "basis": "1 check x 1.5 h"
+   },
+   {
+    "task": "Summarize pass or fail",
+    "low": 2,
+    "high": 3,
+    "basis": "1 summary x 2 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-3.s4": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 14.5,
+  "high": 29.8,
+  "unit": "Set up dose-response fitting for the assay: configure a 4-parameter logistic fit for 10-point curves in duplicate for 500 compounds, define which parameters (top, bottom, slope) are fixed, define curve quality classes, and test it on 20 reference compounds.",
+  "ests": [
+   [
+    16.0,
+    29.8
+   ],
+   [
+    10.0,
+    23.5
+   ],
+   [
+    14.5,
+    33
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Write or configure 4PL fit model",
+    "low": 4,
+    "high": 8,
+    "basis": "1 model x 4 h, high debugging"
+   },
+   {
+    "task": "Choose fixed parameters",
+    "low": 2,
+    "high": 4,
+    "basis": "1 decision x 2 h"
+   },
+   {
+    "task": "Test on 20 reference compounds",
+    "low": 1.7,
+    "high": 3.3,
+    "basis": "20 compounds x 5 min = 1.7 h"
+   },
+   {
+    "task": "Test batch of 500 compounds",
+    "low": 2,
+    "high": 4,
+    "basis": "1 run x 2 h"
+   },
+   {
+    "task": "Review 50 curves by eye",
+    "low": 1.3,
+    "high": 2.5,
+    "basis": "50 curves x 1.5 min = 1.3 h, high x 3 min"
+   },
+   {
+    "task": "Define quality classes",
+    "low": 2,
+    "high": 4,
+    "basis": "1 scheme x 2 h"
+   },
+   {
+    "task": "Document rules",
+    "low": 3,
+    "high": 4,
+    "basis": "1 doc x 3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-3.s5": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 36,
+  "high": 84,
+  "unit": "Integrate the robot and reader for one assay: connect a liquid handler, plate reader and scheduler to the data system, so about 700 plates produce files that arrive automatically, and test with 20 plates.",
+  "ests": [
+   [
+    49.3,
+    105
+   ],
+   [
+    31,
+    68
+   ],
+   [
+    36,
+    84
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Program liquid handler method",
+    "low": 12,
+    "high": 24,
+    "basis": "1 method x 1.5-3 days"
+   },
+   {
+    "task": "Configure reader export, file naming and transfer",
+    "low": 6,
+    "high": 12,
+    "basis": "1 setup x 6-12 h"
+   },
+   {
+    "task": "Scheduler and data system connection",
+    "low": 8,
+    "high": 16,
+    "basis": "1 integration x 1-2 days"
+   },
+   {
+    "task": "Test run with 20 plates, load and check files",
+    "low": 4,
+    "high": 6,
+    "basis": "20 plates x 12-18 min"
+   },
+   {
+    "task": "Assay scientist input on method",
+    "low": 3,
+    "high": 5,
+    "basis": "part-time 3-5 h"
+   },
+   {
+    "task": "Documentation",
+    "low": 3,
+    "high": 5,
+    "basis": "1 workflow doc x 3-5 h"
+   },
+   {
+    "task": "Fix errors and retest",
+    "low": 0,
+    "high": 16,
+    "basis": "one troubleshooting round x 16 h, high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-3.s8": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 14.5,
+  "high": 21,
+  "unit": "One screen-ready gate review: 1 hour meeting on a 10 page validation report of one assay with Z-prime, CV, reference compound potency, and DMSO tolerance data, ending in a sign-off.",
+  "ests": [
+   [
+    17,
+    23.5
+   ],
+   [
+    14.5,
+    21
+   ],
+   [
+    13.5,
+    19.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Write 10 page validation report",
+    "low": 8,
+    "high": 10,
+    "basis": "1 day = 8 to 10 h"
+   },
+   {
+    "task": "Pre-read by 3 other attendees",
+    "low": 2,
+    "high": 3,
+    "basis": "3 people x 40 to 60 min"
+   },
+   {
+    "task": "Meeting 1 h with 4 people",
+    "low": 4,
+    "high": 4,
+    "basis": "4 x 1 h = 4 h"
+   },
+   {
+    "task": "Record decision and sign-off",
+    "low": 0.5,
+    "high": 1,
+    "basis": "minutes 30 to 60 min"
+   },
+   {
+    "task": "Revise report after comments",
+    "low": 0,
+    "high": 3,
+    "basis": "one revision"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s1": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 16.5,
+  "high": 28.5,
+  "unit": "Choose the compound set for one HTS campaign: compare 3 in-house and vendor collections (about 500,000 compounds total), filter for lead-like properties and PAINS, overlap and diversity, and select a 200,000-compound subset with a one-page rationale and a sign-off meeting.",
+  "ests": [
+   [
+    18,
+    31
+   ],
+   [
+    16.5,
+    28.0
+   ],
+   [
+    16.5,
+    28.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Read library annotations",
+    "low": 3,
+    "high": 5,
+    "basis": "3 libraries x 1 to 1.7 h"
+   },
+   {
+    "task": "Run property and PAINS filters",
+    "low": 3,
+    "high": 5,
+    "basis": "500k compounds, 3 libraries x 1 to 1.7 h"
+   },
+   {
+    "task": "Overlap and diversity analysis",
+    "low": 3,
+    "high": 5,
+    "basis": "1 analysis x 3 to 5 h"
+   },
+   {
+    "task": "Select 200k subset",
+    "low": 2,
+    "high": 4,
+    "basis": "1 selection x 2 to 4 h"
+   },
+   {
+    "task": "Write one-page rationale",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "1 page x 1.5 to 2.5 h"
+   },
+   {
+    "task": "Sign-off meeting 1 h",
+    "low": 4,
+    "high": 4,
+    "basis": "4 people x 1 h = 4 person-h"
+   },
+   {
+    "task": "Rework filters after review",
+    "low": 0,
+    "high": 3,
+    "basis": "1 round x 3 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s2": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 21.5,
+  "high": 35,
+  "unit": "Decide the screening approach for one new target: write a comparison of HTS of 200,000 compounds, a 2,000-fragment biophysical screen, a DNA-encoded library selection, and virtual screening, with cost, hit-rate and risk, and present it for a go decision.",
+  "ests": [
+   [
+    21.5,
+    35
+   ],
+   [
+    22.5,
+    33.5
+   ],
+   [
+    20,
+    36
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Literature and precedent review for four approaches",
+    "low": 6,
+    "high": 10,
+    "basis": "4 approaches x 1.5 to 2.5 h"
+   },
+   {
+    "task": "Assay and reagent feasibility discussions",
+    "low": 2,
+    "high": 4,
+    "basis": "2 short talks x 1 to 2 h"
+   },
+   {
+    "task": "Cost and hit-rate estimates",
+    "low": 3,
+    "high": 5,
+    "basis": "4 approaches x 45 to 75 min"
+   },
+   {
+    "task": "Write 2-page comparison and risk table",
+    "low": 4,
+    "high": 6,
+    "basis": "2 pages x 2 to 3 h"
+   },
+   {
+    "task": "Prepare presentation",
+    "low": 1.5,
+    "high": 3,
+    "basis": "1.5 to 3 h"
+   },
+   {
+    "task": "Decision meeting",
+    "low": 5,
+    "high": 5,
+    "basis": "1 h x 5 people = 5 h"
+   },
+   {
+    "task": "Rework after review comments",
+    "low": 0,
+    "high": 2,
+    "basis": "one revision 0 to 2 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s3": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 15,
+  "high": 31,
+  "unit": "Design and analyse one DNA-encoded library selection: 1 library pool of about 1 billion members, 3 selection conditions (target, no-target beads, competitor) in duplicate, 12 samples sequenced to 10 million reads each. Hands-on work is barcode counting, enrichment calling, replicate comparison and picking 50 compounds for off-DNA resynthesis.",
+  "ests": [
+   [
+    14,
+    28
+   ],
+   [
+    16,
+    31
+   ],
+   [
+    15,
+    31
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Process read counts for 12 samples",
+    "low": 3,
+    "high": 5,
+    "basis": "12 samples x 15 to 25 min"
+   },
+   {
+    "task": "Barcode counting and decoding to structures",
+    "low": 2,
+    "high": 4,
+    "basis": "1 pipeline x 2 to 4 h"
+   },
+   {
+    "task": "Enrichment and noise statistics",
+    "low": 3,
+    "high": 6,
+    "basis": "1 analysis x 3 to 6 h"
+   },
+   {
+    "task": "Replicate and condition comparison",
+    "low": 2,
+    "high": 4,
+    "basis": "3 conditions x 40 to 80 min"
+   },
+   {
+    "task": "Chemotype review of top enriched",
+    "low": 3,
+    "high": 5,
+    "basis": "about 300 candidates x 40 to 60 s"
+   },
+   {
+    "task": "Pick 50 compounds and write resynthesis list",
+    "low": 2,
+    "high": 3,
+    "basis": "50 compounds x 2.4 to 3.6 min"
+   },
+   {
+    "task": "Rework with revised thresholds",
+    "low": 0,
+    "high": 4,
+    "basis": "1 round x 4 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "One-day DEL selection run: about 7.5 to 8 hours at the bench (practitioner blog, author estimate)",
+    "url": "https://www.cureffi.org/2016/11/17/how-to-do-a-dna-encoded-library-sel"
+   }
+  ]
+ },
+ "b1-4.s4": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 73,
+  "high": 120,
+  "unit": "Run the primary screen of 200,000 compounds at 10 uM in 384-well plates (about 600 plates with controls) on one automated line, in roughly 10 screening days of 60 plates each.",
+  "ests": [
+   [
+    73,
+    120
+   ],
+   [
+    53,
+    91
+   ],
+   [
+    90,
+    155
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Daily line startup, reagent prep and loading",
+    "low": 15,
+    "high": 25,
+    "basis": "10 days x 1.5 to 2.5 h x 1 person"
+   },
+   {
+    "task": "Plate loading and unloading, 60 plates per day",
+    "low": 20,
+    "high": 30,
+    "basis": "10 days x 2 to 3 h x 1 person"
+   },
+   {
+    "task": "Monitoring line and run logging",
+    "low": 20,
+    "high": 30,
+    "basis": "10 days x 2 to 3 h x 1 person"
+   },
+   {
+    "task": "Daily first-pass data upload",
+    "low": 5,
+    "high": 8,
+    "basis": "10 days x 0.5 to 0.8 h"
+   },
+   {
+    "task": "Fix jams and shutdown cleaning",
+    "low": 5,
+    "high": 15,
+    "basis": "10 days x 0.5 to 1.5 h, with one big failure in high"
+   },
+   {
+    "task": "Second person shared loading and consumables",
+    "low": 8,
+    "high": 12,
+    "basis": "10 days x 0.8 to 1.2 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s5": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 15.5,
+  "high": 25.0,
+  "unit": "Plate quality control for the 600-plate primary screen: calculate Z' factor, signal-to-background and control CVs for every plate, flag failures, decide on reruns (about 5% or 30 plates), and write the QC summary.",
+  "ests": [
+   [
+    16.5,
+    31
+   ],
+   [
+    15.5,
+    25.0
+   ],
+   [
+    8.5,
+    17.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Compute Z', S/B and CVs per plate",
+    "low": 2,
+    "high": 3,
+    "basis": "script setup 2 h"
+   },
+   {
+    "task": "Review plate statistics and control trends",
+    "low": 8,
+    "high": 13,
+    "basis": "600 plates x 0.8 to 1.3 min = 8 to 13 h"
+   },
+   {
+    "task": "Flag failures and decide reruns",
+    "low": 2,
+    "high": 3,
+    "basis": "30 plates x 4 min = 2 h"
+   },
+   {
+    "task": "Request and re-check 30 reruns",
+    "low": 2,
+    "high": 3.5,
+    "basis": "30 x 4 min = 2 h"
+   },
+   {
+    "task": "Write QC report",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "1.5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s6": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 14.0,
+  "high": 28,
+  "unit": "Spatial artefact review of the 600 plates: inspect heat maps for edge, row, column and dispensing patterns, apply a B-score or similar correction check, and fail or flag about 20 plates.",
+  "ests": [
+   [
+    14.0,
+    28
+   ],
+   [
+    17,
+    28.5
+   ],
+   [
+    13.0,
+    23.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Open and inspect heat maps",
+    "low": 10,
+    "high": 17,
+    "basis": "600 plates x 1 to 1.7 min"
+   },
+   {
+    "task": "Run B-score correction check",
+    "low": 1.5,
+    "high": 3,
+    "basis": "set up and run 1.5 to 3 h"
+   },
+   {
+    "task": "Judge flagged plates in detail",
+    "low": 1.5,
+    "high": 3,
+    "basis": "40 plates x 2 to 4.5 min"
+   },
+   {
+    "task": "Document 20 flagged plates",
+    "low": 1,
+    "high": 2,
+    "basis": "20 x 3 to 6 min"
+   },
+   {
+    "task": "Redo review after tuning method",
+    "low": 0,
+    "high": 3,
+    "basis": "one rework round 0 to 3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s7": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 12.5,
+  "high": 23,
+  "unit": "Set the hit threshold for the 200,000-compound screen: normalise to percent inhibition, test cut-offs at 3 SD and 30% inhibition against the control distribution, estimate the false-positive rate, choose one cut-off giving about 3000 primary hits (1.5%), and write the hit list with filters.",
+  "ests": [
+   [
+    14.5,
+    26.5
+   ],
+   [
+    12.0,
+    17.5
+   ],
+   [
+    12.5,
+    23
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Normalise to percent inhibition",
+    "low": 2,
+    "high": 3,
+    "basis": "1 dataset x 2 to 3 h"
+   },
+   {
+    "task": "Test 3 SD and 30% cut-offs against controls",
+    "low": 2,
+    "high": 4,
+    "basis": "2 cut-offs x 1 to 2 h"
+   },
+   {
+    "task": "Estimate false-positive rate",
+    "low": 1.5,
+    "high": 3,
+    "basis": "1 analysis x 1.5 to 3 h"
+   },
+   {
+    "task": "Remove frequent hitters and build hit list",
+    "low": 2,
+    "high": 4,
+    "basis": "3000 hits, filter lists x 2 to 4 h"
+   },
+   {
+    "task": "Write rationale",
+    "low": 1,
+    "high": 2,
+    "basis": "1 note x 1 to 2 h"
+   },
+   {
+    "task": "Review meeting 1 h",
+    "low": 4,
+    "high": 4,
+    "basis": "4 people x 1 h = 4 person-h"
+   },
+   {
+    "task": "Rework after review",
+    "low": 0,
+    "high": 3,
+    "basis": "1 round x 3 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s8": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 12.0,
+  "high": 23.5,
+  "unit": "Track the binder generation arm of one antibody campaign in software: register the 3 phage-display rounds and 1 immunized-animal output, import sequences for about 300 unique clones, link each to its source, round and plate position, and check for duplicates and sequence liabilities.",
+  "ests": [
+   [
+    12.0,
+    25.5
+   ],
+   [
+    12.0,
+    21.0
+   ],
+   [
+    10.0,
+    23.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Build clone registry structure",
+    "low": 2,
+    "high": 3,
+    "basis": "fields and links 2 h"
+   },
+   {
+    "task": "Register 4 selection outputs",
+    "low": 1,
+    "high": 1.5,
+    "basis": "4 x 15 min = 1 h"
+   },
+   {
+    "task": "Import sequence files for 300 clones",
+    "low": 1.5,
+    "high": 3,
+    "basis": "about 4 files x 25 min = 1.7 h"
+   },
+   {
+    "task": "Link source, round, plate position",
+    "low": 3,
+    "high": 5,
+    "basis": "300 x 40 s = 3.3 h"
+   },
+   {
+    "task": "Check duplicates and liabilities",
+    "low": 2,
+    "high": 4,
+    "basis": "300 x 25 s = 2.1 h"
+   },
+   {
+    "task": "Verify against source records",
+    "low": 1.5,
+    "high": 3,
+    "basis": "30 spot-checks x 3 min = 1.5 h"
+   },
+   {
+    "task": "Write campaign summary",
+    "low": 1,
+    "high": 1.5,
+    "basis": "1 page x 1 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s9": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 15,
+  "high": 26,
+  "unit": "Review one computer-designed antibody library of 5,000 designed variants of 1 parent antibody: check sequences in a table for numbering, frameworks, glycosylation sites, cysteines, aggregation and expression risk, and remove about 15% that cannot be built.",
+  "ests": [
+   [
+    16,
+    28
+   ],
+   [
+    15,
+    21
+   ],
+   [
+    14.5,
+    26
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Filter 5,000 sequences by liability rules",
+    "low": 3,
+    "high": 5,
+    "basis": "1 script set x 3 to 5 h"
+   },
+   {
+    "task": "Check numbering and frameworks",
+    "low": 1.5,
+    "high": 3,
+    "basis": "100 spot checks x 1 to 2 min"
+   },
+   {
+    "task": "Spot-check glycosylation, cysteines, aggregation, expression",
+    "low": 2,
+    "high": 4,
+    "basis": "150 spot checks x 1 to 1.5 min plus tool runs"
+   },
+   {
+    "task": "Judge about 750 removals",
+    "low": 3,
+    "high": 5,
+    "basis": "750 variants x 15 to 25 s"
+   },
+   {
+    "task": "Write approved list",
+    "low": 1,
+    "high": 2,
+    "basis": "1 list x 1 to 2 h"
+   },
+   {
+    "task": "Team review 1 h",
+    "low": 4,
+    "high": 4,
+    "basis": "4 people x 1 h = 4 person-h"
+   },
+   {
+    "task": "Rework filters after review",
+    "low": 0,
+    "high": 3,
+    "basis": "1 round x 3 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s10": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 27,
+  "high": 37,
+  "unit": "Close out the screen for one target: review confirmation data on the 500 confirmed hits, assess purity, potency and tractability for 6 series, register the top series in the compound database, and hold the go or no-go meeting for chemistry.",
+  "ests": [
+   [
+    31.5,
+    48
+   ],
+   [
+    27,
+    37
+   ],
+   [
+    23,
+    34
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Assemble data package for 500 hits",
+    "low": 4,
+    "high": 6,
+    "basis": "6 series x 40 min = 4 h"
+   },
+   {
+    "task": "Check structures and purity data",
+    "low": 3,
+    "high": 5,
+    "basis": "500 hits x 25 s = 3.5 h"
+   },
+   {
+    "task": "Assess potency and tractability per series",
+    "low": 3,
+    "high": 5,
+    "basis": "6 x 30 min = 3 h"
+   },
+   {
+    "task": "Register top series in database",
+    "low": 1,
+    "high": 2,
+    "basis": "about 30 compounds x 2 min = 1 h"
+   },
+   {
+    "task": "Write 3-page gate document",
+    "low": 3,
+    "high": 5,
+    "basis": "3 pages x 1 h"
+   },
+   {
+    "task": "Prepare for meeting",
+    "low": 1,
+    "high": 2,
+    "basis": "slides 1 h"
+   },
+   {
+    "task": "Decision meeting, 6 people",
+    "low": 12,
+    "high": 12,
+    "basis": "2 h x 6 people = 12 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s11": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 9.5,
+  "high": 20.5,
+  "unit": "Process one repertoire sequencing dataset: 12 samples of paired-end reads at 2 million reads each, with QC, primer and UMI handling, merging, and alignment to a reference V(D)J database, ending with a clean table of productive rearrangements.",
+  "ests": [
+   [
+    12.5,
+    28.5
+   ],
+   [
+    9.5,
+    20.5
+   ],
+   [
+    8.5,
+    20
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up and parameterise pipeline",
+    "low": 3,
+    "high": 5,
+    "basis": "primers, UMI, reference 3 h"
+   },
+   {
+    "task": "Run on 12 samples and monitor",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "12 x 8 min = 1.6 h"
+   },
+   {
+    "task": "Check QC metrics",
+    "low": 2,
+    "high": 3,
+    "basis": "12 x 10 min = 2 h"
+   },
+   {
+    "task": "Check alignment metrics",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "12 x 8 min = 1.6 h"
+   },
+   {
+    "task": "Fix issues and rerun",
+    "low": 0,
+    "high": 5,
+    "basis": "one round of troubleshooting 5 h"
+   },
+   {
+    "task": "Build clean productive table and record",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "12 x 8 min = 1.6 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s12": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 9.0,
+  "high": 17.0,
+  "unit": "Germline gene assignment for the 12-sample dataset (about 1 million productive sequences after QC): assign V, D and J genes against IMGT, annotate CDR3 junctions, and check ambiguous calls and novel alleles on about 500 sequences.",
+  "ests": [
+   [
+    12.5,
+    24.5
+   ],
+   [
+    9.0,
+    17.0
+   ],
+   [
+    6.0,
+    14.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up IMGT annotation run",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "database and options 1.5 h"
+   },
+   {
+    "task": "Run annotation and handle failures",
+    "low": 1,
+    "high": 3,
+    "basis": "12 samples x 5 min = 1 h"
+   },
+   {
+    "task": "Review about 500 ambiguous calls",
+    "low": 4,
+    "high": 7,
+    "basis": "500 x 30 s to 50 s = 4.2 to 6.9 h"
+   },
+   {
+    "task": "Check novel alleles",
+    "low": 1,
+    "high": 2,
+    "basis": "about 10 candidates x 10 min = 1.7 h"
+   },
+   {
+    "task": "Gene usage sanity checks and save tables",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "12 samples x 8 min = 1.6 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s13": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 7.5,
+  "high": 14.0,
+  "unit": "Clonotype clustering of the 1 million annotated sequences: compute the nearest-neighbour junction distance distribution within each V-J-length group, choose the cut-off from the valley of the distribution, cluster, and report clonotype counts per sample.",
+  "ests": [
+   [
+    9.5,
+    22
+   ],
+   [
+    7.5,
+    14
+   ],
+   [
+    5.0,
+    14.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up distance and grouping script",
+    "low": 2,
+    "high": 3,
+    "basis": "V-J-length grouping 2 h"
+   },
+   {
+    "task": "Run nearest-neighbour distance analysis",
+    "low": 1,
+    "high": 2,
+    "basis": "3 runs x 20 min = 1 h"
+   },
+   {
+    "task": "Inspect histograms and pick cut-off",
+    "low": 2,
+    "high": 4,
+    "basis": "12 samples x 10 min = 2 h"
+   },
+   {
+    "task": "Cluster and count clonotypes",
+    "low": 1,
+    "high": 2,
+    "basis": "12 samples x 5 min = 1 h"
+   },
+   {
+    "task": "Check clone sizes and report",
+    "low": 1.5,
+    "high": 3,
+    "basis": "12 x 8 min = 1.6 h, plus table"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s14": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 11.5,
+  "high": 22,
+  "unit": "Lineage trees for the 20 largest clonotypes from the dataset: reconstruct trees with a maximum-likelihood method, root at the inferred germline, map isotype and class switching, and prepare figures.",
+  "ests": [
+   [
+    12,
+    27
+   ],
+   [
+    11.5,
+    22
+   ],
+   [
+    8.0,
+    20.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare inputs for 20 clonotypes",
+    "low": 2,
+    "high": 3,
+    "basis": "20 x 6 min = 2 h"
+   },
+   {
+    "task": "Run ML tree tools",
+    "low": 1.5,
+    "high": 3,
+    "basis": "20 x 5 min of babysitting = 1.7 h"
+   },
+   {
+    "task": "Review trees and root at germline",
+    "low": 3,
+    "high": 5,
+    "basis": "20 trees x 10 min = 3.3 h"
+   },
+   {
+    "task": "Fix problem trees",
+    "low": 0,
+    "high": 3,
+    "basis": "5 trees x 35 min rework = 3 h"
+   },
+   {
+    "task": "Map isotype and class switching",
+    "low": 2,
+    "high": 3,
+    "basis": "20 x 6 min = 2 h"
+   },
+   {
+    "task": "Make figures",
+    "low": 3,
+    "high": 5,
+    "basis": "20 trees x 10 min = 3.3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s15": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 10.0,
+  "high": 21.5,
+  "unit": "Complete the MiAIRR metadata for the 12-sample study: fill the study, subject, sample, cell processing, nucleic acid processing, sequencing and data processing fields for about 60 fields per sample, validate against the AIRR schema.",
+  "ests": [
+   [
+    11,
+    25
+   ],
+   [
+    10.0,
+    19.5
+   ],
+   [
+    9.5,
+    21.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Collect facts from lab and sequencing records",
+    "low": 4,
+    "high": 8,
+    "basis": "12 samples x 20 to 40 min = 4 to 8 h"
+   },
+   {
+    "task": "Enter about 60 fields per sample",
+    "low": 4,
+    "high": 7,
+    "basis": "720 fields, many shared, x 20 to 35 s = 4 to 7 h"
+   },
+   {
+    "task": "Validate against AIRR schema",
+    "low": 0.5,
+    "high": 1.5,
+    "basis": "3 validation runs x 10 to 30 min"
+   },
+   {
+    "task": "Consistency check across samples",
+    "low": 1,
+    "high": 2,
+    "basis": "1 pass x 1 to 2 h"
+   },
+   {
+    "task": "Correct errors and revalidate",
+    "low": 0,
+    "high": 3,
+    "basis": "1 round x 3 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s16": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 7.0,
+  "high": 14.5,
+  "unit": "Package and deposit one 12-sample repertoire study: organise raw FASTQ files, annotation tables and metadata, create the BioProject, BioSample and SRA submissions, fix validation errors, and confirm the public records.",
+  "ests": [
+   [
+    8,
+    20
+   ],
+   [
+    7.0,
+    14.5
+   ],
+   [
+    6.0,
+    14
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Organise FASTQ, tables and metadata files",
+    "low": 2,
+    "high": 3,
+    "basis": "12 samples x 10 min = 2 h"
+   },
+   {
+    "task": "Compute checksums and prepare upload",
+    "low": 1,
+    "high": 2,
+    "basis": "12 samples x 5 min = 1 h"
+   },
+   {
+    "task": "Create BioProject and BioSample records",
+    "low": 2,
+    "high": 3.5,
+    "basis": "12 samples x 10 min = 2 h, plus fix"
+   },
+   {
+    "task": "Create SRA submission",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "12 runs x 8 min = 1.6 h"
+   },
+   {
+    "task": "Fix validation errors",
+    "low": 0,
+    "high": 2.5,
+    "basis": "one round of error fixes 2.5 h"
+   },
+   {
+    "task": "Confirm public records",
+    "low": 0.5,
+    "high": 1,
+    "basis": "12 records x 3 min = 0.6 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s17": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 9.0,
+  "high": 18.5,
+  "unit": "Enrichment analysis for one phage display campaign: 3 rounds on 1 target with input and output counts for about 100,000 unique sequences, estimate growth-rate bias from no-target controls, fit enrichment per clone, and pick 300 clones for screening.",
+  "ests": [
+   [
+    13.0,
+    27.5
+   ],
+   [
+    7.5,
+    14.5
+   ],
+   [
+    9.0,
+    18.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Load and clean count tables",
+    "low": 1.5,
+    "high": 3,
+    "basis": "3 rounds x 30 to 60 min = 1.5 to 3 h"
+   },
+   {
+    "task": "Estimate growth bias from no-target controls",
+    "low": 2,
+    "high": 4,
+    "basis": "1 model x 2 to 4 h"
+   },
+   {
+    "task": "Fit per-clone enrichment",
+    "low": 2,
+    "high": 5,
+    "basis": "1 pipeline x 2 to 5 h incl. rerun"
+   },
+   {
+    "task": "Check against controls and sanity plots",
+    "low": 1.5,
+    "high": 3,
+    "basis": "5 plots x 20 to 35 min"
+   },
+   {
+    "task": "Select and list 300 clones",
+    "low": 1,
+    "high": 2,
+    "basis": "1 list x 1 to 2 h"
+   },
+   {
+    "task": "Short write-up",
+    "low": 1,
+    "high": 1.5,
+    "basis": "1 note x 1 to 1.5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-4.s18": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 14,
+  "high": 35,
+  "unit": "Fit a hierarchical mixed-effects model to the 200,000-compound primary screen: random effects for plate (600), run (10 days) and batch (3 reagent lots), a fixed effect for compound, compare against simple plate normalisation, and check the residuals and shrunken hit calls.",
+  "ests": [
+   [
+    17.5,
+    37
+   ],
+   [
+    10.5,
+    20.0
+   ],
+   [
+    14,
+    35
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare dataset and design matrix",
+    "low": 3,
+    "high": 6,
+    "basis": "1 dataset of 600 plates, 10 runs, 3 lots x 3 to 6 h to merge and clean"
+   },
+   {
+    "task": "Write and fit mixed-effects models",
+    "low": 4,
+    "high": 14,
+    "basis": "2 model variants x 2 to 5 h incl. coding and fitting setup"
+   },
+   {
+    "task": "Run simple plate normalisation baseline",
+    "low": 1,
+    "high": 2,
+    "basis": "1 baseline x 1 to 2 h"
+   },
+   {
+    "task": "Diagnostics of residuals and random effects",
+    "low": 2,
+    "high": 6,
+    "basis": "4 diagnostic sets x 30 to 75 min = 2 to 5 h"
+   },
+   {
+    "task": "Compare hit lists and shrunken calls",
+    "low": 2,
+    "high": 4,
+    "basis": "1 comparison x 2 to 4 h"
+   },
+   {
+    "task": "Short write-up",
+    "low": 2,
+    "high": 3,
+    "basis": "1 note x 2 to 3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-5.s2": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 13.5,
+  "high": 27,
+  "unit": "Flag and remove frequent hitters, PAINS, aggregators and assay-interference compounds from 2,000 primary actives, using substructure filters, historical promiscuity data and counter-screen results.",
+  "ests": [
+   [
+    14.5,
+    27
+   ],
+   [
+    11.0,
+    24.5
+   ],
+   [
+    13.5,
+    30
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up and run filters and lookups",
+    "low": 3,
+    "high": 6,
+    "basis": "2000 structures x 3 filters scripted, 3 h setup, high 6 h"
+   },
+   {
+    "task": "Quick review of obvious flags",
+    "low": 3,
+    "high": 4,
+    "basis": "~1000 flagged x 10 s = 2.8 h, high 4 h"
+   },
+   {
+    "task": "Detailed review of borderline compounds",
+    "low": 5,
+    "high": 10,
+    "basis": "~150 x 2 min = 5 h, high 150 x 4 min = 10 h"
+   },
+   {
+    "task": "Counter-screen and promiscuity cross-check",
+    "low": 2,
+    "high": 4,
+    "basis": "~300 lookups x 25 s = 2 h, high 4 h"
+   },
+   {
+    "task": "Record removals and reasons",
+    "low": 1.5,
+    "high": 3,
+    "basis": "2000 rows batch annotated, 1.5 h, high 3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-5.s3": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 14,
+  "high": 27,
+  "unit": "Cluster the roughly 800 retested, interference-free hits into chemical series, giving about 6 prioritized series plus singletons, with SAR notes per series.",
+  "ests": [
+   [
+    20,
+    35
+   ],
+   [
+    13,
+    26
+   ],
+   [
+    14,
+    27
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Clustering setup by cheminformatician",
+    "low": 3,
+    "high": 7,
+    "basis": "4 h"
+   },
+   {
+    "task": "Run and check clustering",
+    "low": 1,
+    "high": 2,
+    "basis": "1 h"
+   },
+   {
+    "task": "Manually review and merge clusters",
+    "low": 6,
+    "high": 10,
+    "basis": "800 hits, 8 h"
+   },
+   {
+    "task": "Draw core structures",
+    "low": 2,
+    "high": 4,
+    "basis": "7 groups x 25 min = 3 h"
+   },
+   {
+    "task": "One-line SAR notes",
+    "low": 2,
+    "high": 4,
+    "basis": "6 x 30 min = 3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-5.s5": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 25.5,
+  "high": 44.5,
+  "unit": "LC-MS identity and purity check of the 150 compounds in the 6 prioritized series, plus NMR on about 20 key representatives, comparing to the drawn structure and a 90 percent purity cutoff.",
+  "ests": [
+   [
+    27.0,
+    44.5
+   ],
+   [
+    20,
+    33.5
+   ],
+   [
+    25.5,
+    47
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare LC-MS samples",
+    "low": 6,
+    "high": 10,
+    "basis": "150 x 3 min = 7.5 h"
+   },
+   {
+    "task": "Set up and queue LC-MS",
+    "low": 2,
+    "high": 5,
+    "basis": "3 h"
+   },
+   {
+    "task": "Read 150 traces",
+    "low": 6,
+    "high": 10,
+    "basis": "150 x 3 min = 7.5 h"
+   },
+   {
+    "task": "Prepare NMR samples",
+    "low": 4,
+    "high": 7,
+    "basis": "20 x 15 min = 5 h"
+   },
+   {
+    "task": "Run and interpret NMR",
+    "low": 6,
+    "high": 12,
+    "basis": "20 x 25 min = 8.3 h"
+   },
+   {
+    "task": "Log pass or fail",
+    "low": 1.5,
+    "high": 3,
+    "basis": "2 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-5.s7": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 20,
+  "high": 35,
+  "unit": "Set hit criteria for the campaign: potency cutoff (for example IC50 under 10 uM), efficacy, ligand efficiency, selectivity and counter-screen limits, justified against the assay window and disease need.",
+  "ests": [
+   [
+    23,
+    35
+   ],
+   [
+    20,
+    36
+   ],
+   [
+    16,
+    31
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Review confirmation data distribution",
+    "low": 3,
+    "high": 6,
+    "basis": "3 people share, 1 person x 3-6 h"
+   },
+   {
+    "task": "Propose thresholds",
+    "low": 3,
+    "high": 6,
+    "basis": "3-6 h"
+   },
+   {
+    "task": "Team discussion",
+    "low": 6,
+    "high": 8,
+    "basis": "2 h x 3 people = 6 h, high 8"
+   },
+   {
+    "task": "Write criteria with rationale",
+    "low": 8,
+    "high": 12,
+    "basis": "1-1.5 day"
+   },
+   {
+    "task": "Revise after discussion",
+    "low": 0,
+    "high": 4,
+    "basis": "one round 4 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-5.s8": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 18,
+  "high": 35,
+  "unit": "Rank 300 unique antibody binders from a display campaign by affinity, kinetics and epitope bin, and select about 30 covering 8 epitope bins. Software and data analysis level.",
+  "ests": [
+   [
+    20,
+    35
+   ],
+   [
+    17,
+    34
+   ],
+   [
+    18,
+    37
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Load binding and binning data",
+    "low": 3,
+    "high": 7,
+    "basis": "4 h"
+   },
+   {
+    "task": "Build bin map",
+    "low": 4,
+    "high": 8,
+    "basis": "5 h"
+   },
+   {
+    "task": "Ranking table",
+    "low": 3,
+    "high": 6,
+    "basis": "4 h"
+   },
+   {
+    "task": "Check sequence families",
+    "low": 2,
+    "high": 5,
+    "basis": "3 h"
+   },
+   {
+    "task": "Select 30 with rationale",
+    "low": 3,
+    "high": 6,
+    "basis": "4 h"
+   },
+   {
+    "task": "Write summary",
+    "low": 3,
+    "high": 5,
+    "basis": "4 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "One BLI kinetics, competition and epitope binning experiment: procedure takes 3 hours (Nature Protocols 2025)",
+    "url": "https://doi.org/10.1038/s41596-024-01079-8"
+   }
+  ]
+ },
+ "b1-5.s9": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 16,
+  "high": 32,
+  "unit": "Review binding and enrichment data for 300 antibody binders for confounders (polyreactivity, sticky sequences, tag effects, avidity, display bias) using existing assay readouts. Software and data analysis level.",
+  "ests": [
+   [
+    15,
+    26
+   ],
+   [
+    16,
+    32
+   ],
+   [
+    17,
+    35
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Join readouts across assays",
+    "low": 3,
+    "high": 5,
+    "basis": "3-5 h"
+   },
+   {
+    "task": "Plot and flag suspect binders",
+    "low": 3,
+    "high": 5,
+    "basis": "3-5 h"
+   },
+   {
+    "task": "Re-read raw data for 40 binders",
+    "low": 5,
+    "high": 10,
+    "basis": "40 x 7.5-15 min = 5-10 h"
+   },
+   {
+    "task": "Assess tag, avidity and display bias",
+    "low": 2,
+    "high": 4,
+    "basis": "2-4 h"
+   },
+   {
+    "task": "Write verdicts",
+    "low": 3,
+    "high": 4,
+    "basis": "3-4 h"
+   },
+   {
+    "task": "Recheck with alternate thresholds",
+    "low": 0,
+    "high": 4,
+    "basis": "one round"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-5.s11": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 11.3,
+  "high": 27,
+  "unit": "Fit 500 confirmed dose-response curves with 3-parameter, 4-parameter and Hill-free models, compare by information criteria, and flag poor fits.",
+  "ests": [
+   [
+    11.3,
+    22.7
+   ],
+   [
+    13.5,
+    28
+   ],
+   [
+    9,
+    27
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up fitting scripts",
+    "low": 4,
+    "high": 8,
+    "basis": "1 setup x 4 h, high 8 h"
+   },
+   {
+    "task": "Run 3 models and compare AIC",
+    "low": 1,
+    "high": 2,
+    "basis": "500 curves batch, 1 h, high 2 h"
+   },
+   {
+    "task": "Eye review of flagged curves",
+    "low": 3.3,
+    "high": 6.7,
+    "basis": "100 x 2 min = 3.3 h, high 100 x 4 min = 6.7 h"
+   },
+   {
+    "task": "Decide model rule",
+    "low": 1,
+    "high": 2,
+    "basis": "1 h, high 2 h"
+   },
+   {
+    "task": "Documentation",
+    "low": 2,
+    "high": 4,
+    "basis": "2 h, high 4 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-5.s12": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 6.5,
+  "high": 14,
+  "unit": "Handle censored readings in the 500-compound dose-response set: about 80 curves with potency above the top concentration or below the assay limit, recorded as limits and propagated into analysis.",
+  "ests": [
+   [
+    6.5,
+    13
+   ],
+   [
+    5.5,
+    14
+   ],
+   [
+    6.5,
+    18
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Identify censored values",
+    "low": 1.5,
+    "high": 3,
+    "basis": "500 curves queried, 1.5 h, high 3 h"
+   },
+   {
+    "task": "Set handling rule",
+    "low": 1,
+    "high": 2,
+    "basis": "1 h, high 2 h"
+   },
+   {
+    "task": "Recode 80 results as limits",
+    "low": 1.5,
+    "high": 3,
+    "basis": "80 x 1 min = 1.3 h ~1.5 h, high 3 h"
+   },
+   {
+    "task": "Rerun summaries",
+    "low": 1,
+    "high": 2,
+    "basis": "1 h, high 2 h"
+   },
+   {
+    "task": "Document choice",
+    "low": 1.5,
+    "high": 3,
+    "basis": "1.5 h, high 3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-5.s13": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 23,
+  "high": 38,
+  "unit": "Validate the confirmation assay before triage decisions: 3 independent plate runs with controls, Z' factor, signal window, reference compound IC50 reproducibility and a plate-uniformity check.",
+  "ests": [
+   [
+    24,
+    38
+   ],
+   [
+    21,
+    37
+   ],
+   [
+    23,
+    40
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Design validation",
+    "low": 4,
+    "high": 6,
+    "basis": "4 h, high 6 h"
+   },
+   {
+    "task": "Run 3 plate sets attended",
+    "low": 9,
+    "high": 15,
+    "basis": "3 runs x 3 h = 9 h, high 3 x 5 h with one repeat"
+   },
+   {
+    "task": "Calculate Z prime CV and IC50 spread",
+    "low": 3,
+    "high": 5,
+    "basis": "3 runs x 1 h = 3 h, high 5 h"
+   },
+   {
+    "task": "Compare to acceptance and uniformity check",
+    "low": 2,
+    "high": 4,
+    "basis": "2 h, high 4 h"
+   },
+   {
+    "task": "Validation report",
+    "low": 6,
+    "high": 8,
+    "basis": "0.75 day = 6 h, high 8 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-6.s1": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 37,
+  "high": 54,
+  "unit": "Write the block objectives for 3 chemical series: target product profile for potency, selectivity, solubility, microsomal stability and early PK, with go/no-go numbers per series.",
+  "ests": [
+   [
+    40,
+    59
+   ],
+   [
+    37,
+    54
+   ],
+   [
+    33.5,
+    52
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Draft objectives",
+    "low": 14,
+    "high": 18,
+    "basis": "2 days = 14-18 h"
+   },
+   {
+    "task": "Two team meetings",
+    "low": 16,
+    "high": 20,
+    "basis": "2 x 2 h x 4 = 16 h"
+   },
+   {
+    "task": "Prepare meeting inputs",
+    "low": 3,
+    "high": 6,
+    "basis": "3-6 h"
+   },
+   {
+    "task": "Write and sign objectives document",
+    "low": 4,
+    "high": 6,
+    "basis": "4-6 h"
+   },
+   {
+    "task": "Revise after meetings",
+    "low": 0,
+    "high": 4,
+    "basis": "one round"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-6.s3": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 24,
+  "high": 45.5,
+  "unit": "Structure-based design for one series: dock and model 60 candidate analogues in a 3D target structure, inspect poses, rank and choose 20 to synthesize, including analysis of one new co-crystal structure.",
+  "ests": [
+   [
+    24,
+    43
+   ],
+   [
+    25,
+    45.5
+   ],
+   [
+    23,
+    49
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare structure and docking setup",
+    "low": 3,
+    "high": 8,
+    "basis": "4 h"
+   },
+   {
+    "task": "Dock 60 analogues",
+    "low": 3,
+    "high": 6,
+    "basis": "4 h"
+   },
+   {
+    "task": "Inspect poses",
+    "low": 5,
+    "high": 9,
+    "basis": "60 x 6 min = 6 h"
+   },
+   {
+    "task": "Free-energy and scoring checks",
+    "low": 4,
+    "high": 10,
+    "basis": "6 h"
+   },
+   {
+    "task": "Analyze new co-crystal",
+    "low": 3,
+    "high": 8,
+    "basis": "5 h"
+   },
+   {
+    "task": "Design meeting",
+    "low": 2,
+    "high": 3,
+    "basis": "2 people x 1 h = 2 h"
+   },
+   {
+    "task": "Write up chosen 20",
+    "low": 3,
+    "high": 5,
+    "basis": "4 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-6.s4": {
+  "bin": 5,
+  "label": "Over 1 month",
+  "low": 262,
+  "high": 448,
+  "unit": "Synthesis planning and making of 40 analogues for one series in one cycle: route design, building block ordering list, synthesis, purification and characterization at 20 to 50 mg each, in 8 weeks.",
+  "ests": [
+   [
+    262,
+    448
+   ],
+   [
+    239,
+    387
+   ],
+   [
+    281,
+    475
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Route design and searching",
+    "low": 36,
+    "high": 60,
+    "basis": "40 analogues, 8 route families x 4.5 h = 36 h, high 60 h"
+   },
+   {
+    "task": "Building block list",
+    "low": 4,
+    "high": 8,
+    "basis": "4 h, high 8 h"
+   },
+   {
+    "task": "Reaction setup and workup",
+    "low": 120,
+    "high": 180,
+    "basis": "40 cpds x 3 h = 120 h, high 40 x 4.5 h"
+   },
+   {
+    "task": "Chromatography purification",
+    "low": 60,
+    "high": 100,
+    "basis": "40 x 1.5 h = 60 h, high 40 x 2.5 h"
+   },
+   {
+    "task": "NMR and LC-MS characterization",
+    "low": 30,
+    "high": 50,
+    "basis": "40 x 45 min = 30 h, high 40 x 75 min"
+   },
+   {
+    "task": "Registration and documentation",
+    "low": 12,
+    "high": 20,
+    "basis": "40 x 18 min = 12 h, high 20 h"
+   },
+   {
+    "task": "Troubleshooting failed steps",
+    "low": 0,
+    "high": 30,
+    "basis": "~6 failed reactions x 5 h = 30 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-6.s8": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 24,
+  "high": 44,
+  "unit": "One affinity maturation round for one lead antibody against a human disease target: design a mutation library (about 1e8 variants), analyze sequencing enrichment, pick 20 variants for characterization. Software and data analysis level.",
+  "ests": [
+   [
+    26,
+    44
+   ],
+   [
+    21,
+    41
+   ],
+   [
+    24,
+    58
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Design mutation library in software",
+    "low": 8,
+    "high": 14,
+    "basis": "1 day = 8 h, high 14 h"
+   },
+   {
+    "task": "Process sequencing enrichment",
+    "low": 6,
+    "high": 12,
+    "basis": "6 h, high 12 h"
+   },
+   {
+    "task": "Analyze enrichment and pick 20",
+    "low": 8,
+    "high": 12,
+    "basis": "1 day = 8 h, high 12 h"
+   },
+   {
+    "task": "Summarize and propose next round",
+    "low": 4,
+    "high": 6,
+    "basis": "4 h, high 6 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-6.s9": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 19,
+  "high": 34,
+  "unit": "Humanization and liability removal for one lead antibody: choose human frameworks, design 10 humanized variants, scan sequences for deamidation, isomerization, glycosylation and oxidation liabilities, and predict immunogenicity in silico. Software level.",
+  "ests": [
+   [
+    19,
+    31
+   ],
+   [
+    17,
+    34
+   ],
+   [
+    19,
+    41
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Choose human frameworks",
+    "low": 3,
+    "high": 5,
+    "basis": "3 h, high 5 h"
+   },
+   {
+    "task": "Liability scans",
+    "low": 2,
+    "high": 4,
+    "basis": "2 h, high 4 h"
+   },
+   {
+    "task": "Immunogenicity prediction runs",
+    "low": 3,
+    "high": 5,
+    "basis": "3 tools x 1 h = 3 h, high 5 h"
+   },
+   {
+    "task": "Inspect models",
+    "low": 4,
+    "high": 6,
+    "basis": "10 variants x 24 min = 4 h, high 6 h"
+   },
+   {
+    "task": "Design and rank 10 variants",
+    "low": 4,
+    "high": 6,
+    "basis": "4 h, high 6 h"
+   },
+   {
+    "task": "Write rationale",
+    "low": 3,
+    "high": 5,
+    "basis": "3 h, high 5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-6.s10": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 54,
+  "high": 78,
+  "unit": "One lead declaration gate for the 3 series: assemble all potency, selectivity, ADME and in vivo data, review against the block objectives, and pick one lead series and one backup.",
+  "ests": [
+   [
+    59,
+    77
+   ],
+   [
+    54,
+    80
+   ],
+   [
+    54,
+    78
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Build data package",
+    "low": 28,
+    "high": 36,
+    "basis": "4 days = 28-36 h"
+   },
+   {
+    "task": "Review meeting",
+    "low": 18,
+    "high": 21,
+    "basis": "3 h x 6 = 18 h"
+   },
+   {
+    "task": "Write decision record",
+    "low": 3,
+    "high": 5,
+    "basis": "3-5 h"
+   },
+   {
+    "task": "Pre-read time for attendees",
+    "low": 5,
+    "high": 10,
+    "basis": "5 x 1-2 h"
+   },
+   {
+    "task": "Rework package after queries",
+    "low": 0,
+    "high": 8,
+    "basis": "one round"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-6.s11": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 23.5,
+  "high": 46,
+  "unit": "Select the linker and conjugation site for one antibody-drug conjugate: compare 6 linker-payload options and 4 attachment-site choices, and rank 8 combinations. Software and data analysis level.",
+  "ests": [
+   [
+    25,
+    42.5
+   ],
+   [
+    23,
+    46
+   ],
+   [
+    23.5,
+    50
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Review structural models and literature",
+    "low": 6,
+    "high": 10,
+    "basis": "3 people x 2 h = 6 h, high 10 h"
+   },
+   {
+    "task": "Solvent accessibility and stability analysis",
+    "low": 8,
+    "high": 14,
+    "basis": "4 sites x 2 h = 8 h, high 14 h"
+   },
+   {
+    "task": "Linker-payload comparison",
+    "low": 4,
+    "high": 8,
+    "basis": "6 options x 40 min = 4 h, high 8 h"
+   },
+   {
+    "task": "Design meeting",
+    "low": 3,
+    "high": 4.5,
+    "basis": "1 h x 3 people = 3 h, high 1.5 h x 3"
+   },
+   {
+    "task": "Ranking document",
+    "low": 4,
+    "high": 6,
+    "basis": "4 h, high 6 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-6.s12": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 14.0,
+  "high": 28,
+  "unit": "Analyze drug-to-antibody ratio data for 10 ADC batches: process LC-MS or HIC chromatograms to get the average DAR and the distribution of DAR 0 to 8 species. Software and data analysis level.",
+  "ests": [
+   [
+    16,
+    28
+   ],
+   [
+    11.0,
+    21.0
+   ],
+   [
+    14.0,
+    29
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Load raw data",
+    "low": 1.5,
+    "high": 3,
+    "basis": "10 x 10 min = 1.7 h"
+   },
+   {
+    "task": "Deconvolution",
+    "low": 4,
+    "high": 8,
+    "basis": "10 x 30 min = 5 h"
+   },
+   {
+    "task": "HIC peak integration",
+    "low": 3,
+    "high": 7,
+    "basis": "10 x 25 min = 4.2 h"
+   },
+   {
+    "task": "Calculate DAR and distribution",
+    "low": 1.5,
+    "high": 3,
+    "basis": "2 h"
+   },
+   {
+    "task": "Compare to spec",
+    "low": 1,
+    "high": 2,
+    "basis": "1.5 h"
+   },
+   {
+    "task": "Write report",
+    "low": 3,
+    "high": 6,
+    "basis": "4 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-6.s13": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 25,
+  "high": 44,
+  "unit": "Design a site-specific conjugation scheme for one antibody: propose 6 engineered sites or tags, model structural effects, and rank them to give a homogeneous DAR of 2 or 4. Software and data analysis level.",
+  "ests": [
+   [
+    27,
+    44
+   ],
+   [
+    24,
+    43
+   ],
+   [
+    25,
+    53
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Propose 6 sites",
+    "low": 4,
+    "high": 6,
+    "basis": "2 people x 2 h = 4 h, high 6 h"
+   },
+   {
+    "task": "Structure modeling",
+    "low": 8,
+    "high": 14,
+    "basis": "6 sites x 1.3 h = 8 h, high 14 h"
+   },
+   {
+    "task": "Stability and accessibility predictions",
+    "low": 6,
+    "high": 10,
+    "basis": "6 x 1 h = 6 h, high 10 h"
+   },
+   {
+    "task": "Design review meeting",
+    "low": 4,
+    "high": 6,
+    "basis": "2 h x 2 people = 4 h, high 6 h"
+   },
+   {
+    "task": "Ranked proposal",
+    "low": 5,
+    "high": 8,
+    "basis": "2 people x 2.5 h = 5 h, high 8 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s1": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 28.5,
+  "high": 42,
+  "unit": "Writing the lead optimization objective for one small-molecule series: a one-page target profile with 12 properties (potency, selectivity, hERG, CYP, clearance, solubility, permeability, predicted dose) each with a minimum and an ideal value, plus a ranked list of 3 liabilities to fix.",
+  "ests": [
+   [
+    26.8,
+    39.7
+   ],
+   [
+    29,
+    42
+   ],
+   [
+    28.5,
+    44
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Review hit-to-lead data for 3 series",
+    "low": 6,
+    "high": 9,
+    "basis": "3 series x 2-3 h"
+   },
+   {
+    "task": "Draft profile with 12 thresholds",
+    "low": 5,
+    "high": 8,
+    "basis": "12 properties x 25-40 min"
+   },
+   {
+    "task": "Score existing compounds against it",
+    "low": 3,
+    "high": 5,
+    "basis": "3 series x 1-1.7 h"
+   },
+   {
+    "task": "Rank 3 liabilities and write one page",
+    "low": 2,
+    "high": 3,
+    "basis": "1 x 2-3 h"
+   },
+   {
+    "task": "Review meeting 2 h x 6 people",
+    "low": 12,
+    "high": 12,
+    "basis": "6 x 2 h = 12 h"
+   },
+   {
+    "task": "Edit after meeting",
+    "low": 1,
+    "high": 2,
+    "basis": "1 x 1-2 h"
+   },
+   {
+    "task": "Rework thresholds",
+    "low": 0,
+    "high": 3,
+    "basis": "Rework only in high: 3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s2": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 32,
+  "high": 60,
+  "unit": "Redesigning 40 compounds of one lead series in one cycle to lower a hERG liability (IC50 from 3 uM to above 30 uM) while keeping enzyme potency within 3-fold, using matched-pair and property analysis of the 160-compound dataset.",
+  "ests": [
+   [
+    32,
+    56
+   ],
+   [
+    38,
+    71
+   ],
+   [
+    30,
+    60
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Analyse earlier hERG and matched-pair data",
+    "low": 6,
+    "high": 10,
+    "basis": "160 compounds, 1 analysis x 6 to 10 h"
+   },
+   {
+    "task": "Propose and enumerate analogs",
+    "low": 8,
+    "high": 14,
+    "basis": "1 computational chemist x 8 to 14 h, 40 analogs"
+   },
+   {
+    "task": "Check synthetic feasibility and rank",
+    "low": 6,
+    "high": 10,
+    "basis": "40 compounds x 9 to 15 min = 6 to 10 h"
+   },
+   {
+    "task": "Review new hERG, CYP, permeability, stability data",
+    "low": 6,
+    "high": 10,
+    "basis": "40 compounds x 9 to 15 min = 6 to 10 h"
+   },
+   {
+    "task": "Choose next set and document",
+    "low": 4,
+    "high": 6,
+    "basis": "1 decision x 4 to 6 h"
+   },
+   {
+    "task": "Re-design after unexpected results",
+    "low": 0,
+    "high": 10,
+    "basis": "1 round x 10 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s3": {
+  "bin": 5,
+  "label": "Over 1 month",
+  "low": 304,
+  "high": 506,
+  "unit": "One full design-make-test-analyse cycle for one lead series: design of 40 compounds, synthesis and purification of 40 compounds, testing in potency, hERG, microsomal stability, permeability and solubility assays, and a data review.",
+  "ests": [
+   [
+    230.0,
+    346
+   ],
+   [
+    304,
+    506
+   ],
+   [
+    317,
+    617
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Design meeting 2 h x 6",
+    "low": 12,
+    "high": 12,
+    "basis": "6 people x 2 h = 12 h"
+   },
+   {
+    "task": "Draw 40 compounds",
+    "low": 4,
+    "high": 6,
+    "basis": "40 x 6-9 min = 4-6 h"
+   },
+   {
+    "task": "Synthesis and purification of 40 compounds",
+    "low": 240,
+    "high": 360,
+    "basis": "40 compounds x 6-9 h = 240-360 h across 3 chemists"
+   },
+   {
+    "task": "Registration and sample prep",
+    "low": 6,
+    "high": 10,
+    "basis": "40 x 9-15 min = 6-10 h"
+   },
+   {
+    "task": "Assay set-up",
+    "low": 20,
+    "high": 30,
+    "basis": "5 assays x 4-6 h = 20-30 h"
+   },
+   {
+    "task": "Assay data analysis",
+    "low": 10,
+    "high": 16,
+    "basis": "5 assays x 2-3.2 h"
+   },
+   {
+    "task": "Data review meeting 2 h x 6",
+    "low": 12,
+    "high": 12,
+    "basis": "6 x 2 h = 12 h"
+   },
+   {
+    "task": "Resynthesis of failed compounds",
+    "low": 0,
+    "high": 60,
+    "basis": "Rework only in high: 8 compounds x 7.5 h = 60 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s4": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 11.5,
+  "high": 23,
+  "unit": "Efficiency-metric analysis of 160 lead-series compounds: calculating ligand efficiency, lipophilic ligand efficiency and the 4 or 400 rule, plotting potency vs size and logD, and writing recommendations for the next 40 compounds.",
+  "ests": [
+   [
+    10.5,
+    18.5
+   ],
+   [
+    12,
+    23
+   ],
+   [
+    11.5,
+    23
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Export data and compute metrics",
+    "low": 2,
+    "high": 4,
+    "basis": "160 compounds scripted, 1 job x 2 to 4 h"
+   },
+   {
+    "task": "Make plots",
+    "low": 2,
+    "high": 4,
+    "basis": "3 plots x 40 to 80 min = 2 to 4 h"
+   },
+   {
+    "task": "Interpret which changes earn potency",
+    "low": 3,
+    "high": 5,
+    "basis": "1 analysis x 3 to 5 h"
+   },
+   {
+    "task": "Write recommendations for 40 compounds",
+    "low": 3,
+    "high": 5,
+    "basis": "1 note x 3 to 5 h"
+   },
+   {
+    "task": "Present to team",
+    "low": 1.5,
+    "high": 2,
+    "basis": "1 h talk plus 0.5 to 1 h prep"
+   },
+   {
+    "task": "Rework data cleaning",
+    "low": 0,
+    "high": 3,
+    "basis": "1 round x 3 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s5": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 98,
+  "high": 160,
+  "unit": "One rodent PK and PK/PD study set for the lead compound: IV and oral PK in rat (n=3 per route, 8 time points) and dog (n=3, cross-over), plus a 5-dose-level mouse PK/PD efficacy study with 8 mice per group.",
+  "ests": [
+   [
+    98,
+    158
+   ],
+   [
+    122,
+    208
+   ],
+   [
+    92,
+    160
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Study design protocol and approvals paperwork",
+    "low": 8,
+    "high": 14,
+    "basis": "3 studies x 2.7 to 4.7 h"
+   },
+   {
+    "task": "Formulation prep",
+    "low": 4,
+    "high": 8,
+    "basis": "3 studies x 1.3 to 2.7 h"
+   },
+   {
+    "task": "Dosing and sampling in rat and dog",
+    "low": 22,
+    "high": 34,
+    "basis": "rat 6 animals x 8 pts + dog 3x2 x 8 pts + mouse 40 mice x 5 min = ~22 to 34 h"
+   },
+   {
+    "task": "Mouse PK/PD efficacy handling and measurement",
+    "low": 20,
+    "high": 32,
+    "basis": "40 mice x 6 days x 5 to 8 min"
+   },
+   {
+    "task": "Bioanalytical sample prep",
+    "low": 16,
+    "high": 24,
+    "basis": "~380 samples x 2.5 to 4 min"
+   },
+   {
+    "task": "Bioanalytical data review and calibration",
+    "low": 6,
+    "high": 10,
+    "basis": "4 batches x 1.5 to 2.5 h"
+   },
+   {
+    "task": "NCA in WinNonlin and PK/PD model fit",
+    "low": 12,
+    "high": 20,
+    "basis": "3 NCA + 1 PKPD model x 3 to 5 h"
+   },
+   {
+    "task": "Report writing",
+    "low": 10,
+    "high": 16,
+    "basis": "1 report x 10 to 16 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s7": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 16,
+  "high": 27,
+  "unit": "Selecting the best 3 of 24 antibody variants by balancing affinity (SPR KD), developability flags, expression yield and predicted immunogenicity score, with a Pareto-style comparison and written justification.",
+  "ests": [
+   [
+    15,
+    24
+   ],
+   [
+    16,
+    27
+   ],
+   [
+    18,
+    31
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Collate data for 24 variants",
+    "low": 3,
+    "high": 5,
+    "basis": "24 x 8-12 min = 3.2-4.8 h"
+   },
+   {
+    "task": "Build combined table and Pareto plot",
+    "low": 3,
+    "high": 5,
+    "basis": "1 x 3-5 h"
+   },
+   {
+    "task": "Weigh trade-offs",
+    "low": 2,
+    "high": 4,
+    "basis": "1 x 2-4 h"
+   },
+   {
+    "task": "Write recommendation",
+    "low": 3,
+    "high": 5,
+    "basis": "1 x 3-5 h"
+   },
+   {
+    "task": "Team discussion 1 h x 5 people",
+    "low": 5,
+    "high": 5,
+    "basis": "5 x 1 h = 5 h"
+   },
+   {
+    "task": "Redo analysis after discussion",
+    "low": 0,
+    "high": 3,
+    "basis": "Rework only in high: 3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s9": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 37.5,
+  "high": 55,
+  "unit": "One exit-gate review for lead optimization: a 30-page data package of the lead against the written profile (12 properties), a 2-hour review meeting and a signed gate decision.",
+  "ests": [
+   [
+    37.5,
+    53
+   ],
+   [
+    38,
+    55
+   ],
+   [
+    36,
+    59
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Compile 30-page data package",
+    "low": 12,
+    "high": 18,
+    "basis": "30 pages x 24-36 min = 12-18 h"
+   },
+   {
+    "task": "Score lead against 12 criteria",
+    "low": 3,
+    "high": 5,
+    "basis": "12 x 15-25 min"
+   },
+   {
+    "task": "Prepare slides",
+    "low": 5,
+    "high": 8,
+    "basis": "2 people x 2.5-4 h"
+   },
+   {
+    "task": "Review meeting 2 h x 8 attendees",
+    "low": 16,
+    "high": 16,
+    "basis": "8 x 2 h = 16 h"
+   },
+   {
+    "task": "Answer questions and write minutes",
+    "low": 2,
+    "high": 3,
+    "basis": "1 x 2-3 h"
+   },
+   {
+    "task": "Rework after dry run",
+    "low": 0,
+    "high": 5,
+    "basis": "Rework only in high: 5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s10": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 95,
+  "high": 176,
+  "unit": "Running the full 12-assay developability panel for 24 antibodies and counting the warning flags per antibody (up to 12 flags each).",
+  "ests": [
+   [
+    70,
+    108
+   ],
+   [
+    105,
+    177
+   ],
+   [
+    95,
+    176
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Panel planning and sample logistics",
+    "low": 5,
+    "high": 8,
+    "basis": "1 plan x 5 to 8 h"
+   },
+   {
+    "task": "Run 12 assays on 24 antibodies",
+    "low": 70,
+    "high": 110,
+    "basis": "12 assays x 6 to 9 h = 72 to 108 h"
+   },
+   {
+    "task": "Data reduction",
+    "low": 14,
+    "high": 22,
+    "basis": "12 assays x 70 to 110 min = 14 to 22 h"
+   },
+   {
+    "task": "Compare to thresholds and count flags",
+    "low": 4,
+    "high": 7,
+    "basis": "24 antibodies x 10 to 17 min = 4 to 7 h"
+   },
+   {
+    "task": "Summary table",
+    "low": 2,
+    "high": 4,
+    "basis": "1 table x 2 to 4 h"
+   },
+   {
+    "task": "Rerun problem assays",
+    "low": 0,
+    "high": 25,
+    "basis": "2 assays x 12 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s11": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 17.5,
+  "high": 32.0,
+  "unit": "AC-SINS and CSI-BLI self-association measurements on 24 antibodies in duplicate at one buffer condition.",
+  "ests": [
+   [
+    16.5,
+    26.5
+   ],
+   [
+    18.0,
+    32.0
+   ],
+   [
+    17.5,
+    37
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Plate and sensor layout",
+    "low": 2,
+    "high": 3,
+    "basis": "2 assays x 1-1.5 h"
+   },
+   {
+    "task": "AC-SINS set-up",
+    "low": 5,
+    "high": 7,
+    "basis": "48 wells, 3 plates x 1.7-2.3 h"
+   },
+   {
+    "task": "CSI-BLI set-up",
+    "low": 5,
+    "high": 7,
+    "basis": "48 sensors x 6-9 min = 4.8-7.2 h"
+   },
+   {
+    "task": "Calculate shifts and responses",
+    "low": 3,
+    "high": 4,
+    "basis": "2 assays x 1.5-2 h"
+   },
+   {
+    "task": "QC of replicates",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "48 pairs x 2-3 min"
+   },
+   {
+    "task": "Summary against thresholds",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "1 x 1.5-2.5 h"
+   },
+   {
+    "task": "Repeat failed plate or sensor set",
+    "low": 0,
+    "high": 6,
+    "basis": "Rework only in high: 6 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s12": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 19.5,
+  "high": 36,
+  "unit": "Polyspecificity reagent (PSR) and baculovirus particle (BVP) binding scores for 24 antibodies in duplicate.",
+  "ests": [
+   [
+    15.5,
+    24.5
+   ],
+   [
+    25.5,
+    48
+   ],
+   [
+    19.5,
+    36
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Assay planning",
+    "low": 2,
+    "high": 3,
+    "basis": "1 plan x 2 to 3 h"
+   },
+   {
+    "task": "Prepare reagents and coat plates for PSR and BVP",
+    "low": 5,
+    "high": 8,
+    "basis": "2 assays x 2.5 to 4 h = 5 to 8 h"
+   },
+   {
+    "task": "Run duplicates of 24 antibodies",
+    "low": 8,
+    "high": 12,
+    "basis": "2 assays x 4 to 6 h = 8 to 12 h"
+   },
+   {
+    "task": "Normalise signals and compare to reference",
+    "low": 3,
+    "high": 5,
+    "basis": "2 assays x 1.5 to 2.5 h = 3 to 5 h"
+   },
+   {
+    "task": "Summary table",
+    "low": 1.5,
+    "high": 3,
+    "basis": "1 table x 1.5 to 3 h"
+   },
+   {
+    "task": "Repeat failed plate",
+    "low": 0,
+    "high": 5,
+    "basis": "1 plate rerun x 5 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s13": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 22,
+  "high": 43,
+  "unit": "HIC and SMAC retention-time measurements for 24 antibodies, duplicate injections each, with comparison to reference antibodies.",
+  "ests": [
+   [
+    14.5,
+    23.5
+   ],
+   [
+    22,
+    43
+   ],
+   [
+    23.5,
+    45
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Method set-up and standards",
+    "low": 3,
+    "high": 5,
+    "basis": "HIC and SMAC 2 x 1.5-2.5 h"
+   },
+   {
+    "task": "Sample preparation",
+    "low": 5,
+    "high": 8,
+    "basis": "24 x 12-20 min = 4.8-8 h"
+   },
+   {
+    "task": "Queue 96 injections",
+    "low": 3,
+    "high": 5,
+    "basis": "96 injections x 2-3 min = 3.2-4.8 h"
+   },
+   {
+    "task": "Integrate chromatograms",
+    "low": 6,
+    "high": 10,
+    "basis": "96 x 4-6 min = 6.4-9.6 h"
+   },
+   {
+    "task": "Record retention times and QC",
+    "low": 3,
+    "high": 5,
+    "basis": "1 x 3-5 h"
+   },
+   {
+    "task": "Summary against reference antibodies",
+    "low": 2,
+    "high": 4,
+    "basis": "1 x 2-4 h"
+   },
+   {
+    "task": "Column re-equilibration and reruns",
+    "low": 0,
+    "high": 6,
+    "basis": "Rework only in high: 6 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s14": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 19,
+  "high": 36,
+  "unit": "Accelerated stability study of 24 antibodies: 4 weeks at 40 C, SEC monomer percent measured at time 0, 2 and 4 weeks (72 injections).",
+  "ests": [
+   [
+    15.6,
+    26.0
+   ],
+   [
+    19,
+    36
+   ],
+   [
+    24,
+    43
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Study planning",
+    "low": 2,
+    "high": 3,
+    "basis": "1 x 2-3 h"
+   },
+   {
+    "task": "Sample set-up at 40 C",
+    "low": 3,
+    "high": 5,
+    "basis": "24 x 8-12 min = 3.2-4.8 h"
+   },
+   {
+    "task": "Pull time points",
+    "low": 3,
+    "high": 5,
+    "basis": "2 pulls x 24 x 4-6 min = 3.2-4.8 h"
+   },
+   {
+    "task": "SEC set-up and queueing",
+    "low": 3,
+    "high": 5,
+    "basis": "3 time-point runs x 1-1.7 h"
+   },
+   {
+    "task": "Integrate 72 chromatograms",
+    "low": 5,
+    "high": 8,
+    "basis": "72 x 4-6 min = 4.8-7.2 h"
+   },
+   {
+    "task": "Compute monomer loss and summary",
+    "low": 3,
+    "high": 5,
+    "basis": "24 x 8-12 min = 3.2-4.8 h"
+   },
+   {
+    "task": "Re-integrate or rerun failed injections",
+    "low": 0,
+    "high": 5,
+    "basis": "Rework only in high: 5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-7.s16": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 19,
+  "high": 35,
+  "unit": "Risk-based immunogenicity assessment of 3 shortlisted antibodies: in-silico T-cell epitope scan, humanness scoring, and an ADA assay strategy with tiered screening, confirmatory and titer assays, with a written risk report.",
+  "ests": [
+   [
+    17.5,
+    30
+   ],
+   [
+    19,
+    35
+   ],
+   [
+    21,
+    39
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Run T-cell epitope scan on 3 sequences",
+    "low": 2,
+    "high": 3,
+    "basis": "3 sequences x 40-60 min = 2-3 h"
+   },
+   {
+    "task": "Humanness scoring of 3 sequences",
+    "low": 1,
+    "high": 2,
+    "basis": "3 x 20-40 min"
+   },
+   {
+    "task": "Interpret epitope hits",
+    "low": 3,
+    "high": 5,
+    "basis": "3 antibodies x 1-1.7 h"
+   },
+   {
+    "task": "Plan tiered ADA assay strategy",
+    "low": 5,
+    "high": 8,
+    "basis": "3 tiers x 1.7-2.7 h"
+   },
+   {
+    "task": "Compute cut point from data",
+    "low": 3,
+    "high": 5,
+    "basis": "1 x 3-5 h"
+   },
+   {
+    "task": "Write risk report",
+    "low": 5,
+    "high": 8,
+    "basis": "1 x 5-8 h"
+   },
+   {
+    "task": "Rerun with alternate tool settings",
+    "low": 0,
+    "high": 4,
+    "basis": "Rework only in high: 4 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-8.s1": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 49.5,
+  "high": 89,
+  "unit": "Assembling the characterisation package for 1 nominated small-molecule candidate: 9 studies (Ames, hERG, CYP, permeability, protein binding, secondary pharmacology and others) summarised in one 40-page document.",
+  "ests": [
+   [
+    44.5,
+    75.5
+   ],
+   [
+    50,
+    89
+   ],
+   [
+    49.5,
+    94
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Collect reports from study owners",
+    "low": 4,
+    "high": 8,
+    "basis": "9 studies x 25-55 min = 3.8-8 h"
+   },
+   {
+    "task": "Check data consistency",
+    "low": 8,
+    "high": 14,
+    "basis": "9 studies x 55-95 min = 8-14 h"
+   },
+   {
+    "task": "Write summaries",
+    "low": 18,
+    "high": 27,
+    "basis": "9 studies x 2-3 h = 18-27 h"
+   },
+   {
+    "task": "Build tables and assemble 40 pages",
+    "low": 8,
+    "high": 12,
+    "basis": "40 pages x 12-18 min = 8-12 h"
+   },
+   {
+    "task": "Internal review by 4 owners",
+    "low": 8,
+    "high": 12,
+    "basis": "4 owners x 2-3 h = 8-12 h"
+   },
+   {
+    "task": "Revision of reviewed document",
+    "low": 4,
+    "high": 8,
+    "basis": "1 x 4-8 h"
+   },
+   {
+    "task": "Resolve conflicting data between reports",
+    "low": 0,
+    "high": 8,
+    "basis": "Rework only in high: 8 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "One Caco-2 run can be completed within one working day (Nature Protocols 2007)",
+    "url": "https://doi.org/10.1038/nprot.2007.303"
+   }
+  ]
+ },
+ "b1-8.s2": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 20.0,
+  "high": 37.0,
+  "unit": "Checking 1 candidate compound against a written candidate criteria sheet of 20 potency, selectivity, ADME and safety targets, including a human dose projection.",
+  "ests": [
+   [
+    20.0,
+    37.0
+   ],
+   [
+    17,
+    32
+   ],
+   [
+    21,
+    40
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Fill 20-target sheet from data",
+    "low": 4.0,
+    "high": 8.0,
+    "basis": "20 targets x 0.2 to 0.4 h"
+   },
+   {
+    "task": "Human dose projection in Simcyp or GastroPlus",
+    "low": 8,
+    "high": 14,
+    "basis": "1 model x 8 to 14 h"
+   },
+   {
+    "task": "Flag misses",
+    "low": 1,
+    "high": 2,
+    "basis": "20 targets x 3 to 6 min"
+   },
+   {
+    "task": "Write summary",
+    "low": 2,
+    "high": 4,
+    "basis": "1 summary x 2 to 4 h"
+   },
+   {
+    "task": "Team meeting 1 h",
+    "low": 5,
+    "high": 5,
+    "basis": "5 people x 1 h"
+   },
+   {
+    "task": "Rework dose model",
+    "low": 0,
+    "high": 4,
+    "basis": "one rerun in high"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-8.s3": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 55,
+  "high": 101,
+  "unit": "Solid-form screening of 1 candidate: polymorph and salt screen of about 60 conditions, characterisation of 5 leading forms by XRPD, DSC, TGA and DVS, and equilibrium solubility in 4 media.",
+  "ests": [
+   [
+    52.0,
+    85.0
+   ],
+   [
+    55,
+    101
+   ],
+   [
+    64,
+    121
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Screen design",
+    "low": 4,
+    "high": 6,
+    "basis": "2 people x 2-3 h"
+   },
+   {
+    "task": "Set up 60 crystallisation conditions",
+    "low": 10,
+    "high": 16,
+    "basis": "60 conditions x 10-16 min = 10-16 h"
+   },
+   {
+    "task": "XRPD on 60 samples plus harvest",
+    "low": 10,
+    "high": 15,
+    "basis": "60 samples x 10-15 min = 10-15 h"
+   },
+   {
+    "task": "Characterise 5 forms by DSC, TGA, DVS",
+    "low": 12,
+    "high": 18,
+    "basis": "5 forms x 3 methods x 50-70 min = 12.5-17.5 h"
+   },
+   {
+    "task": "Solubility in 4 media for 5 forms",
+    "low": 8,
+    "high": 12,
+    "basis": "20 samples x 25-35 min = 8-12 h"
+   },
+   {
+    "task": "Analyse data and pick form",
+    "low": 5,
+    "high": 8,
+    "basis": "2 people x 2.5-4 h"
+   },
+   {
+    "task": "Write report",
+    "low": 6,
+    "high": 10,
+    "basis": "1 x 6-10 h"
+   },
+   {
+    "task": "Repeat amorphous or failed set-ups",
+    "low": 0,
+    "high": 16,
+    "basis": "Rework only in high: 16 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-8.s4": {
+  "bin": 5,
+  "label": "Over 1 month",
+  "low": 156,
+  "high": 257,
+  "unit": "Stable CHO cell line development for 1 antibody candidate: transfection, selection, cloning of about 500 clones, titer-based screening to 12 clones, fed-batch evaluation of 12 clones, and a research cell bank of the lead clone.",
+  "ests": [
+   [
+    168,
+    257
+   ],
+   [
+    120,
+    228
+   ],
+   [
+    156,
+    296
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Planning and vector or pool prep",
+    "low": 8,
+    "high": 14,
+    "basis": "2 people x 4 to 7 h"
+   },
+   {
+    "task": "Transfection and selection culture handling",
+    "low": 20,
+    "high": 32,
+    "basis": "~10 weeks x 2 to 3.2 h of feeding"
+   },
+   {
+    "task": "Clone picking and cloning 500 clones",
+    "low": 30,
+    "high": 45,
+    "basis": "500 clones x 3.6 to 5.4 min"
+   },
+   {
+    "task": "Titer screening and data analysis",
+    "low": 20,
+    "high": 30,
+    "basis": "500 clones x 2.4 to 3.6 min"
+   },
+   {
+    "task": "Fed-batch set-up and sampling 12 clones",
+    "low": 72,
+    "high": 108,
+    "basis": "12 clones x 6 to 9 h"
+   },
+   {
+    "task": "Stability data analysis",
+    "low": 6,
+    "high": 10,
+    "basis": "12 clones x 0.5 to 0.8 h"
+   },
+   {
+    "task": "Research cell bank and documentation",
+    "low": 12,
+    "high": 18,
+    "basis": "2 people x 6 to 9 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-8.s5": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 15.5,
+  "high": 24,
+  "unit": "Agreeing a candidate criteria sheet for the 5 finalist antibodies: thresholds for Tm, charge variants, HIC retention, self-association and SEC monomer, set from clinical-stage reference ranges.",
+  "ests": [
+   [
+    15.5,
+    20.5
+   ],
+   [
+    15.5,
+    24
+   ],
+   [
+    16.5,
+    25
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Review reference data for 5 metrics",
+    "low": 3,
+    "high": 5,
+    "basis": "5 metrics x 35-60 min = 3-5 h"
+   },
+   {
+    "task": "Propose 10 thresholds",
+    "low": 2,
+    "high": 4,
+    "basis": "10 thresholds x 12-24 min = 2-4 h"
+   },
+   {
+    "task": "Team discussion 1.5 h x 6 people",
+    "low": 9,
+    "high": 9,
+    "basis": "6 people x 1.5 h = 9 h"
+   },
+   {
+    "task": "Rewrite criteria sheet",
+    "low": 1.5,
+    "high": 3,
+    "basis": "1 x 1.5-3 h"
+   },
+   {
+    "task": "Second discussion round by email",
+    "low": 0,
+    "high": 3,
+    "basis": "Rework only in high: 3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-8.s6": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 14.5,
+  "high": 26,
+  "unit": "Selection analysis for 6 finalist compounds across 12 properties, with 5 weighting schemes and ranking-stability checks (rank changes under weight perturbation).",
+  "ests": [
+   [
+    14.5,
+    26
+   ],
+   [
+    12.5,
+    25
+   ],
+   [
+    15,
+    30
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Build score table 6x12",
+    "low": 1.5,
+    "high": 3,
+    "basis": "72 values x 1.25 to 2.5 min"
+   },
+   {
+    "task": "Define desirability functions",
+    "low": 3,
+    "high": 5,
+    "basis": "12 properties x 15 to 25 min"
+   },
+   {
+    "task": "Run 5 weighting schemes",
+    "low": 2,
+    "high": 4,
+    "basis": "5 schemes x 0.4 to 0.8 h"
+   },
+   {
+    "task": "Rank stability analysis",
+    "low": 3,
+    "high": 6,
+    "basis": "1 perturbation study x 3 to 6 h"
+   },
+   {
+    "task": "Interpret rank changes",
+    "low": 2,
+    "high": 3,
+    "basis": "1 pass x 2 to 3 h"
+   },
+   {
+    "task": "Short report",
+    "low": 3,
+    "high": 5,
+    "basis": "1 report x 3 to 5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-8.s7": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 23,
+  "high": 44,
+  "unit": "Gate economics for one nomination gate: a model of the gate with assumed probability of technical success, cost and timing, run with 1,000 Monte Carlo draws, and a 5-page memo on the gate's predictive value.",
+  "ests": [
+   [
+    27,
+    46
+   ],
+   [
+    21,
+    40
+   ],
+   [
+    23,
+    44
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Collect benchmark attrition numbers",
+    "low": 5,
+    "high": 10,
+    "basis": "1 analyst x 5 to 10 h"
+   },
+   {
+    "task": "Build gate model",
+    "low": 6,
+    "high": 10,
+    "basis": "1 model x 6 to 10 h"
+   },
+   {
+    "task": "Run 1000 Monte Carlo draws and check",
+    "low": 2,
+    "high": 4,
+    "basis": "1 run set x 2 to 4 h of human time"
+   },
+   {
+    "task": "Interpret results",
+    "low": 3,
+    "high": 5,
+    "basis": "1 analysis x 3 to 5 h"
+   },
+   {
+    "task": "Write 5-page memo",
+    "low": 5,
+    "high": 8,
+    "basis": "5 pages x 1 to 1.6 h = 5 to 8 h"
+   },
+   {
+    "task": "Prepare and present for 1 hour",
+    "low": 2,
+    "high": 3,
+    "basis": "1 h prep and 1 h talk x 1 person plus 1 h = 2 to 3 h"
+   },
+   {
+    "task": "Fix model assumptions after feedback",
+    "low": 0,
+    "high": 4,
+    "basis": "1 rework round x 4 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-8.s8": {
+  "bin": 4,
+  "label": "1 week to 1 month",
+  "low": 37.5,
+  "high": 57,
+  "unit": "One nomination decision meeting: a 2-hour review of the 1 finalist with a 25-page dossier and a documented go decision with a named backup.",
+  "ests": [
+   [
+    59.0,
+    77
+   ],
+   [
+    36,
+    51
+   ],
+   [
+    37.5,
+    57
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare dossier of 25 pages",
+    "low": 12,
+    "high": 20,
+    "basis": "2 people x 6 to 10 h = 12 to 20 h"
+   },
+   {
+    "task": "Prepare slides",
+    "low": 4,
+    "high": 8,
+    "basis": "2 people x 2 to 4 h = 4 to 8 h"
+   },
+   {
+    "task": "Review meeting",
+    "low": 20,
+    "high": 20,
+    "basis": "2 h x 10 attendees = 20 h"
+   },
+   {
+    "task": "Minutes and decision record",
+    "low": 1.5,
+    "high": 3,
+    "basis": "1 person x 1.5 to 3 h"
+   },
+   {
+    "task": "Rework dossier after queries",
+    "low": 0,
+    "high": 6,
+    "basis": "1 round x 2 people x 3 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-8.s9": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 10.0,
+  "high": 22,
+  "unit": "Threshold setting for 5 finalist antibodies: computing worst-10-percent cutoffs for 12 developability metrics from the 137-antibody clinical-stage reference set and flagging each finalist.",
+  "ests": [
+   [
+    10.0,
+    22
+   ],
+   [
+    7.5,
+    16.5
+   ],
+   [
+    10.0,
+    22
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Load reference data of 137 antibodies",
+    "low": 1.5,
+    "high": 3,
+    "basis": "137 x 1 set x 1.5 to 3 h"
+   },
+   {
+    "task": "Compute percentile cutoffs for 12 metrics",
+    "low": 2,
+    "high": 4,
+    "basis": "12 metrics x 10 to 20 min"
+   },
+   {
+    "task": "Score 5 antibodies on 12 metrics",
+    "low": 1.5,
+    "high": 3,
+    "basis": "60 values x 1.5 to 3 min"
+   },
+   {
+    "task": "Run TAP and CamSol",
+    "low": 2,
+    "high": 4,
+    "basis": "5 antibodies x 2 tools x 12 to 24 min"
+   },
+   {
+    "task": "Write comparison",
+    "low": 3,
+    "high": 5,
+    "basis": "1 doc x 3 to 5 h"
+   },
+   {
+    "task": "Rework data cleaning",
+    "low": 0,
+    "high": 3,
+    "basis": "one round in high"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-8.s10": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 26.0,
+  "high": 42,
+  "unit": "Writing the release specification for 1 ADC candidate: 12 attributes (DAR, drug load distribution, free drug, unconjugated antibody, aggregates, charge variants, potency, binding and others) each with a proposed limit and test method.",
+  "ests": [
+   [
+    26.0,
+    40
+   ],
+   [
+    29,
+    47
+   ],
+   [
+    24,
+    42
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Review product design and batch data",
+    "low": 4,
+    "high": 8,
+    "basis": "1 review x 4 to 8 h"
+   },
+   {
+    "task": "Propose 12 attributes and limits",
+    "low": 6.0,
+    "high": 12,
+    "basis": "12 attributes x 0.5 to 1 h"
+   },
+   {
+    "task": "Draft spec table with methods",
+    "low": 4,
+    "high": 6,
+    "basis": "1 table x 4 to 6 h"
+   },
+   {
+    "task": "Cross-functional review 2 h",
+    "low": 10,
+    "high": 10,
+    "basis": "5 people x 2 h"
+   },
+   {
+    "task": "Revise table",
+    "low": 2,
+    "high": 4,
+    "basis": "1 round x 2 to 4 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b1-8.s11": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 14,
+  "high": 26,
+  "unit": "Selecting the analytical methods for 1 ADC candidate: a method table covering 8 attributes for a cysteine-conjugated vc-MMAE ADC with DAR about 4, by comparing HIC, UV-Vis, native MS and SEC-MS options.",
+  "ests": [
+   [
+    19.2,
+    33.8
+   ],
+   [
+    11,
+    24
+   ],
+   [
+    14,
+    26
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Literature review of four method options",
+    "low": 6,
+    "high": 10,
+    "basis": "4 methods x 1.5 to 2.5 h = 6 to 10 h"
+   },
+   {
+    "task": "Compare options for vc-MMAE linker and payload",
+    "low": 3,
+    "high": 5,
+    "basis": "1 comparison x 3 to 5 h"
+   },
+   {
+    "task": "Draft method table with rationale",
+    "low": 4,
+    "high": 7,
+    "basis": "8 attributes x 0.5 to 0.9 h = 4 to 7 h"
+   },
+   {
+    "task": "Review meeting",
+    "low": 1,
+    "high": 1,
+    "basis": "1 h x 1 person = 1 h"
+   },
+   {
+    "task": "Revise table after review",
+    "low": 0,
+    "high": 3,
+    "basis": "1 rework round x 3 h in high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
  },
  "b1-2.s3": {
   "bin": 5,
-  "sure": "high",
-  "unit": "one knockout mouse line",
-  "reason": "Genotyping, colony care and phenotyping stretch over many weeks, so hands-on time is well above a week.",
-  "cites": [
+  "label": "Over 1 month",
+  "low": 172,
+  "high": 327,
+  "unit": "One CRISPR knockout mouse line for one target, from guide design to the end of a 10-week early-adult phenotyping pipeline (7 males and 7 females plus controls). Microinjection by a core is not counted.",
+  "ests": [
+   [
+    248,
+    374
+   ],
+   [
+    130,
+    270
+   ],
+   [
+    172,
+    327
+   ]
+  ],
+  "tasks": [
    {
-    "label": "JAX timeline: 26 to 37 weeks on the calendar (vendor)",
-    "url": "https://indianactsi.org/wp-content/uploads/2024/12/IndianaCTSI-JAX-Flyer.pdf"
+    "task": "Design guides and strategy, order oligos",
+    "low": 6,
+    "high": 10,
+    "basis": "1 design x 6-10 h"
    },
    {
-    "label": "IMPC phenotyping runs from 9 to 15 weeks of age",
-    "url": "https://www.mousephenotype.org/understand/start-using-the-impc/impc-data-generation/"
-   }
-  ],
-  "label": "Over 1 week"
- },
- "b1-2.s4": {
-  "bin": 5,
-  "sure": "medium",
-  "unit": "make and check antibodies, as the step is written",
-  "reason": "Making the antibody and checking it for specificity needs repeated assays over several weeks. If the task is only to check one existing antibody, it drops to the 1 day to 1 week bin.",
-  "cites": [
+    "task": "Founder genotyping and sequencing analysis",
+    "low": 16,
+    "high": 28,
+    "basis": "~30 pups x 30 min DNA prep and PCR plus CRISPResso2 review 2 h"
+   },
    {
-    "label": "Nature Protocols 2024: within 1 month while working part-time, per protein",
-    "url": "https://www.nature.com/articles/s41596-024-01095-8"
+    "task": "Breeding set-up and colony weekly care and genotyping",
+    "low": 50,
+    "high": 90,
+    "basis": "~20 weeks x 2.5-4.5 h/wk (tech plus scientist)"
+   },
+   {
+    "task": "Genotype F1 and F2 offspring",
+    "low": 20,
+    "high": 35,
+    "basis": "~80 animals x 15-25 min = 20-35 h"
+   },
+   {
+    "task": "Early-adult phenotyping pipeline, 14 plus controls animals",
+    "low": 60,
+    "high": 100,
+    "basis": "~25 animals x 2.4-4 h across 10 weeks of tests"
+   },
+   {
+    "task": "Data analysis and statistics",
+    "low": 12,
+    "high": 20,
+    "basis": "1 pipeline x 12-20 h"
+   },
+   {
+    "task": "Report writing and meetings",
+    "low": 8,
+    "high": 14,
+    "basis": "1 report x 8-14 h"
+   },
+   {
+    "task": "Rework: repeat founder genotyping or failed cohort tests",
+    "low": 0,
+    "high": 30,
+    "basis": "one troubleshooting round, high only"
    }
   ],
-  "label": "Over 1 week"
- },
- "b1-2.s7": {
-  "bin": 1,
-  "sure": "medium",
-  "unit": "one project",
-  "reason": "Checking that early exploratory work sits outside GLP is a short read and a note.",
-  "cites": [],
-  "label": "Under 1 hour"
+  "conf": "medium",
+  "ctx": []
  }
 }</script>
 <script id="rdata" type="application/json">{
@@ -58308,7 +62711,16 @@ function stepList(bi, si, id){
     const subs = (d.substeps||[]).map(s=>`<li>${esc(s.plain)}${s.tool?` <em>${esc(s.tool)}</em>`:""}</li>`).join("");
     return `<div class="sdet">
       ${d.human?`<p class="sh">${esc(d.human)}</p>`:""}
-      ${x.h?`<div class="hbox"><span class="hh">Hands-on human time <em>expert estimate, not a cited figure</em></span><p><b>${esc(x.h.label)}</b> for ${esc(x.h.unit)}. ${esc(x.h.reason)}</p>${(x.h.cites||[]).length?`<p class="hc">Context from cited work, not proof:</p><ul>${x.h.cites.map(c=>`<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.label)}</a></li>`).join("")}</ul>`:`<p class="hc">No cited source for this one.</p>`}</div>`:""}
+      ${x.h?`<div class="hbox"><span class="hh">Hands-on human time <em>estimate, not a measurement</em></span>
+        <p><b>${esc(String(x.h.low))} to ${esc(String(x.h.high))} hours</b> · ${esc(x.h.label)}</p>
+        <p class="hu">For: ${esc(x.h.unit)}</p>
+        <details class="hmath"><summary>Show the math</summary>
+          <p class="hc">Three independent estimates, in person-hours: ${x.h.ests.map(e=>esc(e[0])+" to "+esc(e[1])).join(", ")}. The range above is the median of the three lows and the median of the three highs.</p>
+          <ul class="htasks">${x.h.tasks.map(k=>`<li><b>${esc(String(k.low))} to ${esc(String(k.high))} h</b> ${esc(k.task)}<span>${esc(k.basis)}</span></li>`).join("")}</ul>
+          <p class="hc">Tasks come from the middle estimate. Low means nothing goes wrong. High includes one round of rework. Counts bench and desk time of every person, not waiting or computer time. 1 day = 8 hours, 1 week = 40, 1 month = 160.</p>
+        </details>
+        ${(x.h.ctx||[]).length?`<p class="hc">Related published figures, not proof:</p><ul>${x.h.ctx.map(c=>`<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.label)}</a></li>`).join("")}</ul>`:""}
+      </div>`:""}
       ${x.v?`<p class="vwhy v-${x.v.label}"><b>${x.v.label==="strict"?"Strict verification":"Loose verification"}</b> ${esc(x.v.why)}</p>`:""}
       ${tools?`<ul class="stools">${tools}</ul>`:""}
       ${(!d.items||!d.items.length) && d.files && !/^Not described/i.test(d.files)?`<p class="sf"><span>Data</span>${esc(d.files)}</p>`:""}
