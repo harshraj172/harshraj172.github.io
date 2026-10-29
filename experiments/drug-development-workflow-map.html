@@ -62300,6 +62300,3352 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
   ],
   "conf": "medium",
   "ctx": []
+ },
+ "b7-1.s4": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 0.85,
+  "high": 2.2,
+  "unit": "one NovaSeq X 10B flow cell run, 2x150 bp, with a pool of 12 human whole-genome samples at about 30x (about 100 Gb each), 12 samples aligned to GRCh38",
+  "ests": [
+   [
+    0.85,
+    2.2
+   ],
+   [
+    0.75,
+    2.2
+   ],
+   [
+    1.2,
+    3.3
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Configure pipeline and GRCh38 reference",
+    "low": 0.4,
+    "high": 0.75,
+    "basis": "1 config x 25 to 45 min"
+   },
+   {
+    "task": "Launch 12 alignments",
+    "low": 0.2,
+    "high": 0.3,
+    "basis": "12 samples x 1 min"
+   },
+   {
+    "task": "Check flagstat and alignment rates",
+    "low": 0.25,
+    "high": 0.4,
+    "basis": "12 samples x 1.5 to 2 min"
+   },
+   {
+    "task": "Fix failures and rerun",
+    "low": 0,
+    "high": 0.75,
+    "basis": "2 failed jobs x 22 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "4 h 30 min (STAR Protocols, whole exome consolidated variant calling protocol 2022)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9163752/"
+   }
+  ]
+ },
+ "b7-7.s11": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 0.8,
+  "high": 2.05,
+  "unit": "one family of 12 members over 3 generations with 4 affected, 6 members with exome sequencing including the proband trio, about 500 candidate variants in the proband, segregation check of 1 candidate variant in 12 members",
+  "ests": [
+   [
+    0.75,
+    1.95
+   ],
+   [
+    0.8,
+    2.05
+   ],
+   [
+    1.4,
+    3.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Look up candidate variant in 12 members",
+    "low": 0.3,
+    "high": 0.6,
+    "basis": "6 sequenced x 3-6 min plus 6 untyped notes"
+   },
+   {
+    "task": "Tabulate genotype with phenotype",
+    "low": 0.2,
+    "high": 0.35,
+    "basis": "12 members x 1-1.75 min"
+   },
+   {
+    "task": "Score segregation evidence for ACMG",
+    "low": 0.3,
+    "high": 0.6,
+    "basis": "1 scoring x 18-36 min"
+   },
+   {
+    "task": "Recheck IGV or Sanger data on odd member",
+    "low": 0,
+    "high": 0.5,
+    "basis": "one check x 30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b7-2.s1": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 4.25,
+  "high": 9.75,
+  "unit": "One QC and filtering of all 10 samples (about 120,000 raw droplets before filtering to about 100,000 cells), including ambient RNA and doublet checks per sample",
+  "ests": [
+   [
+    3.9,
+    9.5
+   ],
+   [
+    4.5,
+    10.25
+   ],
+   [
+    4.25,
+    9.75
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up per sample inputs and load 10 samples",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "10 samples x 5 min = 0.8 h"
+   },
+   {
+    "task": "Empty drops and cell calling check",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "10 samples x 3 min"
+   },
+   {
+    "task": "QC metric plots and MAD thresholds",
+    "low": 1.0,
+    "high": 1.75,
+    "basis": "10 samples x 6 min = 1 h"
+   },
+   {
+    "task": "Ambient RNA with SoupX",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "10 samples x 5 min"
+   },
+   {
+    "task": "Doublet detection with scDblFinder",
+    "low": 0.75,
+    "high": 1.25,
+    "basis": "10 samples x 5 min = 0.8 h"
+   },
+   {
+    "task": "Rework thresholds and bad samples",
+    "low": 0,
+    "high": 2.0,
+    "basis": "One round"
+   },
+   {
+    "task": "Write up QC summary",
+    "low": 0.5,
+    "high": 0.75,
+    "basis": "30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "5 min In this step, we wi (STAR Protocols (Cell Press) full text 2025)",
+    "url": "https://europepmc.org/article/PMC/PMC11994394"
+   },
+   {
+    "label": "10\u201330 min In this step, w (STAR Protocols (Cell Press) full text 2025)",
+    "url": "https://europepmc.org/article/PMC/PMC11994394"
+   },
+   {
+    "label": "10\u201315 min for each sample, depending on the number of cells (STAR Protocols (Cell Press) full text 2022)",
+    "url": "https://europepmc.org/article/PMC/PMC8980964"
+   }
+  ]
+ },
+ "b7-2.s4": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 1.5,
+  "high": 3.5,
+  "unit": "One PCA with 50 components plus one UMAP embedding of the 100,000-cell study",
+  "ests": [
+   [
+    1.5,
+    4.1
+   ],
+   [
+    1.5,
+    3.25
+   ],
+   [
+    1.5,
+    3.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Run PCA with 50 components",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "15 min"
+   },
+   {
+    "task": "Elbow plot and choose PCs",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "15 min"
+   },
+   {
+    "task": "Compute neighbors and UMAP",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "15 min"
+   },
+   {
+    "task": "Inspect embeddings coloured by sample and QC",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "5 colourings x 6 min = 0.5 h"
+   },
+   {
+    "task": "Rework parameters",
+    "low": 0,
+    "high": 0.75,
+    "basis": "One round"
+   },
+   {
+    "task": "Write up",
+    "low": 0.25,
+    "high": 0.25,
+    "basis": "Short"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "30 min\u20132 h (dataset size (STAR Protocols (Cell Press) full text 2026)",
+    "url": "https://europepmc.org/article/PMC/PMC13453456"
+   },
+   {
+    "label": "1 h T (STAR Protocols (Cell Press) full text 2025)",
+    "url": "https://europepmc.org/article/PMC/PMC12702057"
+   }
+  ]
+ },
+ "b7-2.s5": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.2,
+  "high": 6.7,
+  "unit": "One integration of the 10 samples (100,000 cells) with one method, checking mixing against biology",
+  "ests": [
+   [
+    2.2,
+    6.7
+   ],
+   [
+    2.0,
+    5.75
+   ],
+   [
+    3.25,
+    8.75
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Pick method, set up (Harmony)",
+    "low": 0.4,
+    "high": 0.8,
+    "basis": "1 setup x 25-50 min"
+   },
+   {
+    "task": "Launch integration, monitor",
+    "low": 0.2,
+    "high": 0.5,
+    "basis": "1 run x 12-30 min active"
+   },
+   {
+    "task": "Inspect mixing UMAPs by donor, batch",
+    "low": 0.5,
+    "high": 1,
+    "basis": "6 plots x 5-10 min"
+   },
+   {
+    "task": "Check biology preserved, markers on UMAP",
+    "low": 0.5,
+    "high": 1,
+    "basis": "10 marker plots x 3-6 min"
+   },
+   {
+    "task": "Quantify LISI or kBET",
+    "low": 0.3,
+    "high": 0.8,
+    "basis": "1 metric run x 20-50 min"
+   },
+   {
+    "task": "Retune theta, rerun, recheck",
+    "low": 0,
+    "high": 2,
+    "basis": "one rerun x 2 h of tuning and checks"
+   },
+   {
+    "task": "Write-up",
+    "low": 0.3,
+    "high": 0.6,
+    "basis": "1 x 20-35 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "2\u20133 h The aim of integrating a (STAR Protocols (Cell Press) full text 2022)",
+    "url": "https://europepmc.org/article/PMC/PMC8980964"
+   },
+   {
+    "label": "4 h This section describe (STAR Protocols (Cell Press) full text 2026)",
+    "url": "https://europepmc.org/article/PMC/PMC13260199"
+   }
+  ]
+ },
+ "b7-2.s6": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.0,
+  "high": 4.5,
+  "unit": "One clustering of the 100,000-cell integrated study at 3 resolutions, ending with about 15 chosen clusters",
+  "ests": [
+   [
+    1.6,
+    4.0
+   ],
+   [
+    2.0,
+    4.5
+   ],
+   [
+    2.0,
+    4.75
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Build neighbour graph on integrated space",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "1 call x 15 min"
+   },
+   {
+    "task": "Run Leiden at 3 resolutions",
+    "low": 0.25,
+    "high": 0.75,
+    "basis": "3 runs x 5 min = 0.25 h"
+   },
+   {
+    "task": "Inspect UMAPs and clustree",
+    "low": 0.5,
+    "high": 1,
+    "basis": "3 resolutions x 10 min = 0.5 h"
+   },
+   {
+    "task": "Check cluster markers for splits",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "15 clusters x 3 min = 0.75 h"
+   },
+   {
+    "task": "Choose final resolution and write up",
+    "low": 0.25,
+    "high": 0.75,
+    "basis": "1 decision x 15 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "1 h T (STAR Protocols (Cell Press) full text 2025)",
+    "url": "https://europepmc.org/article/PMC/PMC12702057"
+   }
+  ]
+ },
+ "b7-2.s7": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 3.75,
+  "high": 8.25,
+  "unit": "One annotation of about 15 clusters into about 12 cell types using marker genes plus one reference-based tool",
+  "ests": [
+   [
+    3.2,
+    8.9
+   ],
+   [
+    4.0,
+    8.0
+   ],
+   [
+    3.75,
+    8.25
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Run marker finding for 15 clusters",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "Script and launch 30 min"
+   },
+   {
+    "task": "Review top markers per cluster",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "15 clusters x 6 min = 1.5 h"
+   },
+   {
+    "task": "Run reference tool such as CellTypist or Azimuth",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "30 min"
+   },
+   {
+    "task": "Reconcile conflicts and merge to 12 types",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "45 min"
+   },
+   {
+    "task": "Recheck ambiguous clusters",
+    "low": 0,
+    "high": 1.5,
+    "basis": "One round"
+   },
+   {
+    "task": "Write up annotation table",
+    "low": 0.5,
+    "high": 0.75,
+    "basis": "30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "1.5\u20132 h Th (STAR Protocols (Cell Press) full text 2022)",
+    "url": "https://europepmc.org/article/PMC/PMC8980964"
+   },
+   {
+    "label": "20 min In this step, we s (STAR Protocols (Cell Press) full text 2025)",
+    "url": "https://europepmc.org/article/PMC/PMC12721030"
+   },
+   {
+    "label": "3\u20134 weeks This secti (STAR Protocols (Cell Press) full text 2026)",
+    "url": "https://europepmc.org/article/PMC/PMC13156634"
+   }
+  ]
+ },
+ "b7-2.s9": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 3.5,
+  "high": 8.4,
+  "unit": "One trajectory analysis on one lineage subset of about 15,000 cells with about 4 branches",
+  "ests": [
+   [
+    2.9,
+    8.4
+   ],
+   [
+    3.5,
+    8.25
+   ],
+   [
+    3.5,
+    9.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Subset lineage and recompute embedding",
+    "low": 0.5,
+    "high": 1,
+    "basis": "1 subset x 30 min"
+   },
+   {
+    "task": "Choose method and root cell",
+    "low": 0.5,
+    "high": 1.5,
+    "basis": "1 choice x 30 min, high with root rethink"
+   },
+   {
+    "task": "Run PAGA or Slingshot trajectory",
+    "low": 0.5,
+    "high": 1.5,
+    "basis": "1 run x 30 min, high with rerun"
+   },
+   {
+    "task": "Check branches and pseudotime plots",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "4 branches x 12 min = 0.8 h"
+   },
+   {
+    "task": "Run gene trends along branches",
+    "low": 0.75,
+    "high": 2,
+    "basis": "4 branches x 12 min = 0.8 h"
+   },
+   {
+    "task": "Write up",
+    "low": 0.5,
+    "high": 0.75,
+    "basis": "1 summary x 30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "15 min \u2013 30 min (STAR Protocols (Cell Press) full text 2025)",
+    "url": "https://europepmc.org/article/PMC/PMC12682022"
+   },
+   {
+    "label": "1\u20131.5 h Fr (STAR Protocols (Cell Press) full text 2022)",
+    "url": "https://europepmc.org/article/PMC/PMC8980964"
+   },
+   {
+    "label": "\u223c6 h Apply the scVelo pyt (STAR Protocols (Cell Press) full text 2024)",
+    "url": "https://europepmc.org/article/PMC/PMC10826422"
+   }
+  ]
+ },
+ "b7-2.s10": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 3.0,
+  "high": 7.25,
+  "unit": "One neighbourhood enrichment on 4 spatial sections (about 40,000 cells, about 15 cell types) with niche calling",
+  "ests": [
+   [
+    2.6,
+    6.4
+   ],
+   [
+    3.5,
+    7.5
+   ],
+   [
+    3.0,
+    7.25
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Build spatial graph per section",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "4 sections x 8 min = 0.5 h"
+   },
+   {
+    "task": "Neighborhood enrichment with permutation",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "4 sections x 8 min"
+   },
+   {
+    "task": "Niche calling by neighbor composition clustering",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "45 min"
+   },
+   {
+    "task": "Inspect spatial plots and z-scores",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "4 sections x 12 min = 0.8 h"
+   },
+   {
+    "task": "Rework radius or niche count",
+    "low": 0,
+    "high": 1.5,
+    "basis": "One round"
+   },
+   {
+    "task": "Write up",
+    "low": 0.5,
+    "high": 0.75,
+    "basis": "Summary"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "2 h I (STAR Protocols (Cell Press) full text 2025)",
+    "url": "https://europepmc.org/article/PMC/PMC12702057"
+   }
+  ]
+ },
+ "b7-2.s11": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 3.25,
+  "high": 7.0,
+  "unit": "One ligand-receptor inference across about 12 cell types for case and control, with comparison of the two",
+  "ests": [
+   [
+    2.5,
+    6.2
+   ],
+   [
+    3.25,
+    7.0
+   ],
+   [
+    3.75,
+    8.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare case and control inputs by cell type",
+    "low": 0.5,
+    "high": 1,
+    "basis": "2 groups x 15 min = 0.5 h"
+   },
+   {
+    "task": "Run CellChat or LIANA for both groups",
+    "low": 0.5,
+    "high": 1.5,
+    "basis": "2 groups x 15 min, high with error fix"
+   },
+   {
+    "task": "Filter by min cells and check parameters",
+    "low": 0.5,
+    "high": 1,
+    "basis": "1 pass x 30 min"
+   },
+   {
+    "task": "Compare case versus control and plot",
+    "low": 1,
+    "high": 2,
+    "basis": "1 comparison x 1 h"
+   },
+   {
+    "task": "Review top pairs for plausibility and write up",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "1 review x 45 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "\u223c2 h By analyzing the exp (STAR Protocols (Cell Press) full text 2024)",
+    "url": "https://europepmc.org/article/PMC/PMC10826422"
+   },
+   {
+    "label": "4 h This section describe (STAR Protocols (Cell Press) full text 2025)",
+    "url": "https://europepmc.org/article/PMC/PMC12741461"
+   },
+   {
+    "label": ">4 h In this section, we (STAR Protocols (Cell Press) full text 2023)",
+    "url": "https://europepmc.org/article/PMC/PMC10491853"
+   }
+  ]
+ },
+ "b7-3.s1": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 1.8,
+  "high": 4.75,
+  "unit": "One alignment and mapping-rate check of 6 samples (about 30 million reads each) plus 2 input controls, with trimming",
+  "ests": [
+   [
+    1.8,
+    4.8
+   ],
+   [
+    2.0,
+    4.75
+   ],
+   [
+    1.75,
+    4.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up trimming and alignment sheet",
+    "low": 0.5,
+    "high": 1,
+    "basis": "8 libraries x 4-8 min = 0.5-1 h"
+   },
+   {
+    "task": "Launch trimming and Bowtie2 alignment",
+    "low": 0.3,
+    "high": 0.6,
+    "basis": "1 batch x 20-35 min"
+   },
+   {
+    "task": "Filter MAPQ, dedupe, index",
+    "low": 0.4,
+    "high": 0.8,
+    "basis": "8 libs x 3-6 min"
+   },
+   {
+    "task": "Check flagstat and trim reports",
+    "low": 0.4,
+    "high": 0.8,
+    "basis": "8 libs x 3-6 min"
+   },
+   {
+    "task": "Fix failed job or low-mapping sample",
+    "low": 0,
+    "high": 1.2,
+    "basis": "one round x 0-70 min"
+   },
+   {
+    "task": "Write summary",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "1 x 12-25 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "~1 h (Nature Protocols PDF (Bardet et al.) 2012)",
+    "url": "https://stowers-institute.files.svdcdn.com/production/files/2011_Bardet.pdf?dm=1731708474"
+   }
+  ]
+ },
+ "b7-3.s2": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.75,
+  "high": 5.75,
+  "unit": "One library QC of 6 samples and 2 controls: duplication, library complexity, fragment size, FRiP, cross-correlation or TSS enrichment, and a pass/fail call per sample",
+  "ests": [
+   [
+    2.2,
+    5.2
+   ],
+   [
+    2.75,
+    5.75
+   ],
+   [
+    2.75,
+    6.25
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Run Picard duplicates and library complexity",
+    "low": 0.5,
+    "high": 1,
+    "basis": "8 libraries scripted x 4 min = 0.5 h"
+   },
+   {
+    "task": "Compute fragment size and TSS enrichment",
+    "low": 0.5,
+    "high": 1,
+    "basis": "1 script x 30 min"
+   },
+   {
+    "task": "Run cross-correlation phantompeakqualtools",
+    "low": 0.25,
+    "high": 0.75,
+    "basis": "6 samples x 3 min"
+   },
+   {
+    "task": "Compute FRiP and fingerprints",
+    "low": 0.5,
+    "high": 1,
+    "basis": "1 script x 30 min"
+   },
+   {
+    "task": "Review plots and make pass fail table",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "8 libraries x 6 min = 0.8 h"
+   },
+   {
+    "task": "Write up",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "1 summary x 15 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "1 h This section describe (STAR Protocols (Cell Press) full text 2025)",
+    "url": "https://europepmc.org/article/PMC/PMC12702366"
+   }
+  ]
+ },
+ "b7-3.s3": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.0,
+  "high": 4.6,
+  "unit": "One peak calling on 6 samples against controls, per replicate and pooled, giving about 50,000 peaks",
+  "ests": [
+   [
+    1.7,
+    4.6
+   ],
+   [
+    2.0,
+    4.5
+   ],
+   [
+    2.0,
+    5.25
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up MACS3 commands with controls",
+    "low": 0.5,
+    "high": 1,
+    "basis": "1 sample sheet x 30 min"
+   },
+   {
+    "task": "Launch per replicate calls on 6 samples",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "6 runs scripted x 3 min = 0.3 h"
+   },
+   {
+    "task": "Launch pooled calls per condition",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "2 runs x 8 min"
+   },
+   {
+    "task": "Check peak counts and FRiP, fix problems",
+    "low": 0.5,
+    "high": 1.5,
+    "basis": "8 outputs x 4 min = 0.5 h, high with rerun"
+   },
+   {
+    "task": "Inspect peaks in IGV and write up",
+    "low": 0.5,
+    "high": 1,
+    "basis": "1 review x 30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "1\u20133 h This major step cal (STAR Protocols (Cell Press) full text 2026)",
+    "url": "https://europepmc.org/article/PMC/PMC13675712"
+   },
+   {
+    "label": "~30 min (Nature Protocols PDF (Bardet et al.) 2012)",
+    "url": "https://stowers-institute.files.svdcdn.com/production/files/2011_Bardet.pdf?dm=1731708474"
+   }
+  ]
+ },
+ "b7-3.s5": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.0,
+  "high": 4.5,
+  "unit": "One normalised signal tracks for 6 samples plus 2 conditions merged, and a heatmap or profile plot over the 50,000 peaks",
+  "ests": [
+   [
+    1.6,
+    4.1
+   ],
+   [
+    2.0,
+    4.5
+   ],
+   [
+    2.25,
+    5.25
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Write bamCoverage commands for 6 samples",
+    "low": 0.5,
+    "high": 1,
+    "basis": "6 samples x 5 min = 0.5 h"
+   },
+   {
+    "task": "Make merged condition tracks",
+    "low": 0.25,
+    "high": 0.75,
+    "basis": "2 conditions x 8 min = 0.25 h"
+   },
+   {
+    "task": "Run computeMatrix over 50,000 peaks",
+    "low": 0.25,
+    "high": 0.75,
+    "basis": "1 run x 15 min"
+   },
+   {
+    "task": "Plot heatmap and profile, adjust",
+    "low": 0.5,
+    "high": 1,
+    "basis": "1 figure x 30 min"
+   },
+   {
+    "task": "Inspect tracks in IGV and check scaling",
+    "low": 0.5,
+    "high": 1,
+    "basis": "8 tracks x 4 min = 0.5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "~1 h (Nature Protocols PDF (Bardet et al.) 2012)",
+    "url": "https://stowers-institute.files.svdcdn.com/production/files/2011_Bardet.pdf?dm=1731708474"
+   }
+  ]
+ },
+ "b7-3.s6": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.25,
+  "high": 5.25,
+  "unit": "One differential analysis of 2 conditions x 3 replicates over about 50,000 consensus regions",
+  "ests": [
+   [
+    2.0,
+    5.2
+   ],
+   [
+    2.5,
+    5.25
+   ],
+   [
+    2.25,
+    5.75
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Build count matrix over 50,000 regions",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "6 bams, 30 min"
+   },
+   {
+    "task": "Set up DESeq2 or DiffBind design and normalisation",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "30 min"
+   },
+   {
+    "task": "Run test and inspect PCA, MA, volcano",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "4 plots x 10 min = 0.67 h"
+   },
+   {
+    "task": "Check normalisation, batch, fix design",
+    "low": 0,
+    "high": 1.5,
+    "basis": "One rework round"
+   },
+   {
+    "task": "Export tables and write up",
+    "low": 0.5,
+    "high": 0.75,
+    "basis": "30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "~45 min (Nature Protocols PDF (Bardet et al.) 2012)",
+    "url": "https://stowers-institute.files.svdcdn.com/production/files/2011_Bardet.pdf?dm=1731708474"
+   },
+   {
+    "label": "1\u20132 days This section out (STAR Protocols (Cell Press) full text 2025)",
+    "url": "https://europepmc.org/article/PMC/PMC12702366"
+   }
+  ]
+ },
+ "b7-3.s7": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.75,
+  "high": 6.75,
+  "unit": "One 12-state ChromHMM model from 6 histone marks in 2 conditions (12 mark-by-condition tracks), with state naming and enrichment checks",
+  "ests": [
+   [
+    2.8,
+    7.0
+   ],
+   [
+    2.5,
+    5.75
+   ],
+   [
+    2.75,
+    6.75
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare binarization inputs, 12 tracks and chrom sizes",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "12 tracks x 3 min = 0.6 h"
+   },
+   {
+    "task": "Run BinarizeBam and LearnModel for 12 states",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "Scripting and launch 30 min"
+   },
+   {
+    "task": "Inspect emission matrix and name states",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "12 states x 4 min = 0.8 h"
+   },
+   {
+    "task": "OverlapEnrichment and checks vs TSS and genes",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "30 min"
+   },
+   {
+    "task": "Compare other state counts and rerun",
+    "low": 0,
+    "high": 1.5,
+    "basis": "One rework round"
+   },
+   {
+    "task": "Write up",
+    "low": 0.5,
+    "high": 0.75,
+    "basis": "Figures and table"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "binarization 1 h, file preparation 30 min, post-model analysis 2 h (Nature Protocols PDF (Ernst and Kellis) 2017)",
+    "url": "https://compbio.mit.edu/publications/Ernst_NatureProtocols_17.pdf"
+   }
+  ]
+ },
+ "b7-3.s8": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 3.5,
+  "high": 7.75,
+  "unit": "One de novo and known motif analysis of about 5,000 differential regions, plus footprinting on the ATAC samples",
+  "ests": [
+   [
+    3.1,
+    7.6
+   ],
+   [
+    3.75,
+    7.75
+   ],
+   [
+    3.5,
+    8.25
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare differential region BED and background",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "2 sets x 8 min"
+   },
+   {
+    "task": "Run HOMER or MEME-ChIP de novo and known motifs",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "2 sets x 15 min scripting = 0.5 h"
+   },
+   {
+    "task": "Inspect motif results and match to JASPAR",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "2 sets x 20 min = 0.75 h"
+   },
+   {
+    "task": "TOBIAS ATAC bias correction and footprinting setup",
+    "low": 1.0,
+    "high": 2.0,
+    "basis": "6 samples x 10 min config = 1 h"
+   },
+   {
+    "task": "Review footprint differential binding plots",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "30 min plots"
+   },
+   {
+    "task": "Fix pipeline errors",
+    "low": 0,
+    "high": 1.5,
+    "basis": "One rework round"
+   },
+   {
+    "task": "Write up",
+    "low": 0.5,
+    "high": 0.75,
+    "basis": "Summary"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "~2 h (Nature Protocols PDF (Bardet et al.) 2012)",
+    "url": "https://stowers-institute.files.svdcdn.com/production/files/2011_Bardet.pdf?dm=1731708474"
+   },
+   {
+    "label": "1\u20132 h The following steps (STAR Protocols (Cell Press) full text 2026)",
+    "url": "https://europepmc.org/article/PMC/PMC12796723"
+   }
+  ]
+ },
+ "b7-3.s9": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 3.5,
+  "high": 8.25,
+  "unit": "One differential methylation of whole-genome bisulfite data, 2 conditions x 3 replicates at about 15x coverage, calling DMCs and DMRs",
+  "ests": [
+   [
+    3.1,
+    7.6
+   ],
+   [
+    3.5,
+    8.25
+   ],
+   [
+    3.75,
+    9.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare Bismark coverage files and sample table",
+    "low": 0.5,
+    "high": 1,
+    "basis": "6 samples x 5 min = 0.5 h"
+   },
+   {
+    "task": "Read data and filter coverage in methylKit or DSS",
+    "low": 0.5,
+    "high": 1.5,
+    "basis": "1 script x 30 min, high with memory fix"
+   },
+   {
+    "task": "QC: coverage, correlation and PCA plots",
+    "low": 0.5,
+    "high": 1,
+    "basis": "6 samples x 5 min = 0.5 h"
+   },
+   {
+    "task": "Run DMC testing and set cutoffs",
+    "low": 0.5,
+    "high": 1.5,
+    "basis": "1 run x 30 min, high with one rerun"
+   },
+   {
+    "task": "Call DMRs and tune merge parameters",
+    "low": 0.75,
+    "high": 2,
+    "basis": "1 run x 45 min, high with parameter retune"
+   },
+   {
+    "task": "Inspect results and write up",
+    "low": 0.75,
+    "high": 1.25,
+    "basis": "1 summary x 45 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "4 h D (STAR Protocols (Cell Press) full text 2026)",
+    "url": "https://europepmc.org/article/PMC/PMC13675703"
+   },
+   {
+    "label": "10 min (STAR Protocols (Cell Press) full text 2026)",
+    "url": "https://europepmc.org/article/PMC/PMC13675703"
+   },
+   {
+    "label": "2\u20133 h This section includ (STAR Protocols (Cell Press) full text 2026)",
+    "url": "https://europepmc.org/article/PMC/PMC12907704"
+   }
+  ]
+ },
+ "b7-3.s10": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.0,
+  "high": 4.5,
+  "unit": "One annotating about 50,000 consensus regions to genes and features and running enrichment on gene sets from the differential regions",
+  "ests": [
+   [
+    1.5,
+    3.8
+   ],
+   [
+    2.0,
+    4.5
+   ],
+   [
+    2.0,
+    4.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare consensus regions and annotation databases",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "1 file set x 15 min = 0.25 h"
+   },
+   {
+    "task": "Run ChIPseeker annotation and feature distribution",
+    "low": 0.5,
+    "high": 1,
+    "basis": "1 run x 30 min script and plots"
+   },
+   {
+    "task": "Assign genes to differential region sets",
+    "low": 0.25,
+    "high": 0.75,
+    "basis": "2 sets x 8 min = 0.3 h, high x 22 min"
+   },
+   {
+    "task": "Run GO and pathway enrichment on gene sets",
+    "low": 0.5,
+    "high": 1.25,
+    "basis": "2 sets x 15 min = 0.5 h"
+   },
+   {
+    "task": "Check plots and write up",
+    "low": 0.5,
+    "high": 1,
+    "basis": "1 write-up x 30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "15 min (STAR Protocols (Cell Press) full text 2026)",
+    "url": "https://europepmc.org/article/PMC/PMC13675703"
+   },
+   {
+    "label": "~1 h (Nature Protocols PDF (Bardet et al.) 2012)",
+    "url": "https://stowers-institute.files.svdcdn.com/production/files/2011_Bardet.pdf?dm=1731708474"
+   }
+  ]
+ },
+ "b7-5.s2": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.75,
+  "high": 6.0,
+  "unit": "Quality control of the 30 raw files of the study: per-run metrics (peptide IDs, TIC, retention time drift, missed cleavages, contaminants) reviewed with one QC tool and a short QC table",
+  "ests": [
+   [
+    4.67,
+    8.25
+   ],
+   [
+    2.75,
+    6.0
+   ],
+   [
+    2.75,
+    5.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up QC tool",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "PTXQC or rawDiag install and config 45 to 90 min"
+   },
+   {
+    "task": "Read 30 run metric plots",
+    "low": 1.0,
+    "high": 1.5,
+    "basis": "30 runs x 2 min = 1 h"
+   },
+   {
+    "task": "Spot outliers",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "15 to 30 min"
+   },
+   {
+    "task": "Decide keep or rerun",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "3 outliers x 5 to 10 min"
+   },
+   {
+    "task": "Write QC summary table",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "30 to 60 min"
+   },
+   {
+    "task": "Fix tool problems",
+    "low": 0,
+    "high": 1.0,
+    "basis": "one rework round 1 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "5 min (user dependent) (Nature Protocols (MSstats with FragPipe) 2024)",
+    "url": "https://www.devonkohler.com/files/s41596-024-01000-3.pdf"
+   },
+   {
+    "label": "Data quality control Timing: 1 day (STAR Protocols (AP-MS, PMC11567037) 2024)",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11567037/fullTextXML"
+   }
+  ]
+ },
+ "b7-5.s6": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.25,
+  "high": 5.75,
+  "unit": "Normalisation and missing value handling for the 30 by about 5,000 protein intensity table, including a before and after check and 1 imputation choice",
+  "ests": [
+   [
+    2.3,
+    6.15
+   ],
+   [
+    2.25,
+    5.75
+   ],
+   [
+    2.0,
+    4.75
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Inspect density, boxplot, PCA before",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "4 plots x 8 min = 0.5 h"
+   },
+   {
+    "task": "Choose normalisation",
+    "low": 0.25,
+    "high": 0.75,
+    "basis": "15 to 45 min"
+   },
+   {
+    "task": "Choose missing value rule",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "filter plus impute decision 30 to 60 min"
+   },
+   {
+    "task": "Run normalisation and imputation",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "script 30 to 60 min"
+   },
+   {
+    "task": "Check effect after",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "4 plots x 8 min = 0.5 h"
+   },
+   {
+    "task": "Rework with other choice",
+    "low": 0,
+    "high": 1.0,
+    "basis": "one alternative round 1 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "Timing: 10 min (STAR Protocols (PhosR) 2021)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8190506/"
+   },
+   {
+    "label": "Timing: 10 min (STAR Protocols (PhosR) 2021)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8190506/"
+   },
+   {
+    "label": "2.5 h (Nature Protocols (MSstats) 2024)",
+    "url": "https://www.devonkohler.com/files/s41596-024-01000-3.pdf"
+   }
+  ]
+ },
+ "b7-6.s1": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 3.73,
+  "high": 8.5,
+  "unit": "Reading the vendor image files of the 5 plate screen (11,520 fields, 57,600 images) with Bio-Formats, and building a plate, well, field and channel metadata table with pixel size",
+  "ests": [
+   [
+    3.73,
+    8.75
+   ],
+   [
+    3.0,
+    7.25
+   ],
+   [
+    3.75,
+    8.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up Bio-Formats reader",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "1 reader x 30-60 min"
+   },
+   {
+    "task": "Map channels to stains",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "5 channels x 6-12 min"
+   },
+   {
+    "task": "Link plate maps to wells",
+    "low": 1.0,
+    "high": 2.0,
+    "basis": "5 plates x 12-24 min"
+   },
+   {
+    "task": "Build metadata table with pixel size",
+    "low": 1.0,
+    "high": 2.0,
+    "basis": "1 script x 1-2 h"
+   },
+   {
+    "task": "Check 5 test wells and fix errors",
+    "low": 0.75,
+    "high": 2.5,
+    "basis": "5 wells x 9 min, high adds 1.5 h fixing"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "30 min experienced, 2\u20133 h inexperienced (Nature Protocols (Cell Painting) 2023)",
+    "url": "https://carpenter-singh-lab.broadinstitute.org/files/anne/files/176_cimini_natureprotocols_2023.pdf"
+   }
+  ]
+ },
+ "b7-6.s10": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.0,
+  "high": 4.75,
+  "unit": "Aggregation of the single-cell profiles of 1,920 wells (about 1.5 million cells) into 1,920 well-level profiles, with feature selection to about 500 features",
+  "ests": [
+   [
+    2.9,
+    6.8
+   ],
+   [
+    1.75,
+    4.75
+   ],
+   [
+    2.0,
+    4.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Set up aggregation and annotation config",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "1 config x 30-60 min"
+   },
+   {
+    "task": "Run median aggregation and control normalisation",
+    "low": 0.5,
+    "high": 1.5,
+    "basis": "5 plates x 6 min launch and check, high adds rerun"
+   },
+   {
+    "task": "Run feature selection to about 500 features",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "1 run plus parameter check, 30-60 min"
+   },
+   {
+    "task": "Check output tables and distributions",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "1,920 profiles, 5 plate checks x 6-12 min"
+   }
+  ],
+  "conf": "high",
+  "ctx": [
+   {
+    "label": "30 min to 2\u20133 h (Nature Protocols (Cell Painting) 2023)",
+    "url": "https://carpenter-singh-lab.broadinstitute.org/files/anne/files/176_cimini_natureprotocols_2023.pdf"
+   }
+  ]
+ },
+ "b7-6.s11": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 3.0,
+  "high": 6.5,
+  "unit": "Hit calling on 1,920 well profiles from 5 plates with 1,500 test compounds in duplicate and control wells, giving a ranked list of about 50 hits",
+  "ests": [
+   [
+    3.65,
+    8.25
+   ],
+   [
+    3.0,
+    6.5
+   ],
+   [
+    2.25,
+    5.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Choose scoring and replicate rules",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "read pipeline docs and plate map: 0.5 to 1 h"
+   },
+   {
+    "task": "Normalise to controls and run scoring",
+    "low": 0.75,
+    "high": 2.0,
+    "basis": "script 3 methods x 15 min = 0.75 h, high adds one rerun"
+   },
+   {
+    "task": "Inspect control separation and top profiles",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "5 plates x 10 min + 10 top hits x 3 min = 1.3 h"
+   },
+   {
+    "task": "Set cutoff and rank about 50 hits",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "2 cutoffs x 15 min = 0.5 h"
+   },
+   {
+    "task": "Write hit table",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "merge compound annotations and export: 0.5 to 1 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "\u223c1 h (Nature Protocols (Cell Painting) 2023)",
+    "url": "https://carpenter-singh-lab.broadinstitute.org/files/anne/files/176_cimini_natureprotocols_2023.pdf"
+   }
+  ]
+ },
+ "b8-1.s1": {
+  "bin": 1,
+  "label": "Under 1 hour",
+  "low": 0.35,
+  "high": 1.15,
+  "unit": "Accessioning and requisition check for 3 samples (trio) of one clinical exome case, 1 test order form with consent and clinical info",
+  "ests": [
+   [
+    0.35,
+    1.15
+   ],
+   [
+    0.35,
+    1.3
+   ],
+   [
+    0.35,
+    1.15
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Review requisition against test catalog",
+    "low": 0.1,
+    "high": 0.25,
+    "basis": "1 form x 6 min low, 15 min high = 0.1 to 0.25 h"
+   },
+   {
+    "task": "Resolve missing fields with clinic",
+    "low": 0.0,
+    "high": 0.4,
+    "basis": "0 low, 1 call and 2 emails x 24 min high = 0.4 h"
+   },
+   {
+    "task": "Enter 3 samples in LIMS",
+    "low": 0.15,
+    "high": 0.3,
+    "basis": "3 samples x 3 min low, x 6 min high"
+   },
+   {
+    "task": "Print and apply labels, verify IDs",
+    "low": 0.1,
+    "high": 0.2,
+    "basis": "3 tubes x 2 min low, 4 min high"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "more than 16 minutes before, less than seven minutes after (hospital blog, self-reported None)",
+    "url": "https://www.luminishealth.org/en/blog/caped-crusaders-for-high-quality-low-cost"
+   }
+  ]
+ },
+ "b8-1.s3": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 0.75,
+  "high": 1.5,
+  "unit": "One consent and incidental findings counselling session for a trio case, about 30 minutes with the parents, recording the choice for the proband and 2 parents",
+  "ests": [
+   [
+    0.7,
+    1.5
+   ],
+   [
+    0.8,
+    1.6
+   ],
+   [
+    0.75,
+    1.4
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare chart and consent materials",
+    "low": 0.1,
+    "high": 0.25,
+    "basis": "6 to 15 min review"
+   },
+   {
+    "task": "Counselling session with parents",
+    "low": 0.5,
+    "high": 0.75,
+    "basis": "30 min low, 45 min high x 1 counselor"
+   },
+   {
+    "task": "Record choices for 3 people",
+    "low": 0.1,
+    "high": 0.25,
+    "basis": "3 x 2 min low, 5 min high"
+   },
+   {
+    "task": "Follow-up question or form fix",
+    "low": 0.0,
+    "high": 0.25,
+    "basis": "0 low, 15 min high"
+   }
+  ],
+  "conf": "high",
+  "ctx": [
+   {
+    "label": "average length of 90 min (peer-reviewed time study (Geisinger WGS research program) 2014)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4090811"
+   },
+   {
+    "label": "less than 1 h for 53% of cases and 1 to 2 h for 43% (provider survey (49 respondents, exome ordering) 2016)",
+    "url": "https://scholars.duke.edu/publication/1084053"
+   }
+  ]
+ },
+ "b8-1.s4": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 0.8,
+  "high": 2.05,
+  "unit": "One test scope decision for one patient with a rare disease phenotype, choosing between a panel of about 100 genes, an exome (about 20,000 genes) or a genome, resulting in an exome trio",
+  "ests": [
+   [
+    1.3,
+    2.4
+   ],
+   [
+    0.8,
+    2.05
+   ],
+   [
+    0.8,
+    1.95
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Review phenotype and prior results",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "1 case x 15-30 min = 0.25-0.5 h"
+   },
+   {
+    "task": "Compare panel, exome and genome options",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "3 options x 4-8 min = 0.2-0.4 h"
+   },
+   {
+    "task": "Discuss with family",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "1 discussion x 15-30 min = 0.25-0.5 h"
+   },
+   {
+    "task": "Record decision",
+    "low": 0.1,
+    "high": 0.25,
+    "basis": "1 record x 6-15 min = 0.1-0.25 h"
+   },
+   {
+    "task": "Revisit after extra prior records found",
+    "low": 0,
+    "high": 0.4,
+    "basis": "one rework round x 24 min high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-1.s8": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 3.35,
+  "high": 7.4,
+  "unit": "Orthogonal confirmation of 3 variants in one case: design and review of Sanger primers and traces for 3 amplicons from the proband, plus 2 gap exons filled by Sanger",
+  "ests": [
+   [
+    3.55,
+    8.55
+   ],
+   [
+    3.15,
+    6.95
+   ],
+   [
+    3.35,
+    7.4
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Design 5 primer pairs and check specificity",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "5 pairs x 9-18 min = 0.75-1.5 h"
+   },
+   {
+    "task": "Set up PCR for 5 amplicons",
+    "low": 0.75,
+    "high": 1.25,
+    "basis": "5 x 9-15 min incl. dilutions"
+   },
+   {
+    "task": "Cleanup and sequencing reactions",
+    "low": 0.75,
+    "high": 1.25,
+    "basis": "5 x 9-15 min"
+   },
+   {
+    "task": "Load sequencer plate",
+    "low": 0.4,
+    "high": 0.6,
+    "basis": "1 plate x 24-36 min"
+   },
+   {
+    "task": "Review 5 traces against reference",
+    "low": 0.5,
+    "high": 0.9,
+    "basis": "5 traces x 6-11 min"
+   },
+   {
+    "task": "Record results",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "5 entries x 2.5-5 min"
+   },
+   {
+    "task": "Repeat failed amplicons",
+    "low": 0,
+    "high": 1.5,
+    "basis": "2 repeats x 45 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "approximately 3 hours saved (vendor blog 2016)",
+    "url": "https://www.thermofisher.com/blog/behindthebench/a-simple-workflow-to-confirm-your-ngs-variants-seq-it-out-17"
+   }
+  ]
+ },
+ "b8-2.s6": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 1.1,
+  "high": 2.6,
+  "unit": "Splice assessment of about 30 candidate variants (those near exon boundaries or in introns) from the one exome trio, with a predictor and a check of 5 prioritised ones in a viewer",
+  "ests": [
+   [
+    1.4,
+    3.0
+   ],
+   [
+    1.1,
+    2.6
+   ],
+   [
+    0.95,
+    2.3
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Run predictor on 30 variants",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "1 run x 12-24 min = 0.2-0.4 h"
+   },
+   {
+    "task": "Read scores against thresholds",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "30 variants x 0.4-0.8 min = 0.2-0.4 h"
+   },
+   {
+    "task": "Viewer check of 5 top hits with RNA evidence",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "5 variants x 6-12 min = 0.5-1.0 h"
+   },
+   {
+    "task": "Record interpretation",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "5 variants x 2.4-4.8 min = 0.2-0.4 h"
+   },
+   {
+    "task": "Rerun after format or transcript mismatch",
+    "low": 0,
+    "high": 0.4,
+    "basis": "one rework round x 24 min high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-2.s7": {
+  "bin": 1,
+  "label": "Under 1 hour",
+  "low": 0.4,
+  "high": 1.4,
+  "unit": "Phase determination for 1 pair of heterozygous variants in one gene of the proband of a trio, using parental genotypes and read-backed evidence",
+  "ests": [
+   [
+    0.45,
+    1.55
+   ],
+   [
+    0.4,
+    1.3
+   ],
+   [
+    0.35,
+    1.4
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Check parental genotypes at both sites",
+    "low": 0.1,
+    "high": 0.2,
+    "basis": "2 sites x 3-6 min = 0.1-0.2 h"
+   },
+   {
+    "task": "Open reads in viewer and inspect read pairs",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "1 pair x 12-24 min = 0.2-0.4 h"
+   },
+   {
+    "task": "Conclude cis or trans and write case note",
+    "low": 0.1,
+    "high": 0.2,
+    "basis": "1 note x 6-12 min = 0.1-0.2 h"
+   },
+   {
+    "task": "Run read-backed phaser after unclear reads",
+    "low": 0,
+    "high": 0.5,
+    "basis": "one rework round x 30 min high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-3.s3": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 1.45,
+  "high": 3.4,
+  "unit": "Tuning the term set of one patient, 8 starting terms, over 3 rounds of rerunning a ranking tool and comparing the order of the true or likely gene",
+  "ests": [
+   [
+    1.35,
+    3.05
+   ],
+   [
+    1.55,
+    3.55
+   ],
+   [
+    1.45,
+    3.4
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Decide terms to add or drop",
+    "low": 0.4,
+    "high": 0.8,
+    "basis": "8 terms x 3-6 min = 0.4-0.8 h"
+   },
+   {
+    "task": "Run ranking 3 times",
+    "low": 0.3,
+    "high": 0.6,
+    "basis": "3 runs x 6-12 min = 0.3-0.6 h"
+   },
+   {
+    "task": "Compare result lists across rounds",
+    "low": 0.3,
+    "high": 0.6,
+    "basis": "3 rounds x 6-12 min = 0.3-0.6 h"
+   },
+   {
+    "task": "Record final set with reasons",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "1 note x 12-24 min"
+   },
+   {
+    "task": "Geneticist review",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "1 review x 15-30 min"
+   },
+   {
+    "task": "Extra tuning round after odd ranking",
+    "low": 0,
+    "high": 0.5,
+    "basis": "one round x 30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-3.s6": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 0.75,
+  "high": 1.8,
+  "unit": "Similarity comparison of 1 pair of candidate disorders, using their annotated feature sets of about 20 terms each, to judge one blended phenotype or two diagnoses",
+  "ests": [
+   [
+    0.8,
+    1.75
+   ],
+   [
+    0.75,
+    2.0
+   ],
+   [
+    0.6,
+    1.8
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Fetch both term sets",
+    "low": 0.1,
+    "high": 0.25,
+    "basis": "2 x 3 min low, x 7.5 min high"
+   },
+   {
+    "task": "Compute similarity",
+    "low": 0.15,
+    "high": 0.4,
+    "basis": "9 to 24 min"
+   },
+   {
+    "task": "Compare with patient terms",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "12 to 24 min"
+   },
+   {
+    "task": "Read shared and unique features",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "~20 terms x 2 sets, 12 to 24 min"
+   },
+   {
+    "task": "Write conclusion",
+    "low": 0.15,
+    "high": 0.3,
+    "basis": "9 to 18 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-3.s7": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.08,
+  "high": 4.35,
+  "unit": "Matchmaking query for 1 candidate gene with 8 patient terms and the variant in 3 exchange networks, then review of about 5 returned matches and contact with 2 centres",
+  "ests": [
+   [
+    1.95,
+    4.35
+   ],
+   [
+    2.15,
+    4.2
+   ],
+   [
+    2.08,
+    4.75
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare case summary and consent check",
+    "low": 0.4,
+    "high": 0.75,
+    "basis": "1 case x 25-45 min = 0.4-0.75 h"
+   },
+   {
+    "task": "Enter case in 3 exchange networks",
+    "low": 0.75,
+    "high": 1.25,
+    "basis": "3 services x 15-25 min = 0.75-1.25 h"
+   },
+   {
+    "task": "Review returned matches for phenotype fit",
+    "low": 0.6,
+    "high": 1.0,
+    "basis": "5 matches x 7-12 min = 0.6-1.0 h"
+   },
+   {
+    "task": "Write contact emails to 2 centres",
+    "low": 0.4,
+    "high": 0.7,
+    "basis": "2 emails x 12-20 min = 0.4-0.7 h"
+   },
+   {
+    "task": "Fix rejected submission or resubmit",
+    "low": 0,
+    "high": 0.5,
+    "basis": "one rework round x 30 min = 0.5 h high only"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-4.s1": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 4.0,
+  "high": 7.33,
+  "unit": "Applying ACMG/AMP evidence codes to 5 candidate variants of one trio exome case, each with about 8 evidence items to weigh.",
+  "ests": [
+   [
+    4.0,
+    6.5
+   ],
+   [
+    4.35,
+    8.35
+   ],
+   [
+    3.59,
+    7.33
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Population evidence per variant",
+    "low": 0.5,
+    "high": 0.83,
+    "basis": "5 variants x 6-10 min = 0.50-0.83 h"
+   },
+   {
+    "task": "Computational evidence per variant",
+    "low": 0.33,
+    "high": 0.67,
+    "basis": "5 variants x 4-8 min = 0.33-0.67 h"
+   },
+   {
+    "task": "Segregation evidence per variant",
+    "low": 0.42,
+    "high": 0.83,
+    "basis": "5 variants x 5-10 min = 0.42-0.83 h"
+   },
+   {
+    "task": "Literature evidence per variant",
+    "low": 1.25,
+    "high": 2.5,
+    "basis": "5 variants x 15-30 min = 1.25-2.50 h"
+   },
+   {
+    "task": "Tick codes and set strengths",
+    "low": 0.67,
+    "high": 1.0,
+    "basis": "5 variants x 8-12 min = 0.67-1.00 h"
+   },
+   {
+    "task": "Write reasoning notes",
+    "low": 0.42,
+    "high": 0.83,
+    "basis": "5 variants x 5-10 min = 0.42-0.83 h"
+   },
+   {
+    "task": "Rework contested codes",
+    "low": 0.0,
+    "high": 0.67,
+    "basis": "2 variants x 0-20 min = 0.00-0.67 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "median 30 min, first variant in gene 60 min, range 5-240 min (peer-reviewed paper (Kim et al. Genome Medicine) 2018)",
+    "url": "https://genomemedicine.biomedcentral.com/track/pdf/10.1186/s13073-018-0607-5"
+   },
+   {
+    "label": "~90 minutes (conference poster (Congenica, vendor) 2021)",
+    "url": "https://blog.congenica.com/hubfs/H%20Savage%20e-Poster%20P15-004-D-1.pdf"
+   },
+   {
+    "label": "hours of skilled person time (trial protocol 2019)",
+    "url": "https://cdn.clinicaltrials.gov/large-docs/74/NCT04196374/Prot_SAP_000.pdf"
+   }
+  ]
+ },
+ "b8-4.s3": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 1.14,
+  "high": 2.32,
+  "unit": "Point-based scoring of 5 variants of one trio exome case, plus 1 copy-number call scored with ClassifyCNV.",
+  "ests": [
+   [
+    1.14,
+    2.32
+   ],
+   [
+    1.2,
+    2.4
+   ],
+   [
+    0.84,
+    2.09
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Convert codes to points and sum",
+    "low": 0.42,
+    "high": 0.67,
+    "basis": "5 variants x 5 to 8 min = 0.42 to 0.67 h"
+   },
+   {
+    "task": "Apply PP3 BP4 point scale",
+    "low": 0.25,
+    "high": 0.42,
+    "basis": "5 variants x 3 to 5 min = 0.25 to 0.42 h"
+   },
+   {
+    "task": "Score CNV with ClassifyCNV",
+    "low": 0.3,
+    "high": 0.6,
+    "basis": "1 call x 18 to 36 min = 0.3 to 0.6 h"
+   },
+   {
+    "task": "Reconcile with tier result",
+    "low": 0.17,
+    "high": 0.33,
+    "basis": "5 variants x 2 to 4 min = 0.17 to 0.33 h"
+   },
+   {
+    "task": "Rework one mismatch",
+    "low": 0,
+    "high": 0.3,
+    "basis": "1 mismatch x 18 min = 0.3 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-4.s4": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 1.5,
+  "high": 3.25,
+  "unit": "Looking up and applying ClinGen expert panel specifications for 2 of the 5 variants whose genes have a published specification.",
+  "ests": [
+   [
+    1.5,
+    2.79
+   ],
+   [
+    1.75,
+    3.7
+   ],
+   [
+    1.33,
+    3.25
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Find current specifications",
+    "low": 0.33,
+    "high": 0.67,
+    "basis": "2 genes x 10-20 min = 0.33-0.67 h"
+   },
+   {
+    "task": "Map general codes to gene rules",
+    "low": 0.5,
+    "high": 0.83,
+    "basis": "2 genes x 15-25 min = 0.50-0.83 h"
+   },
+   {
+    "task": "Re-score variants",
+    "low": 0.33,
+    "high": 0.67,
+    "basis": "2 variants x 10-20 min = 0.33-0.67 h"
+   },
+   {
+    "task": "Record differences",
+    "low": 0.17,
+    "high": 0.33,
+    "basis": "2 variants x 5-10 min = 0.17-0.33 h"
+   },
+   {
+    "task": "Resolve spec ambiguity",
+    "low": 0.0,
+    "high": 0.75,
+    "basis": "1 item x 0-45 min = 0.00-0.75 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-4.s6": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.17,
+  "high": 4.33,
+  "unit": "Submitting 5 classified variants from one case to ClinVar and comparing each with existing submitter calls.",
+  "ests": [
+   [
+    2.17,
+    4.33
+   ],
+   [
+    2.6,
+    5.1
+   ],
+   [
+    1.67,
+    3.34
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Prepare submission file",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "1 file x 30 to 60 min = 0.5 to 1.0 h"
+   },
+   {
+    "task": "Fill evidence fields",
+    "low": 0.67,
+    "high": 1.0,
+    "basis": "5 variants x 8 to 12 min = 0.67 to 1.0 h"
+   },
+   {
+    "task": "Submit via portal",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "1 submission x 15 to 30 min = 0.25 to 0.5 h"
+   },
+   {
+    "task": "Read other labs' calls",
+    "low": 0.5,
+    "high": 0.83,
+    "basis": "5 variants x 6 to 10 min = 0.5 to 0.83 h"
+   },
+   {
+    "task": "Note conflicts",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "5 variants x 3 to 6 min = 0.25 to 0.5 h"
+   },
+   {
+    "task": "Fix validation errors",
+    "low": 0,
+    "high": 0.5,
+    "basis": "1 round x 30 min = 0.5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-4.s7": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 4.9,
+  "high": 8.93,
+  "unit": "Rechecking 50 previously classified variants in the lab's variant database against new evidence.",
+  "ests": [
+   [
+    5.08,
+    9.17
+   ],
+   [
+    4.9,
+    8.4
+   ],
+   [
+    4.52,
+    8.93
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Pull updated ClinVar and population data",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "30 to 60 min"
+   },
+   {
+    "task": "Flag changes among 50 variants",
+    "low": 1.0,
+    "high": 1.7,
+    "basis": "50 x 1.2 to 2 min"
+   },
+   {
+    "task": "Re-score about 5 flagged variants",
+    "low": 2.0,
+    "high": 3.3,
+    "basis": "5 x 24 to 40 min"
+   },
+   {
+    "task": "Record decisions",
+    "low": 0.4,
+    "high": 0.7,
+    "basis": "5 x 5 to 8 min"
+   },
+   {
+    "task": "Lab director sign-off",
+    "low": 1.0,
+    "high": 1.0,
+    "basis": "1 person x 1 h"
+   },
+   {
+    "task": "Fix data pull or rerun",
+    "low": 0.0,
+    "high": 0.7,
+    "basis": "one round 42 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "many hours of expert review per variant (conference abstract (ClinGen) 2019)",
+    "url": "https://www.acmgmeeting.net/conference-program/clingen-curation-clinvar-improving-critical-community-resourcestrong-strong"
+   }
+  ]
+ },
+ "b8-5.s3": {
+  "bin": 1,
+  "label": "Under 1 hour",
+  "low": 0.5,
+  "high": 1.33,
+  "unit": "Computing and checking the post-test probability for the top candidate of one trio exome case with 6 HPO terms.",
+  "ests": [
+   [
+    0.65,
+    1.45
+   ],
+   [
+    0.5,
+    1.25
+   ],
+   [
+    0.42,
+    1.33
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Run LIRICAL on case",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "1 run x 12 to 24 min"
+   },
+   {
+    "task": "Check result in IGV",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "1 variant x 12 to 24 min"
+   },
+   {
+    "task": "Write probability in case notes",
+    "low": 0.1,
+    "high": 0.15,
+    "basis": "6 to 9 min"
+   },
+   {
+    "task": "Rerun after HPO fix",
+    "low": 0.0,
+    "high": 0.3,
+    "basis": "one round 18 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-5.s4": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 1.55,
+  "high": 3.2,
+  "unit": "One dual diagnosis check on a trio exome case where the top 3 candidates cover different feature groups.",
+  "ests": [
+   [
+    1.6,
+    3.2
+   ],
+   [
+    1.35,
+    2.8
+   ],
+   [
+    1.55,
+    3.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Split HPO terms by candidate",
+    "low": 0.2,
+    "high": 0.3,
+    "basis": "6 terms x 2 to 3 min = 0.2 to 0.3 h"
+   },
+   {
+    "task": "Review top 3 genes vs features",
+    "low": 0.75,
+    "high": 1.25,
+    "basis": "3 genes x 15 to 25 min = 0.75 to 1.25 h"
+   },
+   {
+    "task": "Check reads in IGV",
+    "low": 0.25,
+    "high": 0.4,
+    "basis": "3 genes x 5 to 8 min = 0.25 to 0.4 h"
+   },
+   {
+    "task": "Judge need for two diagnoses",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "1 decision x 15 to 30 min = 0.25 to 0.5 h"
+   },
+   {
+    "task": "Write note",
+    "low": 0.15,
+    "high": 0.25,
+    "basis": "1 note x 9 to 15 min = 0.15 to 0.25 h"
+   },
+   {
+    "task": "Extra literature check",
+    "low": 0,
+    "high": 0.5,
+    "basis": "1 round x 30 min = 0.5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-5.s5": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.7,
+  "high": 4.9,
+  "unit": "Writing one clinical exome report for a trio with 1 reported variant, evidence summary and limitation section.",
+  "ests": [
+   [
+    3.05,
+    5.25
+   ],
+   [
+    2.7,
+    4.9
+   ],
+   [
+    1.84,
+    3.84
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "HGVS naming and validation",
+    "low": 0.2,
+    "high": 0.4,
+    "basis": "1 variant x 12 to 24 min"
+   },
+   {
+    "task": "Write result and evidence text",
+    "low": 0.7,
+    "high": 1.2,
+    "basis": "1 section x 42 to 72 min"
+   },
+   {
+    "task": "Write limitation section",
+    "low": 0.4,
+    "high": 0.7,
+    "basis": "24 to 42 min"
+   },
+   {
+    "task": "Check facts and format",
+    "low": 0.4,
+    "high": 0.6,
+    "basis": "24 to 36 min"
+   },
+   {
+    "task": "Internal review and fixes",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "scientist round 30 to 60 min"
+   },
+   {
+    "task": "Director review",
+    "low": 0.5,
+    "high": 0.5,
+    "basis": "1 person x 0.5 h"
+   },
+   {
+    "task": "Rework after review",
+    "low": 0.0,
+    "high": 0.5,
+    "basis": "30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "~90 minutes (conference poster (Congenica, vendor) 2021)",
+    "url": "https://blog.congenica.com/hubfs/H%20Savage%20e-Poster%20P15-004-D-1.pdf"
+   }
+  ]
+ },
+ "b8-5.s6": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 0.84,
+  "high": 2.05,
+  "unit": "Secondary findings check of one exome case against the ACMG list of 81 genes.",
+  "ests": [
+   [
+    1.0,
+    2.05
+   ],
+   [
+    0.7,
+    1.8
+   ],
+   [
+    0.84,
+    2.16
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Run gene list filter",
+    "low": 0.17,
+    "high": 0.33,
+    "basis": "1 item x 10-20 min = 0.17-0.33 h"
+   },
+   {
+    "task": "Review 3 hits for P or LP status",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "3 variants x 10-20 min = 0.50-1.00 h"
+   },
+   {
+    "task": "Write result or negative statement",
+    "low": 0.17,
+    "high": 0.33,
+    "basis": "1 item x 10-20 min = 0.17-0.33 h"
+   },
+   {
+    "task": "Fix filter issue",
+    "low": 0.0,
+    "high": 0.5,
+    "basis": "1 item x 0-30 min = 0.00-0.50 h"
+   }
+  ],
+  "conf": "high",
+  "ctx": [
+   {
+    "label": "filtering 65.7 vs 8.5 min, classification 497.8 vs 37.4 min, report 157.2 vs 47.9 min (conference abstract (ACMG) 2023)",
+    "url": "https://www.acmgmeeting.net/conference-program/opportunistic-screening-broad-range-clinically-relevant-secondary-findings-outcomes-exome-analysis-incidental-genomics-rct"
+   }
+  ]
+ },
+ "b8-6.s2": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 1.58,
+  "high": 3.67,
+  "unit": "Assigning tiers to the 40 somatic variants of one tumour-normal 500-gene panel case, of which 5 are tier-relevant.",
+  "ests": [
+   [
+    2.2,
+    4.23
+   ],
+   [
+    1.5,
+    2.75
+   ],
+   [
+    1.58,
+    3.67
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Read relevant variants against tumour type",
+    "low": 0.83,
+    "high": 1.67,
+    "basis": "5 variants x 10-20 min = 0.83-1.67 h"
+   },
+   {
+    "task": "Run tier tool and compare",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "5 variants x 3-6 min = 0.25-0.50 h"
+   },
+   {
+    "task": "Reconcile differences",
+    "low": 0.17,
+    "high": 0.83,
+    "basis": "5 variants x 2-10 min = 0.17-0.83 h"
+   },
+   {
+    "task": "Record tier with reasoning",
+    "low": 0.33,
+    "high": 0.67,
+    "basis": "5 variants x 4-8 min = 0.33-0.67 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "12 minutes before, under 5 after (vendor case study (Agilent/Genoptix) 2020)",
+    "url": "https://agilent.com/cs/library/brochures/5991-9205EN_AlissaInterpret_CS_Genoptix_NGSAutoPipeline.pdf"
+   }
+  ]
+ },
+ "b8-6.s4": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.17,
+  "high": 4.59,
+  "unit": "Evidence-level grading for 5 relevant variants of one tumour-normal 500-gene panel case.",
+  "ests": [
+   [
+    3.08,
+    5.17
+   ],
+   [
+    1.95,
+    3.85
+   ],
+   [
+    2.17,
+    4.59
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Read cited trials and papers",
+    "low": 1.67,
+    "high": 2.92,
+    "basis": "5 claims x 20-35 min = 1.67-2.92 h"
+   },
+   {
+    "task": "Assign level A to D",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "5 claims x 3-6 min = 0.25-0.50 h"
+   },
+   {
+    "task": "Write one-line justification",
+    "low": 0.25,
+    "high": 0.42,
+    "basis": "5 claims x 3-5 min = 0.25-0.42 h"
+   },
+   {
+    "task": "Resolve ambiguous evidence",
+    "low": 0.0,
+    "high": 0.75,
+    "basis": "1 item x 0-45 min = 0.00-0.75 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-6.s8": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 1.55,
+  "high": 2.67,
+  "unit": "Flagging likely germline variants among 40 somatic calls of one tumour-normal 500-gene panel case, with 2 suspected.",
+  "ests": [
+   [
+    1.82,
+    2.98
+   ],
+   [
+    1.55,
+    2.45
+   ],
+   [
+    1.08,
+    2.67
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Review allele fractions near 50 percent and predisposition genes",
+    "low": 0.4,
+    "high": 0.7,
+    "basis": "40 calls x 0.75 min scan = 0.5 h"
+   },
+   {
+    "task": "Classify the 2 suspect variants",
+    "low": 0.5,
+    "high": 0.9,
+    "basis": "2 variants x 15 to 27 min = 0.5-0.9 h"
+   },
+   {
+    "task": "Write referral and counselling note",
+    "low": 0.4,
+    "high": 0.6,
+    "basis": "1 note x 25 to 35 min"
+   },
+   {
+    "task": "Geneticist review 15 min",
+    "low": 0.25,
+    "high": 0.25,
+    "basis": "1 person x 0.25 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-7.s1": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 9.8,
+  "high": 16.5,
+  "unit": "one gene-drug pair review: 25 candidate gene-drug pairs for the 12-gene panel, each checked against CPIC/PharmGKB evidence levels and local prescribing volume",
+  "ests": [
+   [
+    9.34,
+    14.75
+   ],
+   [
+    9.8,
+    16.5
+   ],
+   [
+    10.0,
+    17.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Each person reads CPIC and PharmGKB entries",
+    "low": 3.3,
+    "high": 5,
+    "basis": "2 people x 25 pairs x 4-6 min = 3.3-5 h"
+   },
+   {
+    "task": "Tally local prescribing volume per pair",
+    "low": 1.5,
+    "high": 3,
+    "basis": "25 pairs x 4-7 min, one person = 1.7-2.9 h"
+   },
+   {
+    "task": "Pre-meeting notes and draft ranking",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "2 people x 0.75-1.25 h = 1.5-2.5 h"
+   },
+   {
+    "task": "Joint meeting discussing pairs",
+    "low": 2,
+    "high": 2,
+    "basis": "2 people x 1 h = 2 h"
+   },
+   {
+    "task": "Write shortlist with reasons",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "25 pairs x 3-5 min = 1.25-2.1 h, rounded"
+   },
+   {
+    "task": "Rework after disputed pairs",
+    "low": 0,
+    "high": 1.5,
+    "basis": "Re-check 6 pairs x 2 people x 7 min = 1.4 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-7.s4": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 1.1,
+  "high": 2.7,
+  "unit": "one patient prescribing decision: 1 drug (for example a thiopurine or clopidogrel) for 1 patient with a known phenotype, choosing dose or alternative from the guideline",
+  "ests": [
+   [
+    0.85,
+    1.9
+   ],
+   [
+    1.1,
+    2.8
+   ],
+   [
+    1.15,
+    2.7
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Find guideline entry for the drug",
+    "low": 0.15,
+    "high": 0.3,
+    "basis": "1 drug x 10-20 min"
+   },
+   {
+    "task": "Check phenotype and patient chart",
+    "low": 0.4,
+    "high": 0.75,
+    "basis": "1 patient x 25-45 min for renal, liver, co-drugs"
+   },
+   {
+    "task": "Choose dose or alternative",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "1 decision x 15-30 min"
+   },
+   {
+    "task": "Write recommendation note",
+    "low": 0.3,
+    "high": 0.5,
+    "basis": "1 note x 20-30 min"
+   },
+   {
+    "task": "Rework for interacting drugs or edge phenotype",
+    "low": 0,
+    "high": 0.75,
+    "basis": "One extra check, 45 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "24 minutes (peer-reviewed (Mayo Clinic experience) 2023)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37478473/"
+   }
+  ]
+ },
+ "b8-8.s2": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 11.0,
+  "high": 19.5,
+  "unit": "one board preparation and review of 10 cases: for each case, read the panel report alongside tumour type, stage, prior treatments and performance status",
+  "ests": [
+   [
+    9.17,
+    14.83
+   ],
+   [
+    13.5,
+    24.0
+   ],
+   [
+    11.0,
+    19.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Pre-read 10 charts",
+    "low": 5.0,
+    "high": 8.0,
+    "basis": "2 people x 10 x 15-24 min = 5 to 8 h"
+   },
+   {
+    "task": "Review 30 alterations vs context",
+    "low": 2.0,
+    "high": 3.0,
+    "basis": "2 people x 30 x 2-3 min = 2 to 3 h"
+   },
+   {
+    "task": "Build 10 slides",
+    "low": 3.0,
+    "high": 5.0,
+    "basis": "1 person x 10 x 18-30 min = 3 to 5 h"
+   },
+   {
+    "task": "Present cases",
+    "low": 1.0,
+    "high": 2.0,
+    "basis": "10 x 6-12 min"
+   },
+   {
+    "task": "Rework slides after missing data",
+    "low": 0,
+    "high": 1.5,
+    "basis": "1.5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "65 v 46.7 minutes (peer-reviewed (JCO Clin Cancer Inform) 2020)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7469605/"
+   },
+   {
+    "label": "1.6 to 6 hours (peer-reviewed survey of Italian molecular genetics labs (PLOS ONE) 2018)",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0206855"
+   }
+  ]
+ },
+ "b8-8.s4": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.2,
+  "high": 4.5,
+  "unit": "one tumour-agnostic marker check for 10 cases: MSI, tumour mutational burden, NTRK/RET fusions, BRAF V600 for each",
+  "ests": [
+   [
+    2.17,
+    4.34
+   ],
+   [
+    2.2,
+    4.5
+   ],
+   [
+    3.2,
+    7.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Read MSI, TMB, fusion and BRAF values",
+    "low": 0.5,
+    "high": 0.8,
+    "basis": "10 cases x 3-5 min = 0.5-0.8 h"
+   },
+   {
+    "task": "Check quality of calls",
+    "low": 1,
+    "high": 1.5,
+    "basis": "10 cases x 6-9 min"
+   },
+   {
+    "task": "Compare with thresholds",
+    "low": 0.3,
+    "high": 0.5,
+    "basis": "40 values x 0.5-0.75 min"
+   },
+   {
+    "task": "Note results per case",
+    "low": 0.4,
+    "high": 0.7,
+    "basis": "10 cases x 2.5-4 min"
+   },
+   {
+    "task": "Rework borderline TMB or MSI recheck",
+    "low": 0,
+    "high": 1,
+    "basis": "2 cases x 30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-8.s6": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.1,
+  "high": 5.25,
+  "unit": "one trial search for 1 patient with 1 actionable alteration and no approved drug: search ClinicalTrials.gov and local lists, check eligibility, refer",
+  "ests": [
+   [
+    2.0,
+    5.25
+   ],
+   [
+    2.1,
+    4.65
+   ],
+   [
+    2.75,
+    7.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Search registries and local lists",
+    "low": 0.5,
+    "high": 1,
+    "basis": "1 patient x 30-60 min"
+   },
+   {
+    "task": "Read eligibility rules of 3-5 trials",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "3-5 trials x 10-12 min = 0.5-1 h"
+   },
+   {
+    "task": "Check distance and fitness with chart",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "15-30 min"
+   },
+   {
+    "task": "Contact trial site and exchange info",
+    "low": 0.5,
+    "high": 1.25,
+    "basis": "1 site x 30-75 min"
+   },
+   {
+    "task": "Redo search after no match",
+    "low": 0,
+    "high": 1,
+    "basis": "one rework 0-1 h"
+   },
+   {
+    "task": "Document referral",
+    "low": 0.25,
+    "high": 0.5,
+    "basis": "15-30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": [
+   {
+    "label": "about 120 min (peer-reviewed (ESMO Real World Data and Digital Oncology) 2026)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13091143/"
+   }
+  ]
+ },
+ "b8-8.s8": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 6.75,
+  "high": 13.5,
+  "unit": "one quarterly quality report for the board: turnaround and recommendation uptake over about 120 cases (10 per week for 12 weeks)",
+  "ests": [
+   [
+    5.5,
+    12.0
+   ],
+   [
+    6.75,
+    13.5
+   ],
+   [
+    7.0,
+    16.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Define indicators",
+    "low": 1,
+    "high": 2,
+    "basis": "6 indicators x 10-20 min"
+   },
+   {
+    "task": "Extract data for 120 cases",
+    "low": 2,
+    "high": 3.5,
+    "basis": "120 x 1-1.75 min"
+   },
+   {
+    "task": "Compute times and rates",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "6 indicators x 15-25 min"
+   },
+   {
+    "task": "Review results",
+    "low": 0.75,
+    "high": 1.5,
+    "basis": "1 pass x 45-90 min"
+   },
+   {
+    "task": "Write summary",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "1 report x 1.5-2.5 h"
+   },
+   {
+    "task": "Rework missing timestamps",
+    "low": 0,
+    "high": 1.5,
+    "basis": "One cleanup round 1.5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-9.s6": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 3.3,
+  "high": 7.1,
+  "unit": "one proficiency testing round: 5 blind samples from an external provider, analysed like patient samples, with the score report reviewed",
+  "ests": [
+   [
+    2.85,
+    6.92
+   ],
+   [
+    3.3,
+    7.1
+   ],
+   [
+    5.0,
+    10.75
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Log in 5 blind samples",
+    "low": 0.4,
+    "high": 0.6,
+    "basis": "5 x 5-7 min"
+   },
+   {
+    "task": "Technologist routine hands-on for 5 samples",
+    "low": 2,
+    "high": 3,
+    "basis": "5 samples x 25-35 min share"
+   },
+   {
+    "task": "Enter results",
+    "low": 0.4,
+    "high": 0.75,
+    "basis": "5 x 5-9 min"
+   },
+   {
+    "task": "Director reviews score report",
+    "low": 0.5,
+    "high": 0.75,
+    "basis": "1 report x 30-45 min"
+   },
+   {
+    "task": "Corrective action write-up",
+    "low": 0,
+    "high": 2,
+    "basis": "One miss x 2 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-9.s8": {
+  "bin": 2,
+  "label": "1 hour to 1 day",
+  "low": 2.5,
+  "high": 6.5,
+  "unit": "one corrected report: 1 wrong result found after release, phoning the doctor, issuing an amended report and filing the original",
+  "ests": [
+   [
+    3.3,
+    7.5
+   ],
+   [
+    2.25,
+    5.5
+   ],
+   [
+    2.5,
+    6.5
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Verify the error",
+    "low": 0.5,
+    "high": 1.5,
+    "basis": "re-review case 30-90 min"
+   },
+   {
+    "task": "Phone doctor and document call",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "call and note 2 people x 15-30 min = 0.5 to 1 h"
+   },
+   {
+    "task": "Write amended report and retain original",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "30-60 min"
+   },
+   {
+    "task": "File incident and audit trail",
+    "low": 0.5,
+    "high": 1.5,
+    "basis": "incident form 30-90 min"
+   },
+   {
+    "task": "Second review by geneticist",
+    "low": 0.5,
+    "high": 1.0,
+    "basis": "30-60 min"
+   },
+   {
+    "task": "Rework amended report",
+    "low": 0,
+    "high": 0.5,
+    "basis": "one correction 30 min"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
+ },
+ "b8-9.s9": {
+  "bin": 3,
+  "label": "1 day to 1 week",
+  "low": 8.0,
+  "high": 13.0,
+  "unit": "one quarterly review of about 300 reports (100 per month): list errors and delays, find the causes, and change procedures",
+  "ests": [
+   [
+    8.5,
+    15.0
+   ],
+   [
+    8.0,
+    13.0
+   ],
+   [
+    7.0,
+    11.0
+   ]
+  ],
+  "tasks": [
+   {
+    "task": "Extract error and delay logs",
+    "low": 1,
+    "high": 2,
+    "basis": "300 reports x 0.2-0.4 min"
+   },
+   {
+    "task": "Group causes",
+    "low": 1.5,
+    "high": 3,
+    "basis": "60 events x 1.5-3 min"
+   },
+   {
+    "task": "Quality meeting",
+    "low": 4,
+    "high": 4,
+    "basis": "2 people x 2 h"
+   },
+   {
+    "task": "Write corrective actions",
+    "low": 1.5,
+    "high": 2.5,
+    "basis": "5 actions x 18-30 min"
+   },
+   {
+    "task": "Rework after follow-up questions",
+    "low": 0,
+    "high": 1.5,
+    "basis": "One round 1.5 h"
+   }
+  ],
+  "conf": "medium",
+  "ctx": []
  }
 }</script>
 <script id="rdata" type="application/json">{
