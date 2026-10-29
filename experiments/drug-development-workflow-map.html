@@ -250,6 +250,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .dts span{font:500 10px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--faint);margin-right:2px}
 .dts i{font:500 10.5px var(--mono);font-style:normal;padding:3px 7px;border-radius:999px;background:var(--surface2);color:var(--ink);border:1px solid var(--line)}
 .dnone{font-size:12.5px;color:var(--muted);font-style:italic}
+.vtag{font:600 9.5px/1 var(--mono);font-style:normal;letter-spacing:.05em;text-transform:uppercase;padding:3px 7px;border-radius:999px;white-space:nowrap;flex:0 0 auto;margin-top:3px}
+.vtag.v-strict{background:var(--accent);color:var(--bg)}
+.vtag.v-loose{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.wstep > summary > .vtag{grid-column:3;grid-row:1}
+.vwhy{font-size:12.5px;line-height:1.5;padding-left:9px;border-left:3px solid var(--line);color:var(--muted)}
+.vwhy.v-strict{border-left-color:var(--accent)}
+.vwhy b{font:600 10px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-right:6px}
+.vcount{font-size:13px;color:var(--muted);margin-top:4px}
+.vcount b{color:var(--ink)}
 /* stacked tree for narrow screens */
 .vtree{display:none;margin-top:22px}
 .vtree ul{list-style:none;margin:0;padding:0}
@@ -56238,6 +56247,964 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
   ]
  }
 }</script>
+<script id="vdata" type="application/json">{
+ "b1-1.s1": {
+  "label": "loose",
+  "why": "Written framing of unmet need, no fixed correct answer"
+ },
+ "b1-1.s2": {
+  "label": "loose",
+  "why": "Candidate genes from text mining; relevance is a judgment"
+ },
+ "b1-1.s3": {
+  "label": "strict",
+  "why": "Harmonic sum association scores follow Open Targets published formula"
+ },
+ "b1-1.s4": {
+  "label": "strict",
+  "why": "GWAS association statistics recomputed and matched to published summary stats"
+ },
+ "b1-1.s5": {
+  "label": "strict",
+  "why": "Differential expression table from counts, checked against published DE results"
+ },
+ "b1-1.s6": {
+  "label": "strict",
+  "why": "Gene effect ranking from sgRNA counts, checked against reference essential sets"
+ },
+ "b1-1.s7": {
+  "label": "loose",
+  "why": "Antibody panning bench work and target identity judgment"
+ },
+ "b1-1.s8": {
+  "label": "loose",
+  "why": "Safety and workability triage is expert judgment on checklists"
+ },
+ "b1-1.s9": {
+  "label": "loose",
+  "why": "Go or no-go leadership decision has no fixed answer"
+ },
+ "b1-2.s1": {
+  "label": "loose",
+  "why": "Planning which validation tests are needed is a design choice"
+ },
+ "b1-2.s2": {
+  "label": "loose",
+  "why": "Probe validity is an expert judgment across many assays"
+ },
+ "b1-2.s3": {
+  "label": "loose",
+  "why": "Animal work and phenotype interpretation, no fixed correct answer"
+ },
+ "b1-2.s4": {
+  "label": "loose",
+  "why": "Making antibodies is bench work, binding checks secondary"
+ },
+ "b1-2.s5": {
+  "label": "loose",
+  "why": "Mechanism interpretation of compound action is reasoning, experts may differ"
+ },
+ "b1-2.s6": {
+  "label": "loose",
+  "why": "Storage and record linking is data management, no graded result"
+ },
+ "b1-2.s7": {
+  "label": "loose",
+  "why": "Regulatory posture is a policy judgment, no dataset"
+ },
+ "b1-2.s8": {
+  "label": "loose",
+  "why": "Gate on whether evidence suffices is a leadership decision"
+ },
+ "b1-3.s1": {
+  "label": "loose",
+  "why": "Choosing assay format and sourcing reagents is a design choice"
+ },
+ "b1-3.s2": {
+  "label": "loose",
+  "why": "Moving assay to small wells is bench optimisation, no fixed answer"
+ },
+ "b1-3.s3": {
+  "label": "strict",
+  "why": "Z prime computed from control wells with 0.5 acceptance threshold"
+ },
+ "b1-3.s4": {
+  "label": "strict",
+  "why": "IC50 and Hill fits from raw dose tables, checked against fitted parameters"
+ },
+ "b1-3.s5": {
+  "label": "loose",
+  "why": "instrument connection setup is engineering and bench work, no computed answer"
+ },
+ "b1-3.s6": {
+  "label": "strict",
+  "why": "plate pass or fail from Z-prime and control thresholds"
+ },
+ "b1-3.s7": {
+  "label": "strict",
+  "why": "cell feature tables checked against segmentation ground-truth masks"
+ },
+ "b1-3.s8": {
+  "label": "loose",
+  "why": "readiness sign-off is a go or no-go judgment"
+ },
+ "b1-4.s1": {
+  "label": "loose",
+  "why": "picking a library is a choice experts may disagree on"
+ },
+ "b1-4.s2": {
+  "label": "loose",
+  "why": "screening strategy is a planning choice with no fixed answer"
+ },
+ "b1-4.s3": {
+  "label": "strict",
+  "why": "enrichment counts from reads checked against KinDEL held-out affinities"
+ },
+ "b1-4.s4": {
+  "label": "loose",
+  "why": "robotic screen run is physical bench work, output not a computed answer"
+ },
+ "b1-4.s5": {
+  "label": "strict",
+  "why": "plate QC pass or fail by Z-prime and threshold on metrics"
+ },
+ "b1-4.s6": {
+  "label": "loose",
+  "why": "visual heat map review and failing plates is a judgment call"
+ },
+ "b1-4.s7": {
+  "label": "loose",
+  "why": "activity cut-off choice is a judgment, experts differ"
+ },
+ "b1-4.s8": {
+  "label": "loose",
+  "why": "immunizing or panning to make antibodies is bench work"
+ },
+ "b1-4.s9": {
+  "label": "loose",
+  "why": "expert review of designed libraries is a judgment task"
+ },
+ "b1-4.s10": {
+  "label": "loose",
+  "why": "hit worth chemistry is a go or no-go decision"
+ },
+ "b1-4.s11": {
+  "label": "strict",
+  "why": "V(D)J reads assembled and aligned, checked against known repertoire clones"
+ },
+ "b1-4.s12": {
+  "label": "strict",
+  "why": "germline gene calls checked against IMGT reference and expected assignments"
+ },
+ "b1-4.s13": {
+  "label": "strict",
+  "why": "clone groups from set junction distance threshold, checkable by reference clustering"
+ },
+ "b1-4.s14": {
+  "label": "loose",
+  "why": "tree inference has many valid methods, no single fixed correct tree"
+ },
+ "b1-4.s15": {
+  "label": "strict",
+  "why": "AIRR schema validation by airr-tools gives fixed pass or fail"
+ },
+ "b1-4.s16": {
+  "label": "loose",
+  "why": "packaging and repository deposition is a filing task, no computed answer"
+ },
+ "b1-4.s17": {
+  "label": "loose",
+  "why": "Method and cutoff for calling binders vary, no ground truth"
+ },
+ "b1-4.s18": {
+  "label": "strict",
+  "why": "mixed-model variance estimates reproducible against lme4 reference fit"
+ },
+ "b1-5.s1": {
+  "label": "loose",
+  "why": "team agreement on which hits merit work is a recorded decision"
+ },
+ "b1-5.s2": {
+  "label": "strict",
+  "why": "PAINS SMARTS matches by RDKit give a fixed flag list"
+ },
+ "b1-5.s3": {
+  "label": "strict",
+  "why": "Butina clusters from fixed fingerprint and cutoff are deterministic"
+ },
+ "b1-5.s4": {
+  "label": "strict",
+  "why": "four-parameter logistic fit gives fixed IC50 and Hill slope values"
+ },
+ "b1-5.s5": {
+  "label": "strict",
+  "why": "Purity from HPLC integrals against fixed 90 percent gate"
+ },
+ "b1-5.s6": {
+  "label": "loose",
+  "why": "chemist judgment on whether a core is tractable, experts differ"
+ },
+ "b1-5.s7": {
+  "label": "loose",
+  "why": "choosing potency cutoffs for hit status is a judgment call"
+ },
+ "b1-5.s8": {
+  "label": "loose",
+  "why": "ranking antibodies and picking epitope spread is a weighed judgment"
+ },
+ "b1-5.s9": {
+  "label": "loose",
+  "why": "deciding which binding numbers are real is a reasoning step"
+ },
+ "b1-5.s10": {
+  "label": "loose",
+  "why": "resource-driven portfolio gate, no fixed correct answer"
+ },
+ "b1-5.s11": {
+  "label": "strict",
+  "why": "AIC-selected log-logistic fit and ED50 checkable against drc output"
+ },
+ "b1-5.s12": {
+  "label": "strict",
+  "why": "censored-data MLE estimates computed by Tobit or NADA formulas"
+ },
+ "b1-5.s13": {
+  "label": "strict",
+  "why": "Z prime, SSMD and MSR computed from plate data with set thresholds"
+ },
+ "b1-6.s1": {
+  "label": "loose",
+  "why": "writing potency, selectivity and dose goals is a planning document"
+ },
+ "b1-6.s2": {
+  "label": "loose",
+  "why": "iterative design-make-test choices, no single correct analog set"
+ },
+ "b1-6.s3": {
+  "label": "loose",
+  "why": "design choices from viewing 3D structure, experts disagree"
+ },
+ "b1-6.s4": {
+  "label": "loose",
+  "why": "route choice and bench synthesis, not a computed answer"
+ },
+ "b1-6.s5": {
+  "label": "loose",
+  "why": "Cascade design is a planning choice with no fixed answer"
+ },
+ "b1-6.s6": {
+  "label": "strict",
+  "why": "Clearance and solubility computed by standard formulas from assay data"
+ },
+ "b1-6.s7": {
+  "label": "loose",
+  "why": "Choosing animal model questions is experimental judgment, not a computed result"
+ },
+ "b1-6.s8": {
+  "label": "loose",
+  "why": "Wet-lab selection rounds, outcome is bench work not a fixed computed answer"
+ },
+ "b1-6.s9": {
+  "label": "loose",
+  "why": "Choosing humanization mutations trades off risks, experts could differ"
+ },
+ "b1-6.s10": {
+  "label": "loose",
+  "why": "Lead family declaration is a go decision with no fixed answer"
+ },
+ "b1-6.s11": {
+  "label": "loose",
+  "why": "Linker and site choice is a design judgment with several defensible options"
+ },
+ "b1-6.s12": {
+  "label": "strict",
+  "why": "Mean DAR from deconvolved native mass spectra has a fixed weighted-average formula"
+ },
+ "b1-6.s13": {
+  "label": "loose",
+  "why": "Redesign of antibody for even loading is engineering design, no single answer"
+ },
+ "b1-7.s1": {
+  "label": "loose",
+  "why": "Deciding which properties to keep or fix is a framing choice"
+ },
+ "b1-7.s2": {
+  "label": "loose",
+  "why": "Redesign to fix hERG or CYP risk is open design, many valid analogs"
+ },
+ "b1-7.s3": {
+  "label": "loose",
+  "why": "Iterative cycle is a loop of design and making, not one checkable output"
+ },
+ "b1-7.s4": {
+  "label": "strict",
+  "why": "Ligand efficiency and LLE come from fixed formulas on potency and size"
+ },
+ "b1-7.s5": {
+  "label": "strict",
+  "why": "PK parameters like AUC and clearance computed by NCA from concentration-time data"
+ },
+ "b1-7.s6": {
+  "label": "strict",
+  "why": "Warning flags counted from assay values against published Jain thresholds"
+ },
+ "b1-7.s7": {
+  "label": "loose",
+  "why": "Balancing binding, stability and immune risk is a weighted judgment"
+ },
+ "b1-7.s8": {
+  "label": "loose",
+  "why": "Choosing backup series and diversity is a portfolio judgment"
+ },
+ "b1-7.s9": {
+  "label": "loose",
+  "why": "Committee sign-off gate has no public data or fixed answer"
+ },
+ "b1-7.s10": {
+  "label": "strict",
+  "why": "Flag count per antibody from panel values against fixed cutoffs"
+ },
+ "b1-7.s11": {
+  "label": "strict",
+  "why": "AC-SINS plasmon shift computed from spectra, with published reference values"
+ },
+ "b1-7.s12": {
+  "label": "loose",
+  "why": "Wet-lab PSR and BVP signals, no fixed rule gives the answer"
+ },
+ "b1-7.s13": {
+  "label": "loose",
+  "why": "Bench HIC and SEC retention runs, no computed hidden answer"
+ },
+ "b1-7.s14": {
+  "label": "loose",
+  "why": "Warm-storage bench study, monomer loss has no single fixed answer"
+ },
+ "b1-7.s15": {
+  "label": "loose",
+  "why": "Bench expression and DSF measurements, not a rule-fixed computation"
+ },
+ "b1-7.s16": {
+  "label": "loose",
+  "why": "Risk weighing of predicted epitopes and ADA rates is judgment"
+ },
+ "b1-8.s1": {
+  "label": "loose",
+  "why": "Assembling a multi-assay package is planning and document work"
+ },
+ "b1-8.s2": {
+  "label": "loose",
+  "why": "Criteria check against guideline targets leaves room for expert disagreement"
+ },
+ "b1-8.s3": {
+  "label": "loose",
+  "why": "XRD and solubility bench work, form calls are expert judgment"
+ },
+ "b1-8.s4": {
+  "label": "loose",
+  "why": "Cell line building and banking is bench work with no computed answer"
+ },
+ "b1-8.s5": {
+  "label": "loose",
+  "why": "Agreeing target properties is a team choice with no fixed answer"
+ },
+ "b1-8.s6": {
+  "label": "loose",
+  "why": "Scoring weights are arbitrary, ranking robustness is a judgment"
+ },
+ "b1-8.s7": {
+  "label": "loose",
+  "why": "Weighing predictive value of a gate rests on private assumptions"
+ },
+ "b1-8.s8": {
+  "label": "loose",
+  "why": "Governance meeting and dossier, a go decision with no fixed answer"
+ },
+ "b1-8.s9": {
+  "label": "strict",
+  "why": "Worst-decile percentile cutoffs computed from reference antibody dataset"
+ },
+ "b1-8.s10": {
+  "label": "loose",
+  "why": "Setting release specs is a judgment about attributes and limits"
+ },
+ "b1-8.s11": {
+  "label": "loose",
+  "why": "Choosing methods for a linker and payload is expert choice"
+ },
+ "b7-1.s1": {
+  "label": "strict",
+  "why": "Run QC metrics from InterOp checked against vendor thresholds"
+ },
+ "b7-1.s2": {
+  "label": "strict",
+  "why": "Per-sample read counts checked against known sample sheet truth"
+ },
+ "b7-1.s3": {
+  "label": "strict",
+  "why": "Adapter trimming and QC metrics checkable against known bad reads"
+ },
+ "b7-1.s4": {
+  "label": "strict",
+  "why": "Alignments checked against reference genome and truth BAM positions"
+ },
+ "b7-1.s5": {
+  "label": "strict",
+  "why": "mosdepth depth and breadth computed, fixed by coverage thresholds"
+ },
+ "b7-1.s6": {
+  "label": "strict",
+  "why": "duplication rate and FREEMIX computed from BAM, standard cutoffs"
+ },
+ "b7-1.s7": {
+  "label": "strict",
+  "why": "fingerprint concordance LOD and sex check, known sample truth"
+ },
+ "b7-1.s8": {
+  "label": "strict",
+  "why": "CRAM conversion, quickcheck and md5 checks are exact and scriptable"
+ },
+ "b7-2.s1": {
+  "label": "loose",
+  "why": "Filter thresholds and tools vary, experts differ"
+ },
+ "b7-2.s2": {
+  "label": "strict",
+  "why": "Library-size log normalisation is a fixed formula"
+ },
+ "b7-2.s3": {
+  "label": "strict",
+  "why": "Top variable genes by defined dispersion formula, deterministic"
+ },
+ "b7-2.s4": {
+  "label": "loose",
+  "why": "PC count and UMAP layout are judgment and stochastic"
+ },
+ "b7-2.s5": {
+  "label": "loose",
+  "why": "Integration method choice and stochastic output, no single answer"
+ },
+ "b7-2.s6": {
+  "label": "loose",
+  "why": "Cluster count depends on resolution choice"
+ },
+ "b7-2.s7": {
+  "label": "loose",
+  "why": "Labeling clusters is expert judgment on markers"
+ },
+ "b7-2.s8": {
+  "label": "strict",
+  "why": "Pseudobulk DE with FDR cutoff against benchmark matched bulk"
+ },
+ "b7-2.s9": {
+  "label": "loose",
+  "why": "Trajectory structure depends on method and root choice"
+ },
+ "b7-2.s10": {
+  "label": "strict",
+  "why": "Neighborhood enrichment z-scores computed by defined permutation test"
+ },
+ "b7-2.s11": {
+  "label": "loose",
+  "why": "ligand receptor scores differ by tool, no fixed truth"
+ },
+ "b7-2.s12": {
+  "label": "loose",
+  "why": "Deconvolution is method dependent with no real ground truth"
+ },
+ "b7-3.s1": {
+  "label": "strict",
+  "why": "flagstat mapping rate and MAPQ filter checked against ENCODE QC"
+ },
+ "b7-3.s2": {
+  "label": "strict",
+  "why": "FRiP, NSC RSC, NRF PBC computed, ENCODE thresholds fix pass"
+ },
+ "b7-3.s3": {
+  "label": "strict",
+  "why": "MACS peaks compared to ENCODE reference peak set"
+ },
+ "b7-3.s4": {
+  "label": "strict",
+  "why": "IDR scores computed, 0.05 threshold and ENCODE optimal set fix output"
+ },
+ "b7-3.s5": {
+  "label": "strict",
+  "why": "Coverage scaling by CPM or RPGC is exact and checkable"
+ },
+ "b7-3.s6": {
+  "label": "strict",
+  "why": "Count-based differential test with FDR threshold, like DE"
+ },
+ "b7-3.s7": {
+  "label": "loose",
+  "why": "Unsupervised state count and labels are modeller choices, not fixed"
+ },
+ "b7-3.s8": {
+  "label": "strict",
+  "why": "Motif hits from PWM scores with known JASPAR motif and p cutoff"
+ },
+ "b7-3.s9": {
+  "label": "strict",
+  "why": "Per-CpG methylation difference tests with defined cutoffs"
+ },
+ "b7-3.s10": {
+  "label": "strict",
+  "why": "Nearest gene and promoter overlap fixed by GENCODE coordinates"
+ },
+ "b7-3.s11": {
+  "label": "loose",
+  "why": "Loop calls differ by caller and thresholds, no fixed set"
+ },
+ "b7-4.s1": {
+  "label": "strict",
+  "why": "Variant calls scored against GIAB or NIST truth VCF"
+ },
+ "b7-4.s2": {
+  "label": "strict",
+  "why": "Joint genotypes from gVCFs are deterministic, compare to reference VCF"
+ },
+ "b7-4.s3": {
+  "label": "strict",
+  "why": "Left-aligned, split variants have one canonical form by rule"
+ },
+ "b7-4.s4": {
+  "label": "strict",
+  "why": "Filtered set scored by fixed cutoffs or truth sensitivity tranche"
+ },
+ "b7-4.s5": {
+  "label": "strict",
+  "why": "SV calls scored against GIAB Tier1 SV truth set"
+ },
+ "b7-4.s6": {
+  "label": "strict",
+  "why": "Consequence terms fixed by Sequence Ontology rules and MANE transcripts"
+ },
+ "b7-4.s7": {
+  "label": "strict",
+  "why": "Allele frequency cutoffs from gnomAD give fixed pass or fail list"
+ },
+ "b7-4.s8": {
+  "label": "strict",
+  "why": "Precision recall F1 computed against GIAB benchmark by hap.py"
+ },
+ "b7-4.s9": {
+  "label": "strict",
+  "why": "ACMG point rules and ClinVar give a checkable class per variant"
+ },
+ "b7-5.s1": {
+  "label": "strict",
+  "why": "Converted mzML checkable against reference file spectra counts and m/z"
+ },
+ "b7-5.s2": {
+  "label": "loose",
+  "why": "Pass or fail from chart review, thresholds are lab specific"
+ },
+ "b7-5.s3": {
+  "label": "strict",
+  "why": "Peptide IDs at 1 percent target-decoy FDR compared to reference search"
+ },
+ "b7-5.s4": {
+  "label": "strict",
+  "why": "Protein quantities by defined formulas such as iBAQ or Top3"
+ },
+ "b7-5.s5": {
+  "label": "strict",
+  "why": "TMT reporter intensities scaled by reference channel, checked against CPTAC tables"
+ },
+ "b7-5.s6": {
+  "label": "loose",
+  "why": "Normalization and imputation method choice has no single correct output"
+ },
+ "b7-5.s7": {
+  "label": "strict",
+  "why": "Moderated t-test with BH FDR checked against iPRG2015 known spike-ins"
+ },
+ "b7-5.s8": {
+  "label": "strict",
+  "why": "Site localization scores and thresholds computed, checked against published phosphosite tables"
+ },
+ "b7-5.s9": {
+  "label": "strict",
+  "why": "Enrichment p-values fixed by hypergeometric test, background and Reactome sets"
+ },
+ "b7-5.s10": {
+  "label": "loose",
+  "why": "Library content depends on tool, FDR and prediction choices"
+ },
+ "b7-5.s11": {
+  "label": "strict",
+  "why": "DIA peptide quantities at 1 percent FDR compared to reference report"
+ },
+ "b7-5.s12": {
+  "label": "loose",
+  "why": "Archive upload and accession filing is a submission task, not computed"
+ },
+ "b7-6.s1": {
+  "label": "strict",
+  "why": "Channel names, pixel sizes, plate positions must match Index.idx.xml metadata"
+ },
+ "b7-6.s2": {
+  "label": "strict",
+  "why": "Flat-field divides image by illumination function, comparable to provided IllumDNA reference"
+ },
+ "b7-6.s3": {
+  "label": "strict",
+  "why": "Instance masks scored by IoU against BBBC039 ground truth masks"
+ },
+ "b7-6.s4": {
+  "label": "strict",
+  "why": "Area, shape, intensity are formula-defined, compared to Nuclei.csv reference values"
+ },
+ "b7-6.s5": {
+  "label": "strict",
+  "why": "3D instance masks scored against BBBC050 ground truth regions"
+ },
+ "b7-6.s6": {
+  "label": "strict",
+  "why": "Alignment error checked against landmarks in registration evaluation sets"
+ },
+ "b7-6.s7": {
+  "label": "strict",
+  "why": "Track links scored with Cell Tracking Challenge ground truth metrics"
+ },
+ "b7-6.s8": {
+  "label": "strict",
+  "why": "Z prime and SSMD have fixed formulas, but flagging cutoffs partly judgment"
+ },
+ "b7-6.s9": {
+  "label": "loose",
+  "why": "Correction method and strength are choices, no single answer"
+ },
+ "b7-6.s10": {
+  "label": "strict",
+  "why": "Median aggregation and MAD normalization are deterministic, checkable against well profiles"
+ },
+ "b7-6.s11": {
+  "label": "strict",
+  "why": "Robust z-score and ranking by formula, scored against MoA labels"
+ },
+ "b7-7.s1": {
+  "label": "strict",
+  "why": "Pedigree relations parsed from fam files and checked against 1000 Genomes table"
+ },
+ "b7-7.s2": {
+  "label": "strict",
+  "why": "KING kinship vs pedigree checked against HapMap known relationships"
+ },
+ "b7-7.s3": {
+  "label": "strict",
+  "why": "Kinship and swap calls checked against 1000G related list"
+ },
+ "b7-7.s4": {
+  "label": "strict",
+  "why": "Mendel error counts fixed by trio genotypes and PLINK rule"
+ },
+ "b7-7.s5": {
+  "label": "strict",
+  "why": "Phase sets scored against Platinum Pedigree haplotype truth"
+ },
+ "b7-7.s6": {
+  "label": "strict",
+  "why": "Genotype logic for dominant, recessive, compound-het is deterministic"
+ },
+ "b7-7.s7": {
+  "label": "strict",
+  "why": "Trio calls benchmarked against GIAB truth VCFs with hap.py"
+ },
+ "b7-7.s8": {
+  "label": "strict",
+  "why": "De novo calls checked against Platinum Pedigree truth set"
+ },
+ "b7-7.s9": {
+  "label": "strict",
+  "why": "IBD segments computed from phased panel; truth from known relatives"
+ },
+ "b7-7.s10": {
+  "label": "strict",
+  "why": "LOD scores computed by Merlin from genotypes and map"
+ },
+ "b7-7.s11": {
+  "label": "loose",
+  "why": "Cosegregation weighing is evidence judgment, experts may disagree"
+ },
+ "b8-1.s1": {
+  "label": "loose",
+  "why": "Internal order check and logging, no public data or computed answer"
+ },
+ "b8-1.s2": {
+  "label": "loose",
+  "why": "Sample rejection is local rule judgment on private specimen records"
+ },
+ "b8-1.s3": {
+  "label": "loose",
+  "why": "Counselling conversation and patient preference, no computed answer"
+ },
+ "b8-1.s4": {
+  "label": "loose",
+  "why": "Choosing panel versus exome versus genome is a clinical judgment"
+ },
+ "b8-1.s5": {
+  "label": "strict",
+  "why": "Aligned reads and variant calls scored against GIAB HG002 truth"
+ },
+ "b8-1.s6": {
+  "label": "strict",
+  "why": "Depth and gap regions computed from BAM with fixed threshold"
+ },
+ "b8-1.s7": {
+  "label": "strict",
+  "why": "Identity and contamination checked by VerifyBamID and known trio pedigree"
+ },
+ "b8-1.s8": {
+  "label": "loose",
+  "why": "Bench Sanger and MLPA rechecks, output not a computed answer"
+ },
+ "b8-2.s1": {
+  "label": "strict",
+  "why": "Consequence annotation of VCF reproducible against Ensembl VEP and MANE"
+ },
+ "b8-2.s2": {
+  "label": "strict",
+  "why": "Database annotations joined to variants, fixed by ClinVar and gnomAD values"
+ },
+ "b8-2.s3": {
+  "label": "strict",
+  "why": "MCF threshold vs gnomAD AF gives fixed kept variant list"
+ },
+ "b8-2.s4": {
+  "label": "strict",
+  "why": "Mendelian models on PED and genotypes give fixed passing variants"
+ },
+ "b8-2.s5": {
+  "label": "strict",
+  "why": "CNV and SV calls scored against GIAB SV truth VCF"
+ },
+ "b8-2.s6": {
+  "label": "strict",
+  "why": "Splice scores computed, checked against MFASS and SpliceVarDB labels"
+ },
+ "b8-2.s7": {
+  "label": "strict",
+  "why": "Cis/trans phase from reads or trio, checked against HG002 trio truth"
+ },
+ "b8-3.s1": {
+  "label": "loose",
+  "why": "Choosing HPO terms for a patient is clinical judgment"
+ },
+ "b8-3.s2": {
+  "label": "strict",
+  "why": "Disease term lists are exact lookups in phenotype.hpoa"
+ },
+ "b8-3.s3": {
+  "label": "loose",
+  "why": "Picking and pruning terms is a tuning judgment, no fixed answer"
+ },
+ "b8-3.s4": {
+  "label": "strict",
+  "why": "PhenoDigm-style similarity computed from MGI and IMPC tables"
+ },
+ "b8-3.s5": {
+  "label": "strict",
+  "why": "LIRICAL likelihood ratio formula fixes posttest probabilities and ranking"
+ },
+ "b8-3.s6": {
+  "label": "strict",
+  "why": "Resnik information content similarity has a fixed formula on HPO"
+ },
+ "b8-3.s7": {
+  "label": "loose",
+  "why": "Contacting external centres and waiting for matches is not computed"
+ },
+ "b8-4.s1": {
+  "label": "loose",
+  "why": "Choosing and weighting ACMG codes involves expert disagreement"
+ },
+ "b8-4.s2": {
+  "label": "strict",
+  "why": "ACMG combining table maps code set to one fixed class"
+ },
+ "b8-4.s3": {
+  "label": "strict",
+  "why": "Tavtigian point sums map to fixed posterior and class"
+ },
+ "b8-4.s4": {
+  "label": "loose",
+  "why": "Picking and applying gene-specific rule specs is a curation judgment"
+ },
+ "b8-4.s5": {
+  "label": "loose",
+  "why": "A principle about separating variant from case, no computed output"
+ },
+ "b8-4.s6": {
+  "label": "loose",
+  "why": "Filing a submission and reconciling lab disagreements is documentation and judgment"
+ },
+ "b8-4.s7": {
+  "label": "loose",
+  "why": "Deciding to reclassify on new evidence is an expert judgment"
+ },
+ "b8-5.s1": {
+  "label": "strict",
+  "why": "Exomiser ranking checked against known diagnoses in phenopacket store"
+ },
+ "b8-5.s2": {
+  "label": "strict",
+  "why": "Causal noncoding variant rank scored against Phenopacket Store known diagnoses"
+ },
+ "b8-5.s3": {
+  "label": "strict",
+  "why": "LIRICAL post-test probability is a fixed Bayesian formula over HPO annotations"
+ },
+ "b8-5.s4": {
+  "label": "loose",
+  "why": "Judging need for two diagnoses has no open truth data"
+ },
+ "b8-5.s5": {
+  "label": "loose",
+  "why": "Written report and limits statement, no reference output"
+ },
+ "b8-5.s6": {
+  "label": "strict",
+  "why": "ACMG SF gene list plus ClinVar pathogenic status fixes returned list"
+ },
+ "b8-5.s7": {
+  "label": "strict",
+  "why": "Newly changed ClinVar classes between archives give a computable reanalysis diff"
+ },
+ "b8-6.s1": {
+  "label": "strict",
+  "why": "Somatic calls scored against SEQC2 HCC1395 truth set"
+ },
+ "b8-6.s2": {
+  "label": "loose",
+  "why": "AMP tier assignment involves expert judgment on evidence weight"
+ },
+ "b8-6.s3": {
+  "label": "strict",
+  "why": "Per-variant OncoKB and CIViC lookup gives table with fixed levels"
+ },
+ "b8-6.s4": {
+  "label": "loose",
+  "why": "Grading papers by reading is judgment"
+ },
+ "b8-6.s5": {
+  "label": "strict",
+  "why": "MSI score from BAM has published cutoff and TCGA MSI labels"
+ },
+ "b8-6.s6": {
+  "label": "strict",
+  "why": "Mutations per Mb computed from MAF and BED, checkable against cohort values"
+ },
+ "b8-6.s7": {
+  "label": "strict",
+  "why": "CNV and fusion calls scored against SEQC2 truth sets"
+ },
+ "b8-6.s8": {
+  "label": "loose",
+  "why": "Deciding which findings look inherited and need referral is a judgment"
+ },
+ "b8-6.s9": {
+  "label": "loose",
+  "why": "Limitation statement is written prose even if coverage is measured"
+ },
+ "b8-7.s1": {
+  "label": "loose",
+  "why": "Choosing which pairs deserve testing is a prioritisation judgment"
+ },
+ "b8-7.s2": {
+  "label": "loose",
+  "why": "Choosing alleles for an assay panel is a design choice experts dispute"
+ },
+ "b8-7.s3": {
+  "label": "strict",
+  "why": "CPIC diplotype to phenotype table fixes the metaboliser label"
+ },
+ "b8-7.s4": {
+  "label": "strict",
+  "why": "CPIC recommendation table fixes dose action per phenotype and drug"
+ },
+ "b8-7.s5": {
+  "label": "strict",
+  "why": "CPIC recommendation strength field is a fixed lookup per guideline row"
+ },
+ "b8-7.s6": {
+  "label": "loose",
+  "why": "Saving a record entry is data entry, no fixed computed answer"
+ },
+ "b8-7.s7": {
+  "label": "strict",
+  "why": "Germline calls on HCC1395BL checkable against SEQC2 truth and ClinVar"
+ },
+ "b8-8.s1": {
+  "label": "loose",
+  "why": "Board seating is an organisational choice"
+ },
+ "b8-8.s2": {
+  "label": "loose",
+  "why": "Weighing results against clinical context is expert judgment"
+ },
+ "b8-8.s3": {
+  "label": "loose",
+  "why": "Ranking evidence across tiers allows reasonable expert disagreement"
+ },
+ "b8-8.s4": {
+  "label": "strict",
+  "why": "MSI score and TMB computed from MAFs, thresholds fixed by TCGA MANTIS"
+ },
+ "b8-8.s5": {
+  "label": "loose",
+  "why": "Writing a plan with counselling advice is a document and judgment"
+ },
+ "b8-8.s6": {
+  "label": "loose",
+  "why": "Choosing and referring to a trial is a judgment, not fixed"
+ },
+ "b8-8.s7": {
+  "label": "loose",
+  "why": "Recording whether advice was followed is tracking, outcome judged"
+ },
+ "b8-8.s8": {
+  "label": "loose",
+  "why": "Internal board turnaround metrics have no public data or fixed answer"
+ },
+ "b8-9.s1": {
+  "label": "strict",
+  "why": "Accuracy, PPA and LoD computed against GIAB HG002 benchmark"
+ },
+ "b8-9.s2": {
+  "label": "loose",
+  "why": "Wet-lab end-to-end run across sample types, pathologist review involved"
+ },
+ "b8-9.s3": {
+  "label": "strict",
+  "why": "hap.py precision and recall scored against GIAB and SEQC2 truth sets"
+ },
+ "b8-9.s4": {
+  "label": "strict",
+  "why": "Calibration slope of lab TMB versus exome reference is a fixed fit"
+ },
+ "b8-9.s5": {
+  "label": "strict",
+  "why": "Run QC metrics pass or fail by fixed thresholds and Westgard rules"
+ },
+ "b8-9.s6": {
+  "label": "loose",
+  "why": "Blind proficiency enrolment is procedural, provider data not public"
+ },
+ "b8-9.s7": {
+  "label": "loose",
+  "why": "Writing a report is a document with interpretive content"
+ },
+ "b8-9.s8": {
+  "label": "loose",
+  "why": "Notifying doctors and reissuing reports is process work"
+ },
+ "b8-9.s9": {
+  "label": "loose",
+  "why": "Reviewing errors and changing procedures is a judgment-driven improvement cycle"
+ }
+}</script>
 <script>
 const R = JSON.parse(document.getElementById("data").textContent);
 const T = JSON.parse(document.getElementById("tdata").textContent).blocks;
@@ -56245,6 +57212,9 @@ const K = JSON.parse(document.getElementById("kdata").textContent);
 const P = JSON.parse(document.getElementById("pdata").textContent);
 const L = JSON.parse(document.getElementById("ldata").textContent);
 const SD = JSON.parse(document.getElementById("sdata").textContent);
+const V = JSON.parse(document.getElementById("vdata").textContent);
+const vOf = (sid,i) => V[sid+".s"+i] || null;
+function vCount(sid){ const steps=(SD[sid]||{}).steps||[]; let s=0,n=0; steps.forEach((st,k)=>{ const v=vOf(sid,k+1); if(v){ n++; if(v.label==="strict") s++ } }); return n?{s,n}:null }
 const fmtN = n => n>=1000 ? (n/1000).toFixed(n>=10000?0:1).replace(/\.0$/,"")+"k" : String(n);
 const QLAB = {good:"Good match", fair:"Fair match", poor:"Weak match"};
 function litBar(id){
@@ -56324,7 +57294,7 @@ function stepList(bi, si, id){
   const plain = P[id] && P[id].length===orig.length ? P[id] : orig;
   const mine = K.filter(k=>k.at===id);
   const det = SD[id] ? SD[id].steps : null;
-  let items = orig.map((o,i)=>({o, p:plain[i], on: mine.some(k=>k.step===o), d: det ? det[i] : null}));
+  let items = orig.map((o,i)=>({o, p:plain[i], on: mine.some(k=>k.step===o), d: det ? det[i] : null, v: vOf(id,i+1)}));
   if(!items.length) items = mine.map(k=>({o:k.step, p:k.step, on:true, d:null}));
   if(!items.length || (items.length===1 && !mine.length)) return "";
   const hit = items.some(x=>x.on);
@@ -56335,6 +57305,7 @@ function stepList(bi, si, id){
     const subs = (d.substeps||[]).map(s=>`<li>${esc(s.plain)}${s.tool?` <em>${esc(s.tool)}</em>`:""}</li>`).join("");
     return `<div class="sdet">
       ${d.human?`<p class="sh">${esc(d.human)}</p>`:""}
+      ${x.v?`<p class="vwhy v-${x.v.label}"><b>${x.v.label==="strict"?"Strict verification":"Loose verification"}</b> ${esc(x.v.why)}</p>`:""}
       ${tools?`<ul class="stools">${tools}</ul>`:""}
       ${(!d.items||!d.items.length) && d.files && !/^Not described/i.test(d.files)?`<p class="sf"><span>Data</span>${esc(d.files)}</p>`:""}
       ${(d.data_types&&d.data_types.length)?`<p class="dts"><span>Data types</span>${d.data_types.map(x=>`<i>${esc(x)}</i>`).join("")}</p>`:""}
@@ -56344,7 +57315,7 @@ function stepList(bi, si, id){
     </div>`;
   };
   const row = x => x.d
-    ? `<details class="wstep${x.on?" on":""}"><summary><span class="sp">${esc(x.p)}</span>${x.d.paradigm?`<i class="dot ${x.d.paradigm}" title="${PLAB[x.d.paradigm]||""}"></i>`:""}${x.on?'<i class="tflag">task</i>':""}</summary>${body(x)}</details>`
+    ? `<details class="wstep${x.on?" on":""}"><summary><span class="sp">${esc(x.p)}</span>${x.v?`<i class="vtag v-${x.v.label}" title="${esc(x.v.why)}">${x.v.label==="strict"?"Strict":"Loose"}</i>`:""}${x.on?'<i class="tflag">task</i>':""}</summary>${body(x)}</details>`
     : `<div class="wstep flat${x.on?" on":""}"><span class="sp">${esc(x.p)}</span>${x.on?'<i class="tflag">task</i>':""}</div>`;
   return `<details class="steps-in"${hit||det?" open":""}><summary><span>Steps</span><i>show</i></summary>
     <div class="slist">${items.map(row).join("")}</div></details>`;
@@ -56355,11 +57326,11 @@ function tCard(bi, si){
   const full = R[bi]?.subs[+sn-1]?.title || "";
   return `<article class="card" id="tcard">
     <div><div class="eyrow"><span class="ey">Block ${bn}</span><span class="ey num" style="white-space:nowrap">Section ${sn} of ${b.sections.length}</span></div>
-      <h3 style="margin-top:8px">${esc(s.label)}</h3>${full && full.toLowerCase()!==s.label.toLowerCase()?`<div class="full">${esc(full)}</div>`:""}</div>
+      <h3 style="margin-top:8px">${esc(s.label)}</h3>${(()=>{const c=vCount(s.id);return c?`<p class="vcount"><b class="num">${c.s} of ${c.n}</b> steps strictly checkable by a script</p>`:""})()}${full && full.toLowerCase()!==s.label.toLowerCase()?`<div class="full">${esc(full)}</div>`:""}</div>
     ${s.gets?`<div class="flow"><div><span>Input</span><p>${esc(s.gets)}</p></div><i aria-hidden="true">&rarr;</i><div><span>Output</span><p>${esc(s.gives)}</p></div></div>`:""}
     ${stepList(bi, +sn-1, s.id)}
     ${SD[s.id]?"":`<dl class="kv"><dt>What humans do</dt><dd>${esc(s.human)}</dd></dl>`}
-    ${SD[s.id]?"":`<dl class="kv"><dt>Tools <span class="ptag"><i class="dot ${s.paradigm}"></i>${PLAB[s.paradigm]||s.paradigm}</span></dt><dd>${s.toolList?`<ul class="tools">${s.toolList.map(x=>`<li><b>${esc(x.name)}</b><span>${esc(x.does)}</span></li>`).join("")}</ul>`:esc(s.tools)}</dd></dl>`}
+    ${SD[s.id]?"":`<dl class="kv"><dt>Tools</dt><dd>${s.toolList?`<ul class="tools">${s.toolList.map(x=>`<li><b>${esc(x.name)}</b><span>${esc(x.does)}</span></li>`).join("")}</ul>`:esc(s.tools)}</dd></dl>`}
     ${litBox(s.id)}
     ${tasksAt(s.id).map(k=>`<div class="tbox"><div class="tbh"><span class="tflag">Our task</span><a href="${esc(k.url)}" target="_blank" rel="noopener">${esc(k.name)}</a></div>
       <p>${esc(k.what)}</p>
@@ -56370,10 +57341,10 @@ function tCard(bi, si){
 }
 function treeView(){
   const blocks = T.map((b,i)=>`<button class="bnode ${i===tb?"on":""}" data-tb="${i}" aria-pressed="${i===tb}"><span class="k num">${b.n}</span><b>${esc(b.label)}${blockTasks(i)?`<em class="bt">${blockTasks(i)} task${blockTasks(i)>1?"s":""}</em>`:""}</b><small>${esc(b.gist)}</small></button>`).join("");
-  const secs = T[tb].sections.map((s,j)=>`<button class="snode ${j===ts?"on":""}" data-ts="${j}" aria-pressed="${j===ts}"><i class="dot ${s.paradigm}" title="${PLAB[s.paradigm]||""}"></i><span class="t">${esc(s.label)}</span>${litBar(s.id)}${tasksAt(s.id).length?'<i class="tflag" title="We have a task here">task</i>':""}</button>`).join("");
+  const secs = T[tb].sections.map((s,j)=>`<button class="snode ${j===ts?"on":""}" data-ts="${j}" aria-pressed="${j===ts}"><span class="t">${esc(s.label)}</span>${litBar(s.id)}${tasksAt(s.id).length?'<i class="tflag" title="We have a task here">task</i>':""}</button>`).join("");
   const vt = T.map((b,i)=>`<li class="${i===tb?"on":""}"><button class="bnode ${i===tb?"on":""}" data-tb="${i}" aria-expanded="${i===tb}"><span class="k num">${b.n}</span><b>${esc(b.label)}${blockTasks(i)?`<em class="bt">${blockTasks(i)} task${blockTasks(i)>1?"s":""}</em>`:""}</b><small>${esc(b.gist)}</small></button>
-      ${i===tb?`<ul>${b.sections.map((s,j)=>`<li class="${j===ts?"on":""}"><button class="snode ${j===ts?"on":""}" data-ts="${j}" aria-expanded="${j===ts}"><i class="dot ${s.paradigm}"></i><span class="t">${esc(s.label)}</span>${litBar(s.id)}${tasksAt(s.id).length?'<i class="tflag" title="We have a task here">task</i>':""}</button>${j===ts?tCard(i,j).replace('id="tcard"',''):""}</li>`).join("")}</ul>`:""}</li>`).join("");
-  const legend = PARA.map(p=>`<span><i class="dot ${p}"></i>${PLAB[p]}</span>`).join("") + `<span><i class="lb q-good" style="width:34px"><i style="width:70%"></i></i>Papers per year (log scale)</span>`;
+      ${i===tb?`<ul>${b.sections.map((s,j)=>`<li class="${j===ts?"on":""}"><button class="snode ${j===ts?"on":""}" data-ts="${j}" aria-expanded="${j===ts}"><span class="t">${esc(s.label)}</span>${litBar(s.id)}${tasksAt(s.id).length?'<i class="tflag" title="We have a task here">task</i>':""}</button>${j===ts?tCard(i,j).replace('id="tcard"',''):""}</li>`).join("")}</ul>`:""}</li>`).join("");
+  const legend = `<span><i class="vtag v-strict">Strict</i>A script can check the result</span><span><i class="vtag v-loose">Loose</i>Needs reading, choice or expert judgment</span>` + `<span><i class="lb q-good" style="width:34px"><i style="width:70%"></i></i>Papers per year (log scale)</span>`;
   const strip = K.map(k=>`<button class="tchip" data-jump="${k.at}"><span class="tn">${esc(k.name)}</span><span class="tw">${esc(secName(k.at))}</span></button>`).join("");
   return `<div class="narrow" style="max-width:none">
     <h1 style="margin-top:14px">Drug Development Workflow Map</h1>
