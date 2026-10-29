@@ -257,6 +257,19 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .vwhy{font-size:12.5px;line-height:1.5;padding-left:9px;border-left:3px solid var(--line);color:var(--muted)}
 .vwhy.v-strict{border-left-color:var(--accent)}
 .vwhy b{font:600 10px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-right:6px}
+.hpill{grid-column:2 / span 2;grid-row:2;justify-self:start;font:500 10px/1 var(--mono);letter-spacing:.03em;padding:3px 8px;border-radius:999px;border:1px solid color-mix(in srgb,var(--p-plat) 55%,transparent);color:var(--ink);white-space:nowrap}
+.hpill em{font-style:normal;color:var(--faint);margin-left:3px;text-transform:uppercase;font-size:9px;letter-spacing:.06em}
+.hpill.b1{background:color-mix(in srgb,var(--p-plat) 8%,transparent)}
+.hpill.b2{background:color-mix(in srgb,var(--p-plat) 16%,transparent)}
+.hpill.b3{background:color-mix(in srgb,var(--p-plat) 26%,transparent)}
+.hpill.b4{background:color-mix(in srgb,var(--p-plat) 38%,transparent)}
+.hpill.b5{background:color-mix(in srgb,var(--p-plat) 52%,transparent)}
+.hbox{border:1px solid color-mix(in srgb,var(--p-plat) 45%,transparent);background:color-mix(in srgb,var(--p-plat) 8%,transparent);border-radius:9px;padding:9px 12px;display:grid;gap:5px;font-size:13px}
+.hbox p{margin:0}
+.hh{font:500 10px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.hh em{font-style:normal;text-transform:none;letter-spacing:0;margin-left:6px;color:var(--muted)}
+.hc{font-size:12px;color:var(--muted)}
+.hbox ul{margin:0;padding-left:17px;font-size:12.5px;display:grid;gap:3px}
 .vcount{font-size:13px;color:var(--muted);margin-top:4px}
 .vcount b{color:var(--ink)}
 /* stacked tree for narrow screens */
@@ -57205,6 +57218,54 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
   "why": "Reviewing errors and changing procedures is a judgment-driven improvement cycle"
  }
 }</script>
+<script id="hdata" type="application/json">{
+ "b1-2.s2": {
+  "bin": 4,
+  "sure": "medium",
+  "unit": "one tool compound, one cell line",
+  "reason": "Dose-response repeats, an inactive control, a second compound and a binding check in cells come to roughly 3 to 7 days of hands-on work. It reaches the next bin if selectivity panels run in-house.",
+  "cites": [],
+  "label": "1 day to 1 week"
+ },
+ "b1-2.s3": {
+  "bin": 5,
+  "sure": "high",
+  "unit": "one knockout mouse line",
+  "reason": "Genotyping, colony care and phenotyping stretch over many weeks, so hands-on time is well above a week.",
+  "cites": [
+   {
+    "label": "JAX timeline: 26 to 37 weeks on the calendar (vendor)",
+    "url": "https://indianactsi.org/wp-content/uploads/2024/12/IndianaCTSI-JAX-Flyer.pdf"
+   },
+   {
+    "label": "IMPC phenotyping runs from 9 to 15 weeks of age",
+    "url": "https://www.mousephenotype.org/understand/start-using-the-impc/impc-data-generation/"
+   }
+  ],
+  "label": "Over 1 week"
+ },
+ "b1-2.s4": {
+  "bin": 5,
+  "sure": "medium",
+  "unit": "make and check antibodies, as the step is written",
+  "reason": "Making the antibody and checking it for specificity needs repeated assays over several weeks. If the task is only to check one existing antibody, it drops to the 1 day to 1 week bin.",
+  "cites": [
+   {
+    "label": "Nature Protocols 2024: within 1 month while working part-time, per protein",
+    "url": "https://www.nature.com/articles/s41596-024-01095-8"
+   }
+  ],
+  "label": "Over 1 week"
+ },
+ "b1-2.s7": {
+  "bin": 1,
+  "sure": "medium",
+  "unit": "one project",
+  "reason": "Checking that early exploratory work sits outside GLP is a short read and a note.",
+  "cites": [],
+  "label": "Under 1 hour"
+ }
+}</script>
 <script>
 const R = JSON.parse(document.getElementById("data").textContent);
 const T = JSON.parse(document.getElementById("tdata").textContent).blocks;
@@ -57213,7 +57274,9 @@ const P = JSON.parse(document.getElementById("pdata").textContent);
 const L = JSON.parse(document.getElementById("ldata").textContent);
 const SD = JSON.parse(document.getElementById("sdata").textContent);
 const V = JSON.parse(document.getElementById("vdata").textContent);
+const H = JSON.parse(document.getElementById("hdata").textContent);
 const vOf = (sid,i) => V[sid+".s"+i] || null;
+const hOf = (sid,i) => H[sid+".s"+i] || null;
 function vCount(sid){ const steps=(SD[sid]||{}).steps||[]; let s=0,n=0; steps.forEach((st,k)=>{ const v=vOf(sid,k+1); if(v){ n++; if(v.label==="strict") s++ } }); return n?{s,n}:null }
 const fmtN = n => n>=1000 ? (n/1000).toFixed(n>=10000?0:1).replace(/\.0$/,"")+"k" : String(n);
 const QLAB = {good:"Good match", fair:"Fair match", poor:"Weak match"};
@@ -57294,7 +57357,7 @@ function stepList(bi, si, id){
   const plain = P[id] && P[id].length===orig.length ? P[id] : orig;
   const mine = K.filter(k=>k.at===id);
   const det = SD[id] ? SD[id].steps : null;
-  let items = orig.map((o,i)=>({o, p:plain[i], on: mine.some(k=>k.step===o), d: det ? det[i] : null, v: vOf(id,i+1)}));
+  let items = orig.map((o,i)=>({o, p:plain[i], on: mine.some(k=>k.step===o), d: det ? det[i] : null, v: vOf(id,i+1), h: hOf(id,i+1)}));
   if(!items.length) items = mine.map(k=>({o:k.step, p:k.step, on:true, d:null}));
   if(!items.length || (items.length===1 && !mine.length)) return "";
   const hit = items.some(x=>x.on);
@@ -57305,6 +57368,7 @@ function stepList(bi, si, id){
     const subs = (d.substeps||[]).map(s=>`<li>${esc(s.plain)}${s.tool?` <em>${esc(s.tool)}</em>`:""}</li>`).join("");
     return `<div class="sdet">
       ${d.human?`<p class="sh">${esc(d.human)}</p>`:""}
+      ${x.h?`<div class="hbox"><span class="hh">Hands-on human time <em>expert estimate, not a cited figure</em></span><p><b>${esc(x.h.label)}</b> for ${esc(x.h.unit)}. ${esc(x.h.reason)}</p>${(x.h.cites||[]).length?`<p class="hc">Context from cited work, not proof:</p><ul>${x.h.cites.map(c=>`<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.label)}</a></li>`).join("")}</ul>`:`<p class="hc">No cited source for this one.</p>`}</div>`:""}
       ${x.v?`<p class="vwhy v-${x.v.label}"><b>${x.v.label==="strict"?"Strict verification":"Loose verification"}</b> ${esc(x.v.why)}</p>`:""}
       ${tools?`<ul class="stools">${tools}</ul>`:""}
       ${(!d.items||!d.items.length) && d.files && !/^Not described/i.test(d.files)?`<p class="sf"><span>Data</span>${esc(d.files)}</p>`:""}
@@ -57315,7 +57379,7 @@ function stepList(bi, si, id){
     </div>`;
   };
   const row = x => x.d
-    ? `<details class="wstep${x.on?" on":""}"><summary><span class="sp">${esc(x.p)}</span>${x.v?`<i class="vtag v-${x.v.label}" title="${esc(x.v.why)}">${x.v.label==="strict"?"Strict":"Loose"}</i>`:""}${x.on?'<i class="tflag">task</i>':""}</summary>${body(x)}</details>`
+    ? `<details class="wstep${x.on?" on":""}"><summary><span class="sp">${esc(x.p)}</span>${x.h?`<span class="hpill b${x.h.bin}" title="Expert estimate, not cited">${esc(x.h.label)} <em>estimate</em></span>`:""}${x.v?`<i class="vtag v-${x.v.label}" title="${esc(x.v.why)}">${x.v.label==="strict"?"Strict":"Loose"}</i>`:""}${x.on?'<i class="tflag">task</i>':""}</summary>${body(x)}</details>`
     : `<div class="wstep flat${x.on?" on":""}"><span class="sp">${esc(x.p)}</span>${x.on?'<i class="tflag">task</i>':""}</div>`;
   return `<details class="steps-in"${hit||det?" open":""}><summary><span>Steps</span><i>show</i></summary>
     <div class="slist">${items.map(row).join("")}</div></details>`;
@@ -57344,7 +57408,7 @@ function treeView(){
   const secs = T[tb].sections.map((s,j)=>`<button class="snode ${j===ts?"on":""}" data-ts="${j}" aria-pressed="${j===ts}"><span class="t">${esc(s.label)}</span>${litBar(s.id)}${tasksAt(s.id).length?'<i class="tflag" title="We have a task here">task</i>':""}</button>`).join("");
   const vt = T.map((b,i)=>`<li class="${i===tb?"on":""}"><button class="bnode ${i===tb?"on":""}" data-tb="${i}" aria-expanded="${i===tb}"><span class="k num">${b.n}</span><b>${esc(b.label)}${blockTasks(i)?`<em class="bt">${blockTasks(i)} task${blockTasks(i)>1?"s":""}</em>`:""}</b><small>${esc(b.gist)}</small></button>
       ${i===tb?`<ul>${b.sections.map((s,j)=>`<li class="${j===ts?"on":""}"><button class="snode ${j===ts?"on":""}" data-ts="${j}" aria-expanded="${j===ts}"><span class="t">${esc(s.label)}</span>${litBar(s.id)}${tasksAt(s.id).length?'<i class="tflag" title="We have a task here">task</i>':""}</button>${j===ts?tCard(i,j).replace('id="tcard"',''):""}</li>`).join("")}</ul>`:""}</li>`).join("");
-  const legend = `<span><i class="vtag v-strict">Strict</i>A script can check the result</span><span><i class="vtag v-loose">Loose</i>Needs reading, choice or expert judgment</span>` + `<span><i class="lb q-good" style="width:34px"><i style="width:70%"></i></i>Papers per year (log scale)</span>`;
+  const legend = `<span><i class="vtag v-strict">Strict</i>A script can check the result</span><span><i class="vtag v-loose">Loose</i>Needs reading, choice or expert judgment</span><span><i class="hpill b4">1 day to 1 week <em>estimate</em></i>Expert estimate of hands-on human time</span>` + `<span><i class="lb q-good" style="width:34px"><i style="width:70%"></i></i>Papers per year (log scale)</span>`;
   const strip = K.map(k=>`<button class="tchip" data-jump="${k.at}"><span class="tn">${esc(k.name)}</span><span class="tw">${esc(secName(k.at))}</span></button>`).join("");
   return `<div class="narrow" style="max-width:none">
     <h1 style="margin-top:14px">Drug Development Workflow Map</h1>
