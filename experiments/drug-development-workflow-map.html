@@ -272,6 +272,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hbox ul{margin:0;padding-left:17px;font-size:12.5px;display:grid;gap:3px}
 .vcount{font-size:13px;color:var(--muted);margin-top:4px}
 .vcount b{color:var(--ink)}
+.gh{font:500 10px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);padding:12px 10px 5px;display:flex;align-items:center;gap:8px}
+.gh::after{content:"";flex:1;height:1px;background:var(--line)}
+.sl .gh:first-child{padding-top:2px}
+.sres{display:block;font-size:12px;color:var(--faint);margin-top:1px}
+.sres::before{content:"\2192  ";color:var(--accent)}
+.ghli{list-style:none}
+.ghli .gh{padding-left:2px}
 /* stacked tree for narrow screens */
 .vtree{display:none;margin-top:22px}
 .vtree ul{list-style:none;margin:0;padding:0}
@@ -347,6 +354,8 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
   .vtree{display:block}
 }
 @media (max-width:620px){
+  .legend{gap:8px 14px}
+  .legend span{white-space:normal;flex-wrap:wrap}
   .f{grid-template-columns:1fr;gap:3px}
   .card{padding:16px 16px}
 }
@@ -359,7 +368,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
   <footer id="foot" hidden></footer>
 </div>
 
-<script id="data" type="application/json">[{"n": 1, "name": "Discovery", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Target identification", "rows": [], "steps": ["Disease hypothesis and unmet need framing", "Literature and patent data mining", "Evidence weighting and association scoring", "Human genetics evidence", "Expression and omics evidence", "Functional-genomics screen analysis", "Phenotypic and antibody-led target discovery", "Target tractability and assessment triage", "Target selection gate"], "rule": [], "judg": []}, {"title": "Target validation", "rows": [], "steps": ["Scoping the validation package", "Pharmacological tool validation", "Genetic validation in whole animals", "Antibody tool validation", "Mechanism and cellular pharmacology calls", "Validation data handling", "Regulatory posture of the work", "Validation gate"], "rule": [], "judg": []}, {"title": "Assay development and validation", "rows": [], "steps": ["Assay format selection and reagent generation", "Miniaturization to plate format", "Robustness and quality qualification", "Dose-response method setup", "Automation and instrument integration", "Analysis plumbing and acceptance checks", "Image-based assay analysis", "Screen-ready gate"], "rule": [], "judg": []}, {"title": "Screening and hit identification", "rows": [], "steps": ["Library selection, small molecules", "Screening strategy choice", "Alternative hit-finding via encoded libraries", "Primary screen execution", "In-campaign plate QC", "Spatial artefact review", "Hit-list generation", "Binder generation, biologics", "Library design and review, biologics", "Screen output gate", "Antibody repertoire sequencing and V(D)J read alignment", "Germline V, D and J gene assignment and junction annotation", "Clonotype clustering with a data-driven junction distance threshold", "B cell lineage tree reconstruction and class-switch analysis", "MiAIRR compliant repertoire metadata and rearrangement reporting", "AIRR data set curation for deposition and reuse", "Round-over-round enrichment analysis with amplification bias correction", "Hierarchical mixed-effects modelling of plate, run and batch structure"], "rule": [], "judg": []}, {"title": "Hit confirmation, triage and series definition", "rows": [], "steps": ["Framing the triage", "Frequent-hitter and interference removal", "Clustering into chemical series", "Re-test and dose-response confirmation", "Identity and purity confirmation", "Chemotype tractability check", "Setting the hit threshold", "Binder triage and epitope coverage, biologics", "Confounder checks, biologics", "Series progression gate", "Dose-response curve fitting and model selection", "Censored and below-limit-of-quantification measurement handling", "Fit-for-purpose assay validation before triage decisions"], "rule": [], "judg": []}, {"title": "Hit-to-lead", "rows": [], "steps": ["Block objective setting", "Systematic SAR exploration", "Structure-based design", "Synthesis planning and execution", "Screening cascade construction", "Early property and DMPK profiling", "In vivo tool compound use", "Affinity maturation, biologics", "Engineering for immunogenicity and liabilities, biologics", "Lead declaration gate", "Antibody-drug conjugate linker and attachment site selection", "Drug-to-antibody ratio and drug load distribution measurement", "Site-specific conjugation engineering to reduce product heterogeneity"], "rule": [], "judg": []}, {"title": "Lead optimization", "rows": [], "steps": ["Setting the optimization objective", "Multi-parameter optimization against liabilities", "Running the design-make-test-analyse cycle", "Efficiency-metric steering", "In vivo PK and PK/PD", "Developability assessment, biologics", "Multi-parameter balance, biologics", "Backup and follow-up series", "Exit gate", "Developability biophysical assay panel and warning flag counting", "Self-association measurement by AC-SINS and CSI-BLI", "Polyspecificity and non-specific binding screening by PSR and BVP", "Hydrophobicity and salt-stress association chromatography", "Accelerated stability testing with monomer retention by size-exclusion chromatography", "Expression titer and thermal unfolding screening", "Risk-based immunogenicity and anti-drug antibody assessment"], "rule": [], "judg": []}, {"title": "Final characterization and candidate nomination", "rows": [], "steps": ["Assembling the characterization package", "Candidate criteria check, small molecules", "Solid-form and physical characterization", "Expression and cell line development, biologics", "Candidate criteria check, biologics", "Multi-parameter selection analysis", "Gate economics", "Nomination decision", "Developability threshold setting against clinical-stage benchmarks", "ADC critical quality attribute control and lot release testing", "Analytical method selection matched to conjugate architecture"], "rule": [], "judg": []}]}, {"n": 2, "name": "Preclinical and IND", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Program strategy and regulatory planning", "rows": [], "steps": ["Nonclinical development plan", "Map clinical plan onto required studies", "Choose package type", "Pre-IND meeting", "Guideline gap analysis"], "rule": [], "judg": []}, {"title": "In vitro and in vivo pharmacology", "rows": [], "steps": ["Primary pharmacodynamics package", "Target engagement and receptor occupancy", "Species cross-reactivity for biologics", "Number of species for biologics", "GLP status of pharmacology", "Curve fitting and exposure-response", "Secondary pharmacology and off-target panels", "IND pharmacology summary"], "rule": [], "judg": []}, {"title": "DMPK and ADME", "rows": [], "steps": ["In vitro ADME battery", "Tox species choice on metabolic grounds", "In vivo PK, non-GLP", "Non-compartmental analysis", "Human PK prediction by allometry", "PBPK simulation"], "rule": [], "judg": []}, {"title": "PK/PD modelling and first-in-human dose", "rows": [], "steps": ["NOAEL determination", "MRSD five-step algorithm", "HED conversion", "Species choice for MRSD", "Safety factor", "MABEL and PAD for high-risk agents", "Starting dose decision and documentation"], "rule": [], "judg": []}, {"title": "Toxicology from non-GLP range-finding to GLP pivotal studies", "rows": [], "steps": ["Dose range-finding, non-GLP", "Limit-dose selection", "GLP repeat-dose duration", "Study direction", "In-life data capture", "Clinical pathology", "Statistics", "NOAEL, target organs and margins"], "rule": [], "judg": []}, {"title": "Histopathology and pathology peer review", "rows": [], "steps": ["Microscopic evaluation", "Blinding approach", "Peer review", "Documenting the peer review"], "rule": [], "judg": []}, {"title": "Safety pharmacology", "rows": [], "steps": ["Core battery scope", "GLP status and integration", "Cardiovascular assessment", "CNS and respiratory assessment", "Cardiac ion channel work", "Margin assessment", "Data standards output"], "rule": [], "judg": []}, {"title": "Genetic toxicology", "rows": [], "steps": ["Battery selection", "Timing against the clinical plan", "Modality exemption", "Scoring and data capture", "Positive or negative call", "Positive-finding follow-up", "Data standards output", "Reproductive toxicity timing"], "rule": [], "judg": []}, {"title": "Bioanalysis, method validation and toxicokinetics", "rows": [], "steps": ["Scope of the standard", "Full validation, chromatographic", "Chromatographic acceptance criteria", "Ligand binding assay criteria", "Partial and cross validation", "Incurred sample reanalysis", "Sample analysis and run review", "LIMS and sample tracking", "Toxicokinetic analysis", "Reporting"], "rule": [], "judg": []}, {"title": "Biomarker development", "rows": [], "steps": ["PD and target-engagement biomarkers", "Biomarker assay validation"], "rule": [], "judg": []}, {"title": "Data standards and SEND", "rows": [], "steps": ["Standard scope", "Version selection", "Applicability by study start date", "Domain mapping", "Metadata and reviewer guide", "Conformance validation", "CRO delivery"], "rule": [], "judg": []}, {"title": "Quality assurance, reports and archiving", "rows": [], "steps": ["QAU independence", "QAU duties", "Final report assembly", "Sign-off and amendment", "Archiving and retention"], "rule": [], "judg": []}, {"title": "Early CMC and formulation", "rows": [], "steps": ["IND chemistry section", "Test article characterisation", "Vehicle and dose-formulation work", "Clinical batch and impurity qualification"], "rule": [], "judg": []}, {"title": "IND and CTA package assembly", "rows": [], "steps": ["Pharmacology and toxicology section", "GLP compliance statement", "Summary documents", "Publishing", "Waiting period"], "rule": [], "judg": []}]}, {"n": 3, "name": "Clinical development", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Protocol and trial design", "rows": [], "steps": ["Target product profile to objectives, endpoint selection", "Estimand definition", "Design choice (randomization, blinding, control)", "Sample size and power", "Critical-to-quality (CtQ) risk identification and quality tolerance limits", "Protocol authoring, review and amendment"], "rule": [], "judg": []}, {"title": "Dose finding (Phase 1, 1b and Phase 2 dose ranging)", "rows": [], "steps": ["Escalation design choice (3+3 vs BOIN)", "Cohort-by-cohort escalation decision", "Oncology dose optimization", "EOP2A dose-selection gate"], "rule": [], "judg": []}, {"title": "Site selection and study start-up", "rows": [], "steps": ["Feasibility questionnaires and site qualification visit", "Contract and budget negotiation", "IRB/IEC submission and regulatory green light", "Site initiation visit and activation"], "rule": [], "judg": []}, {"title": "Patient recruitment and retention", "rows": [], "steps": ["Screening and consent", "Enrollment tracking and site performance management", "Randomization and drug assignment", "Recruitment campaigns and cohort finding"], "rule": [], "judg": []}, {"title": "Clinical operations and monitoring, including RBQM", "rows": [], "steps": ["Monitoring plan and extent of monitoring", "Site visits, SDR and SDV", "Centralised and statistical monitoring", "QTL review and breach evaluation", "Protocol deviation management, issue escalation, close-out"], "rule": [], "judg": []}, {"title": "Data management", "rows": [], "steps": ["CRF design and annotated CRF", "EDC build, UAT, edit check specification and programming", "Data management plan and external data transfer and reconciliation", "Query management and data review", "MedDRA and WHODrug coding", "SAE reconciliation, investigator endorsement, database lock"], "rule": [], "judg": []}, {"title": "Biostatistics and statistical programming", "rows": [], "steps": ["SAP and TLF shells", "SDTM mapping specs and datasets", "ADaM specs and datasets", "define.xml and reviewer's guides", "TLF production and independent QC", "Analysis methods (MMRM, KM/Cox)", "Pinnacle 21 conformance and issue triage", "Interim and DMC analyses, topline", "R as a submission language"], "rule": [], "judg": []}, {"title": "Clinical pharmacology", "rows": [], "steps": ["PK sampling design and bioanalysis data receipt", "Non-compartmental analysis (NCA)", "popPK model building and covariate analysis", "Exposure-response for efficacy and safety", "Simulation for dose selection and labeling, DDI and special populations"], "rule": [], "judg": []}, {"title": "Safety in trials", "rows": [], "steps": ["AE and SAE capture at site, SAE form to sponsor", "Causality and expectedness assessment", "MedDRA coding of safety cases", "Expedited reporting (IND safety reports, SUSARs)", "Aggregate review and DSUR", "IDMC charter, reports and meetings", "Unblinding control and medical monitoring"], "rule": [], "judg": []}, {"title": "Medical writing", "rows": [], "steps": ["Investigator's Brochure", "Protocol authoring", "Clinical study report authoring", "Subject narratives", "Timeline from last patient visit to topline and TLFs"], "rule": [], "judg": []}]}, {"n": 4, "name": "CMC and manufacturing", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Process development, QbD and design space", "rows": [], "steps": ["Process development, QbD and design space"], "rule": [], "judg": []}, {"title": "Analytical method development and validation", "rows": [], "steps": ["Analytical method development and validation"], "rule": [], "judg": []}, {"title": "Scale-up and technology transfer", "rows": [], "steps": ["Scale-up and technology transfer"], "rule": [], "judg": []}, {"title": "GMP manufacturing and batch records", "rows": [], "steps": ["GMP manufacturing and batch records"], "rule": [], "judg": []}, {"title": "QC testing and OOS investigation", "rows": [], "steps": ["QC testing and OOS investigation"], "rule": [], "judg": []}, {"title": "Stability", "rows": [], "steps": ["Stability"], "rule": [], "judg": []}, {"title": "Batch disposition and release", "rows": [], "steps": ["Batch disposition and release"], "rule": [], "judg": []}, {"title": "Deviations, CAPA, change control and annual product review", "rows": [], "steps": ["Deviations, CAPA, change control and annual product review"], "rule": [], "judg": []}]}, {"n": 5, "name": "Regulatory submission and approval", "overview": [], "rule": [], "judg": [], "subs": [{"title": "IND and CTA", "rows": [], "steps": ["IND and CTA"], "rule": [], "judg": []}, {"title": "Dossier authoring, CTD and eCTD Modules 1 to 5", "rows": [], "steps": ["Dossier authoring, CTD and eCTD Modules 1 to 5"], "rule": [], "judg": []}, {"title": "Health-authority meetings", "rows": [], "steps": ["Health-authority meetings"], "rule": [], "judg": []}, {"title": "NDA and BLA filing, review and labeling negotiation", "rows": [], "steps": ["NDA and BLA filing, review and labeling negotiation"], "rule": [], "judg": []}]}, {"n": 6, "name": "Post-market", "overview": [], "rule": [], "judg": [], "subs": [{"title": "PV case processing of ICSRs", "rows": [], "steps": ["PV case processing of ICSRs"], "rule": [], "judg": []}, {"title": "Signal detection and management", "rows": [], "steps": ["Signal detection and management"], "rule": [], "judg": []}, {"title": "Periodic reports, PBRER and PSUR", "rows": [], "steps": ["Periodic reports, PBRER and PSUR"], "rule": [], "judg": []}, {"title": "Risk management, PV plan, RMP and REMS", "rows": [], "steps": ["Risk management, PV plan, RMP and REMS"], "rule": [], "judg": []}, {"title": "Real-world evidence", "rows": [], "steps": ["Real-world evidence"], "rule": [], "judg": []}, {"title": "Lifecycle changes and post-approval variations", "rows": [], "steps": ["Lifecycle changes and post-approval variations"], "rule": [], "judg": []}]}, {"n": 7, "name": "Shared lab services", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Sequencing core", "rows": [], "steps": ["Run setup and run-level quality review", "Demultiplexing by index barcode", "Read quality control and adapter trimming", "Alignment to the reference genome", "Coverage and depth assessment", "Duplicate marking and contamination estimation", "Sample swap and identity checks", "File and metadata handoff"], "rule": [], "judg": []}, {"title": "Single-cell and spatial", "rows": [], "steps": ["Quality control and cell filtering", "Normalisation and variance stabilisation", "Feature selection of highly variable genes", "Dimension reduction and embedding", "Batch integration across samples", "Graph based clustering", "Cell type annotation", "Differential expression between conditions", "Trajectory and pseudotime analysis", "Spatial neighbourhood and niche analysis", "Cell cell communication inference", "Deconvolution of spatial spots"], "rule": [], "judg": []}, {"title": "Epigenomics", "rows": [], "steps": ["Read alignment handoff", "Library and enrichment quality control", "Peak calling", "Replicate reproducibility of peaks", "Signal track generation and normalisation", "Differential binding or accessibility", "Chromatin state segmentation", "Motif and footprint analysis", "Differential methylation analysis", "Genomic annotation of regions", "3D contact and loop calling"], "rule": [], "judg": []}, {"title": "Variant discovery", "rows": [], "steps": ["Per-sample small variant calling", "Joint genotyping across the cohort", "Variant normalization and representation", "Filtering and variant quality score recalibration", "Structural and copy-number variant discovery", "Functional annotation of variants", "Population and frequency filtering", "Benchmarking against a truth set", "Clinical significance classification"], "rule": [], "judg": []}, {"title": "Proteomics and mass spec", "rows": [], "steps": ["Raw file conversion", "Raw data quality control", "Peptide and protein identification", "Label-free quantification", "Isobaric quantification", "Normalisation and missing value handling", "Differential abundance", "PTM and phospho-site analysis", "Protein interaction and enrichment analysis", "Spectral library building", "Data-independent acquisition analysis", "Deposition to PRIDE"], "rule": [], "judg": []}, {"title": "Imaging and microscopy", "rows": [], "steps": ["Image format and metadata handling", "Illumination and background correction", "Segmentation of cells and nuclei", "Feature extraction", "3D segmentation", "Image registration", "Object tracking", "Quality control of plates and fields", "Batch correction", "Profile aggregation", "Hit calling"], "rule": [], "judg": []}, {"title": "Family and pedigree genetics", "rows": [], "steps": ["Pedigree construction", "Pedigree checking", "Relatedness estimation", "Mendelian error checking", "Phasing and haplotype reconstruction", "Inheritance-mode filtering", "Trio variant calling", "De novo variant calling", "Identity-by-descent analysis", "Linkage analysis", "Segregation analysis"], "rule": [], "judg": []}]}, {"n": 8, "name": "Clinical genomics and diagnostics", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Sample sequencing integrity", "rows": [], "steps": ["Specimen accessioning and test requisition", "Specimen handling and rejection criteria", "Consent and handling of incidental findings", "Test scope selection", "Read alignment and variant calling", "Depth of coverage assessment", "Sample identity tracking and contamination control", "Orthogonal confirmation and gap filling"], "rule": [], "judg": []}, {"title": "Variant annotation filtering", "rows": [], "steps": ["Transcript and consequence annotation", "Filter-based database annotation", "Population allele frequency gating", "Inheritance-pattern filtering", "Copy-number and structural variant calling", "Splice and deep-intronic variant assessment", "Phasing of two variants in one gene"], "rule": [], "judg": []}, {"title": "Phenotype capture matching", "rows": [], "steps": ["Deep phenotyping with ontology terms", "Disease model annotation lookup", "Phenotype term quality and quantity tuning", "Cross-species phenotype comparison", "Likelihood ratio phenotype scoring", "Phenotypic similarity between candidate disorders", "Candidate gene matchmaking across centres"], "rule": [], "judg": []}, {"title": "Variant classification", "rows": [], "steps": ["Apply the ACMG/AMP evidence codes", "Combine codes into a five-tier class", "Quantitative point and probability scoring", "Gene-specific criteria specification", "Keep the variant call separate from the case", "Submit to and reconcile with ClinVar", "Reclassification when evidence changes"], "rule": [], "judg": []}, {"title": "Prioritisation and report", "rows": [], "steps": ["Phenotype-driven variant prioritisation", "Non-coding candidate prioritisation", "Post-test probability for the top candidate", "Dual diagnosis assessment", "Report content and limitation statement", "Secondary findings return", "Periodic reanalysis of unsolved cases"], "rule": [], "judg": []}, {"title": "Somatic tumour profiling", "rows": [], "steps": ["Somatic versus germline discrimination", "Four-tier clinical significance assignment", "Knowledgebase annotation of drug actionability", "Evidence level grading from the literature", "Microsatellite instability scoring", "Tumour mutational burden calculation", "Copy-number and gene fusion reporting", "Suspected germline finding referral", "Assay limitation and failed region statement"], "rule": [], "judg": []}, {"title": "Pharmacogenomic safety", "rows": [], "steps": ["Gene drug pair prioritisation", "Allele panel design for a pharmacogene", "Diplotype to phenotype translation", "Genotype-guided dose selection", "Strength of recommendation grading", "Result capture for future prescribers", "Confirmatory germline test after tumour-only testing"], "rule": [], "judg": []}, {"title": "Tumour board decision", "rows": [], "steps": ["Interdisciplinary board composition", "Case review in full clinical context", "Actionable alteration ranking by cancer type", "Tumour-agnostic biomarker check", "Structured board report with germline plan", "Clinical trial matching and enrolment", "Follow-up on board recommendations", "Quality indicators for the board"], "rule": [], "judg": []}, {"title": "Lab quality validation", "rows": [], "steps": ["Establish performance specifications", "End-to-end validation on permissible sample types", "Pipeline validation against known variants", "Reference standard alignment for quantitative readouts", "Run-level quality control", "Proficiency testing enrolment", "Test report requirements", "Corrected reports after a reporting error", "Postanalytic quality assessment"], "rule": [], "judg": []}]}]</script>
+<script id="data" type="application/json">[{"n": 1, "name": "Discovery", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Target identification", "rows": [], "steps": ["Disease hypothesis and unmet need framing", "Literature and patent data mining", "Evidence weighting and association scoring", "Human genetics evidence", "Expression and omics evidence", "Functional-genomics screen analysis", "Phenotypic and antibody-led target discovery", "Target tractability and assessment triage", "Target selection gate"], "rule": [], "judg": []}, {"title": "Target validation", "rows": [], "steps": ["Scoping the validation package", "Pharmacological tool validation", "Genetic validation in whole animals", "Antibody tool validation", "Mechanism and cellular pharmacology calls", "Validation data handling", "Regulatory posture of the work", "Validation gate"], "rule": [], "judg": []}, {"title": "Assay development and validation", "rows": [], "steps": ["Assay format selection and reagent generation", "Miniaturization to plate format", "Robustness and quality qualification", "Dose-response method setup", "Automation and instrument integration", "Analysis plumbing and acceptance checks", "Image-based assay analysis", "Screen-ready gate"], "rule": [], "judg": []}, {"title": "Screening and hit identification", "rows": [], "steps": ["Library selection, small molecules", "Screening strategy choice", "Alternative hit-finding via encoded libraries", "Primary screen execution", "In-campaign plate QC", "Spatial artefact review", "Hit-list generation", "Binder generation, biologics", "Library design and review, biologics", "Screen output gate", "Antibody repertoire sequencing and V(D)J read alignment", "Germline V, D and J gene assignment and junction annotation", "Clonotype clustering with a data-driven junction distance threshold", "B cell lineage tree reconstruction and class-switch analysis", "MiAIRR compliant repertoire metadata and rearrangement reporting", "AIRR data set curation for deposition and reuse", "Round-over-round enrichment analysis with amplification bias correction", "Hierarchical mixed-effects modelling of plate, run and batch structure"], "rule": [], "judg": []}, {"title": "Hit confirmation, triage and series definition", "rows": [], "steps": ["Framing the triage", "Frequent-hitter and interference removal", "Clustering into chemical series", "Re-test and dose-response confirmation", "Identity and purity confirmation", "Chemotype tractability check", "Setting the hit threshold", "Binder triage and epitope coverage, biologics", "Confounder checks, biologics", "Series progression gate", "Dose-response curve fitting and model selection", "Censored and below-limit-of-quantification measurement handling", "Fit-for-purpose assay validation before triage decisions"], "rule": [], "judg": []}, {"title": "Hit-to-lead", "rows": [], "steps": ["Block objective setting", "Systematic SAR exploration", "Structure-based design", "Synthesis planning and execution", "Screening cascade construction", "Early property and DMPK profiling", "In vivo tool compound use", "Affinity maturation, biologics", "Engineering for immunogenicity and liabilities, biologics", "Lead declaration gate", "Antibody-drug conjugate linker and attachment site selection", "Drug-to-antibody ratio and drug load distribution measurement", "Site-specific conjugation engineering to reduce product heterogeneity"], "rule": [], "judg": []}, {"title": "Lead optimization", "rows": [], "steps": ["Setting the optimization objective", "Multi-parameter optimization against liabilities", "Running the design-make-test-analyse cycle", "Efficiency-metric steering", "In vivo PK and PK/PD", "Developability assessment, biologics", "Multi-parameter balance, biologics", "Backup and follow-up series", "Exit gate", "Developability biophysical assay panel and warning flag counting", "Self-association measurement by AC-SINS and CSI-BLI", "Polyspecificity and non-specific binding screening by PSR and BVP", "Hydrophobicity and salt-stress association chromatography", "Accelerated stability testing with monomer retention by size-exclusion chromatography", "Expression titer and thermal unfolding screening", "Risk-based immunogenicity and anti-drug antibody assessment"], "rule": [], "judg": []}, {"title": "Final characterization and candidate nomination", "rows": [], "steps": ["Assembling the characterization package", "Candidate criteria check, small molecules", "Solid-form and physical characterization", "Expression and cell line development, biologics", "Candidate criteria check, biologics", "Multi-parameter selection analysis", "Gate economics", "Nomination decision", "Developability threshold setting against clinical-stage benchmarks", "ADC critical quality attribute control and lot release testing", "Analytical method selection matched to conjugate architecture"], "rule": [], "judg": []}]}, {"n": 2, "name": "Preclinical and IND", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Program strategy and regulatory planning", "rows": [], "steps": ["Nonclinical development plan", "Map clinical plan onto required studies", "Choose package type", "Pre-IND meeting", "Guideline gap analysis"], "rule": [], "judg": []}, {"title": "In vitro and in vivo pharmacology", "rows": [], "steps": ["Primary pharmacodynamics package", "Target engagement and receptor occupancy", "Species cross-reactivity for biologics", "Number of species for biologics", "GLP status of pharmacology", "Curve fitting and exposure-response", "Secondary pharmacology and off-target panels", "IND pharmacology summary"], "rule": [], "judg": []}, {"title": "DMPK and ADME", "rows": [], "steps": ["In vitro ADME battery", "Tox species choice on metabolic grounds", "In vivo PK, non-GLP", "Non-compartmental analysis", "Human PK prediction by allometry", "PBPK simulation"], "rule": [], "judg": []}, {"title": "PK/PD modelling and first-in-human dose", "rows": [], "steps": ["NOAEL determination", "MRSD five-step algorithm", "HED conversion", "Species choice for MRSD", "Safety factor", "MABEL and PAD for high-risk agents", "Starting dose decision and documentation"], "rule": [], "judg": []}, {"title": "Toxicology from non-GLP range-finding to GLP pivotal studies", "rows": [], "steps": ["Dose range-finding, non-GLP", "Limit-dose selection", "GLP repeat-dose duration", "Study direction", "In-life data capture", "Clinical pathology", "Statistics", "NOAEL, target organs and margins"], "rule": [], "judg": []}, {"title": "Histopathology and pathology peer review", "rows": [], "steps": ["Microscopic evaluation", "Blinding approach", "Peer review", "Documenting the peer review"], "rule": [], "judg": []}, {"title": "Safety pharmacology", "rows": [], "steps": ["Core battery scope", "GLP status and integration", "Cardiovascular assessment", "CNS and respiratory assessment", "Cardiac ion channel work", "Margin assessment", "Data standards output"], "rule": [], "judg": []}, {"title": "Genetic toxicology", "rows": [], "steps": ["Battery selection", "Timing against the clinical plan", "Modality exemption", "Scoring and data capture", "Positive or negative call", "Positive-finding follow-up", "Data standards output", "Reproductive toxicity timing"], "rule": [], "judg": []}, {"title": "Bioanalysis, method validation and toxicokinetics", "rows": [], "steps": ["Scope of the standard", "Full validation, chromatographic", "Chromatographic acceptance criteria", "Ligand binding assay criteria", "Partial and cross validation", "Incurred sample reanalysis", "Sample analysis and run review", "LIMS and sample tracking", "Toxicokinetic analysis", "Reporting"], "rule": [], "judg": []}, {"title": "Biomarker development", "rows": [], "steps": ["PD and target-engagement biomarkers", "Biomarker assay validation"], "rule": [], "judg": []}, {"title": "Data standards and SEND", "rows": [], "steps": ["Standard scope", "Version selection", "Applicability by study start date", "Domain mapping", "Metadata and reviewer guide", "Conformance validation", "CRO delivery"], "rule": [], "judg": []}, {"title": "Quality assurance, reports and archiving", "rows": [], "steps": ["QAU independence", "QAU duties", "Final report assembly", "Sign-off and amendment", "Archiving and retention"], "rule": [], "judg": []}, {"title": "Early CMC and formulation", "rows": [], "steps": ["IND chemistry section", "Test article characterisation", "Vehicle and dose-formulation work", "Clinical batch and impurity qualification"], "rule": [], "judg": []}, {"title": "IND and CTA package assembly", "rows": [], "steps": ["Pharmacology and toxicology section", "GLP compliance statement", "Summary documents", "Publishing", "Waiting period"], "rule": [], "judg": []}]}, {"n": 3, "name": "Clinical development", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Protocol and trial design", "rows": [], "steps": ["Target product profile to objectives, endpoint selection", "Estimand definition", "Design choice (randomization, blinding, control)", "Sample size and power", "Critical-to-quality (CtQ) risk identification and quality tolerance limits", "Protocol authoring, review and amendment"], "rule": [], "judg": []}, {"title": "Dose finding (Phase 1, 1b and Phase 2 dose ranging)", "rows": [], "steps": ["Escalation design choice (3+3 vs BOIN)", "Cohort-by-cohort escalation decision", "Oncology dose optimization", "EOP2A dose-selection gate"], "rule": [], "judg": []}, {"title": "Site selection and study start-up", "rows": [], "steps": ["Feasibility questionnaires and site qualification visit", "Contract and budget negotiation", "IRB/IEC submission and regulatory green light", "Site initiation visit and activation"], "rule": [], "judg": []}, {"title": "Patient recruitment and retention", "rows": [], "steps": ["Screening and consent", "Enrollment tracking and site performance management", "Randomization and drug assignment", "Recruitment campaigns and cohort finding"], "rule": [], "judg": []}, {"title": "Clinical operations and monitoring, including RBQM", "rows": [], "steps": ["Monitoring plan and extent of monitoring", "Site visits, SDR and SDV", "Centralised and statistical monitoring", "QTL review and breach evaluation", "Protocol deviation management, issue escalation, close-out"], "rule": [], "judg": []}, {"title": "Data management", "rows": [], "steps": ["CRF design and annotated CRF", "EDC build, UAT, edit check specification and programming", "Data management plan and external data transfer and reconciliation", "Query management and data review", "MedDRA and WHODrug coding", "SAE reconciliation, investigator endorsement, database lock"], "rule": [], "judg": []}, {"title": "Biostatistics and statistical programming", "rows": [], "steps": ["SAP and TLF shells", "SDTM mapping specs and datasets", "ADaM specs and datasets", "define.xml and reviewer's guides", "TLF production and independent QC", "Analysis methods (MMRM, KM/Cox)", "Pinnacle 21 conformance and issue triage", "Interim and DMC analyses, topline", "R as a submission language"], "rule": [], "judg": []}, {"title": "Clinical pharmacology", "rows": [], "steps": ["PK sampling design and bioanalysis data receipt", "Non-compartmental analysis (NCA)", "popPK model building and covariate analysis", "Exposure-response for efficacy and safety", "Simulation for dose selection and labeling, DDI and special populations"], "rule": [], "judg": []}, {"title": "Safety in trials", "rows": [], "steps": ["AE and SAE capture at site, SAE form to sponsor", "Causality and expectedness assessment", "MedDRA coding of safety cases", "Expedited reporting (IND safety reports, SUSARs)", "Aggregate review and DSUR", "IDMC charter, reports and meetings", "Unblinding control and medical monitoring"], "rule": [], "judg": []}, {"title": "Medical writing", "rows": [], "steps": ["Investigator's Brochure", "Protocol authoring", "Clinical study report authoring", "Subject narratives", "Timeline from last patient visit to topline and TLFs"], "rule": [], "judg": []}]}, {"n": 4, "name": "CMC and manufacturing", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Process development", "rows": [], "steps": ["Quality target product profile definition", "Critical quality attribute identification", "Starting material selection", "Risk assessment of inputs and settings", "Multivariate experimental design", "Critical process parameter classification", "Design space definition", "Design space documentation"], "rule": [], "judg": []}, {"title": "Analytical methods", "rows": [], "steps": ["Analytical target profile definition", "Analytical technique selection", "Development approach choice", "Robustness evaluation", "Procedure control strategy and system suitability", "Specificity study", "Linearity and range study", "Accuracy study", "Precision study", "Detection and quantitation limit study"], "rule": [], "judg": []}, {"title": "Technology transfer", "rows": [], "steps": ["Process knowledge package compilation", "Marketing authorisation conformance check", "Scale and equipment comparison", "User requirement specification", "Transfer protocol writing", "Receiving site equipment qualification", "Analytical method verification at receiving lab", "Transfer batch validation"], "rule": [], "judg": []}, {"title": "GMP batch records", "rows": [], "steps": ["Master production record preparation", "Batch record issuance", "Component release verification", "Component dispensing check", "Component charging verification", "Equipment use log entry", "In-process control testing", "Yield calculation and verification", "Labeling reconciliation", "Deviation recording"], "rule": [], "judg": []}, {"title": "QC and OOS", "rows": [], "steps": ["Sampling plan execution", "Instrument performance check", "Validated method testing", "Laboratory raw data recording", "Specification conformance evaluation", "Phase I laboratory assessment", "Retest by a second analyst", "Outlier test restriction check", "Phase II full-scale investigation", "Investigation conclusion and record"], "rule": [], "judg": []}, {"title": "Stability", "rows": [], "steps": ["Stability protocol writing", "Stability batch selection", "Container closure assignment", "Storage condition selection", "Testing schedule setting", "Stability-indicating testing", "Significant change evaluation", "Batch poolability test", "Shelf life regression", "Expiration date assignment"], "rule": [], "judg": []}, {"title": "Batch release", "rows": [], "steps": ["Batch record completeness review", "Discrepancy investigation check", "Deviation impact assessment", "Finished product specification check", "Supply chain documentation check", "Starting material compliance check", "Validated state confirmation", "Batch certification", "Certification register entry", "Release or reject disposition"], "rule": [], "judg": []}, {"title": "Deviations and CAPA", "rows": [], "steps": ["Event intake and logging", "Impact risk assessment", "Root cause investigation", "Investigation scope extension", "CAPA plan definition", "CAPA effectiveness check", "Change proposal evaluation", "Change reporting category assignment", "Annual product review", "Field alert reporting"], "rule": [], "judg": []}, {"title": "Specification and control", "rows": [], "steps": ["Specification test list setting", "Acceptance criteria justification", "Release and shelf-life limit setting", "In-process test selection", "Skip testing decision", "Control strategy definition", "Input material control definition", "Real time release testing decision", "Established conditions identification", "Biological product specification rationale"], "rule": [], "judg": []}, {"title": "Process validation", "rows": [], "steps": ["Validation master plan writing", "Unit operation control approach", "Equipment and utility qualification", "PPQ protocol writing", "Sampling plan design", "PPQ batch execution", "PPQ data evaluation and report", "Cleaning validation", "Transport verification", "Continued process verification plan"], "rule": [], "judg": []}, {"title": "Product and packaging", "rows": [], "steps": ["Drug substance property characterisation", "Excipient selection", "Formulation development", "Dosage form process selection", "Container closure selection", "Container closure compatibility testing", "Container closure protection assessment", "Aseptic and sterilization process validation", "Microbiological attribute rationale"], "rule": [], "judg": []}]}, {"n": 5, "name": "Regulatory submission and approval", "overview": [], "rule": [], "judg": [], "subs": [{"title": "IND and CTA", "rows": [], "steps": ["Introductory statement and investigational plan", "Pharmacology and toxicology section", "Chemistry, manufacturing and controls section", "Investigator\u2019s brochure writing", "Clinical protocol writing", "IND assembly and submission", "Thirty-day review clearance", "CTA submission in CTIS", "IND safety reporting", "IND annual report"], "rule": [], "judg": []}, {"title": "CTD dossier", "rows": [], "steps": ["Module 3 quality assembly", "Module 4 nonclinical report assembly", "Module 5 clinical report assembly", "CTD introduction writing", "Quality overall summary writing", "Nonclinical overview writing", "Nonclinical summaries writing", "Clinical overview writing", "Clinical summary writing", "eCTD backbone and leaf publishing"], "rule": [], "judg": []}, {"title": "Agency meetings", "rows": [], "steps": ["Meeting type selection", "Meeting request drafting", "Question formulation", "Meeting package preparation", "Preliminary response review", "Meeting necessity decision", "Meeting minutes reconciliation", "Advice clarification request", "EMA scientific advice request"], "rule": [], "judg": []}, {"title": "NDA and BLA", "rows": [], "steps": ["Application form completion", "Gateway transmission", "Filing review", "Refuse-to-file conference", "Day 74 letter review", "Safety update submission", "Mid-cycle communication", "Review amendment response", "Late-cycle meeting", "Final action response"], "rule": [], "judg": []}, {"title": "Regulatory strategy", "rows": [], "steps": ["Application type selection", "Orphan-drug designation request", "Fast track designation request", "Breakthrough therapy designation request", "Priority review request", "Pediatric assessment plan", "Review timeline planning", "User fee determination", "EU procedure eligibility check", "Paediatric investigation plan"], "rule": [], "judg": []}, {"title": "Labeling and promotion", "rows": [], "steps": ["Proprietary name review request", "Highlights section writing", "Indications and usage writing", "Full prescribing information writing", "Patient labeling preparation", "SPL conversion", "Label negotiation", "Final printed labeling submission", "Promotional material submission", "Advertisement claim check"], "rule": [], "judg": []}, {"title": "Postapproval reporting", "rows": [], "steps": ["Change risk classification", "Prior approval supplement", "Moderate change supplement", "Labeling safety supplement", "Fifteen-day alert report", "Periodic adverse experience report", "Field alert report", "Postmarketing study status report", "NDA annual report"], "rule": [], "judg": []}]}, {"n": 6, "name": "Post-market", "overview": [], "rule": [], "judg": [], "subs": [{"title": "ICSR case processing", "rows": [], "steps": ["Case intake and receipt logging", "Case validity check", "Duplicate case search", "E2B(R3) data entry", "MedDRA event coding", "Seriousness assessment", "Expectedness assessment", "Causality assessment", "Case narrative writing", "Expedited report submission"], "rule": [], "judg": []}, {"title": "Signal detection", "rows": [], "steps": ["Spontaneous report extraction", "Duplicate and artifact cleaning", "Drug-event contingency counting", "Disproportionality statistics", "Evans threshold screening", "Stratified subgroup analysis", "Bayesian shrinkage scoring", "Signal validation", "Signal prioritisation", "Signal assessment and recommendation"], "rule": [], "judg": []}, {"title": "Periodic reports", "rows": [], "steps": ["Data lock point and interval setting", "Patient exposure estimation", "Summary tabulation of reactions", "Reference safety information review", "Literature review", "Signal and risk evaluation", "Benefit evidence evaluation", "Integrated benefit-risk analysis", "Conclusions and actions", "Periodic report submission"], "rule": [], "judg": []}, {"title": "Risk management", "rows": [], "steps": ["Safety specification", "Indication epidemiology", "Routine pharmacovigilance definition", "Action plan for safety issues", "Milestone scheduling", "Risk minimisation planning", "REMS necessity determination", "REMS element design", "REMS assessment timetable", "Risk minimisation effectiveness evaluation"], "rule": [], "judg": []}, {"title": "Real-world evidence", "rows": [], "steps": ["Regulatory question framing", "RWD source selection", "Data fitness assessment", "Study design selection", "Protocol and variable definition", "Protocol registration", "Common data model query execution", "Incidence and rate comparison", "Sensitivity analysis", "Final study report"], "rule": [], "judg": []}, {"title": "Post-approval changes", "rows": [], "steps": ["Change description", "Change effect assessment", "Established condition identification", "Risk category assignment", "Post-approval change protocol planning", "Filing type selection", "Supplement compilation", "Supplement submission and wait", "Promotional material alignment", "Annual report filing"], "rule": [], "judg": []}, {"title": "Medical information", "rows": [], "steps": ["Contact intake and logging", "Adverse event screening", "Request classification", "Complaint quality triage", "Investigation decision", "Serious event cross-check", "Request scoping", "Response drafting", "Reply and record closure"], "rule": [], "judg": []}, {"title": "Safety communication", "rows": [], "steps": ["Communication need decision", "Target audience identification", "Message content drafting", "Channel selection", "Safety labeling change", "Communication quality control", "Healthcare professional notice dispatch", "Communication effectiveness check"], "rule": [], "judg": []}]}, {"n": 7, "name": "Shared lab services", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Sequencing core", "rows": [], "steps": ["Run setup and run-level quality review", "Demultiplexing by index barcode", "Read quality control and adapter trimming", "Alignment to the reference genome", "Coverage and depth assessment", "Duplicate marking and contamination estimation", "Sample swap and identity checks", "File and metadata handoff"], "rule": [], "judg": []}, {"title": "Single-cell and spatial", "rows": [], "steps": ["Quality control and cell filtering", "Normalisation and variance stabilisation", "Feature selection of highly variable genes", "Dimension reduction and embedding", "Batch integration across samples", "Graph based clustering", "Cell type annotation", "Differential expression between conditions", "Trajectory and pseudotime analysis", "Spatial neighbourhood and niche analysis", "Cell cell communication inference", "Deconvolution of spatial spots"], "rule": [], "judg": []}, {"title": "Epigenomics", "rows": [], "steps": ["Read alignment handoff", "Library and enrichment quality control", "Peak calling", "Replicate reproducibility of peaks", "Signal track generation and normalisation", "Differential binding or accessibility", "Chromatin state segmentation", "Motif and footprint analysis", "Differential methylation analysis", "Genomic annotation of regions", "3D contact and loop calling"], "rule": [], "judg": []}, {"title": "Variant discovery", "rows": [], "steps": ["Per-sample small variant calling", "Joint genotyping across the cohort", "Variant normalization and representation", "Filtering and variant quality score recalibration", "Structural and copy-number variant discovery", "Functional annotation of variants", "Population and frequency filtering", "Benchmarking against a truth set", "Clinical significance classification"], "rule": [], "judg": []}, {"title": "Proteomics and mass spec", "rows": [], "steps": ["Raw file conversion", "Raw data quality control", "Peptide and protein identification", "Label-free quantification", "Isobaric quantification", "Normalisation and missing value handling", "Differential abundance", "PTM and phospho-site analysis", "Protein interaction and enrichment analysis", "Spectral library building", "Data-independent acquisition analysis", "Deposition to PRIDE"], "rule": [], "judg": []}, {"title": "Imaging and microscopy", "rows": [], "steps": ["Image format and metadata handling", "Illumination and background correction", "Segmentation of cells and nuclei", "Feature extraction", "3D segmentation", "Image registration", "Object tracking", "Quality control of plates and fields", "Batch correction", "Profile aggregation", "Hit calling"], "rule": [], "judg": []}, {"title": "Family and pedigree genetics", "rows": [], "steps": ["Pedigree construction", "Pedigree checking", "Relatedness estimation", "Mendelian error checking", "Phasing and haplotype reconstruction", "Inheritance-mode filtering", "Trio variant calling", "De novo variant calling", "Identity-by-descent analysis", "Linkage analysis", "Segregation analysis"], "rule": [], "judg": []}]}, {"n": 8, "name": "Clinical genomics and diagnostics", "overview": [], "rule": [], "judg": [], "subs": [{"title": "Sample sequencing integrity", "rows": [], "steps": ["Specimen accessioning and test requisition", "Specimen handling and rejection criteria", "Consent and handling of incidental findings", "Test scope selection", "Read alignment and variant calling", "Depth of coverage assessment", "Sample identity tracking and contamination control", "Orthogonal confirmation and gap filling"], "rule": [], "judg": []}, {"title": "Variant annotation filtering", "rows": [], "steps": ["Transcript and consequence annotation", "Filter-based database annotation", "Population allele frequency gating", "Inheritance-pattern filtering", "Copy-number and structural variant calling", "Splice and deep-intronic variant assessment", "Phasing of two variants in one gene"], "rule": [], "judg": []}, {"title": "Phenotype capture matching", "rows": [], "steps": ["Deep phenotyping with ontology terms", "Disease model annotation lookup", "Phenotype term quality and quantity tuning", "Cross-species phenotype comparison", "Likelihood ratio phenotype scoring", "Phenotypic similarity between candidate disorders", "Candidate gene matchmaking across centres"], "rule": [], "judg": []}, {"title": "Variant classification", "rows": [], "steps": ["Apply the ACMG/AMP evidence codes", "Combine codes into a five-tier class", "Quantitative point and probability scoring", "Gene-specific criteria specification", "Keep the variant call separate from the case", "Submit to and reconcile with ClinVar", "Reclassification when evidence changes"], "rule": [], "judg": []}, {"title": "Prioritisation and report", "rows": [], "steps": ["Phenotype-driven variant prioritisation", "Non-coding candidate prioritisation", "Post-test probability for the top candidate", "Dual diagnosis assessment", "Report content and limitation statement", "Secondary findings return", "Periodic reanalysis of unsolved cases"], "rule": [], "judg": []}, {"title": "Somatic tumour profiling", "rows": [], "steps": ["Somatic versus germline discrimination", "Four-tier clinical significance assignment", "Knowledgebase annotation of drug actionability", "Evidence level grading from the literature", "Microsatellite instability scoring", "Tumour mutational burden calculation", "Copy-number and gene fusion reporting", "Suspected germline finding referral", "Assay limitation and failed region statement"], "rule": [], "judg": []}, {"title": "Pharmacogenomic safety", "rows": [], "steps": ["Gene drug pair prioritisation", "Allele panel design for a pharmacogene", "Diplotype to phenotype translation", "Genotype-guided dose selection", "Strength of recommendation grading", "Result capture for future prescribers", "Confirmatory germline test after tumour-only testing"], "rule": [], "judg": []}, {"title": "Tumour board decision", "rows": [], "steps": ["Interdisciplinary board composition", "Case review in full clinical context", "Actionable alteration ranking by cancer type", "Tumour-agnostic biomarker check", "Structured board report with germline plan", "Clinical trial matching and enrolment", "Follow-up on board recommendations", "Quality indicators for the board"], "rule": [], "judg": []}, {"title": "Lab quality validation", "rows": [], "steps": ["Establish performance specifications", "End-to-end validation on permissible sample types", "Pipeline validation against known variants", "Reference standard alignment for quantitative readouts", "Run-level quality control", "Proficiency testing enrolment", "Test report requirements", "Corrected reports after a reporting error", "Postanalytic quality assessment"], "rule": [], "judg": []}]}]</script>
 <script id="tdata" type="application/json">{
  "blocks": [
   {
@@ -584,6 +593,31 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
      ],
      "hint": "Give a property table for candidate molecules and a scoring profile. Grade the ranked candidate list against a script that recomputes the scores"
     }
+   ],
+   "groups": [
+    {
+     "name": "Target",
+     "sections": [
+      "b1-1",
+      "b1-2"
+     ]
+    },
+    {
+     "name": "Screen",
+     "sections": [
+      "b1-3",
+      "b1-4",
+      "b1-5"
+     ]
+    },
+    {
+     "name": "Optimise",
+     "sections": [
+      "b1-6",
+      "b1-7",
+      "b1-8"
+     ]
+    }
    ]
   },
   {
@@ -683,6 +717,28 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
       }
      ],
      "hint": "Give NOAEL values per species. Grade the human equivalent dose and maximum recommended starting dose against FDA body-surface scaling factors"
+    },
+    {
+     "id": "b2-10",
+     "label": "Biomarkers",
+     "human": "Find measurable signs in blood or tissue that show the drug is hitting its target",
+     "tools": "FlowJo, MSD Discovery Workbench, Simoa, R, Prism",
+     "paradigm": "GUI",
+     "rule": null,
+     "judgment": "How much validation the context of use requires",
+     "cite": {
+      "label": "EMA FIH guideline",
+      "url": "https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-strategies-identify-and-mitigate-risks-first-human-and-early-clinical-trials-investigational-medicinal-products-revision-1_en.pdf"
+     },
+     "gets": "The target and the disease models",
+     "gives": "A measurable sign showing the drug is hitting its target",
+     "toolList": [
+      {
+       "name": "No single standard tool",
+       "does": "Often FlowJo, MSD Workbench, R or Prism (not confirmed by our sources)"
+      }
+     ],
+     "hint": "Give standard curve and sample signal tables from an immunoassay. Grade back-calculated concentrations from a four-parameter fit in Python"
     },
     {
      "id": "b2-5",
@@ -811,28 +867,6 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
      "hint": "Instrument software and LIMS are validated and licensed. Give calibration and QC run tables as CSV and grade ICH M10 run acceptance"
     },
     {
-     "id": "b2-10",
-     "label": "Biomarkers",
-     "human": "Find measurable signs in blood or tissue that show the drug is hitting its target",
-     "tools": "FlowJo, MSD Discovery Workbench, Simoa, R, Prism",
-     "paradigm": "GUI",
-     "rule": null,
-     "judgment": "How much validation the context of use requires",
-     "cite": {
-      "label": "EMA FIH guideline",
-      "url": "https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-strategies-identify-and-mitigate-risks-first-human-and-early-clinical-trials-investigational-medicinal-products-revision-1_en.pdf"
-     },
-     "gets": "The target and the disease models",
-     "gives": "A measurable sign showing the drug is hitting its target",
-     "toolList": [
-      {
-       "name": "No single standard tool",
-       "does": "Often FlowJo, MSD Workbench, R or Prism (not confirmed by our sources)"
-      }
-     ],
-     "hint": "Give standard curve and sample signal tables from an immunoassay. Grade back-calculated concentrations from a four-parameter fit in Python"
-    },
-    {
      "id": "b2-11",
      "label": "SEND data standards",
      "human": "Put animal study data into the format the FDA requires and fix any errors flagged",
@@ -923,6 +957,47 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
       }
      ],
      "hint": "Mostly document writing. Give study report PDFs and grade the eCTD Module 4 folder tree the agent builds against the required layout"
+    }
+   ],
+   "groups": [
+    {
+     "name": "Plan",
+     "sections": [
+      "b2-1"
+     ]
+    },
+    {
+     "name": "Pharmacology and PK",
+     "sections": [
+      "b2-2",
+      "b2-3",
+      "b2-4",
+      "b2-10"
+     ]
+    },
+    {
+     "name": "Safety",
+     "sections": [
+      "b2-5",
+      "b2-6",
+      "b2-7",
+      "b2-8"
+     ]
+    },
+    {
+     "name": "Data and quality",
+     "sections": [
+      "b2-9",
+      "b2-11",
+      "b2-12"
+     ]
+    },
+    {
+     "name": "Package",
+     "sections": [
+      "b2-13",
+      "b2-14"
+     ]
     }
    ]
   },
@@ -1180,6 +1255,38 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
      ],
      "hint": "Give ADaM datasets and a narrative template. Grade subject narratives for correct event dates, doses and outcomes"
     }
+   ],
+   "groups": [
+    {
+     "name": "Design",
+     "sections": [
+      "b3-1",
+      "b3-2"
+     ]
+    },
+    {
+     "name": "Run",
+     "sections": [
+      "b3-3",
+      "b3-4",
+      "b3-5"
+     ]
+    },
+    {
+     "name": "Data and analysis",
+     "sections": [
+      "b3-6",
+      "b3-7",
+      "b3-8"
+     ]
+    },
+    {
+     "name": "Report",
+     "sections": [
+      "b3-9",
+      "b3-10"
+     ]
+    }
    ]
   },
   {
@@ -1192,38 +1299,42 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
      "id": "b4-1",
      "label": "Process development",
      "human": "Work out which product qualities matter and which process settings keep them in range",
-     "tools": "JMP, Minitab, Design-Expert, FMEA spreadsheets",
-     "paradigm": "GUI",
-     "rule": "Working within the design space is not a change, leaving it is",
-     "judgment": "Defining the design space and choosing the risk tool",
-     "cite": {
-      "label": "ICH Q8(R2)",
-      "url": "https://database.ich.org/sites/default/files/Q8%28R2%29%20Guideline.pdf"
-     },
      "gets": "A way to make the drug in the lab",
      "gives": "A process with settings that keep product quality in range",
+     "paradigm": "GUI",
      "toolList": [
       {
        "name": "No single standard tool",
        "does": "GUI stats tools like JMP or Minitab (not confirmed by our sources)"
       }
      ],
-     "hint": "JMP and Minitab are licensed. Give a DoE results table as CSV and grade fitted model terms and optimum settings from statsmodels"
+     "tools": "JMP, Minitab, Design-Expert, FMEA spreadsheets",
+     "cite": {
+      "label": "ICH Q8(R2)",
+      "url": "https://database.ich.org/sites/default/files/Q8%28R2%29%20Guideline.pdf"
+     }
+    },
+    {
+     "id": "b4-11",
+     "label": "Product and packaging",
+     "human": "Choose the formula, the filling process and the container that keep the product safe to use",
+     "gets": "A drug substance and its quality targets",
+     "gives": "A finished form in a suitable sealed container",
+     "paradigm": "Documents",
+     "toolList": [],
+     "tools": "",
+     "cite": {
+      "label": "ICH Q8(R2)",
+      "url": "https://database.ich.org/sites/default/files/Q8%28R2%29%20Guideline.pdf"
+     }
     },
     {
      "id": "b4-2",
      "label": "Analytical methods",
      "human": "Build lab tests for the product and prove they give accurate, repeatable results",
-     "tools": "Waters Empower CDS, Excel, JMP",
-     "paradigm": "Platform",
-     "rule": "Precision and accuracy from at least 9 determinations, or 6 at 100%",
-     "judgment": "Choosing a minimal or enhanced development approach",
-     "cite": {
-      "label": "ICH Q2(R2)",
-      "url": "https://database.ich.org/sites/default/files/ICH_Q2%28R2%29_Guideline_2023_1130.pdf"
-     },
      "gets": "The product and its quality targets",
      "gives": "Lab tests proven to measure the product accurately",
+     "paradigm": "Platform",
      "toolList": [
       {
        "name": "Waters Empower",
@@ -1234,66 +1345,85 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
        "does": "Validation statistics like linearity and %RSD"
       }
      ],
-     "hint": "Empower is validated and licensed. Give exported peak area tables and grade linearity, %RSD and recovery against ICH Q2 limits"
+     "tools": "Waters Empower CDS, Excel, JMP",
+     "cite": {
+      "label": "ICH Q2(R2)",
+      "url": "https://database.ich.org/sites/default/files/ICH_Q2%28R2%29_Guideline_2023_1130.pdf"
+     }
+    },
+    {
+     "id": "b4-9",
+     "label": "Specification and control",
+     "human": "Set the tests and limits each batch must meet and the controls that keep it there",
+     "gets": "Process and product knowledge and test methods",
+     "gives": "Specifications and a control strategy for routine use",
+     "paradigm": "Documents",
+     "toolList": [],
+     "tools": "",
+     "cite": {
+      "label": "ICH Q6A",
+      "url": "https://database.ich.org/sites/default/files/Q6A%20Guideline.pdf"
+     }
     },
     {
      "id": "b4-3",
      "label": "Technology transfer",
      "human": "Move the manufacturing process from one site to another without changing the product",
-     "tools": "not sourced",
-     "paradigm": "Documents",
-     "rule": null,
-     "judgment": "How design space relates to new scale and equipment",
-     "cite": {
-      "label": "ICH Q8(R2)",
-      "url": "https://database.ich.org/sites/default/files/Q8%28R2%29%20Guideline.pdf"
-     },
      "gets": "A working process at one site",
      "gives": "The same process running at a bigger or new site",
+     "paradigm": "Documents",
      "toolList": [
       {
        "name": "No single standard tool",
        "does": "No tool named in our sources"
       }
      ],
-     "hint": "Sources name no files. A task could give small and large scale batch tables and grade checks against set acceptance ranges"
+     "tools": "not sourced",
+     "cite": {
+      "label": "ICH Q8(R2)",
+      "url": "https://database.ich.org/sites/default/files/Q8%28R2%29%20Guideline.pdf"
+     }
+    },
+    {
+     "id": "b4-10",
+     "label": "Process validation",
+     "human": "Prove with planned batches that the process makes good product every time",
+     "gets": "A defined process and qualified equipment",
+     "gives": "Evidence the process is consistently capable",
+     "paradigm": "Documents",
+     "toolList": [],
+     "tools": "",
+     "cite": {
+      "label": "EU GMP Annex 15",
+      "url": "https://health.ec.europa.eu/system/files/2016-11/2015-10_annex15_0.pdf"
+     }
     },
     {
      "id": "b4-4",
      "label": "GMP batch records",
      "human": "Operators make each batch step by step, and a second person checks every key step",
-     "tools": "Paper batch records or eBR and MES",
-     "paradigm": "Platform",
-     "rule": "Keep batch records at least 1 year after batch expiration date",
-     "judgment": "Whether an unexplained discrepancy was fully investigated",
-     "cite": {
-      "label": "21 CFR 211.180",
-      "url": "https://www.law.cornell.edu/cfr/text/21/211.180"
-     },
      "gets": "An approved process",
      "gives": "A finished batch with a full record of every step",
+     "paradigm": "Platform",
      "toolList": [
       {
        "name": "No single standard tool",
        "does": "Paper or electronic batch records (not confirmed by our sources)"
       }
      ],
-     "hint": "MES software is validated. Give an executed batch record as structured data and grade the missing entries and deviations the agent lists"
+     "tools": "Paper batch records or eBR and MES",
+     "cite": {
+      "label": "21 CFR 211.180",
+      "url": "https://www.law.cornell.edu/cfr/text/21/211.180"
+     }
     },
     {
      "id": "b4-5",
      "label": "QC and OOS",
-     "human": "Test each batch, and when a result fails, investigate whether the lab or the product is at fault",
-     "tools": "Empower, LIMS, TrackWise, Veeva Vault QMS",
-     "paradigm": "Platform",
-     "rule": "Retest by a different equally qualified analyst, no outlier test on chemical assays",
-     "judgment": "Whether a clearly identified lab error justifies invalidation",
-     "cite": {
-      "label": "FDA OOS guidance",
-      "url": "https://www.fda.gov/media/158416/download"
-     },
+     "human": "Test each batch and, when a result fails, find if lab or product is at fault",
      "gets": "A finished batch",
      "gives": "Test results, and an explanation for any failed result",
+     "paradigm": "Platform",
      "toolList": [
       {
        "name": "Waters Empower",
@@ -1304,22 +1434,19 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
        "does": "Tracks out-of-spec investigations and quality records"
       }
      ],
-     "hint": "Give chromatography result exports and specifications. Grade which results are out of specification and the recalculated assay values"
+     "tools": "Empower, LIMS, TrackWise, Veeva Vault QMS",
+     "cite": {
+      "label": "FDA OOS guidance",
+      "url": "https://www.fda.gov/media/158416/download"
+     }
     },
     {
      "id": "b4-6",
      "label": "Stability",
      "human": "Store batches under set conditions over time and calculate how long the product lasts",
-     "tools": "JMP Stability, R expirest",
-     "paradigm": "GUI",
-     "rule": "Shelf life where one-sided 95% confidence limit crosses acceptance, pool at 0.25",
-     "judgment": "Which software variance convention to use for shelf life",
-     "cite": {
-      "label": "ICH Q1E",
-      "url": "https://database.ich.org/sites/default/files/Q1E%20Guideline.pdf"
-     },
      "gets": "Batches kept in storage over time",
      "gives": "How long the product stays good: its shelf life",
+     "paradigm": "GUI",
      "toolList": [
       {
        "name": "JMP Stability",
@@ -1330,51 +1457,77 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
        "does": "R package for shelf life under ICH Q1E"
       }
      ],
-     "hint": "JMP is licensed. Give stability data per batch, condition and time point and grade ICH Q1E pooling and shelf life from R expirest"
+     "tools": "JMP Stability, R expirest",
+     "cite": {
+      "label": "ICH Q1E",
+      "url": "https://database.ich.org/sites/default/files/Q1E%20Guideline.pdf"
+     }
     },
     {
      "id": "b4-7",
      "label": "Batch release",
      "human": "Quality staff review every record of a batch before allowing it to be sold",
-     "tools": "eBR and MES review, LIMS, QMS, SAP",
-     "paradigm": "Platform",
-     "rule": "Quality unit must review and approve all production and control records before release",
-     "judgment": "Approve or reject the batch, QP certification of each batch",
-     "cite": {
-      "label": "21 CFR 211.192",
-      "url": "https://www.law.cornell.edu/cfr/text/21/211.192"
-     },
      "gets": "A batch with its records and test results",
      "gives": "A decision to release the batch for sale, or not",
+     "paradigm": "Platform",
      "toolList": [
       {
        "name": "No single standard tool",
        "does": "Review of batch, lab and quality records (not confirmed by our sources)"
       }
      ],
-     "hint": "Give batch record checks, LIMS results and open deviations as CSV. Grade the release or reject decision and its listed reasons"
+     "tools": "eBR and MES review, LIMS, QMS, SAP",
+     "cite": {
+      "label": "21 CFR 211.192",
+      "url": "https://www.law.cornell.edu/cfr/text/21/211.192"
+     }
     },
     {
      "id": "b4-8",
      "label": "Deviations and CAPA",
      "human": "Investigate anything that went wrong, fix the cause, and review each product every year",
-     "tools": "Veeva Vault QMS, Minitab, JMP",
-     "paradigm": "Platform",
-     "rule": "Field alert within 3 working days of receipt for distributed-batch failures",
-     "judgment": "Whether the annual review requires specification or procedure changes",
-     "cite": {
-      "label": "21 CFR 314.81",
-      "url": "https://www.law.cornell.edu/cfr/text/21/314.81"
-     },
      "gets": "Anything that went wrong",
      "gives": "A fixed root cause and a yearly review of each product",
+     "paradigm": "Platform",
      "toolList": [
       {
        "name": "Veeva Vault QMS",
        "does": "Tracks deviations, CAPA, audits and change control"
       }
      ],
-     "hint": "Vault QMS is licensed. Give deviation log exports as CSV and grade trend counts and recurrence flags computed in pandas"
+     "tools": "Veeva Vault QMS, Minitab, JMP",
+     "cite": {
+      "label": "21 CFR 314.81",
+      "url": "https://www.law.cornell.edu/cfr/text/21/314.81"
+     }
+    }
+   ],
+   "groups": [
+    {
+     "name": "Design",
+     "sections": [
+      "b4-1",
+      "b4-11",
+      "b4-2",
+      "b4-9"
+     ]
+    },
+    {
+     "name": "Make",
+     "sections": [
+      "b4-3",
+      "b4-10",
+      "b4-4"
+     ]
+    },
+    {
+     "name": "Check",
+     "sections": [
+      "b4-5",
+      "b4-6",
+      "b4-7",
+      "b4-8"
+     ]
     }
    ]
   },
@@ -1385,41 +1538,64 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
    "paradigm": "Word authoring in validated RIM and eCTD publishing systems",
    "sections": [
     {
-     "id": "b5-1",
-     "label": "IND and CTA",
-     "human": "Send the request to start human trials, then wait 30 days for the FDA to object",
-     "tools": "not sourced",
+     "id": "b5-5",
+     "label": "Regulatory strategy",
+     "human": "Pick the approval route, special designations, timeline and fees before writing the filing",
+     "gets": "Development plan and early data",
+     "gives": "A written plan for how to file and win approval",
      "paradigm": "Documents",
-     "rule": "IND takes effect 30 days after FDA receipt unless clinical hold",
-     "judgment": "Narrative or tabular summary of serious adverse experiences",
+     "toolList": [],
+     "tools": "",
      "cite": {
-      "label": "21 CFR 312.40",
-      "url": "https://www.law.cornell.edu/cfr/text/21/312.40"
-     },
-     "gets": "The preclinical package",
-     "gives": "Permission to start human trials",
+      "label": "21 CFR 601.2",
+      "url": "https://www.law.cornell.edu/cfr/text/21/601.2"
+     }
+    },
+    {
+     "id": "b5-3",
+     "label": "Agency meetings",
+     "human": "Plan questions for regulators, request the meeting, and record what was agreed",
+     "gets": "Open questions about the development plan",
+     "gives": "Written advice and agreements from the regulator",
+     "paradigm": "Documents",
      "toolList": [
       {
        "name": "No single standard tool",
        "does": "No tool named in our sources"
       }
      ],
-     "hint": "Give a year of study status and safety tables. Grade the summary tables the agent builds for an IND annual report"
+     "tools": "not sourced",
+     "cite": {
+      "label": "FDA formal meetings guidance",
+      "url": "https://www.fda.gov/media/172311/download"
+     }
+    },
+    {
+     "id": "b5-1",
+     "label": "IND and CTA",
+     "human": "Send the request to start human trials and wait 30 days for FDA to object",
+     "gets": "The preclinical package and trial plan",
+     "gives": "Permission to start human trials",
+     "paradigm": "Documents",
+     "toolList": [
+      {
+       "name": "No single standard tool",
+       "does": "No tool named in our sources"
+      }
+     ],
+     "tools": "not sourced",
+     "cite": {
+      "label": "21 CFR 312.40",
+      "url": "https://www.law.cornell.edu/cfr/text/21/312.40"
+     }
     },
     {
      "id": "b5-2",
      "label": "CTD dossier",
-     "human": "Write the big application document and assemble it in the required electronic format",
-     "tools": "Word, Veeva Vault RIM, Lorenz docuBridge, eCTD XML",
-     "paradigm": "Documents",
-     "rule": "CTD has five modules, Module 1 regional, Module 2 summaries in 7 sections",
-     "judgment": "Content of the Module 2 summaries beyond the fixed structure",
-     "cite": {
-      "label": "ICH M4(R4)",
-      "url": "https://database.ich.org/sites/default/files/M4_R4__Guideline.pdf"
-     },
+     "human": "Write the big application document and build it in the required electronic format",
      "gets": "All study, trial and manufacturing reports",
-     "gives": "The full approval application in electronic form",
+     "gives": "The approval application in electronic form",
+     "paradigm": "Documents",
      "toolList": [
       {
        "name": "Veeva Vault RIM",
@@ -1430,51 +1606,82 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
        "does": "Builds and checks eCTD submission packages"
       }
      ],
-     "hint": "Publishing tools are licensed. Give PDF leaf documents and grade the eCTD index.xml backbone the agent writes for structure and checksums"
-    },
-    {
-     "id": "b5-3",
-     "label": "Agency meetings",
-     "human": "Prepare questions for meetings with regulators, bring the experts, and record what was agreed",
-     "tools": "not sourced",
-     "paradigm": "Documents",
-     "rule": "Type A meeting within 30 days, Type B 60, Type C 75",
-     "judgment": "Which questions to put in the briefing package and how",
+     "tools": "Word, Veeva Vault RIM, Lorenz docuBridge, eCTD XML",
      "cite": {
-      "label": "FDA formal meetings guidance",
-      "url": "https://www.fda.gov/media/172311/download"
-     },
-     "gets": "Open questions about the plan",
-     "gives": "Advice and agreement from the regulator",
-     "toolList": [
-      {
-       "name": "No single standard tool",
-       "does": "No tool named in our sources"
-      }
-     ],
-     "hint": "Mostly writing. Give a briefing package and agency responses and grade a table matching each question to its agreed outcome"
+      "label": "ICH M4(R4)",
+      "url": "https://database.ich.org/sites/default/files/M4_R4__Guideline.pdf"
+     }
     },
     {
      "id": "b5-4",
      "label": "NDA and BLA",
-     "human": "Answer the regulator's questions during review and agree on the wording of the drug label",
-     "tools": "not sourced",
+     "human": "Submit the application, answer reviewer questions, and reach the final FDA decision",
+     "gets": "The complete approval application",
+     "gives": "An approval or a list of fixes",
      "paradigm": "Documents",
-     "rule": "PDUFA goal 10 months standard, 6 priority, from the 60-day filing date",
-     "judgment": "How the label ends up worded in negotiation",
-     "cite": {
-      "label": "PDUFA VII letter",
-      "url": "https://www.fda.gov/media/151712/download"
-     },
-     "gets": "The approval application",
-     "gives": "An approval and an agreed drug label",
      "toolList": [
       {
        "name": "No single standard tool",
        "does": "No tool named in our sources"
       }
      ],
-     "hint": "Mostly writing. Give draft and agency-revised label text and grade the structured list of changes the agent extracts"
+     "tools": "not sourced",
+     "cite": {
+      "label": "PDUFA VII letter",
+      "url": "https://www.fda.gov/media/151712/download"
+     }
+    },
+    {
+     "id": "b5-6",
+     "label": "Labeling and promotion",
+     "human": "Write and agree the drug label, then clear ads and promotional material against it",
+     "gets": "Clinical results and the proposed claims",
+     "gives": "Approved label and cleared promotional material",
+     "paradigm": "Documents",
+     "toolList": [],
+     "tools": "",
+     "cite": {
+      "label": "PDUFA VII letter",
+      "url": "https://www.fda.gov/media/151712/download"
+     }
+    },
+    {
+     "id": "b5-7",
+     "label": "Postapproval reporting",
+     "human": "File required safety reports, change supplements and yearly reports after approval",
+     "gets": "Approved product and market safety information",
+     "gives": "Filed reports and approved changes",
+     "paradigm": "Documents",
+     "toolList": [],
+     "tools": "",
+     "cite": {
+      "label": "21 CFR 314.70",
+      "url": "https://www.law.cornell.edu/cfr/text/21/314.70"
+     }
+    }
+   ],
+   "groups": [
+    {
+     "name": "Planning",
+     "sections": [
+      "b5-5",
+      "b5-3"
+     ]
+    },
+    {
+     "name": "Building and filing",
+     "sections": [
+      "b5-1",
+      "b5-2",
+      "b5-4"
+     ]
+    },
+    {
+     "name": "Label and upkeep",
+     "sections": [
+      "b5-6",
+      "b5-7"
+     ]
     }
    ]
   },
@@ -1485,19 +1692,26 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
    "paradigm": "Validated safety databases, plus R or SAS signal scripting",
    "sections": [
     {
+     "id": "b6-7",
+     "label": "Medical information",
+     "human": "Answer questions and complaints about the marketed drug and pass safety or quality issues on",
+     "gets": "A question or complaint from a doctor, patient or pharmacist",
+     "gives": "A logged contact, a reply, and any safety or quality case raised",
+     "paradigm": "Documents",
+     "toolList": [],
+     "tools": "",
+     "cite": {
+      "label": "21 CFR 211.198",
+      "url": "https://www.law.cornell.edu/cfr/text/21/211.198"
+     }
+    },
+    {
      "id": "b6-1",
      "label": "ICSR case processing",
-     "human": "Enter each side-effect report, label it with standard terms, and judge how serious it is",
-     "tools": "Oracle Argus, MedDRA, WHO Drug, E2B(R3) XML",
+     "human": "Enter each side-effect report, check it, code it, judge it, and send it on time",
+     "gets": "A side-effect report from a doctor, patient or study",
+     "gives": "A coded, judged case sent to regulators on time",
      "paradigm": "Platform",
-     "rule": "Serious unexpected cases reported within 15 calendar days, receipt day is day 0",
-     "judgment": "Whether an important medical event is serious",
-     "cite": {
-      "label": "ICH E2D",
-      "url": "https://database.ich.org/sites/default/files/E2D_Guideline.pdf"
-     },
-     "gets": "A side-effect report from a doctor or patient",
-     "gives": "A coded case entered in the safety database",
      "toolList": [
       {
        "name": "Oracle Argus",
@@ -1512,22 +1726,19 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
        "does": "Standard dictionary for coding medicines"
       }
      ],
-     "hint": "Argus and MedDRA are licensed. Give E2B(R3) XML cases and grade duplicate detection by the N.1.2 field and data extraction in Python"
+     "tools": "Oracle Argus, MedDRA, WHO Drug, E2B(R3) XML",
+     "cite": {
+      "label": "ICH E2D",
+      "url": "https://database.ich.org/sites/default/files/E2D_Guideline.pdf"
+     }
     },
     {
      "id": "b6-2",
      "label": "Signal detection",
      "human": "Search side-effect databases for unusual patterns and decide which ones are real concerns",
-     "tools": "R openEBGM, SAS, SQL over FAERS",
+     "gets": "The safety database or public report files",
+     "gives": "A short list of assessed safety concerns with actions",
      "paradigm": "Scripted",
-     "rule": "Evans signal: PRR at least 2, chi-squared at least 4, 3 or more cases",
-     "judgment": "Whether a disproportionality hit is a real, previously unknown signal",
-     "cite": {
-      "label": "CASRAI guide",
-      "url": "https://www.casrai.org/guides/signal-detection-in-pharmacovigilance"
-     },
-     "gets": "The safety database",
-     "gives": "A list of real new safety concerns",
      "toolList": [
       {
        "name": "openEBGM",
@@ -1538,95 +1749,126 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
        "does": "Scripts that count reports in FAERS or company data"
       }
      ],
-     "hint": "Give FAERS quarterly files. Grade drug-event counts and EBGM scores computed with openEBGM against a hidden table"
+     "tools": "R openEBGM, SAS, SQL over FAERS",
+     "cite": {
+      "label": "CASRAI guide",
+      "url": "https://www.casrai.org/guides/signal-detection-in-pharmacovigilance"
+     }
     },
     {
      "id": "b6-3",
      "label": "Periodic reports",
-     "human": "Write regular safety summary reports for regulators from all the side-effect data",
-     "tools": "Word over safety database exports",
+     "human": "Write the regular safety and benefit-risk report for regulators from all the side-effect data",
+     "gets": "All side-effect and exposure data for a reporting period",
+     "gives": "A periodic safety report filed on time",
      "paradigm": "Documents",
-     "rule": "PBRER due 70 days after data lock for 6 or 12 month intervals, else 90",
-     "judgment": "The benefit-risk evaluation section",
-     "cite": {
-      "label": "ICH E2C(R2)",
-      "url": "https://database.ich.org/sites/default/files/E2C_R2_Guideline.pdf"
-     },
-     "gets": "All side-effect data for a period",
-     "gives": "A regular safety report for regulators",
      "toolList": [
       {
        "name": "No single standard tool",
        "does": "Word documents written over safety database exports (not confirmed by our sources)"
       }
      ],
-     "hint": "Give a safety case line listing as CSV. Grade the summary tabulations of events by MedDRA term and seriousness"
+     "tools": "Word over safety database exports",
+     "cite": {
+      "label": "ICH E2C(R2)",
+      "url": "https://database.ich.org/sites/default/files/E2C_R2_Guideline.pdf"
+     }
     },
     {
      "id": "b6-4",
      "label": "Risk management",
-     "human": "Write the plan for watching and reducing the drug's known risks",
-     "tools": "not sourced",
+     "human": "Write and run the plan for watching, reducing and measuring the drug's known risks",
+     "gets": "The drug's known risks, possible risks and gaps in knowledge",
+     "gives": "An approved risk plan with checks on whether it works",
      "paradigm": "Documents",
-     "rule": null,
-     "judgment": "Whether serious safety concerns warrant a REMS",
-     "cite": {
-      "label": "ICH E2E",
-      "url": "https://database.ich.org/sites/default/files/E2E_Guideline.pdf"
-     },
-     "gets": "The drug's known and possible risks",
-     "gives": "A plan to watch and reduce those risks",
      "toolList": [
       {
        "name": "No single standard tool",
        "does": "No tool named in our sources"
       }
      ],
-     "hint": "Sources describe only documents. A task could grade a structured list of safety concerns extracted from a given safety specification"
+     "tools": "not sourced",
+     "cite": {
+      "label": "ICH E2E",
+      "url": "https://database.ich.org/sites/default/files/E2E_Guideline.pdf"
+     }
     },
     {
      "id": "b6-5",
      "label": "Real-world evidence",
-     "human": "Study insurance and health-record data to see how the drug works in everyday use",
-     "tools": "SAS, R, SQL, Sentinel common data model",
+     "human": "Study insurance and health-record data to see how the drug is used and what happens",
+     "gets": "Insurance and health-record data and a safety question",
+     "gives": "Evidence of safety and use in everyday care",
      "paradigm": "Scripted",
-     "rule": null,
-     "judgment": "Which RWD sources, EHR or claims, to analyse",
-     "cite": {
-      "label": "FDA RWE Framework",
-      "url": "https://www.fda.gov/media/120060/download"
-     },
-     "gets": "Insurance and health-record data",
-     "gives": "Evidence of how the drug does in everyday use",
      "toolList": [
       {
        "name": "No single standard tool",
        "does": "SAS, R or SQL over claims and health records (not confirmed by our sources)"
       }
      ],
-     "hint": "Give Synthea health record tables. Grade cohort counts and incidence rates the agent computes with SQL or pandas"
+     "tools": "SAS, R, SQL, Sentinel common data model",
+     "cite": {
+      "label": "FDA RWE Framework",
+      "url": "https://www.fda.gov/media/120060/download"
+     }
+    },
+    {
+     "id": "b6-8",
+     "label": "Safety communication",
+     "human": "Tell doctors and patients about new safety findings and update the label",
+     "gets": "A confirmed new safety finding and its recommended action",
+     "gives": "Notices sent, the label updated and the effect checked",
+     "paradigm": "Documents",
+     "toolList": [],
+     "tools": "",
+     "cite": {
+      "label": "EMA GVP XV",
+      "url": "https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-good-pharmacovigilance-practices-module-xv-safety-communication-rev-1_en.pdf"
+     }
     },
     {
      "id": "b6-6",
      "label": "Post-approval changes",
      "human": "Judge how big each manufacturing or label change is and file it the right way",
-     "tools": "Veeva Vault QMS linked to RIM",
+     "gets": "A planned change to the product, process or label",
+     "gives": "A change filed, approved or reported the right way",
      "paradigm": "Platform",
-     "rule": "Major change needs prior approval, moderate 30-day supplement, minor annual report",
-     "judgment": "Which established conditions to propose and what a PACMP covers",
-     "cite": {
-      "label": "21 CFR 314.70",
-      "url": "https://www.law.cornell.edu/cfr/text/21/314.70"
-     },
-     "gets": "A planned change to the product or label",
-     "gives": "A change filed and approved the right way",
      "toolList": [
       {
        "name": "Veeva Vault QMS",
        "does": "Change control linked to RIM for regulatory impact"
       }
      ],
-     "hint": "Give a change description and a rule table. Grade the chosen filing type, prior approval supplement, CBE-30 or annual report"
+     "tools": "Veeva Vault QMS linked to RIM",
+     "cite": {
+      "label": "21 CFR 314.70",
+      "url": "https://www.law.cornell.edu/cfr/text/21/314.70"
+     }
+    }
+   ],
+   "groups": [
+    {
+     "name": "Case handling",
+     "sections": [
+      "b6-7",
+      "b6-1"
+     ]
+    },
+    {
+     "name": "Safety review",
+     "sections": [
+      "b6-2",
+      "b6-3",
+      "b6-4",
+      "b6-5"
+     ]
+    },
+    {
+     "name": "Acting on findings",
+     "sections": [
+      "b6-8",
+      "b6-6"
+     ]
     }
    ]
   },
@@ -1698,6 +1940,132 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
       "url": "https://broadinstitute.github.io/warp/docs/Pipelines/Whole_Genome_Germline_Single_Sample_Pipeline/README"
      },
      "tools": "Illumina BCL Convert, bcl2fastq2, FastQC"
+    },
+    {
+     "id": "b7-4",
+     "label": "Variant discovery",
+     "human": "Call genetic differences from aligned reads and judge which ones are real and matter",
+     "gets": "Aligned reads per sample and a reference genome",
+     "gives": "A filtered, annotated variant list with quality numbers",
+     "paradigm": "Pipeline",
+     "toolList": [
+      {
+       "name": "GATK HaplotypeCaller",
+       "does": "Rebuilds local sequence and calls small variants"
+      },
+      {
+       "name": "GATK GenomicsDBImport",
+       "does": "Gathers per-sample files for whole group genotyping"
+      },
+      {
+       "name": "GATK GenotypeGVCFs",
+       "does": "Genotypes all samples together into one file"
+      },
+      {
+       "name": "GATK VariantRecalibrator",
+       "does": "Learns good from bad calls using known sites"
+      },
+      {
+       "name": "bcftools",
+       "does": "Calls, tidies, filters and queries variant files"
+      },
+      {
+       "name": "Manta",
+       "does": "Calls large rearrangements from paired and split reads"
+      },
+      {
+       "name": "CNVkit",
+       "does": "Infers copy number from capture sequencing depth"
+      },
+      {
+       "name": "GATK-SV",
+       "does": "Pipeline for large variants in short-read genomes"
+      },
+      {
+       "name": "ExpansionHunter",
+       "does": "Measures repeat stretches that grow too long"
+      },
+      {
+       "name": "Ensembl VEP",
+       "does": "Says what each variant does to genes"
+      },
+      {
+       "name": "filter_vep",
+       "does": "Filters annotated variants on frequency and consequence"
+      },
+      {
+       "name": "hap.py",
+       "does": "Scores your calls against a truth set"
+      }
+     ],
+     "cite": {
+      "label": "GA4GH benchmarking tools",
+      "url": "https://github.com/ga4gh/benchmarking-tools"
+     },
+     "tools": "GATK HaplotypeCaller, GATK GenomicsDBImport, GATK GenotypeGVCFs"
+    },
+    {
+     "id": "b7-7",
+     "label": "Family and pedigree genetics",
+     "human": "Use family genomes to check who is related and find variants that follow the disease",
+     "gets": "Family genotype or sequencing files and a pedigree file",
+     "gives": "Checked pedigrees, phased haplotypes and inheritance-matched variants",
+     "paradigm": "Scripted",
+     "toolList": [
+      {
+       "name": "PLINK",
+       "does": "Checks Mendel errors and reads pedigree files"
+      },
+      {
+       "name": "KING",
+       "does": "Finds relatives and flags pedigree mistakes"
+      },
+      {
+       "name": "somalier",
+       "does": "Checks sample swaps and relatedness quickly"
+      },
+      {
+       "name": "GATK PhaseByTransmission",
+       "does": "Phases trio genotypes using parent data"
+      },
+      {
+       "name": "WhatsHap",
+       "does": "Phases variants using sequencing reads"
+      },
+      {
+       "name": "Beagle",
+       "does": "Phases and fills in genotypes statistically"
+      },
+      {
+       "name": "SHAPEIT",
+       "does": "Phases large cohorts into haplotypes"
+      },
+      {
+       "name": "DeNovoGear",
+       "does": "Calls new mutations in child versus parents"
+      },
+      {
+       "name": "DeepTrio",
+       "does": "Calls variants in trios with a neural network"
+      },
+      {
+       "name": "Slivar",
+       "does": "Filters variants by family inheritance rules"
+      },
+      {
+       "name": "Merlin",
+       "does": "Runs linkage and haplotype work on pedigrees"
+      },
+      {
+       "name": "GEMINI",
+       "does": "Queries family variants by inheritance pattern"
+      }
+     ],
+     "cite": {
+      "label": "KING tutorial",
+      "url": "https://www.kingrelatedness.com/manual.shtml"
+     },
+     "tools": "PLINK, KING, somalier"
     },
     {
      "id": "b7-2",
@@ -1780,69 +2148,6 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
       "url": "https://www.encodeproject.org/atac-seq/"
      },
      "tools": "MACS3, deepTools, ChromHMM"
-    },
-    {
-     "id": "b7-4",
-     "label": "Variant discovery",
-     "human": "Call genetic differences from aligned reads and judge which ones are real and matter",
-     "gets": "Aligned reads per sample and a reference genome",
-     "gives": "A filtered, annotated variant list with quality numbers",
-     "paradigm": "Pipeline",
-     "toolList": [
-      {
-       "name": "GATK HaplotypeCaller",
-       "does": "Rebuilds local sequence and calls small variants"
-      },
-      {
-       "name": "GATK GenomicsDBImport",
-       "does": "Gathers per-sample files for whole group genotyping"
-      },
-      {
-       "name": "GATK GenotypeGVCFs",
-       "does": "Genotypes all samples together into one file"
-      },
-      {
-       "name": "GATK VariantRecalibrator",
-       "does": "Learns good from bad calls using known sites"
-      },
-      {
-       "name": "bcftools",
-       "does": "Calls, tidies, filters and queries variant files"
-      },
-      {
-       "name": "Manta",
-       "does": "Calls large rearrangements from paired and split reads"
-      },
-      {
-       "name": "CNVkit",
-       "does": "Infers copy number from capture sequencing depth"
-      },
-      {
-       "name": "GATK-SV",
-       "does": "Pipeline for large variants in short-read genomes"
-      },
-      {
-       "name": "ExpansionHunter",
-       "does": "Measures repeat stretches that grow too long"
-      },
-      {
-       "name": "Ensembl VEP",
-       "does": "Says what each variant does to genes"
-      },
-      {
-       "name": "filter_vep",
-       "does": "Filters annotated variants on frequency and consequence"
-      },
-      {
-       "name": "hap.py",
-       "does": "Scores your calls against a truth set"
-      }
-     ],
-     "cite": {
-      "label": "GA4GH benchmarking tools",
-      "url": "https://github.com/ga4gh/benchmarking-tools"
-     },
-     "tools": "GATK HaplotypeCaller, GATK GenomicsDBImport, GATK GenotypeGVCFs"
     },
     {
      "id": "b7-5",
@@ -1969,69 +2274,30 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
       "url": "https://cellprofiler-manual.s3.amazonaws.com/CellProfiler-4.2.8/index.html"
      },
      "tools": "CellProfiler, CellProfiler Analyst, Cellpose"
+    }
+   ],
+   "groups": [
+    {
+     "name": "Sequencing",
+     "sections": [
+      "b7-1",
+      "b7-4",
+      "b7-7"
+     ]
     },
     {
-     "id": "b7-7",
-     "label": "Family and pedigree genetics",
-     "human": "Use family genomes to check who is related and find variants that follow the disease",
-     "gets": "Family genotype or sequencing files and a pedigree file",
-     "gives": "Checked pedigrees, phased haplotypes and inheritance-matched variants",
-     "paradigm": "Scripted",
-     "toolList": [
-      {
-       "name": "PLINK",
-       "does": "Checks Mendel errors and reads pedigree files"
-      },
-      {
-       "name": "KING",
-       "does": "Finds relatives and flags pedigree mistakes"
-      },
-      {
-       "name": "somalier",
-       "does": "Checks sample swaps and relatedness quickly"
-      },
-      {
-       "name": "GATK PhaseByTransmission",
-       "does": "Phases trio genotypes using parent data"
-      },
-      {
-       "name": "WhatsHap",
-       "does": "Phases variants using sequencing reads"
-      },
-      {
-       "name": "Beagle",
-       "does": "Phases and fills in genotypes statistically"
-      },
-      {
-       "name": "SHAPEIT",
-       "does": "Phases large cohorts into haplotypes"
-      },
-      {
-       "name": "DeNovoGear",
-       "does": "Calls new mutations in child versus parents"
-      },
-      {
-       "name": "DeepTrio",
-       "does": "Calls variants in trios with a neural network"
-      },
-      {
-       "name": "Slivar",
-       "does": "Filters variants by family inheritance rules"
-      },
-      {
-       "name": "Merlin",
-       "does": "Runs linkage and haplotype work on pedigrees"
-      },
-      {
-       "name": "GEMINI",
-       "does": "Queries family variants by inheritance pattern"
-      }
-     ],
-     "cite": {
-      "label": "KING tutorial",
-      "url": "https://www.kingrelatedness.com/manual.shtml"
-     },
-     "tools": "PLINK, KING, somalier"
+     "name": "Cells and epigenome",
+     "sections": [
+      "b7-2",
+      "b7-3"
+     ]
+    },
+    {
+     "name": "Proteins and images",
+     "sections": [
+      "b7-5",
+      "b7-6"
+     ]
     }
    ]
   },
@@ -2339,6 +2605,37 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
       "url": "https://www.law.cornell.edu/cfr/text/42/493.1253"
      },
      "tools": "CLIA regulations, CAP accreditation checklists, Characterised reference materials"
+    }
+   ],
+   "groups": [
+    {
+     "name": "Prepare",
+     "sections": [
+      "b8-1",
+      "b8-2",
+      "b8-3"
+     ]
+    },
+    {
+     "name": "Interpret",
+     "sections": [
+      "b8-4",
+      "b8-5"
+     ]
+    },
+    {
+     "name": "Cancer and drugs",
+     "sections": [
+      "b8-6",
+      "b8-7",
+      "b8-8"
+     ]
+    },
+    {
+     "name": "Quality",
+     "sections": [
+      "b8-9"
+     ]
     }
    ]
   }
@@ -2680,58 +2977,215 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
   "Meet the schedule from last patient visit to headline results"
  ],
  "b4-1": [
-  "Find key quality traits and the safe operating range"
+  "Write down the quality traits the drug must have",
+  "Pick which product properties must stay in range",
+  "Choose the raw chemicals the drug is built from",
+  "Rank which inputs and settings could change product quality",
+  "Run planned experiments that change several settings together",
+  "Mark which process settings truly affect quality",
+  "Map the range of settings proven to give good product",
+  "Write up the design space for regulators to approve"
  ],
  "b4-2": [
-  "Develop and validate methods for testing the drug"
+  "Write what the test must measure and how well",
+  "Choose the lab technique that can meet the target",
+  "Decide between a basic or a deeper method study",
+  "Test if small changes in the method alter results",
+  "Set the checks that must pass before each run",
+  "Show the test sees only the target substance",
+  "Show results rise in line with the amount present",
+  "Show results match known true values",
+  "Show repeat runs give close results",
+  "Find the smallest amount the test can detect and measure"
  ],
  "b4-3": [
-  "Move the process to larger scale or another site"
+  "Gather what is known about the product and process",
+  "Check the process still matches the approved filing",
+  "Compare scale and equipment between the two sites",
+  "Write what the new site equipment must do",
+  "Write the plan and pass marks for the transfer",
+  "Prove the new equipment works as intended",
+  "Show the new lab can run the tests well",
+  "Make batches at the new site and judge them"
  ],
  "b4-4": [
-  "Make the drug under strict rules and record every step"
+  "Write and double-check the recipe for the batch",
+  "Hand out an exact recipe copy for one batch",
+  "Hold materials until quality staff approve them",
+  "Have a second person check each weighed material",
+  "Have a second person confirm each material added",
+  "Log which equipment was cleaned and used",
+  "Test samples during making to check the batch",
+  "Work out the yield and have it re-checked",
+  "Count labels issued, used and returned",
+  "Write down any departure from the written steps"
  ],
  "b4-5": [
-  "Test batches and investigate results that fail specifications"
+  "Take the planned samples from the batch",
+  "Confirm instruments are calibrated and in spec",
+  "Run the tests with proven methods",
+  "Record every data point from every test",
+  "Compare each result with its limit",
+  "Check the lab for errors behind a failed result",
+  "Have another qualified analyst repeat the test",
+  "Make sure outlier tests are not used on chemical assays",
+  "Widen the investigation beyond the lab",
+  "Write the findings and the follow-up actions"
  ],
  "b4-6": [
-  "Test how the drug holds up over time in storage"
+  "Write the plan for the stability study",
+  "Pick the batches to put on stability",
+  "Pack samples in the same container as the market pack",
+  "Choose the temperature and humidity settings",
+  "Fix the dates when samples are pulled and tested",
+  "Run tests that can detect product breakdown",
+  "Check if any result changed beyond set limits",
+  "Test whether batches can be combined for analysis",
+  "Fit a line and find where it crosses the limit",
+  "Set the expiry date and storage label text"
  ],
  "b4-7": [
-  "Have quality control approve or reject each batch"
+  "Read the full batch record for gaps",
+  "Confirm every odd result was fully investigated",
+  "Judge if deviations affect the batch",
+  "Confirm test data meet the filed specification",
+  "Confirm the full supply chain is documented",
+  "Confirm materials match the filed sources and limits",
+  "Confirm processes and tests are still validated",
+  "Sign that the batch meets all legal needs",
+  "Log the signed decision in the register",
+  "Approve the batch for sale or reject it"
  ],
  "b4-8": [
-  "Handle errors, fixes, changes and the yearly product review"
+  "Log each complaint, deviation or failure",
+  "Rate how serious the event is for patients",
+  "Dig out the true cause of the event",
+  "Check other batches and products for the same fault",
+  "Decide the fixes and the steps to prevent repeats",
+  "Check later that the fix worked",
+  "Judge the risk of a proposed change",
+  "Decide what the regulator must be told about a change",
+  "Review a year of batches for each product",
+  "Report failures of shipped product to the FDA fast"
  ],
  "b5-1": [
-  "File the trial application and wait 30 days for review"
+  "Write the drug summary and the overall trial plan",
+  "Summarize the animal safety studies for the IND",
+  "Describe how the drug is made and checked",
+  "Write the drug facts handbook for trial doctors",
+  "Write the plan for the first human study",
+  "Fill in the cover form and send the IND",
+  "Wait out 30 days or answer any hold",
+  "Send the EU trial application through the EU portal",
+  "Report serious new risks to FDA on time",
+  "Write the yearly progress and safety summary"
  ],
  "b5-2": [
-  "Write the five-part standard dossier for regulators"
+  "Gather the drug making and testing reports",
+  "Gather the animal and lab study reports",
+  "Gather the human study reports",
+  "Write a one page intro to the drug",
+  "Summarize all quality data for the reviewer",
+  "Judge what the animal studies say about safety",
+  "List the animal study facts in text and tables",
+  "Judge what the human data show about benefit and risk",
+  "List all human study facts in one summary",
+  "Turn the documents into the electronic package"
  ],
  "b5-3": [
-  "Request and prepare formal meetings with regulators"
+  "Pick which kind of FDA meeting fits the need",
+  "Write the letter asking FDA for a meeting",
+  "Write precise questions grouped by FDA expertise",
+  "Assemble the background package for FDA reviewers",
+  "Read FDA's written answers before the meeting",
+  "Decide if the meeting is still needed",
+  "Compare FDA minutes with your own notes",
+  "Ask FDA to clarify advice that is unclear",
+  "Ask the EU agency for advice on the plan"
  ],
  "b5-4": [
-  "File the marketing application, go through review, agree the label"
+  "Fill in and sign the application form",
+  "Send the electronic application to FDA",
+  "Learn at day 60 if FDA will review it",
+  "Ask FDA to reconsider a refusal to file",
+  "Read FDA's first list of review issues",
+  "Send newer safety data while review continues",
+  "Take FDA's call on early review findings",
+  "Answer FDA questions with amendments",
+  "Meet FDA to discuss the open issues",
+  "Act on the approval or complete response letter"
  ],
  "b6-1": [
-  "Process individual side-effect reports, from intake to narrative"
+  "Record the report and start the reporting clock",
+  "Check the report has the four needed facts",
+  "Look for the same case already in the database",
+  "Type the case into the standard electronic report format",
+  "Turn the reported events into standard medical terms",
+  "Decide if the event is serious",
+  "Check if the effect is already listed on the label",
+  "Judge how likely the drug caused the event",
+  "Write a short story of what happened to the patient",
+  "Send serious unexpected cases to regulators within 15 days"
  ],
  "b6-2": [
-  "Spot and assess new safety warning signals in reports"
+  "Download the quarterly side-effect report files",
+  "Remove repeat reports and reporting spikes",
+  "Count reports for each drug and event pair",
+  "Compare reported pair counts to what is expected",
+  "Keep pairs that pass the standard cutoffs",
+  "Repeat the search by age, sex and year",
+  "Score pairs with a method that calms small counts",
+  "Check the flag has real evidence behind it",
+  "Rank validated signals by how much harm they may cause",
+  "Weigh all evidence and say what should be done"
  ],
  "b6-3": [
-  "Write regular periodic safety reports for regulators"
+  "Pick the cutoff date and the period covered",
+  "Estimate how many people took the drug",
+  "Count reactions by medical term and seriousness",
+  "List label changes made during the period",
+  "Search journals for new safety findings",
+  "Summarise how each closed signal was resolved",
+  "Weigh the evidence that the drug works",
+  "Compare benefits and risks for each use",
+  "State what the findings mean and what will change",
+  "File the report within the allowed days"
  ],
  "b6-4": [
-  "Write risk management and drug safety monitoring plans"
+  "List the main known and possible risks",
+  "Describe how common the disease is and who gets it",
+  "Decide if normal safety monitoring is enough",
+  "Plan a study or action for each safety issue",
+  "Put each action on a timeline",
+  "Choose how to reduce each risk",
+  "Decide if a special safety program is needed",
+  "Pick patient guides and other safety tools",
+  "Set when the program will be checked",
+  "Measure whether the risk steps work"
  ],
  "b6-5": [
-  "Analyse real-world health data on how the drug performs"
+  "State the exact question the data must answer",
+  "Pick which claims or record databases to use",
+  "Check the data hold exposure, outcome and patient traits",
+  "Choose cohort or other study design",
+  "Define exposure, outcome and confounders in writing",
+  "Post the protocol before collecting data",
+  "Run the same query at every data partner",
+  "Compute event rates in exposed and comparison groups",
+  "Test if the result holds under other assumptions",
+  "Write up the results and post them"
  ],
  "b6-6": [
-  "Assess and file changes to the drug after approval"
+  "Write down exactly what will change",
+  "Judge what the change could do to the product",
+  "Check if the change touches a locked-in condition",
+  "Label the change major, moderate or minor",
+  "Agree the tests for a future change in advance",
+  "Pick prior approval, 30-day or annual report",
+  "Gather the data and forms the filing needs",
+  "Send the filing and hold distribution until allowed",
+  "Update ads and promo to match the new label",
+  "List minor changes in the yearly report"
  ],
  "b7-1": [
   "Check the machine run worked before using data",
@@ -2907,6 +3361,97 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
   "Find stretches of DNA shared from a common ancestor",
   "Test which regions travel with the disease in families",
   "Check a variant follows the trait through the family"
+ ],
+ "b4-9": [
+  "List the tests and limits a batch must pass",
+  "Explain why each limit was chosen",
+  "Set tighter limits at release than at shelf end",
+  "Choose tests done during making rather than at the end",
+  "Decide which tests need not run on every batch",
+  "Join all controls into one plan for steady quality",
+  "Set limits on raw materials and packaging",
+  "Decide if in-process data can replace end testing",
+  "List the filed settings that need approval to change",
+  "Link protein product limits to its characterisation data"
+ ],
+ "b4-10": [
+  "Write the overall plan for all validation work",
+  "Decide how each process step will be controlled",
+  "Prove equipment and utilities work as intended",
+  "Write the plan and pass marks for validation batches",
+  "Decide how many samples to test and where",
+  "Make the validation batches under routine conditions",
+  "Analyze the data against the plan and write it up",
+  "Prove cleaning removes the previous product",
+  "Prove shipping keeps product within its limits",
+  "Set up routine checks that the process stays in control"
+ ],
+ "b4-11": [
+  "Measure drug properties that affect how it can be formulated",
+  "Choose the added ingredients and their amounts",
+  "Work out the recipe that gives the needed quality",
+  "Choose how the final product will be made",
+  "Pick the vial, bottle or pack for the product",
+  "Check the container does not change the drug",
+  "Check the pack guards the drug from outside harm",
+  "Prove the filling and sterilizing steps keep product sterile",
+  "Explain which germ limits apply to the product"
+ ],
+ "b5-5": [
+  "Decide if the drug needs an NDA or a BLA",
+  "Ask FDA to name it a rare disease drug",
+  "Ask for faster review tools for a serious disease",
+  "Ask for extra FDA help using early strong results",
+  "Flag the application for the faster 6 month review",
+  "Plan child studies or ask to skip them",
+  "Work out the key review dates from the filing day",
+  "Work out which application fee will be owed",
+  "Check if the EU central route is required",
+  "Agree the EU plan for studying children"
+ ],
+ "b5-6": [
+  "Ask FDA to check the brand name is safe",
+  "Write the one page label summary",
+  "State the diseases the drug is approved for",
+  "Write all other required label sections in order",
+  "Write the patient guide or counseling text",
+  "Turn the label into the required data format",
+  "Agree final label wording with FDA",
+  "Send the final label before selling",
+  "Send each ad to FDA when first used",
+  "Check ads show a fair summary of risks"
+ ],
+ "b5-7": [
+  "Rate how risky a planned change is",
+  "File big changes and wait for approval",
+  "File medium changes 30 days before use",
+  "File label changes for newly found risks",
+  "Report serious unexpected side effects fast",
+  "Send the regular summary of other side effects",
+  "Report product mix ups or defects within 3 days",
+  "Report progress on promised follow up studies",
+  "Write the yearly report on the approved product"
+ ],
+ "b6-7": [
+  "Write down who asked what and when",
+  "Check each contact for a side effect to report",
+  "Decide if the question was asked unprompted",
+  "Send product defect reports to the quality team",
+  "Decide if the defect needs a full investigation",
+  "Check if a complaint is also a serious side effect",
+  "Ask enough questions to know what is really needed",
+  "Write a balanced answer limited to the question",
+  "Send the answer and close the record"
+ ],
+ "b6-8": [
+  "Decide who must be told and how fast",
+  "List the doctors, carers and patients to reach",
+  "Write plain facts that are not promotional",
+  "Choose letters, websites or other ways to reach people",
+  "Add the new warning or side effect to the label",
+  "Check the notice for accuracy before it goes out",
+  "Send the letter to doctors and tell the regulator",
+  "Measure whether people got it and acted"
  ]
 }</script>
 <script id="ldata" type="application/json">{
@@ -5092,6 +5637,94 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
   "judged": "not judged"
  },
  "b7-7": {
+  "pubmed": null,
+  "epmc": null,
+  "n_pubmed": 0,
+  "n_epmc": 0,
+  "examples": [],
+  "on_target": "not searched yet",
+  "quality": "poor",
+  "better_source": "Searches for this new section are not built yet",
+  "judged": "not judged"
+ },
+ "b4-9": {
+  "pubmed": null,
+  "epmc": null,
+  "n_pubmed": 0,
+  "n_epmc": 0,
+  "examples": [],
+  "on_target": "not searched yet",
+  "quality": "poor",
+  "better_source": "Searches for this new section are not built yet",
+  "judged": "not judged"
+ },
+ "b4-10": {
+  "pubmed": null,
+  "epmc": null,
+  "n_pubmed": 0,
+  "n_epmc": 0,
+  "examples": [],
+  "on_target": "not searched yet",
+  "quality": "poor",
+  "better_source": "Searches for this new section are not built yet",
+  "judged": "not judged"
+ },
+ "b4-11": {
+  "pubmed": null,
+  "epmc": null,
+  "n_pubmed": 0,
+  "n_epmc": 0,
+  "examples": [],
+  "on_target": "not searched yet",
+  "quality": "poor",
+  "better_source": "Searches for this new section are not built yet",
+  "judged": "not judged"
+ },
+ "b5-5": {
+  "pubmed": null,
+  "epmc": null,
+  "n_pubmed": 0,
+  "n_epmc": 0,
+  "examples": [],
+  "on_target": "not searched yet",
+  "quality": "poor",
+  "better_source": "Searches for this new section are not built yet",
+  "judged": "not judged"
+ },
+ "b5-6": {
+  "pubmed": null,
+  "epmc": null,
+  "n_pubmed": 0,
+  "n_epmc": 0,
+  "examples": [],
+  "on_target": "not searched yet",
+  "quality": "poor",
+  "better_source": "Searches for this new section are not built yet",
+  "judged": "not judged"
+ },
+ "b5-7": {
+  "pubmed": null,
+  "epmc": null,
+  "n_pubmed": 0,
+  "n_epmc": 0,
+  "examples": [],
+  "on_target": "not searched yet",
+  "quality": "poor",
+  "better_source": "Searches for this new section are not built yet",
+  "judged": "not judged"
+ },
+ "b6-7": {
+  "pubmed": null,
+  "epmc": null,
+  "n_pubmed": 0,
+  "n_epmc": 0,
+  "examples": [],
+  "on_target": "not searched yet",
+  "quality": "poor",
+  "better_source": "Searches for this new section are not built yet",
+  "judged": "not judged"
+ },
+ "b6-8": {
   "pubmed": null,
   "epmc": null,
   "n_pubmed": 0,
@@ -57266,6 +57899,310 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:15px;font:40
   "label": "Under 1 hour"
  }
 }</script>
+<script id="rdata" type="application/json">{
+ "b4-1": [
+  "A target profile of drug quality traits",
+  "A list of critical quality attributes",
+  "Chosen starting materials with a reason for each",
+  "A ranked list of risky inputs and settings",
+  "A table linking settings to quality results",
+  "A list of critical process parameters",
+  "A design space with proven setting ranges",
+  "A design space section ready for regulatory review"
+ ],
+ "b4-2": [
+  "A target profile for the test",
+  "A chosen technique with a reason",
+  "A chosen minimal or enhanced approach",
+  "A robustness result for the method",
+  "Controls and a system suitability test",
+  "A specificity result",
+  "A linearity fit and a working range",
+  "An accuracy result across the range",
+  "Repeatability and intermediate precision results",
+  "Detection and quantitation limits"
+ ],
+ "b4-3": [
+  "A transfer knowledge package",
+  "A conformance check against the filing",
+  "A list of scale and equipment differences",
+  "A requirements document for new equipment",
+  "An approved transfer protocol",
+  "Qualified equipment at the new site",
+  "A method verification at the new lab",
+  "Batch results from the new site"
+ ],
+ "b4-4": [
+  "An approved master production record",
+  "A batch record for one batch",
+  "Released components only in use",
+  "Verified dispensed components",
+  "Verified material additions",
+  "An equipment cleaning and use entry",
+  "In-process test results",
+  "A verified yield figure",
+  "A label reconciliation count",
+  "A recorded and justified deviation"
+ ],
+ "b4-5": [
+  "Samples ready for testing",
+  "Instruments cleared for use",
+  "Raw test results",
+  "A complete laboratory record",
+  "A pass or fail per test",
+  "A lab error finding",
+  "A retest result",
+  "A valid statistics decision",
+  "A root cause finding for the failure",
+  "A signed investigation record"
+ ],
+ "b4-6": [
+  "A stability protocol",
+  "A list of stability batches",
+  "Packaged stability samples",
+  "A set of storage conditions",
+  "A pull and test schedule",
+  "Stability data tables per time point",
+  "A significant change finding",
+  "A pool or no pool decision",
+  "A statistical shelf life estimate",
+  "An expiry date and storage statement"
+ ],
+ "b4-7": [
+  "A record review result",
+  "Closed investigations",
+  "A deviation impact finding",
+  "A specification compliance finding",
+  "A supply chain check",
+  "A material compliance check",
+  "A validated state confirmation",
+  "A certified batch",
+  "A register entry",
+  "A release or reject decision"
+ ],
+ "b4-8": [
+  "A logged quality event",
+  "A risk rating for the event",
+  "A documented root cause",
+  "A list of affected batches",
+  "An approved CAPA plan",
+  "A CAPA effectiveness finding",
+  "An approved or rejected change",
+  "A reporting category for the change",
+  "An annual product review report",
+  "A field alert report"
+ ],
+ "b4-9": [
+  "A specification table",
+  "A justification for each limit",
+  "Separate release and shelf-life limits",
+  "A list of in-process tests",
+  "A periodic testing plan",
+  "A written control strategy",
+  "Input material specifications",
+  "A real time release decision",
+  "A list of established conditions",
+  "A biologic specification rationale"
+ ],
+ "b4-10": [
+  "A validation master plan",
+  "A control approach per process step",
+  "Qualified equipment and utilities",
+  "An approved validation protocol",
+  "A sampling plan with statistical backing",
+  "Executed validation batch records",
+  "A signed validation report",
+  "A cleaning validation result",
+  "A transport verification result",
+  "A continued verification plan"
+ ],
+ "b4-11": [
+  "A property profile of the drug substance",
+  "A list of excipients with reasons",
+  "A formulation with its critical attributes",
+  "A chosen commercial manufacturing process with a rationale",
+  "A chosen container closure system with a rationale",
+  "A compatibility result for the container",
+  "A protection result for the pack",
+  "A validation result for sterile processing",
+  "A microbial limits rationale"
+ ],
+ "b5-1": [
+  "Introduction and general plan section",
+  "Pharmacology and toxicology section",
+  "CMC section for the IND",
+  "Investigator\u2019s brochure",
+  "Protocol for each planned study",
+  "IND received by FDA",
+  "Permission to begin the trial",
+  "EU trial application filed",
+  "IND safety report within the deadline",
+  "Annual report sent to FDA"
+ ],
+ "b5-2": [
+  "Module 3 quality section",
+  "Module 4 study reports in order",
+  "Module 5 study reports in order",
+  "Module 2 introduction",
+  "Section 2.3 quality summary",
+  "Section 2.4 nonclinical overview",
+  "Section 2.6 written and tabulated summaries",
+  "Section 2.5 clinical overview",
+  "Section 2.7 clinical summary",
+  "Validated eCTD sequence ready to send"
+ ],
+ "b5-3": [
+  "Chosen meeting type",
+  "Meeting request with purpose, agenda and attendees",
+  "Final list of grouped questions",
+  "Meeting package sent to FDA",
+  "Notes on which answers are clear",
+  "Keep or cancel decision with revised agenda",
+  "Agreed record of decisions and open points",
+  "Clarified advice in writing",
+  "Scientific advice request with questions"
+ ],
+ "b5-4": [
+  "Signed application form for Module 1",
+  "Application received by FDA",
+  "Filing decision",
+  "Informal conference outcome",
+  "Review timeline and issue list",
+  "Safety update report",
+  "Early list of FDA concerns",
+  "Amendment answering the FDA questions",
+  "Agreed plan for remaining issues",
+  "Approval or resubmission plan"
+ ],
+ "b5-5": [
+  "Chosen application type and review center",
+  "Designation request ready to send",
+  "Fast track request with supporting evidence",
+  "Breakthrough request with early clinical evidence",
+  "Priority review request in the cover letter",
+  "Pediatric plan or waiver request",
+  "Dated review timeline",
+  "Fee category and amount",
+  "Eligibility request for the EU route",
+  "Agreed EU paediatric plan"
+ ],
+ "b5-6": [
+  "Name accepted or not accepted",
+  "Highlights of prescribing information",
+  "Indications and usage section",
+  "Full prescribing information text",
+  "Patient labeling or Medication Guide",
+  "Label file in SPL format",
+  "Agreed final label text",
+  "Final printed labeling on file",
+  "Form 2253 filed with the ad",
+  "Ads cleared against label"
+ ],
+ "b5-7": [
+  "Change category for the filing route",
+  "Approved major change",
+  "Moderate change filed",
+  "Updated label filed",
+  "Alert report within 15 days",
+  "Quarterly safety report",
+  "Field alert report",
+  "Study status section",
+  "Annual report sent to FDA"
+ ],
+ "b6-1": [
+  "Case with receipt date and clock start",
+  "Valid or incomplete decision for the case",
+  "Duplicate cases found and merged into one",
+  "Case record in E2B(R3) fields",
+  "Events coded to MedDRA terms",
+  "Serious or non-serious decision with criterion",
+  "Expected or unexpected decision",
+  "Causality rating for each drug-event pair",
+  "Narrative summarising the case",
+  "Submitted report with follow-ups sent when new facts arrive"
+ ],
+ "b6-2": [
+  "Local tables of reports ready to query",
+  "Cleaned report table",
+  "2x2 count table for each pair",
+  "PRR and ROR values for each pair",
+  "List of flagged pairs",
+  "Flags that survive after stratifying",
+  "EBGM and posterior quantile scores",
+  "Validated or closed decision for each flag",
+  "Ranked list of validated signals",
+  "Assessment report with recommended action"
+ ],
+ "b6-3": [
+  "Fixed data lock point and reporting interval",
+  "Cumulative and interval exposure figures",
+  "Cumulative and interval reaction tables",
+  "List of reference safety information changes",
+  "Summary of new published safety findings",
+  "Signal and risk evaluation section",
+  "Efficacy and effectiveness appraisal",
+  "Benefit-risk judgment for each indication",
+  "Conclusions with planned actions",
+  "Report filed within 70 or 90 days"
+ ],
+ "b6-4": [
+  "Summary of identified and potential risks",
+  "Epidemiology section of the specification",
+  "Routine monitoring plan or extra actions needed",
+  "Action plan for each important safety issue",
+  "Pharmacovigilance plan with milestones",
+  "Risk minimisation plan for each safety concern",
+  "REMS needed or not decision",
+  "List of REMS elements",
+  "Schedule of REMS assessments",
+  "Effectiveness evaluation plan or results"
+ ],
+ "b6-5": [
+  "Written study question",
+  "Chosen data sources with reasons",
+  "Fit-for-purpose verdict for each source",
+  "Named design with reasons",
+  "Study protocol",
+  "Registered protocol",
+  "Counts returned from each data partner",
+  "Incidence rates and rate ratios",
+  "Table of sensitivity results",
+  "Final report in the register"
+ ],
+ "b6-6": [
+  "Detailed change description",
+  "Documented effect assessment",
+  "List of affected established conditions",
+  "Risk category for the change",
+  "Approved change protocol",
+  "Chosen filing route",
+  "Complete supplement package",
+  "Supplement filed with release date",
+  "Revised promotional material",
+  "Annual report filed within 60 days"
+ ],
+ "b6-7": [
+  "Logged contact with a record number",
+  "Safety cases passed to the safety team",
+  "Unsolicited or solicited label for the request",
+  "Complaint routed for quality review",
+  "Investigate or not decision with reason",
+  "Complaint linked to a safety case when needed",
+  "Clear statement of the question asked",
+  "Reviewed reply letter or document",
+  "Closed record with reply to the asker"
+ ],
+ "b6-8": [
+  "Communication decision with timing",
+  "List of target audiences",
+  "Draft safety message",
+  "Communication plan with channels",
+  "Labeling supplement for the safety change",
+  "Approved final notice",
+  "Notice sent and regulator informed",
+  "Effectiveness results"
+ ]
+}</script>
 <script>
 const R = JSON.parse(document.getElementById("data").textContent);
 const T = JSON.parse(document.getElementById("tdata").textContent).blocks;
@@ -57275,6 +58212,9 @@ const L = JSON.parse(document.getElementById("ldata").textContent);
 const SD = JSON.parse(document.getElementById("sdata").textContent);
 const V = JSON.parse(document.getElementById("vdata").textContent);
 const H = JSON.parse(document.getElementById("hdata").textContent);
+const RS = JSON.parse(document.getElementById("rdata").textContent);
+const grpOf = (b,id) => (b.groups||[]).find(g=>g.sections.includes(id));
+const grpHead = (b,s,j) => { const g = grpOf(b,s.id); if(!g) return ""; const first = j===0 || (grpOf(b,b.sections[j-1].id)||{}).name !== g.name; return first?`<div class="gh">${esc(g.name)}</div>`:"" };
 const vOf = (sid,i) => V[sid+".s"+i] || null;
 const hOf = (sid,i) => H[sid+".s"+i] || null;
 function vCount(sid){ const steps=(SD[sid]||{}).steps||[]; let s=0,n=0; steps.forEach((st,k)=>{ const v=vOf(sid,k+1); if(v){ n++; if(v.label==="strict") s++ } }); return n?{s,n}:null }
@@ -57357,7 +58297,7 @@ function stepList(bi, si, id){
   const plain = P[id] && P[id].length===orig.length ? P[id] : orig;
   const mine = K.filter(k=>k.at===id);
   const det = SD[id] ? SD[id].steps : null;
-  let items = orig.map((o,i)=>({o, p:plain[i], on: mine.some(k=>k.step===o), d: det ? det[i] : null, v: vOf(id,i+1), h: hOf(id,i+1)}));
+  let items = orig.map((o,i)=>({o, p:plain[i], on: mine.some(k=>k.step===o), d: det ? det[i] : null, v: vOf(id,i+1), h: hOf(id,i+1), r: (RS[id]||[])[i]||""}));
   if(!items.length) items = mine.map(k=>({o:k.step, p:k.step, on:true, d:null}));
   if(!items.length || (items.length===1 && !mine.length)) return "";
   const hit = items.some(x=>x.on);
@@ -57380,8 +58320,8 @@ function stepList(bi, si, id){
   };
   const row = x => x.d
     ? `<details class="wstep${x.on?" on":""}"><summary><span class="sp">${esc(x.p)}</span>${x.h?`<span class="hpill b${x.h.bin}" title="Expert estimate, not cited">${esc(x.h.label)} <em>estimate</em></span>`:""}${x.v?`<i class="vtag v-${x.v.label}" title="${esc(x.v.why)}">${x.v.label==="strict"?"Strict":"Loose"}</i>`:""}${x.on?'<i class="tflag">task</i>':""}</summary>${body(x)}</details>`
-    : `<div class="wstep flat${x.on?" on":""}"><span class="sp">${esc(x.p)}</span>${x.on?'<i class="tflag">task</i>':""}</div>`;
-  return `<details class="steps-in"${hit||det?" open":""}><summary><span>Steps</span><i>show</i></summary>
+    : `<div class="wstep flat${x.on?" on":""}"><span class="sp">${esc(x.p)}${x.r?`<span class="sres">${esc(x.r)}</span>`:""}</span>${x.on?'<i class="tflag">task</i>':""}</div>`;
+  return `<details class="steps-in" open><summary><span>Steps</span><i>show</i></summary>
     <div class="slist">${items.map(row).join("")}</div></details>`;
 }
 function tCard(bi, si){
@@ -57389,12 +58329,12 @@ function tCard(bi, si){
   const [, bn, sn] = /^b(\d+)-(\d+)$/.exec(s.id);
   const full = R[bi]?.subs[+sn-1]?.title || "";
   return `<article class="card" id="tcard">
-    <div><div class="eyrow"><span class="ey">Block ${bn}</span><span class="ey num" style="white-space:nowrap">Section ${sn} of ${b.sections.length}</span></div>
+    <div><div class="eyrow"><span class="ey">Block ${bn}</span><span class="ey num" style="white-space:nowrap">Section ${si+1} of ${b.sections.length}</span></div>
       <h3 style="margin-top:8px">${esc(s.label)}</h3>${(()=>{const c=vCount(s.id);return c?`<p class="vcount"><b class="num">${c.s} of ${c.n}</b> steps strictly checkable by a script</p>`:""})()}${full && full.toLowerCase()!==s.label.toLowerCase()?`<div class="full">${esc(full)}</div>`:""}</div>
     ${s.gets?`<div class="flow"><div><span>Input</span><p>${esc(s.gets)}</p></div><i aria-hidden="true">&rarr;</i><div><span>Output</span><p>${esc(s.gives)}</p></div></div>`:""}
     ${stepList(bi, +sn-1, s.id)}
     ${SD[s.id]?"":`<dl class="kv"><dt>What humans do</dt><dd>${esc(s.human)}</dd></dl>`}
-    ${SD[s.id]?"":`<dl class="kv"><dt>Tools</dt><dd>${s.toolList?`<ul class="tools">${s.toolList.map(x=>`<li><b>${esc(x.name)}</b><span>${esc(x.does)}</span></li>`).join("")}</ul>`:esc(s.tools)}</dd></dl>`}
+    ${(SD[s.id]||!(s.toolList&&s.toolList.length||s.tools))?"":`<dl class="kv"><dt>Tools</dt><dd>${s.toolList?`<ul class="tools">${s.toolList.map(x=>`<li><b>${esc(x.name)}</b><span>${esc(x.does)}</span></li>`).join("")}</ul>`:esc(s.tools)}</dd></dl>`}
     ${litBox(s.id)}
     ${tasksAt(s.id).map(k=>`<div class="tbox"><div class="tbh"><span class="tflag">Our task</span><a href="${esc(k.url)}" target="_blank" rel="noopener">${esc(k.name)}</a></div>
       <p>${esc(k.what)}</p>
@@ -57405,9 +58345,9 @@ function tCard(bi, si){
 }
 function treeView(){
   const blocks = T.map((b,i)=>`<button class="bnode ${i===tb?"on":""}" data-tb="${i}" aria-pressed="${i===tb}"><span class="k num">${b.n}</span><b>${esc(b.label)}${blockTasks(i)?`<em class="bt">${blockTasks(i)} task${blockTasks(i)>1?"s":""}</em>`:""}</b><small>${esc(b.gist)}</small></button>`).join("");
-  const secs = T[tb].sections.map((s,j)=>`<button class="snode ${j===ts?"on":""}" data-ts="${j}" aria-pressed="${j===ts}"><span class="t">${esc(s.label)}</span>${litBar(s.id)}${tasksAt(s.id).length?'<i class="tflag" title="We have a task here">task</i>':""}</button>`).join("");
+  const secs = T[tb].sections.map((s,j)=>grpHead(T[tb],s,j)+`<button class="snode ${j===ts?"on":""}" data-ts="${j}" aria-pressed="${j===ts}"><span class="t">${esc(s.label)}</span>${litBar(s.id)}${tasksAt(s.id).length?'<i class="tflag" title="We have a task here">task</i>':""}</button>`).join("");
   const vt = T.map((b,i)=>`<li class="${i===tb?"on":""}"><button class="bnode ${i===tb?"on":""}" data-tb="${i}" aria-expanded="${i===tb}"><span class="k num">${b.n}</span><b>${esc(b.label)}${blockTasks(i)?`<em class="bt">${blockTasks(i)} task${blockTasks(i)>1?"s":""}</em>`:""}</b><small>${esc(b.gist)}</small></button>
-      ${i===tb?`<ul>${b.sections.map((s,j)=>`<li class="${j===ts?"on":""}"><button class="snode ${j===ts?"on":""}" data-ts="${j}" aria-expanded="${j===ts}"><span class="t">${esc(s.label)}</span>${litBar(s.id)}${tasksAt(s.id).length?'<i class="tflag" title="We have a task here">task</i>':""}</button>${j===ts?tCard(i,j).replace('id="tcard"',''):""}</li>`).join("")}</ul>`:""}</li>`).join("");
+      ${i===tb?`<ul>${b.sections.map((s,j)=>`${grpHead(b,s,j)?`<li class="ghli">${grpHead(b,s,j)}</li>`:""}<li class="${j===ts?"on":""}"><button class="snode ${j===ts?"on":""}" data-ts="${j}" aria-expanded="${j===ts}"><span class="t">${esc(s.label)}</span>${litBar(s.id)}${tasksAt(s.id).length?'<i class="tflag" title="We have a task here">task</i>':""}</button>${j===ts?tCard(i,j).replace('id="tcard"',''):""}</li>`).join("")}</ul>`:""}</li>`).join("");
   const legend = `<span><i class="vtag v-strict">Strict</i>A script can check the result</span><span><i class="vtag v-loose">Loose</i>Needs reading, choice or expert judgment</span><span><i class="hpill b4">1 day to 1 week <em>estimate</em></i>Expert estimate of hands-on human time</span>` + `<span><i class="lb q-good" style="width:34px"><i style="width:70%"></i></i>Papers per year (log scale)</span>`;
   const strip = K.map(k=>`<button class="tchip" data-jump="${k.at}"><span class="tn">${esc(k.name)}</span><span class="tw">${esc(secName(k.at))}</span></button>`).join("");
   return `<div class="narrow" style="max-width:none">
