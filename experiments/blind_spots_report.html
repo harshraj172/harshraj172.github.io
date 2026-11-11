@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Coding-Agent Blind Spots</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column (about 70ch) with wide figures; a spectrum strip states the thesis up top. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #17202b;
+  --muted: #5a6573;
+  --rule: #d9dee5;
+  --accent: #b5620e;          /* the blind-spot band */
+  --accent-soft: #f6e6d3;
+  --noise: #7d8a9a;           /* stochastic end of the spectrum */
+  --frontier: #3f5f8a;        /* capability-limit end */
+  --fail: #b5620e;
+  --pass: #5f8f64;
+  --font-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12171e; --surface: #1a212b; --ink: #e6eaf0; --muted: #9aa6b4; --rule: #2c3644;
+    --accent: #e39a4f; --accent-soft: #3a2a1b; --noise: #8593a4; --frontier: #7f9fcb;
+    --fail: #e39a4f; --pass: #8bbd8f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12171e; --surface: #1a212b; --ink: #e6eaf0; --muted: #9aa6b4; --rule: #2c3644;
+  --accent: #e39a4f; --accent-soft: #3a2a1b; --noise: #8593a4; --frontier: #7f9fcb;
+  --fail: #e39a4f; --pass: #8bbd8f; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--font-body); }
+.page { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 48px 72px; }
+.col { max-width: 70ch; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.01em; }
+h2 { font-size: 1.6rem; margin-block: 0 12px; }
+h3 { font-size: 1.15rem; margin-block: 0 6px; }
+p { margin: 0 0 14px; }
+.eyebrow { font: 500 0.75rem/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.lede { font-size: 1.15rem; color: var(--ink); max-width: 64ch; }
+.muted { color: var(--muted); }
+section { display: grid; gap: 14px; padding-block: 40px; border-top: 1px solid var(--rule); }
+header { display: grid; gap: 16px; padding-block-end: 32px; }
+.num { font-variant-numeric: tabular-nums; }
+code, .mono { font-family: var(--font-mono); font-size: 0.88em; }
+a { color: var(--frontier); }
+
+/* Spectrum: three bands, the middle one is this work */
+.spectrum { display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 3px; margin-block: 8px 0; }
+.band { padding: 16px; min-width: 0; display: grid; gap: 6px; align-content: start; }
+.band h3 { font-size: 1rem; }
+.band p { font-size: 0.9rem; margin: 0; color: var(--muted); }
+.band .tag { font: 500 0.7rem/1 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; }
+.b-noise { background: var(--surface); border-top: 4px solid var(--noise); }
+.b-noise .tag { color: var(--noise); }
+.b-spot { background: var(--accent-soft); border-top: 4px solid var(--accent); }
+.b-spot .tag { color: var(--accent); }
+.b-spot p { color: var(--ink); }
+.b-front { background: var(--surface); border-top: 4px solid var(--frontier); }
+.b-front .tag { color: var(--frontier); }
+.axis { display: flex; justify-content: space-between; font: 400 0.75rem var(--font-mono); color: var(--muted); }
+
+/* Key figures */
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.fig { background: var(--surface); border: 1px solid var(--rule); padding: 16px; display: grid; gap: 4px; min-width: 0; }
+.fig .big { font: 600 2rem/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.fig .cap { font-size: 0.88rem; color: var(--muted); }
+
+/* Trial grid: one square per repeat trial */
+.trials { display: grid; gap: 10px; }
+.trialrow { display: grid; grid-template-columns: minmax(130px, 210px) 1fr; gap: 12px; align-items: center; }
+.trialrow .lbl { font-size: 0.88rem; min-width: 0; }
+.dots { display: flex; flex-wrap: wrap; gap: 4px; }
+.dot { width: 14px; height: 14px; background: var(--fail); }
+.dot.partial { background: transparent; border: 2px solid var(--fail); }
+.legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.82rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Funnel: bar widths on one log-free linear scale of the 866 episodes looked at */
+.funnel { display: grid; gap: 8px; }
+.frow { display: grid; grid-template-columns: minmax(150px, 230px) 1fr 64px; gap: 12px; align-items: center; }
+.frow .lbl { font-size: 0.88rem; min-width: 0; }
+.track { background: var(--surface); border: 1px solid var(--rule); height: 18px; }
+.bar { height: 100%; background: var(--frontier); min-width: 2px; }
+.bar.hi { background: var(--accent); }
+.frow .v { font: 500 0.88rem var(--font-mono); text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Tables */
+.tablewrap { overflow-x: auto; border: 1px solid var(--rule); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 0.9rem; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 500 0.72rem/1.2 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+.pill { display: inline-block; font: 500 0.72rem/1 var(--font-mono); padding: 4px 6px; border: 1px solid var(--rule); white-space: nowrap; }
+.pill.kept { border-color: var(--pass); color: var(--pass); }
+.pill.dropped { border-color: var(--muted); color: var(--muted); }
+
+/* Blind spots: one card per failure type, each with a real example */
+.spots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.spot { background: var(--surface); border: 1px solid var(--rule); padding: 16px; display: grid; gap: 10px;
+        align-content: start; min-width: 0; }
+.spot-h { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.spot-h h3 { margin: 0; font-size: 1.08rem; }
+.model { font: 500 0.68rem/1 var(--font-mono); letter-spacing: 0.04em; color: var(--muted); border: 1px solid var(--rule); padding: 3px 6px; white-space: nowrap; }
+.spot .def { margin: 0; font-size: 0.9rem; color: var(--muted); }
+.trace { margin: 0; display: grid; gap: 0; border-left: 2px solid var(--rule); }
+.trace > div { display: grid; grid-template-columns: 56px 1fr; gap: 8px; padding: 6px 0 6px 10px; }
+.trace dt { font: 500 0.66rem/1.6 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.trace dd { margin: 0; font-size: 0.85rem; line-height: 1.45; min-width: 0; }
+.trace .miss { background: var(--accent-soft); margin-left: -2px; border-left: 2px solid var(--accent); }
+.trace .miss dt { color: var(--accent); }
+.shared { margin: 4px 0 0; font-size: 1rem; max-width: none; padding-top: 12px; border-top: 1px solid var(--rule); }
+
+/* Why 50%: three factors, then the measured reproduction rates */
+.why { display: grid; gap: 14px; margin-top: 8px; padding-top: 24px; border-top: 1px solid var(--rule); }
+.why h3 { font-size: 1.2rem; }
+.why p { margin: 0; max-width: 72ch; }
+.factors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.factor { background: var(--surface); border: 1px solid var(--rule); padding: 14px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.factor h4 { margin: 0; font: 600 1rem/1.2 var(--font-display); }
+.factor p { font-size: 0.86rem; color: var(--muted); }
+.factor .tagline { font: 500 0.68rem/1 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; }
+.factor.ok .tagline { color: var(--pass); }
+.factor.hard { background: var(--accent-soft); border-color: var(--accent); }
+.factor.hard .tagline { color: var(--accent); }
+.factor.hard p { color: var(--ink); }
+.rates { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.rate { background: var(--surface); border: 1px solid var(--rule); padding: 14px; display: grid; gap: 4px; min-width: 0; }
+.rate .big { font: 600 1.7rem/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.rate .cap { font-size: 0.84rem; color: var(--muted); }
+.rate.hi { border-color: var(--accent); }
+@media (max-width: 760px) { .factors, .rates { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .spots { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .spots { grid-template-columns: 1fr; } }
+.pattern-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.pattern { background: var(--surface); border: 1px solid var(--rule); padding: 16px; min-width: 0; }
+.pattern p { font-size: 0.92rem; margin: 0; color: var(--muted); }
+
+ol.steps { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; max-width: 70ch; }
+ul { margin: 0 0 14px; padding-left: 1.2em; max-width: 70ch; }
+li { margin-block: 4px; }
+.note { border-left: 3px solid var(--accent); padding: 8px 14px; background: var(--surface); max-width: 70ch; }
+
+
+/* Flow diagram: six stages left to right; counts shrink on one linear scale of the 866 episodes looked at */
+.flow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 22px; row-gap: 10px; margin-block-start: 6px; }
+.loop { grid-column: 3 / 6; grid-row: 1; border: 1.5px dashed var(--accent); border-bottom: 0; height: 30px;
+        display: flex; align-items: flex-start; justify-content: center; margin-inline: 12%; }
+.loop { position: relative; }
+.loop::after { content: ""; position: absolute; left: -6.5px; bottom: -8px; border: 6px solid transparent;
+               border-top: 8px solid var(--accent); border-bottom: 0; }   /* arrow back into the Builder */
+.loop span { font: 500 0.72rem/1 var(--font-mono); letter-spacing: 0.04em; color: var(--accent); background: var(--bg);
+             padding: 0 8px; transform: translateY(-50%); }
+.stage { grid-row: 2; position: relative; display: grid; grid-template-rows: auto auto 1fr; gap: 8px; min-width: 0;
+         background: var(--surface); border: 1px solid var(--rule); padding: 14px 12px 12px; }
+.stage:not(:last-child)::after { content: ""; position: absolute; top: 34px; right: -19px; width: 16px; height: 2px; background: var(--muted); }
+.stage:not(:last-child)::before { content: ""; position: absolute; top: 30px; right: -20px; border: 5px solid transparent;
+         border-left: 7px solid var(--muted); border-right: 0; }
+.stage .k { display: flex; align-items: center; gap: 8px; }
+.stage .n { font: 600 0.78rem/1 var(--font-mono); width: 24px; height: 24px; display: grid; place-items: center;
+            border: 1.5px solid var(--ink); border-radius: 50%; flex: none; }
+.stage h3 { font-size: 1.02rem; margin: 0; }
+.stage .what { font-size: 0.86rem; color: var(--muted); margin: 0; line-height: 1.45; }
+.rules { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; align-content: start; }
+.rules li { margin: 0; font-size: 0.8rem; line-height: 1.4; padding-left: 12px; position: relative; }
+.rules li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 5px; height: 5px; background: var(--muted); }
+.stage.kept .rules li::before { background: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; align-content: start; }
+.chip { font: 400 0.7rem/1.3 var(--font-mono); padding: 3px 6px; background: var(--bg); border: 1px solid var(--rule); }
+.count { display: grid; gap: 4px; padding-top: 8px; border-top: 1px solid var(--rule); }
+.count .v { font: 600 1.35rem/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.count .v small { font: 400 0.72rem var(--font-body); color: var(--muted); margin-left: 4px; }
+.count .bar2 { height: 6px; background: var(--rule); }
+.count .bar2 i { display: block; height: 100%; background: var(--frontier); min-width: 2px; }
+.stage.kept { background: var(--accent-soft); border-color: var(--accent); }
+.stage.kept .n { border-color: var(--accent); color: var(--accent); }
+.stage.kept .count .bar2 i { background: var(--accent); }
+.drop { grid-row: 3; font-size: 0.76rem; color: var(--muted); padding-left: 12px; border-left: 2px solid var(--rule); min-width: 0; line-height: 1.4; }
+.drop b { font: 500 0.76rem var(--font-mono); color: var(--ink); font-variant-numeric: tabular-nums; }
+.flowkey { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.78rem; color: var(--muted); }
+.flowkey span { display: inline-flex; align-items: center; gap: 6px; }
+.flowkey i { display: inline-block; width: 18px; height: 6px; background: var(--frontier); }
+.flowkey i.drop-sw { width: 2px; height: 14px; background: var(--rule); }
+.flowkey i.loop-sw { height: 0; border-top: 1.5px dashed var(--accent); background: none; }
+
+@media (max-width: 960px) {
+  .flow { grid-template-columns: 1fr; row-gap: 0; }
+  .loop { display: none; }
+  .stage, .drop { grid-row: auto; }
+  .stage:not(:last-child)::after, .stage:not(:last-child)::before { display: none; }
+  .drop { margin: 0 0 0 22px; padding-block: 8px 14px; }
+  .drop::before { content: "↓ "; color: var(--muted); }
+  .drop:empty { display: none; }
+  .stage .loopnote { display: inline-block; }
+}
+.loopnote { display: none; font: 500 0.7rem var(--font-mono); color: var(--accent); }
+
+@media (max-width: 640px) {
+  .spectrum { grid-template-columns: 1fr; }
+  .trialrow, .frow { grid-template-columns: 1fr; gap: 4px; }
+  .frow .v { text-align: left; }
+}
+</style>
+
+<div class="page">
+  <header>
+    <span class="eyebrow">trace2task · project report · October 2026</span>
+    <h1>Trace-to-Task</h1>
+    <p class="lede">From real coding-agent sessions we rebuild the exact situation where the agent slipped, then run the
+      same model again. The mistakes we find are simple and avoidable, and they come back almost every time. That makes
+      them a third kind of failure, sitting between frontier limits and random noise.</p>
+  </header>
+
+  <section aria-labelledby="where">
+    <span class="eyebrow">Where these failures sit</span>
+    <h2 id="where">Between noise and the frontier</h2>
+    <div class="spectrum">
+      <div class="band b-noise">
+        <span class="tag">Stochastic</span>
+        <h3>Random slips</h3>
+        <p>The model fails once and passes on a re-run. Sampling noise, not a habit. Re-running would not show the same mistake.</p>
+      </div>
+      <div class="band b-spot">
+        <span class="tag">This work</span>
+        <h3>Repeatable blind spots</h3>
+        <p>A capable model should get this right, the fix is ordinary engineering, and yet the same model makes the same
+          mistake on nearly every re-run.</p>
+      </div>
+      <div class="band b-front">
+        <span class="tag">Frontier</span>
+        <h3>Capability limits</h3>
+        <p>The task is genuinely hard: deep research, long novel reasoning, knowledge the model does not have.</p>
+      </div>
+    </div>
+    <div class="axis"><span>changes run to run</span><span>beyond the model today</span></div>
+    <div class="col">
+      <p>The traces did not give us frontier-level failures. They gave us ordinary ones: the agent copies an old setup
+        without checking it fits, fixes the loudest message in a log instead of the real failure, or writes docs from
+        memory instead of the code. These
+        are the "dumb" mistakes users complain about, and they are what this project collects.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="patterns">
+    <span class="eyebrow">What the mistakes look like</span>
+    <h2 id="patterns">Three recurring blind spots</h2>
+    <div class="spots">
+      <article class="spot">
+        <div class="spot-h"><h3>Copies without checking</h3><span class="model">Sonnet 4.6</span></div>
+        <p class="def">Reuses the setup of an old tool for a new one, without checking that the new tool works the same way.</p>
+        <dl class="trace">
+          <div><dt>Asked</dt><dd>Follow a plan to swap the app's web terminal for a new terminal tool.</dd></div>
+          <div><dt>Did</dt><dd>Copied the old terminal's web-address rule for the new tool.</dd></div>
+          <div class="miss"><dt>Missed</dt><dd>The new tool expects a different address, so every terminal page shows "404 Not Found". The repo already had the right rule for a similar tool.</dd></div>
+        </dl>
+      </article>
+      <article class="spot">
+        <div class="spot-h"><h3>Blames the wrong error</h3><span class="model">Opus 4.7</span></div>
+        <p class="def">Fixes the loudest message in a log instead of the real failure, and never asks why it can't see the failure itself.</p>
+        <dl class="trace">
+          <div><dt>Asked</dt><dd>"Diagnose and fix this CI error that happens locally," with the end of a failing test log.</dd></div>
+          <div><dt>Did</dt><dd>Chased warnings printed by tests that actually pass. Its own test run passed, so it stopped.</dd></div>
+          <div class="miss"><dt>Missed</dt><dd>Never asked why the user's run fails and its own does not. The tests that really fail stay broken.</dd></div>
+        </dl>
+      </article>
+      <article class="spot">
+        <div class="spot-h"><h3>Writes docs from memory</h3><span class="model">Fable 5.1</span></div>
+        <p class="def">Describes how a feature works from its impression, not from the code it has just read.</p>
+        <dl class="trace">
+          <div><dt>Asked</dt><dd>"Can we add a page in docs showcasing LLM capabilities (with screenshots and short clips)?"</dd></div>
+          <div><dt>Did</dt><dd>Wrote the whole page in one go, right after looking at the screenshots.</dd></div>
+          <div class="miss"><dt>Missed</dt><dd>The page says the AI sees only one summary card. The code, which it had already opened, also sends up to 180 past results.</dd></div>
+        </dl>
+      </article>
+    </div>
+    <p class="shared"><b>What they share:</b> each fix is ordinary engineering, but the agent surprisingly misses them.</p>
+  </section>
+
+  <section aria-labelledby="how">
+    <span class="eyebrow">How a task is made</span>
+    <h2 id="how">From a session to a checked task</h2>
+    <div class="flow" role="img" aria-label="Six stages from an agent session to a kept task: episode, preflight, builder, checks, audit, trial. Audit findings go back to the builder for up to two rounds.">
+      <div class="loop"><span>audit findings → builder fixes · up to 2 rounds</span></div>
+
+      <div class="stage">
+        <div class="k"><span class="n">1</span><h3>Episode</h3></div>
+        <p class="what">One user request and the agent's work until the next message.</p>
+        <ul class="rules"><li>The user's next message pushes back on what the agent did.</li></ul>
+      </div>
+      <div class="stage">
+        <div class="k"><span class="n">2</span><h3>Preflight</h3></div>
+        <p class="what">A program looks for a real failure signal.</p>
+        <ul class="rules"><li>Keep it only with clear evidence: the user complained, a test still failed at the end, or the user undid the agent's work.</li></ul>
+      </div>
+      <div class="stage">
+        <div class="k"><span class="n">3</span><h3>Builder</h3></div>
+        <p class="what">Finds the root cause and rebuilds the moment.</p>
+        <ul class="rules"><li>The first wrong decision falls in the first 50% of the agent's steps.</li><li>The repo is set to the commit from that day.</li><li>The user's request is copied word for word.</li></ul>
+      </div>
+      <div class="stage">
+        <div class="k"><span class="n">4</span><h3>Checks</h3></div>
+        <p class="what">The task must be solvable and not free.</p>
+        <ul class="rules"><li>Oracle and No-op verification.</li></ul>
+      </div>
+      <div class="stage">
+        <div class="k"><span class="n">5</span><h3>Audit</h3></div>
+        <p class="what">Would an ideal expert pass? Is the grading fair?</p>
+        <ul class="rules"><li>Quality Audit.</li></ul>
+        <span class="loopnote">↺ findings go back to the builder, up to 2 rounds</span>
+      </div>
+      <div class="stage kept">
+        <div class="k"><span class="n">6</span><h3>Trial</h3></div>
+        <p class="what">The trace's own model runs the task.</p>
+        <ul class="rules"><li>Run with the same model and Claude Code version.</li><li>Kept only if it fails the same way.</li></ul>
+      </div>
+    </div>
+
+    <div class="why">
+      <h3>Why the first wrong decision must come early (within 50% of the steps)</h3>
+      <p>Three things decide whether a failure can be reproduced.</p>
+      <div class="factors">
+        <div class="factor ok">
+          <h4>The user's instruction</h4>
+          <p>We have it, word for word.</p>
+        </div>
+        <div class="factor ok">
+          <h4>The environment at that step</h4>
+          <p>We can rebuild it. An agent replays the recorded file edits and fills the gaps, as in
+            <a href="https://arxiv.org/abs/2609.04148">Terminal-Universe</a>.</p>
+        </div>
+        <div class="factor hard">
+          <h4>The chat history before it</h4>
+          <p>We cannot keep it. The agent in a task starts from scratch with only the instruction.</p>
+        </div>
+      </div>
+      <p>So whether a failure comes back depends mostly on the history. We therefore look for episodes where the first
+        wrong decision sits close to the user's request. Then the mistake is not a function of the history, and a fresh
+        agent can make it too. In the tasks kept so far, this decision falls at 0 to 50% of the episode's steps.</p>
+      <p>What this gives at stage 6, measured on tasks that were built and reached the trial: the model failed again in
+        <b>90%</b> of them, and made the same mistake as the trace in <b>52%</b>.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="scale">
+    <span class="eyebrow">Scale</span>
+    <h2 id="scale">A large set of instances, not a leaderboard</h2>
+    <div class="col">
+      <p>This is not meant as a standard benchmark with a score to beat. It is a collection of concrete, reproducible
+        instances of simple mistakes, each tied to the model that makes it and labeled with how it fails. The useful size
+        is in the hundreds: <b>500 to 1,000 tasks</b>, enough to cover many repos, languages, and kinds of slip, and to
+        train or test against them.</p>
+    </div>
+  </section>
+</div>
+</html>
