@@ -38,6 +38,7 @@
   title: "Strong Post-Training from Permissive, Reasoning-Dominant, Web-Scale Pretraining"
   authors: "<u>Harsh Raj</u>, Ali Elganzory, Marianna Nezhurina, Victor May, Van Khue Nguyen, David Salinas, Huu Nguyen, Jenia Jitsev"
   venue: "NeurIPS 2026"
+  url: "https://neurips.cc/virtual/2026/loc/sydney/poster/153271"
 - layout: paper
   paper-type: inproceedings
   selected: y
